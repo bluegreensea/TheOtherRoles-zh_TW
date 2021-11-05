@@ -177,7 +177,7 @@ namespace TheOtherRoles.Patches {
             // Deactivate emergency button for Swapper
             if (Swapper.swapper != null && Swapper.swapper == PlayerControl.LocalPlayer && !Swapper.canCallEmergency) {
                 roleCanCallEmergency = false;
-                statusText = "掉包者不能發起緊急會議";
+                statusText = "掉包師不能發起緊急會議";
             }
             // Potentially deactivate emergency button for Jester
             if (Jester.jester != null && Jester.jester == PlayerControl.LocalPlayer && !Jester.canCallEmergency) {

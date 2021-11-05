@@ -1,6 +1,6 @@
 ![eisbison banner](./Images/TOR_logo.png)
 [![en](https://img.shields.io/static/v1?label=lang&message=en&color=blue&style=for-the-badge)](./README.md)
-<p align="center">
+<p style="text-align: center">
 This mod is not affiliated with Among Us or Innersloth LLC, and the content contained therein is not endorsed or otherwise sponsored by Innersloth LLC. Portions of the materials contained herein are property of Innersloth LLC. © Innersloth LLC.</p>
 
 [![Discord](./Images/TOR_server.png)](https://discord.gg/77RkMJHWsM)
@@ -12,7 +12,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 **The Other Roles** 是個 [Among Us](https://store.steampowered.com/app/945360/Among_Us) 的模組，新增了更多的職業與新的 [設定](#設定)，[自定義帽子](#自定義帽子) 及支援 [10人以上玩家](#custom-servers-and-10-players) 進到遊戲。
 更多職業即將推出 :)
 
-| 偽裝者 | 船員 | 獨立 | 第二 |
+| 偽裝者 | 船員 | 中立 | 第二 |
 |----------|-------------|-----------------|----------------|
 | [好 迷你](#迷你) | [壞 迷你](#迷你) | [縱火狂](#縱火狂) | [戀人](#戀人) |
 | [壞 賭徒](#賭徒) | [好 賭徒](#賭徒) | [小丑](#小丑) |  |
@@ -28,7 +28,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 | [吸血鬼](#吸血鬼) | [轉職者](#轉職者) |  |  |
 | [咒詛師](#咒詛師) | [密探](#密探) |  |  |
 |  | [間諜](#間諜) |  |  |
-|  | [掉包者](#掉包者) |  |  |
+|  | [掉包師](#掉包師) |  |  |
 |  | [時間管理大師](#時間管理大師) |  |  |
 |  |  [追踪者](#追踪者) |  |  |
 |  |  [誘餌](#誘餌) |  |
@@ -94,7 +94,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 - Added /color and /murder command to Freeplay (for the Hat Designers)
 
 **Version 2.7.1**
-- Fixed a bug where [swapped](#掉包者) votes were sometimes counted wrongly
+- Fixed a bug where [swapped](#掉包師) votes were sometimes counted wrongly
 - Fixed the positioning of the player name while [morphed](#黑手黨)
 - Fixed a bug where the window of the [Guesser](#賭徒) sometimes showed no "close button"
 - Fixed a bug where the [garlics](#吸血鬼) were not displayed properly
@@ -131,7 +131,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 **Version 2.6.4**
 - **[Lovers](#戀人):** You can now select that Lovers may have a second role (could be a Crewmate, Neutral or Impostor role)
 - **[Seer](#靈媒):** Fixed souls and flash sometimes not being visible (Thanks to [orangeNKeks](https://github.com/orangeNKeks))
-- New option: [Swapper](#掉包者) can only swap others
+- New option: [Swapper](#掉包師) can only swap others
 - New option: Ghosts can see votes
 - New option: [Jackal](#豺狼) and [Sidekick](#跟班) have Impostor vision
 - New option: [Jester](#小丑) can sabotage
@@ -970,7 +970,7 @@ The Time Master won't be affected by the rewind.\
 | 回溯時間護盾持續時間 |
 -----------------------
 
-## 掉包者
+## 掉包師
 ### **隊伍:船員**
 During meetings the Swapper can exchange votes that two people get (i.e. all votes
 that player A got will be given to player B and vice versa).\

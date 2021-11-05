@@ -190,8 +190,8 @@ namespace TheOtherRoles {
             // Using new id's for the options to not break compatibilty with older versions
             crewmateRolesCountMin = CustomOption.Create(300, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小船員職業數"), 0f, 0f, 15f, 1f, null, true);
             crewmateRolesCountMax = CustomOption.Create(301, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大船員職業數"), 0f, 0f, 15f, 1f);
-            neutralRolesCountMin = CustomOption.Create(302, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小獨立職業數"), 0f, 0f, 15f, 1f);
-            neutralRolesCountMax = CustomOption.Create(303, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大獨立職業數"), 0f, 0f, 15f, 1f);
+            neutralRolesCountMin = CustomOption.Create(302, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小中立職業數"), 0f, 0f, 15f, 1f);
+            neutralRolesCountMax = CustomOption.Create(303, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大中立職業數"), 0f, 0f, 15f, 1f);
             impostorRolesCountMin = CustomOption.Create(304, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小偽裝者職業數"), 0f, 0f, 3f, 1f);
             impostorRolesCountMax = CustomOption.Create(305, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大偽裝者職業數"), 0f, 0f, 3f, 1f);
 
@@ -302,9 +302,9 @@ namespace TheOtherRoles {
             medicShowAttemptToShielded = CustomOption.Create(144, "裝盾玩家可看到謀殺未遂", false, medicSpawnRate);
             medicSetShieldAfterMeeting = CustomOption.Create(145, "盾在會議後生效", false, medicSpawnRate);
 
-            swapperSpawnRate = CustomOption.Create(150, cs(Swapper.color, "掉包者"), rates, null, true);
-            swapperCanCallEmergency = CustomOption.Create(151, "掉包者可召開緊急會議", false, swapperSpawnRate);
-            swapperCanOnlySwapOthers = CustomOption.Create(152, "掉包者只可掉包其他人的票", false, swapperSpawnRate);
+            swapperSpawnRate = CustomOption.Create(150, cs(Swapper.color, "掉包師"), rates, null, true);
+            swapperCanCallEmergency = CustomOption.Create(151, "掉包師可召開緊急會議", false, swapperSpawnRate);
+            swapperCanOnlySwapOthers = CustomOption.Create(152, "掉包師只可掉包其他人的得票", false, swapperSpawnRate);
 
             seerSpawnRate = CustomOption.Create(160, cs(Seer.color, "靈媒"), rates, null, true);
             seerMode = CustomOption.Create(161, "靈媒能力模式", new string[]{ "顯示死亡閃爍 + 靈魂", "顯示死亡閃爍", "顯示靈魂"}, seerSpawnRate);
