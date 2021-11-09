@@ -53,6 +53,7 @@ namespace TheOtherRoles {
         public static CustomOption guesserSpawnRate;
         public static CustomOption guesserIsImpGuesserRate;
         public static CustomOption guesserNumberOfShots;
+        public static CustomOption guesserHasMultipleShotsPerMeeting;
 
         public static CustomOption jesterSpawnRate;
         public static CustomOption jesterCanCallEmergency;
@@ -73,6 +74,7 @@ namespace TheOtherRoles {
         public static CustomOption jackalPromotedFromSidekickCanCreateSidekick;
         public static CustomOption jackalCanCreateSidekickFromImpostor;
         public static CustomOption jackalAndSidekickHaveImpostorVision;
+        public static CustomOption jackalCanSeeEngineerVent;
 
         public static CustomOption bountyHunterSpawnRate;
         public static CustomOption bountyHunterBountyDuration;
@@ -166,6 +168,17 @@ namespace TheOtherRoles {
         public static CustomOption baitHighlightAllVents;
         public static CustomOption baitReportDelay;
 
+        public static CustomOption vultureSpawnRate;
+        public static CustomOption vultureCooldown;
+        public static CustomOption vultureNumberToWin;
+        public static CustomOption vultureCanUseVents;
+        public static CustomOption vultureShowArrows;
+
+        public static CustomOption mediumSpawnRate;
+        public static CustomOption mediumCooldown;
+        public static CustomOption mediumDuration;
+        public static CustomOption mediumOneTimeUse;
+
         public static CustomOption maxNumberOfMeetings;
         public static CustomOption blockSkippingInEmergencyMeetings;
         public static CustomOption noVoteIsSelfVote;
@@ -246,6 +259,7 @@ namespace TheOtherRoles {
             guesserSpawnRate = CustomOption.Create(310, cs(Guesser.color, "賭徒"), rates, null, true);
             guesserIsImpGuesserRate = CustomOption.Create(311, "賭徒是個偽裝者的機率", rates, guesserSpawnRate);
             guesserNumberOfShots = CustomOption.Create(312, "賭徒的嘗試次數", 2f, 1f, 15f, 1f, guesserSpawnRate);
+            guesserHasMultipleShotsPerMeeting = CustomOption.Create(313, "Guesser Can Shoot Multiple Times Per Meeting", false, guesserSpawnRate);
 
             jesterSpawnRate = CustomOption.Create(60, cs(Jester.color, "小丑"), rates, null, true);
             jesterCanCallEmergency = CustomOption.Create(61, "小丑可召開緊急會議", true, jesterSpawnRate);
@@ -266,6 +280,13 @@ namespace TheOtherRoles {
             jackalPromotedFromSidekickCanCreateSidekick = CustomOption.Create(228, "從跟班升職的豺狼可製造跟班", true, jackalSpawnRate);
             jackalCanCreateSidekickFromImpostor = CustomOption.Create(229, "豺狼可讓偽裝者轉成跟班", true, jackalSpawnRate);
             jackalAndSidekickHaveImpostorVision = CustomOption.Create(430, "豺狼與跟班有偽裝者視野", false, jackalSpawnRate);
+            jackalCanSeeEngineerVent = CustomOption.Create(431, "Jackal Can See If Engineer Is In A Vent", false, jackalSpawnRate);
+
+            vultureSpawnRate = CustomOption.Create(340, cs(Vulture.color, "Vulture"), rates, null, true);
+            vultureCooldown = CustomOption.Create(341, "Vulture Cooldown", 15f, 10f, 60f, 2.5f, vultureSpawnRate);
+            vultureNumberToWin = CustomOption.Create(342, "Number Of Corpses Needed To Be Eaten", 4f, 0f, 10f, 1f, vultureSpawnRate);
+            vultureCanUseVents = CustomOption.Create(343, "Vulture Can Use Vents", true, vultureSpawnRate);
+            vultureShowArrows = CustomOption.Create(344, "Show Arrows Pointing Towards The Corpes", true, vultureSpawnRate);
 
             shifterSpawnRate = CustomOption.Create(70, cs(Shifter.color, "轉職者"), rates, null, true);
             shifterShiftsModifiers = CustomOption.Create(71, "轉職者轉移調整", false, shifterSpawnRate);
@@ -277,7 +298,6 @@ namespace TheOtherRoles {
             sheriffSpawnRate = CustomOption.Create(100, cs(Sheriff.color, "警長"), rates, null, true);
             sheriffCooldown = CustomOption.Create(101, "警長冷卻", 30f, 10f, 60f, 2.5f, sheriffSpawnRate);
             sheriffCanKillNeutrals = CustomOption.Create(102, "警長可擊殺獨立職業", false, sheriffSpawnRate);
-
 
             lighterSpawnRate = CustomOption.Create(110, cs(Lighter.color, "點燈人"), rates, null, true);
             lighterModeLightsOnVision = CustomOption.Create(111, "開燈時點燈視野", 2f, 0.25f, 5f, 0.25f, lighterSpawnRate);
@@ -340,6 +360,11 @@ namespace TheOtherRoles {
             baitSpawnRate = CustomOption.Create(330, cs(Bait.color, "誘餌"), rates, null, true);
             baitHighlightAllVents = CustomOption.Create(331, "如果通風口被佔用所有通風口發光", false, baitSpawnRate);
             baitReportDelay = CustomOption.Create(332, "誘餌舉報延遲", 0f, 0f, 10f, 1f, baitSpawnRate);
+
+            mediumSpawnRate = CustomOption.Create(360, cs(Medium.color, "Medium"), rates, null, true);
+            mediumCooldown = CustomOption.Create(361, "Medium Questioning Cooldown", 30f, 5f, 120f, 5f, mediumSpawnRate);
+            mediumDuration = CustomOption.Create(362, "Medium Questioning Duration", 3f, 0f, 15f, 1f, mediumSpawnRate);
+            mediumOneTimeUse = CustomOption.Create(363, "Each Soul Can Only Be Questioned Once", false, mediumSpawnRate);
 
             // Other options  
             maxNumberOfMeetings = CustomOption.Create(3, "會議數量(不包括市長會議)", 10, 0, 15, 1, null, true);
@@ -663,7 +688,7 @@ namespace TheOtherRoles {
             var hudString = sb.ToString();
 
             int defaultSettingsLines = 19;
-            int roleSettingsLines = defaultSettingsLines + 35;
+            int roleSettingsLines = defaultSettingsLines + 37;
             int detailedSettingsP1 = roleSettingsLines + 37;
             int detailedSettingsP2 = detailedSettingsP1 + 38;
             int end1 = hudString.TakeWhile(c => (defaultSettingsLines -= (c == '\n' ? 1 : 0)) > 0).Count();
@@ -685,7 +710,7 @@ namespace TheOtherRoles {
                 gap = 18;
                 index = hudString.TakeWhile(c => (gap -= (c == '\n' ? 1 : 0)) > 0).Count();
                 hudString = hudString.Insert(index + 1, "\n");
-                gap = 22;
+                gap = 23;
                 index = hudString.TakeWhile(c => (gap -= (c == '\n' ? 1 : 0)) > 0).Count();
                 hudString = hudString.Insert(index + 1, "\n");
             } else if (counter == 2) {

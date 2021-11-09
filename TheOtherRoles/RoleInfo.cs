@@ -57,6 +57,8 @@ namespace TheOtherRoles
         public static RoleInfo goodGuesser = new RoleInfo("好賭徒", Guesser.color, "猜測並放逐", "猜測並放逐", RoleId.Guesser);
         public static RoleInfo badGuesser = new RoleInfo("壞賭徒", Palette.ImpostorRed, "猜測並放逐", "猜測並放逐", RoleId.Guesser);
         public static RoleInfo bait = new RoleInfo("誘餌", Bait.color, "引誘你的敵人", "引誘你的敵人", RoleId.Bait);
+        public static RoleInfo vulture = new RoleInfo("Vulture", Vulture.color, "Eat Corpses to win", "Eat dead bodies", RoleId.Vulture);
+        public static RoleInfo medium = new RoleInfo("Medium", Medium.color, "Question the souls of the dead to gain informations", "Question the souls", RoleId.Medium);
         public static RoleInfo impostor = new RoleInfo("偽裝者", Palette.ImpostorRed, Helpers.cs(Palette.ImpostorRed, "破壞跟殺死所有人"), "破壞跟殺死所有人", RoleId.Impostor);
         public static RoleInfo crewmate = new RoleInfo("船員", Color.white, "找到偽裝者", "找到偽裝者", RoleId.Crewmate);
         public static RoleInfo lover = new RoleInfo("戀人", Lovers.color, $"你正在戀愛中", $"你正在戀愛中", RoleId.Lover);
@@ -83,6 +85,7 @@ namespace TheOtherRoles
             arsonist,
             jackal,
             sidekick,
+            vulture,
             crewmate,
             shifter,
             mayor,
@@ -99,8 +102,8 @@ namespace TheOtherRoles
             snitch,
             spy,
             securityGuard,
-            bountyHunter,
-            bait
+            bait,
+            medium
         };
 
         public static List<RoleInfo> getRoleInfoForPlayer(PlayerControl p) {
@@ -141,6 +144,8 @@ namespace TheOtherRoles
             if (p == Guesser.guesser) infos.Add(p.Data.IsImpostor ? badGuesser : goodGuesser);
             if (p == BountyHunter.bountyHunter) infos.Add(bountyHunter);
             if (p == Bait.bait) infos.Add(bait);
+            if (p == Vulture.vulture) infos.Add(vulture);
+            if (p == Medium.medium) infos.Add(medium);
 
             // Default roles
             if (infos.Count == 0 && p.Data.IsImpostor) infos.Add(impostor); // Just Impostor
@@ -150,6 +155,13 @@ namespace TheOtherRoles
             if (p == Lovers.lover1|| p == Lovers.lover2) infos.Add(lover);
 
             return infos;
+        }
+
+        public static String GetRole(PlayerControl p) {
+            string roleName;
+            roleName = String.Join("", getRoleInfoForPlayer(p).Select(x => x.name).ToArray());
+            if (roleName.Contains("Lover")) roleName.Replace("Lover", "");
+            return roleName;
         }
     }
 }
