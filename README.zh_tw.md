@@ -18,7 +18,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 | [壞 賭徒](#賭徒) | [好 賭徒](#賭徒) | [小丑](#小丑) |  |
 | [賞金獵人](#賞金獵人) | [偵探](#偵探) | [豺狼](#豺狼) |  |
 | [魔術師](#魔術師) | [工程師](#工程師) | [跟班](#跟班) |  |
-| [清除者](#清除者) | [駭客](#駭客) |  |  |
+| [清除者](#清除者) | [駭客](#駭客) | [Vulture](#vulture) |  |
 | [抹除者](#抹除者) | [點燈人](#點燈人) |  |  |
 | [教父 (黑手黨)](#黑手黨) | [市長](#市長) |  |  |
 | [黑手黨員 (黑手黨)](#黑手黨) | [醫生](#醫生) |  |  |
@@ -32,12 +32,16 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 |  | [時間管理大師](#時間管理大師) |  |  |
 |  |  [追踪者](#追踪者) |  |  |
 |  |  [誘餌](#誘餌) |  |
+|  |  [Medium](#medium) |  |
 
 [職業分配](#職業分配) 部分解釋了職業如何分配.
 
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
+| 2021.6.30s| v2.9.2| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v2.9.2/TheOtherRoles.zip)
+| 2021.6.30s| v2.9.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v2.9.1/TheOtherRoles.zip)
+| 2021.6.30s| v2.9.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v2.9.0/TheOtherRoles.zip)
 | 2021.6.30s| v2.8.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v2.8.1/TheOtherRoles.zip)
 | 2021.6.30s| v2.8.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v2.8.0/TheOtherRoles.zip)
 | 2021.6.30s| v2.7.3| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v2.7.3/TheOtherRoles.zip)
@@ -76,14 +80,33 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 <details>
   <summary>Click to show the Changelog</summary>
 
+**Hotfix 2.9.2**
+- Fixed a bug where the names of all players were visible during camouflage
+- Fixed a bug where the Morphling didn't take over the name of its target
+
+**Version 2.9.1**
+- Fixed a bug where [Camouflager](#camouflager) & [Morphling](#morphling) caused performance issues
+- Fixed a bug where [Medium](#medium) did not exlude the Evil [Mini](#mini)
+- [Vulture](#vulture) "Number Of Corpses Needed To Be Eaten" max value extended to 10
+- Added Vulture Option: "Show Arrows Pointing Towards The Corpes"
+- Removed Medium Question: "What is your name?" (name of the soul is added after each question)
+
+  
+**Version 2.9.0**
+- **New Role:** [Medium](#medium)
+- **New Role:** [Vulture](#vulture)
+- Added Jackal Option: "Jackal Can See If Engineer Is In A Vent"
+- Added Guesser Option: "Guesser Can Shoot Multiple Times Per Meeting"
+- Fixed a bug that occured when the Shifter shifted the Bait
+
 **Hotfix 2.8.1**
 - Fixed a game breaking bug where killing the Bait resulted in a ban of the Bait
 
 **Version 2.8.0**
-- **New Role:** [Bait](#誘餌) created by [Mallöris](https://github.com/Mallaris) 
+- **New Role:** [Bait](#誘餌)
 - Added Tracker Option: "Tracker Reset Target After Meeting" (feature created by [MaximeGillot](https://github.com/MaximeGillot))
-- Added Snitch Options: "Include Team Jackal" and "Use Different Arrow Color For Team Jackal" (feature created by [Mallöris](https://github.com/Mallaris))
-- Added Medic Option: "Shield Will Be Set After Next Meeting" (feature created by [Mallöris](https://github.com/Mallaris))
+- Added Snitch Options: "Include Team Jackal" and "Use Different Arrow Color For Team Jackal"
+- Added Medic Option: "Shield Will Be Set After Next Meeting"
 
 **Version 2.7.3**
 - Updated to Among Us v2021.6.30
@@ -100,7 +123,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 - Fixed a bug where the [garlics](#吸血鬼) were not displayed properly
 
 **Version 2.7.0**
-- **New Role:** [Bounty Hunter](#賞金獵人) created by [Mallöris](https://github.com/Mallaris)
+- **New Role:** [Bounty Hunter](#賞金獵人)
 - Added more new [colors](#顏色) (Thanks to [Drakoni](https://twitter.com/Drakoni13) for sorting them)
 - Added a setting to the [Shifter](#轉職者), that will prevent [Medic Shield](#醫生) & [Lover](#戀人) Roles to be shifted
 - Changed [Jackal](#豺狼) & [Sidekick](#跟班) to always be killable by [Sheriff](#警長)
@@ -135,7 +158,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 - New option: Ghosts can see votes
 - New option: [Jackal](#豺狼) and [Sidekick](#跟班) have Impostor vision
 - New option: [Jester](#小丑) can sabotage
-- Changed FreePlay mode to not assign custom roles anymore
+- Changed Freeplay mode to not assign custom roles anymore
 - Fixed a bug with directional hats not using their flip image after a while
 
 **Version 2.6.3**
@@ -155,7 +178,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 
 **Version 2.6.0**
 - **New Role:** [Arsonist](#縱火狂)
-- Added an Ingame Updater, to make it easier to update the Mod
+- Added an In-Game Updater, to make it easier to update the Mod
 - Added synchronization for Airship toilet doors. Doors now open/close for everyone
 - Changed Shifter to also die when shifting a neutral role (Jester, Arsonist, Jackal, ...)
 - Changed the option "Jester Can Die To Sheriff" to "Neutrals Can Die To Sheriff"
@@ -168,10 +191,10 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 
 **Version 2.5.1**
 - **New Hats:** We added the support for custom hats and there are already a few hats inside the game. We can add new hats without updating the mod and we're awaiting your hat designs on our discord server.
-- Changed Lovers to ignore Lover's Tasks for Taskwin, while an ImpLover is alive
+- Changed Lovers to ignore Lover's Tasks for task win, while an ImpLover is alive
 - Fixed a bug where garlic was not visible in some places
 - The Security Guard can't place cameras on MiraHQ anymore
-- Fixed a bug on there Airship, where the view of the cameras that the Security Guard placed wasn't centered on the camera.
+- Fixed a bug on the Airship, where the view of the cameras that the Security Guard placed wasn't centered on the camera.
 
 **Version 2.5.0**
 - **New Role:** [Security Guard](#守衛)
@@ -198,11 +221,11 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 - Added Trickster Box vent animation. Thanks to [Drakoni](https://twitter.com/Drakoni13)
 - You can now change the custom server ip/port right inside the game
 - The Jackal, the Sidekick and the Jester now have fake tasks
-- Added outlines, to show who you're targetting with your ability. Thanks to [Sihaack](https://github.com/sihaack) for part of the code.
+- Added outlines, to show who you're targeting with your ability. Thanks to [Sihaack](https://github.com/sihaack) for part of the code.
 - Added a streamer mode to Among Us, which hides lobby codes, the ip of your custom server and the port of your custom server. You can also modify the text that replaces the lobby code, check [Settings](#設定) for more details.
-- Changed Meeting Hud Layout when playing with more than 10 players
+- Changed Meeting HUD Layout when playing with more than 10 players
 - Fixed a bug where **ImpLovers** would hardly spawn
-- Fixed a bug where players could get stuck on ladders/platforms when being rewinded
+- Fixed a bug where players could get stuck on ladders/platforms when being rewound
 - Fixed a bug where players could only use quickchat
 - Fixed a bug which prevented to play in Freeplay mode
 - Fixed a bug which moved the Ping info off-screen
@@ -221,7 +244,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 **Version 2.2.0**
 - **Works with the latest Among Us version (2021.4.12s)**
 - **Added support for 10+ player lobbies on custom servers:** Check the [Custom Servers and 10+ Players](#custom-servers-and-10-players) section. During meetings use the up/down keys, on vitals use the left/right keys.
-- **Added a new Impostor role: The Trickster** check the [Trickster](#詭騙師) section for more infos
+- **Added a new Impostor role: The Trickster** check the [Trickster](#詭騙師) section for more info
 - You can now set how long the Time Master shield lasts
 - The host now sees for how long the lobby will remain open
 - We changed the look/layout of the settings
@@ -229,7 +252,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 - You can now choose whether the Eraser is able to erase the Spy/Impostors or not
 - Fixed a bug where a Lovers win wasn't displayed properly
 - Fixed the Among Us bug where people were unable to move after meetings
-- We added a version checking system: The host can only start the game if everyone in his lobby has the same version of the mod installed (he will see, who is using a wrong version). This prevents hacking in public lobbies and bugs because of version missmatches.
+- We added a version checking system: The host can only start the game if everyone in his lobby has the same version of the mod installed (he will see, who is using a wrong version). This prevents hacking in public lobbies and bugs because of version mismatches.
 - Fixed a bug where the Mini Impostor had the same cooldowns as normal Impostors
 - Fixed a bug where the Vampire/Janitor/Mafioso would lose their kill button after being erased
 - The Mini is now able to use ladders and it can do all the tasks right away
@@ -241,7 +264,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 
 **Hotfix 2.0.1**
 - Fixed a bug where camouflaged players would get stuck on ladders/platforms on the airship
-- Introduced a one second cooldown after the Morphling sampled another player
+- Introduced a one-second cooldown after the Morphling sampled another player
 - The Mini can now always reach all usables (ladders, tasks, ...)
 - We removed a bug, where some footprints remained on the ground forever
 - We removed a bug, where the Detective didn't see the right color type when reporting a player
@@ -269,7 +292,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 - Add map and Impostor count to lobby settings.
 - Fixed bugs where changing players to be the Sidekick didn't reset all the effects of their previous role.
 
-**Hotfix 1.8.1** Resolves bugs that occured when the Jackal recruited a Medic, Swapper and Tracker\
+**Hotfix 1.8.1** Resolves bugs that occurred when the Jackal recruited a Medic, Swapper and Tracker\
 \
 **Changes in v1.8:**
 - **New Roles:** Added the Jackal and Sidekick roles
@@ -295,21 +318,21 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 
 \
 **Changes in v1.5:**
-- Time Master - Buff: He is not affected by his rewind anymore, which gives him more utility. Players will now be rewinded out of vents.
+- Time Master - Buff: He is not affected by his rewind anymore, which gives him more utility. Players will now be rewound out of vents.
 - Mini - Nerf: The Mini now grows up (see [Mini](#迷你)) and becomes a normal Crewmate at some point. A growing Mini is not killable anymore. Some tasks are still not doable for the small Mini, we are working on that. But eventually when growing up it can do all the tasks as it's size increases.
 - Seer - Nerf: Added an option that sets how often the Seer mistakes the player for another.
 - Hacker - Nerf: The Hacker now only sees the additional information when he activates his "Hacker mode". That should stops the Hacker from camping the admin table/vitals.
 - Other: Camouflager/Morphling cooldowns were fixed. Custom regions code was removed to enable 3rd party tools. Some minor bugfixes.
 
 **Changes in v1.4:**
-- Fixing a Camoflager/Morphling animation bug
+- Fixing a Camouflager/Morphling animation bug
 - Fixing a bug where the Swapper could swap votes even if they are dead
 - The custom cooldown buttons now render the cooldown progress (the grey overlay) in the right way (v1.3 introduced the bug)
 - Players in vents are not targetable anymore by the role actions, the button does not activate (e.g. Seer revealing, Morphling sample). Exception: Impostor killing an Engineer in a vent
 
 **Changes in v1.3:**
 - Adds support for the Among Us version **2021.3.5s**
-- Fixes a bug where a an edge case caused all players to start the game with the camouflaged look
+- Fixes a bug where an edge case caused all players to start the game with the camouflaged look
 - There might be a few bugs, since I focused on getting the update out fast. A new version resolving the bugs will be published tomorrow.
 
 **Changes in v1.1:**
@@ -347,7 +370,7 @@ Not working? You might want to install the dependency [vc_redist](https://aka.ms
 4. Launch the game via Steam
 
 # Custom Servers and 10+ Players
-We always recommend you to play on custom servers rather than on the official ones. If you want to play with more than 10 players in one lobby, you're required to use a custom server. Credits for the original implementation that allowed 10+ player lobbies go to the creaters of the [CrowdedMod](https://github.com/CrowdedMods/CrowdedMod).
+We always recommend you to play on custom servers rather than on the official ones. If you want to play with more than 10 players in one lobby, you're required to use a custom server. Credits for the original implementation that allowed 10+ player lobbies go to the creators of the [CrowdedMod](https://github.com/CrowdedMods/CrowdedMod).
 
 **Setup the Clients:**
 1. Open the region menu where you can choose between the different regions
@@ -410,15 +433,16 @@ docker run -d -p 22023:22023/udp --env IMPOSTOR_AntiCheat__Enabled=false --env I
 [TownOfUs](https://github.com/slushiegoose/Town-Of-Us) - Idea for the Swapper, Shifter, Arsonist and a similar Mayor role come from **Slushiegoose**\
 [Ottomated](https://twitter.com/ottomated_) - Idea for the Morphling, Snitch and Camouflager role come from **Ottomated**\
 [Crowded-Mod](https://github.com/CrowdedMods/CrowdedMod) - Our implementation for 10+ player lobbies is inspired by the one from the **Crowded Mod Team**\
+[Goose-Goose-Duck](https://store.steampowered.com/app/1568590/Goose_Goose_Duck) - Idea for the Vulture role come from **Slushygoose**
 
 # 設定
 The mod adds a few new settings to Among Us (in addition to the role settings):
 - **Streamer Mode:** You can activate the streamer mode in the Among Us settings. It hides the lobby code, the custom server ip and the custom server port. You can set a custom lobby code replacement text, by changing the *Streamer Mode Replacement Text* in the `BepInEx\config\me.eisbison.theotherroles.cfg` file.
 - **Number of Impostors:** The number of Impostor count be set inside a lobby
 - **Map:** The map can be changed inside a lobby
-- **Maximum Number Of Meetings:** You can set the maximum number of meetings that can be called in total (every player still has personal maximum of buttons, but if the maximum number of meetings is reached you can't use your meetings even if you have some left, Impostor and Jackal meetings also count)
+- **Maximum Number Of Meetings:** You can set the maximum number of meetings that can be called in total (Every player still has personal maximum of buttons, but if the maximum number of meetings is reached you can't use your meetings even if you have some left. Impostor and Jackal meetings also count)
 - **Allow Skips On Emergency Meetings:** If set to false, there will not be a skip button in emergency meetings. If a player does not vote, he'll vote himself.
-- **Hide Player Names:** Hides the names of all players that have role which is unknown to you. Team Lovers/Impostors/Jackal still see the names of their teammates. Impostors can alse see the name of the Spy and everyone can still see the age of the mini.
+- **Hide Player Names:** Hides the names of all players that have role which is unknown to you. Team Lovers/Impostors/Jackal still see the names of their teammates. Impostors can also see the name of the Spy and everyone can still see the age of the mini.
 - **Ghosts Can See Roles**
 - **Ghosts Can See Votes**
 - **Ghosts Can See The Number Of Remaining Tasks**
@@ -468,7 +492,7 @@ Here are a few instructions, on how to create a custom hat:
     - `Climb texture (optional)`:
         - This texture will be rendered in front of the player, when he's climbing.
         - The name of the texture needs to follow the pattern `hatname_climb.png`.
-- **Testing:** You can test your hat design by putting all the files in the `\TheOtherHats\Test` subfolder of your mod folder. Then whenever you start a freeplay game, you and all the dummies will be wearing the new hat. You don't need to restart Among Us if you change the hat files, just exit and reenter the freeplay mode.
+- **Testing:** You can test your hat design by putting all the files in the `\TheOtherHats\Test` subfolder of your mod folder. Then whenever you start a Freeplay game, you and all the dummies will be wearing the new hat. You don't need to restart Among Us if you change the hat files, just exit and reenter the Freeplay mode.
 
 - **Submission:** If you got a hat design, you can submit it on our [Discord server](https://discord.gg/77RkMJHWsM). We'll look at all the hats and add all the good ones to the game.
 
@@ -483,7 +507,7 @@ if you're using it right.
 
 First you need to choose how many special roles of each kind (偽裝者/Neutral/Crewmate) you want in the game.
 The count you set will only be reached, if there are enough Crewmates/偽裝者s in the game and if enough roles are set to be in the game (i.e. they are set to > 0%). The roles are then being distributed as follows:
-- First all roles that are set to 100% are being assigned to arbitrary players
+- First all roles that are set to 100% are being assigned to arbitrary players.
 - After that each role that has 10%-90% selected adds 1-9 tickets to a ticket pool (there exists a ticket pool for Crewmates, Neutrals and 偽裝者s). Then the roles will be selected randomly from the pools as long it's possible (until the selected number is reached, until there are no more Crewmates/偽裝者s or until there are no more tickets). If a role is selected from the pool, obviously all the tickets of that role are being removed.
 - The 黑手黨, 戀人 and 迷你 are being selected independently (without using the ticket system) according to the spawn chance you selected. After that the Crewmate, Neutral and 偽裝者 roles are selected and assigned in a random order.
 
@@ -559,7 +583,7 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 **NOTE:**
 - 如果在召開會議時被咬的玩家還活著，他會在會議開始時死亡。
 - 咬人冷卻時間與殺人冷卻時間相同(如果吸血鬼咬目標則外加死亡延遲時間)。
-- 如果遊戲中有吸血鬼，就不可能有咒詛師
+- 如果遊戲中有吸血鬼，就不可能有咒詛師。
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -580,11 +604,11 @@ By default the Eraser can erase everyone but the Spy and other 偽裝者s. Depen
 he can also erase them (偽裝者s will lose their special 偽裝者 ability).
 \
 **NOTE:**
-- The Shifter shift will always be triggered before the Erase (hence either the new role of the Shifter will be erased or the Shifter saves the role of his target, depending on who the Eraser erased)
+- The Shifter shift will always be triggered before the Erase (hence either the new role of the Shifter will be erased or the Shifter saves the role of his target, depending on whom the Eraser erased)
 - Erasing a Lover automatically erases the other Lover as well (if the second Lover is an ImpLover, he will turn into an 偽裝者)
 - Erasing a Jackal that has a Sidekick, triggers the Sidekick promotion if it's activated in the settings
-- As the erasing is being triggered before the eject of a player, erasing and voting out a Lover in the same round, would result in the
-  ex Lover surviving as the partnership was erased before. Also a Jester win would not happen, as the erase will be triggered before.
+- As the erase is being triggered before the ejection of a player, erasing and voting out a Lover in the same round, would result in the
+  ex-Lover surviving, as the partnership was erased before. Also a Jester win would not happen, as the erase will be triggered before.
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -598,7 +622,7 @@ he can also erase them (偽裝者s will lose their special 偽裝者 ability).
 ### **隊伍:偽裝者**
 The Trickster is an 偽裝者 that can place 3 jack-in-the-boxes that are invisible at first to other players. \
 If the Trickster has placed all of his boxes they will be converted into a vent network usable only by the Trickster himself, but the boxes are revealed to the others. \
-If the boxes are converted to a vent network, the Trickster gains a new ability "Lights out" to limit the visibility of Non-偽裝者s, that cannot be fixed by other players. Lights are automatically restored after a while. 
+If the boxes are converted to a vent network, the Trickster gains a new ability "Lights out" to limit the visibility of Non-Impostors, that cannot be fixed by other players. Lights are automatically restored after a while.\
 
 \
 **NOTE:**
@@ -615,7 +639,7 @@ If the boxes are converted to a vent network, the Trickster gains a new ability 
 
 ## 清除者
 ### **隊伍:偽裝者**
-The Cleaner is an 偽裝者 who has the ability to clean up dead bodies. \
+The Cleaner is an 偽裝者 who has the ability to clean up dead bodies.\
 
 \
 **NOTE:**
@@ -634,11 +658,11 @@ The Cleaner is an 偽裝者 who has the ability to clean up dead bodies. \
 The Warlock is an 偽裝者, that can curse another player (the cursed player doesn't get notified).\
 If the cursed person stands next to another player, the Warlock is able to kill that player (no matter how far away he is).\
 Performing a kill with the help of a cursed player, will lift the curse and it will result in the Warlock being unable to move for a configurable amount of time.\
-The Warlock can still perform normal kills, but the two buttons share the same cooldown.
+The Warlock can still perform normal kills, but the two buttons share the same cooldown.\
 
 \
 **NOTE:**
-- The Warlock can always kill his 偽裝者 mates (and even himselfs) using the "cursed kill"
+- The Warlock can always kill his 偽裝者 mates (and even himself) using the "cursed kill"
 - If there is a Warlock in the game, there can't be a Vampire
 - Performing a normal kill, doesn't lift the curse
 
@@ -656,11 +680,11 @@ The Warlock can still perform normal kills, but the two buttons share the same c
 \
 Created by  [Mallöris](https://github.com/Mallaris)\
 \
-The Bounty Hunter is an 偽裝者, that continuously get bountys (the targeted player doesn't get notified).\
-The target of the Bounty Hunter swaps after every meeting and after a configuarble amount of time.\
+The Bounty Hunter is an Impostor, that continuously get bounties (the targeted player doesn't get notified).\
+The target of the Bounty Hunter swaps after every meeting and after a configurable amount of time.\
 If the Bounty Hunter kills his target, his kill cooldown will be a lot less than usual.\
 Killing a player that's not his current target results in an increased kill cooldown.\
-Depending on the options, there'll be an arrow pointing towards the current target.
+Depending on the options, there'll be an arrow pointing towards the current target.\
 
 \
 **NOTE:**
@@ -682,11 +706,10 @@ Depending on the options, there'll be an arrow pointing towards the current targ
 ## 賭徒
 ### **隊伍:船員或偽裝者**
 The 賭徒 can be a Crewmate or an 偽裝者 (depending on the settings).\
-The 賭徒 can shoot a player during the meeting, by guessing its role. If the guess is wrong, the 賭徒 dies instead.\
-You can select how many players can be shot per meeting and how many players can be shot per game.\
+The 賭徒 can shoot players during the meeting, by guessing its role. If the guess is wrong, the 賭徒 dies instead.\
+You can select how many players can be shot per game and if multiple players can be shot during a single meeting.\
 The guesses 偽裝者 and Crewmate are only right, if the player is part of the corresponding team and has no special role.\
-You can only shoot during the voting time.
-
+You can only shoot during the voting time.\
 \
 **NOTE:**
 - The vote of a shot player, won't be counted
@@ -701,6 +724,7 @@ You can only shoot during the voting time.
 | 賭徒是個偽裝者的機率 | -
 | 一場遊戲中賭徒的嘗試次數 | -
 | 一場會議中賭徒的嘗試次數 | -
+| Guesser Can Shoot Multiple Times Per Meeting| -
 
 -----------------------
 
@@ -778,7 +802,7 @@ After dousing everyone alive the Arsonist can ignite all the players which resul
 ## 靈媒
 ### **隊伍:船員**
 The Seer has two abilities (one can activate one of them or both in the options).
-The Seer sees the souls of players that died a round earlier, the souls slowy fade away.
+The Seer sees the souls of players that died a round earlier, the souls slowly fade away.
 The Seer gets a blue flash on his screen, if a player dies somewhere on the map.
 
 ### 遊戲選項
@@ -796,7 +820,7 @@ The Engineer (if alive) can fix one sabotage per game from anywhere on the map.\
 The Engineer can use vents. If the Engineer is inside a vent, the 偽裝者s will see a blue outline
 around all vents on the map (in order to warn them).
 Because of the vents the Engineer might not be able to start some tasks using the "Use" button,
-you can double click on the tasks instead.
+you can double-click on the tasks instead.
 \
 **NOTE:**
 - The kill button of 偽裝者s activates if they stand next to a vent where the Engineer is. They can also kill them there. No other action (e.g. Morphling sample, Shifter shift, ...) can affect players inside vents.
@@ -822,7 +846,7 @@ you can double click on the tasks instead.
 |----------|:-------------:|
 | 偵探生成機率 | -
 | 匿名足跡 | If set to true, all footprints will have the same color. Otherwise they will have the color of the respective player.
-| 足跡間隔 | The intervall between two footprints
+| 足跡間隔 | The interval between two footprints
 | 足跡持續時間 | Sets how long the footprints remain visible.
 | 偵探報告將有名字的時間 | The amount of time that the Detective will have to report the body since death to get the killer's name.  |
 | 偵探報告將有顏色類型的時間 | The amount of time that the Detective will have to report the body since death to get the killer's color type. |
@@ -830,7 +854,7 @@ you can double click on the tasks instead.
 
 ## 點燈人
 ### **隊伍:船員**
-The Lighter can turn on his Lighter every now and then, which increases his vision by a costumizable amount.
+The Lighter can turn on his Lighter every now and then, which increases his vision by a customizable amount.
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -892,7 +916,7 @@ The Lighter can turn on his Lighter every now and then, which increases his visi
 
 ## 市長
 ### **隊伍:船員**
-The Mayor leades the Crewmates by having a vote that counts twice.\
+The Mayor leads the Crewmates by having a vote that counts twice.\
 The Mayor can always use his meeting, even if the maximum number of meetings was reached.
 
 ### 遊戲選項
@@ -909,7 +933,7 @@ Otherwise he sees the same information as everyone else.
 **Vitals**: The Hacker can see how long dead players have been dead for.\
 \
 **NOTE:**
-- If the Morphling morphes or the Camouflager camouflages, the colors on the admin table change accordingly
+- If the Morphling morphs or the Camouflager camouflages, the colors on the admin table change accordingly
 - More information about the [顏色](#顏色)
 
 ### 遊戲選項
@@ -929,14 +953,14 @@ The Shift will always be performed at the end of the next meeting right before a
 Even if the Shifter or the target dies before the meeting, the Shift will still be performed.\
 Swapping roles with an 偽裝者 or Neutral fails and the Shifter commits suicide after the next meeting (there won't be any body).\
 The Shifter aims to save roles from leaving the game, by e.g. taking over a Sheriff or Medic that is known to the 偽裝者s.\
-This works especially well against the Eraser, but also gives the Eraser the possiblity to act like a Shifter.\
+This works especially well against the Eraser, but also gives the Eraser the possibility to act like a Shifter.\
 The **special interactions** with the Shifter are noted in the chapters of the respective roles.\
 \
 **NOTE:**
-- The Shifter shift will always be triggered before the Erase (hence either the new role of the Shifter will be erased or the Shifter saves the role of his target, depending on who the Eraser erased)
+- The Shifter shift will always be triggered before the Erase (hence either the new role of the Shifter will be erased or the Shifter saves the role of his target, depending on whom the Eraser erased)
 - If the Shifter takes over a role, their new cooldowns will start at the maximum cooldown of the ability
 - One time use abilities (e.g. shielding a player or Engineer sabotage fix) can only used by one player in the game (i.e. the Shifter
-  can only use them, if the previous player did not used them before)
+can only use them, if the previous player did not use them before)
 
 ### 遊戲選項
 | 名稱 | 描述
@@ -948,18 +972,18 @@ The **special interactions** with the Shifter are noted in the chapters of the r
 ## 時間管理大師
 ### **隊伍:船員**
 The Time Master has a time shield which he can activate. The time shield remains active for a configurable amount of time.\
-If a player trys to kill the Time Master while the time shield is active, the kill won't happen and the
+If a player tries to kill the Time Master while the time shield is active, the kill won't happen and the
 time will rewind for a set amount of time.\
 The kill cooldown of the killer won't be reset, so the Time Master
 has to make sure that the game won't result in the same situation.\
 The Time Master won't be affected by the rewind.\
 \
 **NOTE:**
-- Only the movement is affected by the rewind
+- Only the movement is affected by the rewind.
 - A Vampire bite will trigger the rewind. If the Time Master misses shielding the bite, he can still shield the kill which happens a few seconds later.
-- If the Time Master was bitten and has his shield active before when a meeting is called, he survives but the time won't be rewinded.
+- If the Time Master was bitten and has his shield active before when a meeting is called, he survives but the time won't be rewound.
 - If the Time Master has a Medic shield, he won't rewind.
-- The shield itself ends immediately when triggered. So the timemaster can be attacked again as soon as the rewind ends.
+- The shield itself ends immediately when triggered. So the Time Master can be attacked again as soon as the rewind ends.
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -974,7 +998,7 @@ The Time Master won't be affected by the rewind.\
 ### **隊伍:船員**
 During meetings the Swapper can exchange votes that two people get (i.e. all votes
 that player A got will be given to player B and vice versa).\
-Because of the Swappers strength in meetings, they might not start emergency meetings
+Because of the Swapper's strength in meetings, they might not start emergency meetings
 and can't fix lights and comms.
 
 ### 遊戲選項
@@ -990,7 +1014,7 @@ and can't fix lights and comms.
 The Tracker can select one player to track.
 Depending on the options the Tracker can track a different person after each meeting or the Tracker tracks the same person for the whole game.
 An arrow points to the last tracked position of the player.
-The arrow updates it's position every few seconds (configurable).
+The arrow updates its position every few seconds (configurable).
 
 ### 遊戲選項
 | 名稱 | 描述
@@ -1021,11 +1045,11 @@ The Jackal has no tasks and can kill 偽裝者s, Crewmates and Neutrals.\
 The Jackal (if allowed by the options) can select another player to be his Sidekick.
 Creating a Sidekick removes all tasks of the Sidekick and adds him to the team Jackal. The Sidekick loses his current role (except if he's a Lover, then he plays in two teams).
 The "Create Sidekick Action" may only be used once per Jackal or once per game (depending on the options).
-The Jackal can also promote 偽裝者s to be his Sidekick, but depending on the options the 偽裝者 will either really turn into the Sidekick and leave the team 偽裝者s or he will just look like the Sidekick to the Jackal an remain as he was.\
+The Jackal can also promote 偽裝者s to be his Sidekick but, depending on the options the 偽裝者 will either really turn into the Sidekick and leave the team 偽裝者s or he will just look like the Sidekick to the Jackal and remain as he was.\
 \
 The team Jackal enables multiple new outcomes of the game, listing some examples here:
 - The 偽裝者s could be eliminated and then the crew plays against the team Jackal.
-- The Crew could be eliminated, then the Team Jackal fight against the 偽裝者s (the Crew can still make a task win in this scenario)
+- The Crew could be eliminated, then the Team Jackal fight against the 偽裝者s (The Crew can still make a task win in this scenario)
 
 The priority of the win conditions is the following:
 1. Crewmate 迷你 lose by vote
@@ -1036,14 +1060,14 @@ The priority of the win conditions is the following:
 6. 戀人 among the last three players win
 7. Team Jackal wins by outnumbering (When the team Jackal contains an equal or greater amount of players than the Crew and there are 0 偽裝者s left and team Jackal contains no Lover)
 8. Team 偽裝者 wins by outnumbering (When the team 偽裝者s contains an equal or greater amount of players than the Crew and there are 0 players of the team Jackal left and team 偽裝者s contains no Lover)
-9. Team Crew wins by outnumbering (When there is no player of the team Jackal and the team Impostrs left)
+9. Team Crew wins by outnumbering (When there is no player of the team Jackal and the team Impostors left)
 
 **NOTE:**
 - The Jackal (and his Sidekick) may be killed by a Sheriff.
-- A Jackal cannot target the 迷你, while it's growing up. After that he can kill it or select it as its Sidekick
-- The Crew can still win, even if all of their members are dead, if they finish their tasks fast enough (that's why converting the last Crewmate with tasks left into a Sidekick results in a task win for the crew)
+- A Jackal cannot target the 迷你, while it's growing up. After that he can kill it or select it as its Sidekick.
+- The Crew can still win, even if all of their members are dead, if they finish their tasks fast enough (That's why converting the last Crewmate with tasks left into a Sidekick results in a task win for the crew.)
 
-If both 偽裝者s and Jackals are in the game the game continues even if all Crewmates are dead. Crewmates may still win in this case by completing their tasks. Jackal and 偽裝者 have to kill each other.
+If both 偽裝者s and Jackals are in the game the game, continues even if all Crewmates are dead. Crewmates may still win in this case by completing their tasks. Jackal and 偽裝者 have to kill each other.
 
 
 
@@ -1056,8 +1080,9 @@ If both 偽裝者s and Jackals are in the game the game continues even if all Cr
 | 豺狼可使用通風口 | Yes/No |
 | 豺狼可製造跟班跟班 | Yes/No |
 | 在豺狼死亡後跟班可升職成豺狼 | Yes/No (to prevent the Jackal team from growing) |
-| 跟班可以殺人 | Yes/No (to prevent a Jackal from turning an 偽裝者 into a Sidekick, if he uses the ability on an 偽裝者 he sees the 偽裝者 as Sidekick, but the 偽裝者 isn't converted to Sidekick. If this option is set to "No" Jackal and Sidekick can kill each other ) |
+| 跟班可以殺人 | Yes/No (to prevent a Jackal from turning an 偽裝者 into a Sidekick, if he uses the ability on an 偽裝者 he sees the 偽裝者 as Sidekick, but the 偽裝者 isn't converted to Sidekick. If this option is set to "No" Jackal and Sidekick can kill each other.) |
 | 豺狼與跟班有偽裝者視野 | - |
+| Jackal and Sidekick Can See Engineer Vent | - | If set to true, team Jackal will see vents highlited like Impostors if an Engineer is inside one
 -----------------------
 
 ## 跟班
@@ -1105,7 +1130,7 @@ Placing a new camera and sealing vents takes a configurable amount of screws. Th
 The new camera will be visible after the next meeting and accessible by everyone.\
 The vents will be sealed after the next meeting, players can't enter or exit sealed vents, but they can still "move to them" underground.\
 **NOTE:**
-- Tickster boxes can't be sealed
+- Trickster boxes can't be sealed
 - The Security Guard can't place Cameras on MiraHQ
 - The remaining number of screws can be seen above his special button
 - On Skeld the four cameras will be replaced every 3 seconds (with the next four cameras). You can also navigate manually using the arrow keys.
@@ -1124,7 +1149,7 @@ The vents will be sealed after the next meeting, players can't enter or exit sea
 ## 誘餌
 ### **隊伍:船員**
 \
-Created by  [Mallöris](https://github.com/Mallaris)\
+Created by [Mallöris](https://github.com/Mallaris)\
 \
 誘餌是一個船員如果他被殺死，他會強制殺手舉報該誘餌（您可以在選項中設定延遲）。
 此外，誘餌可以查看是否有人在通風口內（取決於設定，發光準確的通風口或所有通風口都可以）。
@@ -1135,10 +1160,55 @@ Created by  [Mallöris](https://github.com/Mallaris)\
 | 誘餌生成機率 | -
 | 誘餌所有通風口發光 | 如果設置為開，玩家在其中一個通風口內，所有通風口都將發光。 如果設置為關，則只會發光玩家所在的通風口。
 | 誘餌舉報延遲 | -
+-----------------------
+
+## Medium
+### **Team: Crewmates**
+\
+Created by [Mallöris](https://github.com/Mallaris)\
+\
+The medium is a crewmate who can ask the souls of dead players for information. Like the Seer, it sees the places where the players have died (after the next meeting) and can question them. It then gets random information about the soul or the killer in the chat. The souls only stay for one round, i.e. until the next meeting. Depending on the options, the souls can only be questioned once and then disappear.
+
+Questions:
+What is your Role?
+What is your killer's color type?
+When did you die?
+What is your killers role? (mini exluded)
+
+### Game Options
+| Name | Description
+|----------|:-------------:|
+| Medium Spawn Chance | -
+| Medium Cooldown | -
+| Medium Duration | The time it takes to question a soul
+| Medium Each Soul Can Only Be Questioned Once | If set to true, souls can only be questioned once and then disappear
+-----------------------
+
+## Vulture
+### **Team: Neutral**
+\
+Created by [Mallöris](https://github.com/Mallaris)\
+\
+The Vulture does not have any tasks, he has to win the game as a solo.\
+The Vulture is a neutral role that must eat a specified number of corpses (depending on the options) in order to win.\
+Depending on the options, when a player dies, the Vulture gets an arrow pointing to the corpse.
+
+### Game Options
+| Name | Description |
+|----------|:-------------:|
+| Vulture Spawn Chance | -
+| Vulture Countdown | -
+| Number Of Corpses Needed To Be Eaten | Corpes needed to be eaten to win the game
+| Vulture Can Use Vents | -
+| Show Arrows Pointing Towards The Corpes | -
+-----------------------
 
 # 原始碼
 It's bad I know, this is a side project and my second week of modding. So there are no best practices around here.
 You can use parts of the code but don't copy paste the whole thing. Make sure you give credits to the other developers, because some parts of the code are based on theirs.
 
 # Bugs, suggestions and requests
-If you found any bugs, have an idea for a new role or any other request, join our [Discord server](https://discord.gg/77RkMJHWsM)
+If you found any bugs, have an idea for a new role or any other request, join our [Discord server](https://discord.gg/77RkMJHWsM).
+
+# Copyedit
+Thanks for fixing our typos [jacktose](https://github.com/jacktose) ✌️
