@@ -203,8 +203,8 @@ namespace TheOtherRoles {
             // Using new id's for the options to not break compatibilty with older versions
             crewmateRolesCountMin = CustomOption.Create(300, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小船員職業數"), 0f, 0f, 15f, 1f, null, true);
             crewmateRolesCountMax = CustomOption.Create(301, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大船員職業數"), 0f, 0f, 15f, 1f);
-            neutralRolesCountMin = CustomOption.Create(302, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小中立職業數"), 0f, 0f, 15f, 1f);
-            neutralRolesCountMax = CustomOption.Create(303, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大中立職業數"), 0f, 0f, 15f, 1f);
+            neutralRolesCountMin = CustomOption.Create(302, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小獨立職業數"), 0f, 0f, 15f, 1f);
+            neutralRolesCountMax = CustomOption.Create(303, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大獨立職業數"), 0f, 0f, 15f, 1f);
             impostorRolesCountMin = CustomOption.Create(304, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小偽裝者職業數"), 0f, 0f, 3f, 1f);
             impostorRolesCountMax = CustomOption.Create(305, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大偽裝者職業數"), 0f, 0f, 3f, 1f);
 
@@ -258,8 +258,8 @@ namespace TheOtherRoles {
 
             guesserSpawnRate = CustomOption.Create(310, cs(Guesser.color, "賭徒"), rates, null, true);
             guesserIsImpGuesserRate = CustomOption.Create(311, "賭徒是個偽裝者的機率", rates, guesserSpawnRate);
-            guesserNumberOfShots = CustomOption.Create(312, "賭徒的嘗試次數", 2f, 1f, 15f, 1f, guesserSpawnRate);
-            guesserHasMultipleShotsPerMeeting = CustomOption.Create(313, "Guesser Can Shoot Multiple Times Per Meeting", false, guesserSpawnRate);
+            guesserNumberOfShots = CustomOption.Create(312, "賭徒的猜測次數", 2f, 1f, 15f, 1f, guesserSpawnRate);
+            guesserHasMultipleShotsPerMeeting = CustomOption.Create(313, "賭徒每個會議可以猜測多次", false, guesserSpawnRate);
 
             jesterSpawnRate = CustomOption.Create(60, cs(Jester.color, "小丑"), rates, null, true);
             jesterCanCallEmergency = CustomOption.Create(61, "小丑可召開緊急會議", true, jesterSpawnRate);
@@ -280,13 +280,13 @@ namespace TheOtherRoles {
             jackalPromotedFromSidekickCanCreateSidekick = CustomOption.Create(228, "從跟班升職的豺狼可製造跟班", true, jackalSpawnRate);
             jackalCanCreateSidekickFromImpostor = CustomOption.Create(229, "豺狼可讓偽裝者轉成跟班", true, jackalSpawnRate);
             jackalAndSidekickHaveImpostorVision = CustomOption.Create(430, "豺狼與跟班有偽裝者視野", false, jackalSpawnRate);
-            jackalCanSeeEngineerVent = CustomOption.Create(431, "Jackal Can See If Engineer Is In A Vent", false, jackalSpawnRate);
+            jackalCanSeeEngineerVent = CustomOption.Create(431, "豺狼是否可以看到工程師在通風口", false, jackalSpawnRate);
 
-            vultureSpawnRate = CustomOption.Create(340, cs(Vulture.color, "Vulture"), rates, null, true);
-            vultureCooldown = CustomOption.Create(341, "Vulture Cooldown", 15f, 10f, 60f, 2.5f, vultureSpawnRate);
-            vultureNumberToWin = CustomOption.Create(342, "Number Of Corpses Needed To Be Eaten", 4f, 0f, 10f, 1f, vultureSpawnRate);
-            vultureCanUseVents = CustomOption.Create(343, "Vulture Can Use Vents", true, vultureSpawnRate);
-            vultureShowArrows = CustomOption.Create(344, "Show Arrows Pointing Towards The Corpes", true, vultureSpawnRate);
+            vultureSpawnRate = CustomOption.Create(340, cs(Vulture.color, "禿鷲"), rates, null, true);
+            vultureCooldown = CustomOption.Create(341, "禿鷲冷卻", 15f, 10f, 60f, 2.5f, vultureSpawnRate);
+            vultureNumberToWin = CustomOption.Create(342, "需要吃的屍體數量", 4f, 0f, 10f, 1f, vultureSpawnRate);
+            vultureCanUseVents = CustomOption.Create(343, "禿鷲可以使用通風口", true, vultureSpawnRate);
+            vultureShowArrows = CustomOption.Create(344, "顯示指向屍體的箭頭", true, vultureSpawnRate);
 
             shifterSpawnRate = CustomOption.Create(70, cs(Shifter.color, "轉職者"), rates, null, true);
             shifterShiftsModifiers = CustomOption.Create(71, "轉職者轉移調整", false, shifterSpawnRate);
@@ -322,9 +322,9 @@ namespace TheOtherRoles {
             medicShowAttemptToShielded = CustomOption.Create(144, "裝盾玩家可看到謀殺未遂", false, medicSpawnRate);
             medicSetShieldAfterMeeting = CustomOption.Create(145, "盾在會議後生效", false, medicSpawnRate);
 
-            swapperSpawnRate = CustomOption.Create(150, cs(Swapper.color, "掉包師"), rates, null, true);
-            swapperCanCallEmergency = CustomOption.Create(151, "掉包師可召開緊急會議", false, swapperSpawnRate);
-            swapperCanOnlySwapOthers = CustomOption.Create(152, "掉包師只可掉包其他人的得票", false, swapperSpawnRate);
+            swapperSpawnRate = CustomOption.Create(150, cs(Swapper.color, "換票師"), rates, null, true);
+            swapperCanCallEmergency = CustomOption.Create(151, "換票師可召開緊急會議", false, swapperSpawnRate);
+            swapperCanOnlySwapOthers = CustomOption.Create(152, "換票師只可掉包其他人的得票", false, swapperSpawnRate);
 
             seerSpawnRate = CustomOption.Create(160, cs(Seer.color, "靈媒"), rates, null, true);
             seerMode = CustomOption.Create(161, "靈媒能力模式", new string[]{ "顯示死亡閃爍 + 靈魂", "顯示死亡閃爍", "顯示靈魂"}, seerSpawnRate);
@@ -361,10 +361,10 @@ namespace TheOtherRoles {
             baitHighlightAllVents = CustomOption.Create(331, "如果通風口被佔用所有通風口發光", false, baitSpawnRate);
             baitReportDelay = CustomOption.Create(332, "誘餌舉報延遲", 0f, 0f, 10f, 1f, baitSpawnRate);
 
-            mediumSpawnRate = CustomOption.Create(360, cs(Medium.color, "Medium"), rates, null, true);
-            mediumCooldown = CustomOption.Create(361, "Medium Questioning Cooldown", 30f, 5f, 120f, 5f, mediumSpawnRate);
-            mediumDuration = CustomOption.Create(362, "Medium Questioning Duration", 3f, 0f, 15f, 1f, mediumSpawnRate);
-            mediumOneTimeUse = CustomOption.Create(363, "Each Soul Can Only Be Questioned Once", false, mediumSpawnRate);
+            mediumSpawnRate = CustomOption.Create(360, cs(Medium.color, "通靈師"), rates, null, true);
+            mediumCooldown = CustomOption.Create(361, "通靈師詢問冷卻", 30f, 5f, 120f, 5f, mediumSpawnRate);
+            mediumDuration = CustomOption.Create(362, "通靈師詢問持續時間", 3f, 0f, 15f, 1f, mediumSpawnRate);
+            mediumOneTimeUse = CustomOption.Create(363, "每個靈魂只能被詢問一次", false, mediumSpawnRate);
 
             // Other options  
             maxNumberOfMeetings = CustomOption.Create(3, "會議數量(不包括市長會議)", 10, 0, 15, 1, null, true);

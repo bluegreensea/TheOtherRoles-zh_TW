@@ -42,7 +42,7 @@ namespace TheOtherRoles
         public static RoleInfo timeMaster = new RoleInfo("時間管理大師", TimeMaster.color, "用你的時間之盾保護自己", "用你的時間之盾", RoleId.TimeMaster);
         public static RoleInfo medic = new RoleInfo("醫生", Medic.color, "用盾牌保護某人", "保護其他人", RoleId.Medic);
         public static RoleInfo shifter = new RoleInfo("轉職者", Shifter.color, "轉移你的職業", "轉移你的職業", RoleId.Shifter);
-        public static RoleInfo swapper = new RoleInfo("掉包師", Swapper.color, "掉包得票來放逐<color=#FF1919FF>偽裝者</color>", "掉包得票", RoleId.Swapper);
+        public static RoleInfo swapper = new RoleInfo("換票師", Swapper.color, "掉包得票來放逐<color=#FF1919FF>偽裝者</color>", "掉包得票", RoleId.Swapper);
         public static RoleInfo seer = new RoleInfo("靈媒", Seer.color, "你可以看到玩家的死亡", "你可以看到玩家的死亡", RoleId.Seer);
         public static RoleInfo hacker = new RoleInfo("駭客", Hacker.color, "駭入系統來找到<color=#FF1919FF>偽裝者</color>", "駭入來找到偽裝者", RoleId.Hacker);
         public static RoleInfo niceMini = new RoleInfo("好迷你", Mini.color, "在你長大之前沒有人可以傷害你", "沒有人可以傷害你", RoleId.Mini);
@@ -57,8 +57,8 @@ namespace TheOtherRoles
         public static RoleInfo goodGuesser = new RoleInfo("好賭徒", Guesser.color, "猜測並放逐", "猜測並放逐", RoleId.Guesser);
         public static RoleInfo badGuesser = new RoleInfo("壞賭徒", Palette.ImpostorRed, "猜測並放逐", "猜測並放逐", RoleId.Guesser);
         public static RoleInfo bait = new RoleInfo("誘餌", Bait.color, "引誘你的敵人", "引誘你的敵人", RoleId.Bait);
-        public static RoleInfo vulture = new RoleInfo("Vulture", Vulture.color, "Eat Corpses to win", "Eat dead bodies", RoleId.Vulture);
-        public static RoleInfo medium = new RoleInfo("Medium", Medium.color, "Question the souls of the dead to gain informations", "Question the souls", RoleId.Medium);
+        public static RoleInfo vulture = new RoleInfo("禿鷲", Vulture.color, "吃屍體來獲勝 ", "吃屍體 ", RoleId.Vulture);
+        public static RoleInfo medium = new RoleInfo("通靈師", Medium.color, "詢問靈魂來取得資訊", "詢問靈魂", RoleId.Medium);
         public static RoleInfo impostor = new RoleInfo("偽裝者", Palette.ImpostorRed, Helpers.cs(Palette.ImpostorRed, "破壞跟殺死所有人"), "破壞跟殺死所有人", RoleId.Impostor);
         public static RoleInfo crewmate = new RoleInfo("船員", Color.white, "找到偽裝者", "找到偽裝者", RoleId.Crewmate);
         public static RoleInfo lover = new RoleInfo("戀人", Lovers.color, $"你正在戀愛中", $"你正在戀愛中", RoleId.Lover);

@@ -12,13 +12,13 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 **The Other Roles** 是個 [Among Us](https://store.steampowered.com/app/945360/Among_Us) 的模組，新增了更多的職業與新的 [設定](#設定)，[自定義帽子](#自定義帽子) 及支援 [10人以上玩家](#custom-servers-and-10-players) 進到遊戲。
 更多職業即將推出 :)
 
-| 偽裝者 | 船員 | 中立 | 第二 |
+| 偽裝者 | 船員 | 獨立 | 第二 |
 |----------|-------------|-----------------|----------------|
-| [好 迷你](#迷你) | [壞 迷你](#迷你) | [縱火狂](#縱火狂) | [戀人](#戀人) |
-| [壞 賭徒](#賭徒) | [好 賭徒](#賭徒) | [小丑](#小丑) |  |
+| [好迷你](#迷你) | [壞迷你](#迷你) | [縱火狂](#縱火狂) | [戀人](#戀人) |
+| [壞賭徒](#賭徒) | [好賭徒](#賭徒) | [小丑](#小丑) |  |
 | [賞金獵人](#賞金獵人) | [偵探](#偵探) | [豺狼](#豺狼) |  |
 | [魔術師](#魔術師) | [工程師](#工程師) | [跟班](#跟班) |  |
-| [清除者](#清除者) | [駭客](#駭客) | [Vulture](#vulture) |  |
+| [清除者](#清除者) | [駭客](#駭客) | [禿鷲](#禿鷲) |  |
 | [抹除者](#抹除者) | [點燈人](#點燈人) |  |  |
 | [教父 (黑手黨)](#黑手黨) | [市長](#市長) |  |  |
 | [黑手黨員 (黑手黨)](#黑手黨) | [醫生](#醫生) |  |  |
@@ -28,11 +28,11 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 | [吸血鬼](#吸血鬼) | [轉職者](#轉職者) |  |  |
 | [咒詛師](#咒詛師) | [密探](#密探) |  |  |
 |  | [間諜](#間諜) |  |  |
-|  | [掉包師](#掉包師) |  |  |
+|  | [換票師](#換票師) |  |  |
 |  | [時間管理大師](#時間管理大師) |  |  |
 |  |  [追踪者](#追踪者) |  |  |
 |  |  [誘餌](#誘餌) |  |
-|  |  [Medium](#medium) |  |
+|  |  [通靈師](#通靈師) |  |
 
 [職業分配](#職業分配) 部分解釋了職業如何分配.
 
@@ -85,16 +85,16 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 - Fixed a bug where the Morphling didn't take over the name of its target
 
 **Version 2.9.1**
-- Fixed a bug where [Camouflager](#camouflager) & [Morphling](#morphling) caused performance issues
-- Fixed a bug where [Medium](#medium) did not exlude the Evil [Mini](#mini)
-- [Vulture](#vulture) "Number Of Corpses Needed To Be Eaten" max value extended to 10
+- Fixed a bug where [魔術師](#魔術師) & [百變怪](#百變怪) caused performance issues
+- Fixed a bug where [通靈師](#通靈師) did not exlude the Evil [迷你](#迷你)
+- [禿鷲](#禿鷲) "Number Of Corpses Needed To Be Eaten" max value extended to 10
 - Added Vulture Option: "Show Arrows Pointing Towards The Corpes"
 - Removed Medium Question: "What is your name?" (name of the soul is added after each question)
 
   
 **Version 2.9.0**
-- **New Role:** [Medium](#medium)
-- **New Role:** [Vulture](#vulture)
+- **New Role:** [通靈師](#通靈師)
+- **New Role:** [禿鷲](#禿鷲)
 - Added Jackal Option: "Jackal Can See If Engineer Is In A Vent"
 - Added Guesser Option: "Guesser Can Shoot Multiple Times Per Meeting"
 - Fixed a bug that occured when the Shifter shifted the Bait
@@ -117,7 +117,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 - Added /color and /murder command to Freeplay (for the Hat Designers)
 
 **Version 2.7.1**
-- Fixed a bug where [swapped](#掉包師) votes were sometimes counted wrongly
+- Fixed a bug where [swapped](#換票師) votes were sometimes counted wrongly
 - Fixed the positioning of the player name while [morphed](#黑手黨)
 - Fixed a bug where the window of the [Guesser](#賭徒) sometimes showed no "close button"
 - Fixed a bug where the [garlics](#吸血鬼) were not displayed properly
@@ -154,7 +154,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 **Version 2.6.4**
 - **[Lovers](#戀人):** You can now select that Lovers may have a second role (could be a Crewmate, Neutral or Impostor role)
 - **[Seer](#靈媒):** Fixed souls and flash sometimes not being visible (Thanks to [orangeNKeks](https://github.com/orangeNKeks))
-- New option: [Swapper](#掉包師) can only swap others
+- New option: [Swapper](#換票師) can only swap others
 - New option: Ghosts can see votes
 - New option: [Jackal](#豺狼) and [Sidekick](#跟班) have Impostor vision
 - New option: [Jester](#小丑) can sabotage
@@ -631,7 +631,7 @@ If the boxes are converted to a vent network, the Trickster gains a new ability 
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
-| 詭騙師 生成機率 | -
+| 詭騙師生成機率 | -
 | 詭騙箱冷卻 | Cooldown for placing jack-in-the-boxes
 | 詭騙師關燈冷卻 | Cooldown for his "lights out" ability
 | 詭騙師關燈持續時間 | Duration after which the light is automatically restored
@@ -669,7 +669,7 @@ The Warlock can still perform normal kills, but the two buttons share the same c
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
-| 咒詛師 生成機率 | -
+| 咒詛師生成機率 | -
 | 咒詛師冷卻 | Cooldown for using the Curse and curse Kill
 | 咒詛師定身持續時間 | Time the Warlock is rooted in place after killing using the curse
 -----------------------
@@ -713,18 +713,18 @@ You can only shoot during the voting time.\
 \
 **NOTE:**
 - The vote of a shot player, won't be counted
-- You can't guess the role **Nice 迷你** for obvious reasons
-- You can't guess the role **Lover**, you'll have to guess the primary role of one of the 戀人, to kill both of them
+- You can't guess the role **好迷你** for obvious reasons
+- You can't guess the role **戀人**, you'll have to guess the primary role of one of the 戀人, to kill both of them
 - Jester wins won't be triggered, if the 賭徒 shoots the Jester before the Jester gets voted out
 
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
-| 賭徒 生成機率 | -
+| 賭徒生成機率 | -
 | 賭徒是個偽裝者的機率 | -
-| 一場遊戲中賭徒的嘗試次數 | -
-| 一場會議中賭徒的嘗試次數 | -
-| Guesser Can Shoot Multiple Times Per Meeting| -
+| 一場遊戲中賭徒的猜測次數 | -
+| 一場會議中賭徒的猜測次數 | -
+| 賭徒每個會議可以猜測多次 | -
 
 -----------------------
 
@@ -733,7 +733,7 @@ You can only shoot during the voting time.\
 總有兩個情人。\
 主要目標是一起活到遊戲結束。\
 如果一個情人死了(並且雙死選項被打開)，另一個情人會自殺。\
-您可以選擇戀人是否可以擔任第二個角色(可以是中立、船員或冒名頂替者角色)。\
+您可以選擇戀人是否可以擔任第二個角色(可以是獨立、船員或冒名頂替者角色)。\
 您可以設定一個情人成為偽裝者的機率。\
 戀人不知道他們伴侶的職業，只知道伴侶是誰。\
 如果在遊戲結束時他們都還活著，則戀人獲勝。他們也可以用他們原來的團隊獲勝(例如，一個死得去的偽裝者可以用偽裝者獲勝，縱火狂戀人仍可以贏縱火狂的勝利）\
@@ -994,7 +994,7 @@ The Time Master won't be affected by the rewind.\
 | 回溯時間護盾持續時間 |
 -----------------------
 
-## 掉包師
+## 換票師
 ### **隊伍:船員**
 During meetings the Swapper can exchange votes that two people get (i.e. all votes
 that player A got will be given to player B and vice versa).\
@@ -1151,8 +1151,8 @@ The vents will be sealed after the next meeting, players can't enter or exit sea
 \
 Created by [Mallöris](https://github.com/Mallaris)\
 \
-誘餌是一個船員如果他被殺死，他會強制殺手舉報該誘餌（您可以在選項中設定延遲）。
-此外，誘餌可以查看是否有人在通風口內（取決於設定，發光準確的通風口或所有通風口都可以）。
+誘餌是一個船員如果他被殺死，他會強制殺手舉報該誘餌(您可以在選項中設定延遲)。
+此外，誘餌可以查看是否有人在通風口內(取決於設定，發光準確的通風口或所有通風口都可以)。
 
 ### 遊戲選項
 | 名稱 | 描述
@@ -1162,45 +1162,45 @@ Created by [Mallöris](https://github.com/Mallaris)\
 | 誘餌舉報延遲 | -
 -----------------------
 
-## Medium
-### **Team: Crewmates**
+## 通靈師
+### **隊伍:船員**
 \
 Created by [Mallöris](https://github.com/Mallaris)\
 \
-The medium is a crewmate who can ask the souls of dead players for information. Like the Seer, it sees the places where the players have died (after the next meeting) and can question them. It then gets random information about the soul or the killer in the chat. The souls only stay for one round, i.e. until the next meeting. Depending on the options, the souls can only be questioned once and then disappear.
+通靈師是一個可以詢問靈魂來得到資訊的船員。和靈媒一樣，他將看到玩家死亡的地方(下次會議後)並可以詢問祂們。然後他會在聊天欄中取得有關靈魂或殺手的隨機信息。靈魂只停留一回合，即只到下次會議。根據選項，靈魂只能被詢問一次然後消失。
 
-Questions:
-What is your Role?
-What is your killer's color type?
-When did you die?
-What is your killers role? (mini exluded)
+問題:
+你的職業是什麼？
+殺你的殺手顏色類型是什麼？
+你什麼時候死的？
+殺你的殺手職業是什麼？ (迷你除外)
 
-### Game Options
-| Name | Description
+### 遊戲選項
+| 名稱 | 描述
 |----------|:-------------:|
-| Medium Spawn Chance | -
-| Medium Cooldown | -
-| Medium Duration | The time it takes to question a soul
-| Medium Each Soul Can Only Be Questioned Once | If set to true, souls can only be questioned once and then disappear
+| 通靈師生成機率 | -
+| 通靈師冷卻 | -
+| 通靈持續時間 | 詢問靈魂所需要的時間
+| 每個靈魂只能被詢問一次 | 如果設置為開，靈魂只能被詢問一次然後消失
 -----------------------
 
-## Vulture
-### **Team: Neutral**
+## 禿鷲
+### **隊伍:獨立**
 \
 Created by [Mallöris](https://github.com/Mallaris)\
 \
-The Vulture does not have any tasks, he has to win the game as a solo.\
-The Vulture is a neutral role that must eat a specified number of corpses (depending on the options) in order to win.\
-Depending on the options, when a player dies, the Vulture gets an arrow pointing to the corpse.
+禿鷲沒有任何任務，他必須自己贏得比賽。\
+禿鷲是一個獨立職業，必須吃掉指定數量的屍體(取決於選項)才能獲勝。\
+根據選項，當有玩家死亡時，禿鷲會得到一個指向屍體的箭頭。 
 
-### Game Options
-| Name | Description |
+### 遊戲選項
+| 名稱 | 描述
 |----------|:-------------:|
-| Vulture Spawn Chance | -
-| Vulture Countdown | -
-| Number Of Corpses Needed To Be Eaten | Corpes needed to be eaten to win the game
-| Vulture Can Use Vents | -
-| Show Arrows Pointing Towards The Corpes | -
+| 禿鷲生成機率 | -
+| 禿鷲冷卻 | -
+| 需要吃的屍體數量 | 獲勝需要吃的屍體數量
+| 禿鷲可以使用通風口 | -
+| 顯示指向屍體的箭頭 | -
 -----------------------
 
 # 原始碼
