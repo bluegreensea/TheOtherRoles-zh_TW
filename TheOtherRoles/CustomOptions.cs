@@ -201,7 +201,7 @@ namespace TheOtherRoles {
             
             // Role Options
             presetSelection = CustomOption.Create(0, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "設定"), presets, null, true);
-            activateRoles = CustomOption.Create(7, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "Enable Mod Roles And Block Vanilla Roles"), true, null, true);
+            activateRoles = CustomOption.Create(7, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "啟用模組職業並禁用原版職業"), true, null, true);
 
             // Using new id's for the options to not break compatibilty with older versions
             crewmateRolesCountMin = CustomOption.Create(300, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小船員職業數"), 0f, 0f, 15f, 1f, null, true);
@@ -295,9 +295,9 @@ namespace TheOtherRoles {
             mayorSpawnRate = CustomOption.Create(80, cs(Mayor.color, "市長"), rates, null, true);
 
             engineerSpawnRate = CustomOption.Create(90, cs(Engineer.color, "工程師"), rates, null, true);
-            engineerNumberOfFixes = CustomOption.Create(91, "Number Of Sabotage Fixes", 1f, 0f, 3f, 1f, engineerSpawnRate);
-            engineerHighlightForImpostors = CustomOption.Create(92, "Impostors See Vents Highlighted", true, engineerSpawnRate);
-            engineerHighlightForTeamJackal = CustomOption.Create(93, "Jackal and Sidekick See Vents Highlighted ", true, engineerSpawnRate);
+            engineerNumberOfFixes = CustomOption.Create(91, "破壞修復數量", 1f, 0f, 3f, 1f, engineerSpawnRate);
+            engineerHighlightForImpostors = CustomOption.Create(92, "偽裝者可看到通風口發光", true, engineerSpawnRate);
+            engineerHighlightForTeamJackal = CustomOption.Create(93, "豺狼與跟班可看到通風口發光", true, engineerSpawnRate);
 
             sheriffSpawnRate = CustomOption.Create(100, cs(Sheriff.color, "警長"), rates, null, true);
             sheriffCooldown = CustomOption.Create(101, "警長冷卻", 30f, 10f, 60f, 2.5f, sheriffSpawnRate);

@@ -39,6 +39,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
+| 2021.11.9.5s| v3.0.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.0.0/TheOtherRoles.zip)
 | 2021.6.30s| v2.9.2| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v2.9.2/TheOtherRoles.zip)
 | 2021.6.30s| v2.9.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v2.9.1/TheOtherRoles.zip)
 | 2021.6.30s| v2.9.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v2.9.0/TheOtherRoles.zip)
@@ -79,6 +80,13 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # Changelog
 <details>
   <summary>Click to show the Changelog</summary>
+
+**Version 3.0.0**
+- Update to Among Us version v2021.11.9.5s
+- **Note:** We wanted to update as fast as possible, that's why you can't use both the Innersloth and mod roles at the same time. We'll make that possible in the future, but there are various things that need to be modified (e.g. Shifter, Guesser, ...) to make that work, so that'll take a little longer. Also, be aware that this version might contain more bugs than usual because Innersloth changed a lot of things and we might have missed some of them.
+- Ability buttons are now bind to the Q key (if it's a killing ability) or to the F key (otherwise). We'll make the binds adaptable in the future.
+- For now we removed the option "Jester Can Sabotage"
+- The Sheriff now always dies, when he tries to kill a not fully grown Mini
 
 **Hotfix 2.9.2**
 - Fixed a bug where the names of all players were visible during camouflage
@@ -521,8 +529,8 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 ### **隊伍:偽裝者**
 黑手黨是由三個偽裝者組成的團體。\
 教父像是普通的偽裝者。\
-黑手黨員是個偽裝者不能殺人及破壞直到教父死亡。\
-守墓人是個偽裝者不能殺人及破壞，但是可以隱藏屍體。\
+黑手黨員是個偽裝者不能殺人，直到教父死亡。\
+守墓人是個偽裝者不能殺人，但是可以隱藏屍體。\
 \
 **NOTE:**
 - 必須至少有 3 個偽裝者才能生成黑手黨。
@@ -781,7 +789,6 @@ The Jester does not have any tasks. They win the game as a solo, if they get vot
 |----------|:-------------:|
 | 小丑生成機率 | -
 | 小丑可召開緊急會議 | Option to disable the emergency button for the Jester
-| 小丑可破壞 | Option to allow the Jester to sabotage
 -----------------------
 
 ## 縱火狂
@@ -816,11 +823,10 @@ The Seer gets a blue flash on his screen, if a player dies somewhere on the map.
 
 ## 工程師
 ### **隊伍:船員**
-The Engineer (if alive) can fix one sabotage per game from anywhere on the map.\
-The Engineer can use vents. If the Engineer is inside a vent, the 偽裝者s will see a blue outline
-around all vents on the map (in order to warn them).
-Because of the vents the Engineer might not be able to start some tasks using the "Use" button,
-you can double-click on the tasks instead.
+The Engineer (if alive) can fix a certain amount of sabotages per game from anywhere on the map.\
+The Engineer can use vents.\
+If the Engineer is inside a vent, depending on the options the members of the team Jackal/Impostors will see a blue outline around all vents on the map (in order to warn them).
+Because of the vents the Engineer might not be able to start some tasks using the "Use" button, you can double-click on the tasks instead.\
 \
 **NOTE:**
 - The kill button of 偽裝者s activates if they stand next to a vent where the Engineer is. They can also kill them there. No other action (e.g. Morphling sample, Shifter shift, ...) can affect players inside vents.
@@ -829,6 +835,9 @@ you can double-click on the tasks instead.
 | 名稱 | 描述 |
 |----------|:-------------:|
 | 工程師生成機率 | -
+| 破壞修復數量 | -
+| 偽裝者可看到通風口發光 | -
+| 豺狼與跟班可看到通風口發光 | -
 -----------------------
 
 ## 偵探
@@ -880,7 +889,7 @@ The Lighter can turn on his Lighter every now and then, which increases his visi
 - 如果他在 18 歲成年前被扔出船，那麼每個人都會輸。所以請你投票之前三思而後行。
 
 **NOTE:**
-- 偽裝者不能殺死迷你(按鈕不起作用)直到他 18 歲成年。
+- 如果警長試圖在迷你成年之前射殺他，警長會死，無論迷你是船員還是偽裝者。
 - 警長可以射殺迷你偽裝者，但前提是他成年了。
 
 ### 遊戲選項
@@ -1078,11 +1087,11 @@ If both 偽裝者s and Jackals are in the game the game, continues even if all C
 | 豺狼/跟班殺人冷卻 | Kill 冷卻 |
 | 狐狼製造跟班冷卻 | Cooldown before a Sidekick can be created |
 | 豺狼可使用通風口 | Yes/No |
-| 豺狼可製造跟班跟班 | Yes/No |
-| 在豺狼死亡後跟班可升職成豺狼 | Yes/No (to prevent the Jackal team from growing) |
-| 跟班可以殺人 | Yes/No (to prevent a Jackal from turning an 偽裝者 into a Sidekick, if he uses the ability on an 偽裝者 he sees the 偽裝者 as Sidekick, but the 偽裝者 isn't converted to Sidekick. If this option is set to "No" Jackal and Sidekick can kill each other.) |
+| 豺狼可製造跟班 | Yes/No |
+| 從跟班升職的豺狼可製造跟班 | Yes/No (to prevent the Jackal team from growing) |
+| 豺狼可讓偽裝者轉成跟班 | Yes/No (to prevent a Jackal from turning an 偽裝者 into a Sidekick, if he uses the ability on an 偽裝者 he sees the 偽裝者 as Sidekick, but the 偽裝者 isn't converted to Sidekick. If this option is set to "No" Jackal and Sidekick can kill each other.) |
 | 豺狼與跟班有偽裝者視野 | - |
-| Jackal and Sidekick Can See Engineer Vent | - | If set to true, team Jackal will see vents highlited like Impostors if an Engineer is inside one
+
 -----------------------
 
 ## 跟班
@@ -1098,10 +1107,10 @@ Upon the death of the Jackal (depending on the options), he might get promoted t
 ### 遊戲選項
 | 名稱 | 描述
 |----------|:-------------:|
-| Jackal/Sidekick Kill 冷卻 | Uses the same kill cooldown setting as the Jackal |
-| Sidekick gets promoted to Jackal on Jackal death |  Yes/No |
-| Sidekick can kill | Yes/No |
-| Sidekick can use vents | Yes/No |
+| 豺狼/跟班殺人冷卻 | Uses the same kill cooldown setting as the Jackal |
+| 在豺狼死亡後跟班可升職成豺狼 |  Yes/No |
+| 跟班可以殺人 | Yes/No |
+| 跟班可使用通風口 | Yes/No |
 -----------------------
 
 ## 間諜
