@@ -343,7 +343,6 @@ namespace TheOtherRoles {
             trackerSpawnRate = CustomOption.Create(200, cs(Tracker.color, "追踪者"), rates, null, true);
             trackerUpdateIntervall = CustomOption.Create(201, "追踪更新間隔", 5f, 2.5f, 30f, 2.5f, trackerSpawnRate);
             trackerResetTargetAfterMeeting = CustomOption.Create(202, "會議後重置追踪", false, trackerSpawnRate);
-
             snitchSpawnRate = CustomOption.Create(210, cs(Snitch.color, "密探"), rates, null, true);
             snitchLeftTasksForReveal = CustomOption.Create(211, "告密者可看到偽裝者在哪的任務數", 1f, 0f, 5f, 1f, snitchSpawnRate);
             snitchIncludeTeamJackal = CustomOption.Create(212, "包含豺狼團隊", false, snitchSpawnRate);
@@ -404,9 +403,6 @@ namespace TheOtherRoles {
         public CustomOption(int id, string name,  System.Object[] selections, System.Object defaultValue, CustomOption parent, bool isHeader) {
             this.id = id;
             this.name = parent == null ? name : "- " + name;
-            if (selections == CustomOptionHolder.rates) {
-                
-            }
             this.selections = selections;
             int index = Array.IndexOf(selections, defaultValue);
             this.defaultSelection = index >= 0 ? index : 0;
@@ -421,7 +417,7 @@ namespace TheOtherRoles {
         }
 
         public static CustomOption Create(int id, string name, string[] selections, CustomOption parent = null, bool isHeader = false) {
-            if (selections.Equals(CustomOptionHolder.rates)) name = "<size=95%>" + name + "</size>";
+            if (selections.Equals(CustomOptionHolder.rates)) name = "<size=90%>" + name + "</size>";
             return new CustomOption(id, name, selections, "", parent, isHeader);
         }
 
