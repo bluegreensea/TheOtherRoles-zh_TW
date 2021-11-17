@@ -271,8 +271,8 @@ namespace TheOtherRoles {
             guesserIsImpGuesserRate = CustomOption.Create(311, "賭徒是個偽裝者的機率", rates, guesserSpawnRate);
             guesserNumberOfShots = CustomOption.Create(312, "賭徒的猜測次數", 2f, 1f, 15f, 1f, guesserSpawnRate);
             guesserHasMultipleShotsPerMeeting = CustomOption.Create(313, "賭徒每個會議可以猜測多次", false, guesserSpawnRate);
-            guesserShowInfoInGhostChat = CustomOption.Create(314, "Guesses Visible In Ghost Chat", true, guesserSpawnRate);
-            guesserKillsThroughShield  = CustomOption.Create(315, "Guesses Ignore The Medic Shield", true, guesserSpawnRate);
+            guesserShowInfoInGhostChat = CustomOption.Create(314, "賭徒在死者聊天中可見 ", true, guesserSpawnRate);
+            guesserKillsThroughShield  = CustomOption.Create(315, "賭徒忽略醫生盾", true, guesserSpawnRate);
 
             jesterSpawnRate = CustomOption.Create(60, cs(Jester.color, "小丑"), rates, null, true);
             jesterCanCallEmergency = CustomOption.Create(61, "小丑可召開緊急會議", true, jesterSpawnRate);
@@ -333,9 +333,9 @@ namespace TheOtherRoles {
 
             medicSpawnRate = CustomOption.Create(140, cs(Medic.color, "醫生"), rates, null, true);
             medicShowShielded = CustomOption.Create(143, "顯示被上盾者", new string[] {"所有人", "被上盾者 + 醫生", "醫生"}, medicSpawnRate);
-            medicShowAttemptToShielded = CustomOption.Create(144, "裝盾玩家可看到謀殺未遂", false, medicSpawnRate);
+            medicShowAttemptToShielded = CustomOption.Create(144, "被上盾者可看到謀殺未遂", false, medicSpawnRate);
             medicSetShieldAfterMeeting = CustomOption.Create(145, "盾在會議後生效", false, medicSpawnRate);
-            medicShowAttemptToMedic = CustomOption.Create(146, "Medic Sees Murder Attempt On Shielded Player", false, medicSpawnRate);
+            medicShowAttemptToMedic = CustomOption.Create(146, "醫生看到對被上盾者的謀殺未遂", false, medicSpawnRate);
 
             swapperSpawnRate = CustomOption.Create(150, cs(Swapper.color, "換票師"), rates, null, true);
             swapperCanCallEmergency = CustomOption.Create(151, "換票師可召開緊急會議", false, swapperSpawnRate);
@@ -354,9 +354,9 @@ namespace TheOtherRoles {
             trackerSpawnRate = CustomOption.Create(200, cs(Tracker.color, "追踪者"), rates, null, true);
             trackerUpdateIntervall = CustomOption.Create(201, "追踪更新間隔", 5f, 2.5f, 30f, 2.5f, trackerSpawnRate);
             trackerResetTargetAfterMeeting = CustomOption.Create(202, "會議後重置追踪", false, trackerSpawnRate);
-            trackerCanTrackCorpses = CustomOption.Create(203, "Tracker Can Track Corpses", true, trackerSpawnRate);
-            trackerCorpsesTrackingCooldown = CustomOption.Create(204, "Corpses Tracking Cooldown", 30f, 0f, 120f, 5f, trackerCanTrackCorpses);
-            trackerCorpsesTrackingDuration = CustomOption.Create(205, "Corpses Tracking Duration", 5f, 2.5f, 30f, 2.5f, trackerCanTrackCorpses);
+            trackerCanTrackCorpses = CustomOption.Create(203, "追踪者可以追踪屍體", true, trackerSpawnRate);
+            trackerCorpsesTrackingCooldown = CustomOption.Create(204, "屍體追踪冷卻", 30f, 0f, 120f, 5f, trackerCanTrackCorpses);
+            trackerCorpsesTrackingDuration = CustomOption.Create(205, "屍體追踪持續時間", 5f, 2.5f, 30f, 2.5f, trackerCanTrackCorpses);
                            
             snitchSpawnRate = CustomOption.Create(210, cs(Snitch.color, "密探"), rates, null, true);
             snitchLeftTasksForReveal = CustomOption.Create(211, "告密者可看到偽裝者在哪的任務數", 1f, 0f, 5f, 1f, snitchSpawnRate);
@@ -389,7 +389,7 @@ namespace TheOtherRoles {
             blockSkippingInEmergencyMeetings = CustomOption.Create(4, "在緊急會議中封鎖跳過", false);
             noVoteIsSelfVote = CustomOption.Create(5, "不能投票給自己", false, blockSkippingInEmergencyMeetings);
             hidePlayerNames = CustomOption.Create(6, "隱藏玩家名稱", false);
-            allowParallelMedBayScans = CustomOption.Create(7, "Allow Parallel MedBay Scans", false);
+            allowParallelMedBayScans = CustomOption.Create(7, "允許並行醫務室掃描", false);
 
             blockedRolePairings.Add((byte)RoleId.Vampire, new [] { (byte)RoleId.Warlock});
             blockedRolePairings.Add((byte)RoleId.Warlock, new [] { (byte)RoleId.Vampire});

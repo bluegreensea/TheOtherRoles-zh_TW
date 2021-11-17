@@ -44,6 +44,7 @@ namespace TheOtherRoles {
         }
 
         public static CustomOption Create(int id, string name, string[] selections, CustomOption parent = null, bool isHeader = false) {
+            if (selections.Equals(CustomOptionHolder.rates)) name = "<size=90%>" + name + "</size>";
             return new CustomOption(id, name, selections, "", parent, isHeader);
         }
 
@@ -55,7 +56,7 @@ namespace TheOtherRoles {
         }
 
         public static CustomOption Create(int id, string name, bool defaultValue, CustomOption parent = null, bool isHeader = false) {
-            return new CustomOption(id, name, new string[]{"Off", "On"}, defaultValue ? "On" : "Off", parent, isHeader);
+            return new CustomOption(id, name, new string[]{"關", "開"}, defaultValue ? "開" : "關", parent, isHeader);
         }
 
         // Static behaviour
@@ -293,7 +294,7 @@ namespace TheOtherRoles {
 
         public static void Postfix(GameSettingMenu __instance) {
             // Setup mapNameTransform
-            var mapNameTransform = __instance.AllItems.FirstOrDefault(x => x.gameObject.activeSelf && x.name.Equals("MapName", StringComparison.OrdinalIgnoreCase));
+            var mapNameTransform = __instance.AllItems.FirstOrDefault(x => x.gameObject.activeSelf && x.name.Equals("地圖名稱", StringComparison.OrdinalIgnoreCase));
             if (mapNameTransform == null) return;
 
             var options = new Il2CppSystem.Collections.Generic.List<Il2CppSystem.Collections.Generic.KeyValuePair<string, int>>();
@@ -329,21 +330,21 @@ namespace TheOtherRoles {
             foreach (CustomOption option in CustomOption.options) {
                 if (option.parent == null) {
                     if (option == CustomOptionHolder.crewmateRolesCountMin) {
-                        var optionName = CustomOptionHolder.cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "Crewmate Roles");
+                        var optionName = CustomOptionHolder.cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "船員職業");
                         var min = CustomOptionHolder.crewmateRolesCountMin.getSelection();
                         var max = CustomOptionHolder.crewmateRolesCountMax.getSelection();
                         if (min > max) min = max;
                         var optionValue = (min == max) ? $"{max}" : $"{min} - {max}";
                         sb.AppendLine($"{optionName}: {optionValue}");
                     } else if (option == CustomOptionHolder.neutralRolesCountMin) {
-                        var optionName = CustomOptionHolder.cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "Neutral Roles");
+                        var optionName = CustomOptionHolder.cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "獨立職業");
                         var min = CustomOptionHolder.neutralRolesCountMin.getSelection();
                         var max = CustomOptionHolder.neutralRolesCountMax.getSelection();
                         if (min > max) min = max;
                         var optionValue = (min == max) ? $"{max}" : $"{min} - {max}";
                         sb.AppendLine($"{optionName}: {optionValue}");
                     } else if (option == CustomOptionHolder.impostorRolesCountMin) {
-                        var optionName = CustomOptionHolder.cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "Impostor Roles");
+                        var optionName = CustomOptionHolder.cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "偽裝者職業");
                         var min = CustomOptionHolder.impostorRolesCountMin.getSelection();
                         var max = CustomOptionHolder.impostorRolesCountMax.getSelection();
                         if (min > max) min = max;
@@ -407,7 +408,7 @@ namespace TheOtherRoles {
                 hudString = hudString.Substring(end5 + 1);
             }
 
-            hudString += $"\n Press tab for more... ({counter+1}/6)";
+            hudString += $"\n 按 tab 看更多... ({counter+1}/6)";
             __result = hudString;
         }
     }

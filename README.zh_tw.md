@@ -39,6 +39,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
+| 2021.11.9.5s| v3.1.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.1.0/TheOtherRoles.zip)
 | 2021.11.9.5s| v3.0.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.0.0/TheOtherRoles.zip)
 | 2021.6.30s| v2.9.2| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v2.9.2/TheOtherRoles.zip)
 | 2021.6.30s| v2.9.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v2.9.1/TheOtherRoles.zip)
@@ -81,8 +82,21 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 <details>
   <summary>Click to show the Changelog</summary>
 
+**Version 3.1.0**
+- Hopefully temporary fixing the issue of being kicked by Innersloth servers for regular kills, until Innersloth fixes it on their side.
+- **NOTE:** Do not combine modded and unmodded versions of the game (even if you don't activate anything). Because of the kicking fix, your kills won't be performed for players that do not share the exact same modded version. Due to this you now can't start a game as the host, if not everyone in the lobby has the same version of the mod. Additionally you'll be kicked out of a lobby after 10 seconds, if the host doesn't have the mod installed (or the same mod version).
+- **Tracker:** The Tracker has been reworked by [Alex2911](https://github.com/Alex2911). The Tracker now has an additional optional ability that tracks all corpses on the map for a few seconds.
+- Add new option: Allow Parallel MedBay Scans
+- Add new [Guesser](#賭徒) option: "Guesses Visible In Ghost Chat"
+- Add new [Guesser](#賭徒) option: "Guesses Ignore The Medic Shield". If this option is set to false, no matter what the Guesser guessed, no one will die and the shielded player/Medic might be notified
+- Add new [Medic](#醫生) option: "Medic Sees Murder Attempt On Shielded Player". This includes attempts from any kind of killer (Sheriff, Jackal, Guesser if the shield is not being ignored, ...)
+- During meetings the [Detective](#偵探), [Hacker](#駭客) and [Medium](#通靈師) now display, whether a player wears a darker or lighter color
+- Bug fix: Bounty Hunter, Mini and Engineer in vent kills do not result in players being kicked anymore
+- Bug fix: The Trickster vent button now doesn't show the text "vent" twice anymore
+- Bug fix: Fixed the visual bug where both Lovers always showed dead during the meeting after a correct guess of one of them even if the option "Both Lovers Die" was disabled
+
 **Version 3.0.0**
-- Update to Among Us version v2021.11.9.5s
+- Updated to Among Us version v2021.11.9.5s
 - **Note:** We wanted to update as fast as possible, that's why you can't use both the Innersloth and mod roles at the same time. We'll make that possible in the future, but there are various things that need to be modified (e.g. Shifter, Guesser, ...) to make that work, so that'll take a little longer. Also, be aware that this version might contain more bugs than usual because Innersloth changed a lot of things and we might have missed some of them.
 - Ability buttons are now bind to the Q key (if it's a killing ability) or to the F key (otherwise). We'll make the binds adaptable in the future.
 - For now we removed the option "Jester Can Sabotage"
@@ -93,16 +107,16 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 - Fixed a bug where the Morphling didn't take over the name of its target
 
 **Version 2.9.1**
-- Fixed a bug where [魔術師](#魔術師) & [百變怪](#百變怪) caused performance issues
-- Fixed a bug where [通靈師](#通靈師) did not exlude the Evil [迷你](#迷你)
-- [禿鷲](#禿鷲) "Number Of Corpses Needed To Be Eaten" max value extended to 10
+- Fixed a bug where [Camouflager](#魔術師) & [Morphling](#百變怪) caused performance issues
+- Fixed a bug where [Medium](#通靈師) did not exlude the Evil [Mini](#迷你)
+- [Vulture](#禿鷲) "Number Of Corpses Needed To Be Eaten" max value extended to 10
 - Added Vulture Option: "Show Arrows Pointing Towards The Corpes"
 - Removed Medium Question: "What is your name?" (name of the soul is added after each question)
 
   
 **Version 2.9.0**
-- **New Role:** [通靈師](#通靈師)
-- **New Role:** [禿鷲](#禿鷲)
+- **New Role:** [Medium](#通靈師)
+- **New Role:** [Vulture](#禿鷲)
 - Added Jackal Option: "Jackal Can See If Engineer Is In A Vent"
 - Added Guesser Option: "Guesser Can Shoot Multiple Times Per Meeting"
 - Fixed a bug that occured when the Shifter shifted the Bait
@@ -451,6 +465,7 @@ The mod adds a few new settings to Among Us (in addition to the role settings):
 - **Maximum Number Of Meetings:** You can set the maximum number of meetings that can be called in total (Every player still has personal maximum of buttons, but if the maximum number of meetings is reached you can't use your meetings even if you have some left. Impostor and Jackal meetings also count)
 - **Allow Skips On Emergency Meetings:** If set to false, there will not be a skip button in emergency meetings. If a player does not vote, he'll vote himself.
 - **Hide Player Names:** Hides the names of all players that have role which is unknown to you. Team Lovers/Impostors/Jackal still see the names of their teammates. Impostors can also see the name of the Spy and everyone can still see the age of the mini.
+- **Allow Parallel MedBay Scans:** Allows players to perform their MedBay scans at the same time
 - **Ghosts Can See Roles**
 - **Ghosts Can See Votes**
 - **Ghosts Can See The Number Of Remaining Tasks**
@@ -459,7 +474,7 @@ The mod adds a few new settings to Among Us (in addition to the role settings):
 - **Role Summary:** When a game ends there will be a list of all players and their roles and their task progress
 
 ### 地圖任務數上限
-You can configure:
+你可以設定:
 - 最多 4 個普通任務
 - 最多 23 個短任務
 - 最多 15 個長任務
@@ -718,6 +733,7 @@ The 賭徒 can shoot players during the meeting, by guessing its role. If the gu
 You can select how many players can be shot per game and if multiple players can be shot during a single meeting.\
 The guesses 偽裝者 and Crewmate are only right, if the player is part of the corresponding team and has no special role.\
 You can only shoot during the voting time.\
+Depending on the options, the Guesser can't guess the shielded player and depending on the Medic options the Medic/shielded player might be notified (no one will die, independently of what the Guesser guessed).\
 \
 **NOTE:**
 - The vote of a shot player, won't be counted
@@ -731,8 +747,9 @@ You can only shoot during the voting time.\
 | 賭徒生成機率 | -
 | 賭徒是個偽裝者的機率 | -
 | 一場遊戲中賭徒的猜測次數 | -
-| 一場會議中賭徒的猜測次數 | -
 | 賭徒每個會議可以猜測多次 | -
+| Guesses Visible In Ghost Chat| -
+| Guesses Ignore The Medic Shield| -
 
 -----------------------
 
@@ -849,6 +866,7 @@ Because of the vents the Engineer might not be able to start some tasks using th
 - When people change their colors (because of a morph or camouflage), all the footprints also change their colors (also the ones that were already on the ground). If the effects are over, all footprints switch back to the original color.
 - The Detective does not see footprints of players that sit in vents
 - More information about the [顏色](#顏色)
+- During the meetings you can see, whether a player wears a darker or a lighter color, represented by (D) or (L) in the names.
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -903,9 +921,10 @@ The Lighter can turn on his Lighter every now and then, which increases his visi
 ### **隊伍:船員**
 醫生可以在每場比賽中上盾(玩家周圍發光)一名玩家，這使玩家無法被殺死。\
 被上盾的玩家仍然可以被票出，也可能是一個偽裝者。\
-如果在選項中設定開啟，有人(偽裝者、警長...)試圖謀殺他們，被上盾的玩家將在螢幕上閃爍紅色。
+如果在選項中設定開啟，有人(偽裝者、警長...)試圖謀殺被上盾的玩家，被上盾的玩家和/或醫生將在螢幕上閃爍紅色。
 如果醫生死了，盾也會隨之消失。\
 如果警長試圖殺死一個有盾的船員，他們不會死，如果他們試圖殺死一個有盾的偽裝者，他們也不會執行射殺。\
+Depending on the options, guesses from the Guesser will be blocked by the shield and the shielded player/medic might be notified.\
 醫生的另一個功能是在他們舉報屍體時可以看到玩家死了多久
 \
 **NOTE:**
@@ -921,6 +940,7 @@ The Lighter can turn on his Lighter every now and then, which increases his visi
 | 顯示被上盾者 | Sets who sees if a player has a shield | "Everyone", "Shielded + Medic", "Medic"
 | 裝盾玩家可看到謀殺未遂 | Whether a shielded player sees if someone tries to kill him | True/false |
 | 盾在會議後生效 | - | 開/關
+| Medic Sees Murder Attempt On Shielded Player | - | If anyone tries to harm the shielded player (Impostor, Sheriff, Guesser, ...), the Medic will see a red flash
 -----------------------
 
 ## 市長
@@ -944,6 +964,7 @@ Otherwise he sees the same information as everyone else.
 **NOTE:**
 - If the Morphling morphs or the Camouflager camouflages, the colors on the admin table change accordingly
 - More information about the [顏色](#顏色)
+- During the meetings you can see, whether a player wears a darker or a lighter color, represented by (D) or (L) in the names.
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -1020,10 +1041,10 @@ and can't fix lights and comms.
 
 ## 追踪者
 ### **隊伍:船員**
-The Tracker can select one player to track.
-Depending on the options the Tracker can track a different person after each meeting or the Tracker tracks the same person for the whole game.
+The Tracker can select one player to track. Depending on the options the Tracker can track a different person after each meeting or the Tracker tracks the same person for the whole game.
 An arrow points to the last tracked position of the player.
 The arrow updates its position every few seconds (configurable).
+Depending on the options, the Tracker has another ability: He can track all corpses on the map for a set amount of time. He will keep tracking corpses, even if they were cleaned or eaten by the Vulture.
 
 ### 遊戲選項
 | 名稱 | 描述
@@ -1031,6 +1052,9 @@ The arrow updates its position every few seconds (configurable).
 | 追踪者生成機率 | -
 | 追踪更新間隔 | Sets how often the position is being updated
 | 會議後重置追踪 | -
+| Tracker Can Track Corpses | -
+| Corpses Tracking Cooldown | -
+| Corpses Tracking Duration | -
 -----------------------
 
 ## 密探
@@ -1177,6 +1201,7 @@ Created by [Mallöris](https://github.com/Mallaris)\
 Created by [Mallöris](https://github.com/Mallaris)\
 \
 通靈師是一個可以詢問靈魂來得到資訊的船員。和靈媒一樣，他將看到玩家死亡的地方(下次會議後)並可以詢問祂們。然後他會在聊天欄中取得有關靈魂或殺手的隨機信息。靈魂只停留一回合，即只到下次會議。根據選項，靈魂只能被詢問一次然後消失。
+During the meetings you can see, whether a player wears a darker or a lighter color, represented by (D) or (L) in the names.
 
 問題:
 你的職業是什麼？
