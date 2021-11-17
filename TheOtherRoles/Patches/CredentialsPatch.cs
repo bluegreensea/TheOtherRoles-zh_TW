@@ -11,7 +11,7 @@ namespace TheOtherRoles.Patches {
     public static class CredentialsPatch {
         public static string fullCredentials = 
 $@"<size=130%><color=#ff351f>TheOtherRoles</color></size> v{TheOtherRolesPlugin.Version.ToString()}
-<size=80%>由 <color=#FCCE03FF>Eisbison</color>, <color=#FCCE03FF>EndOfFile</color>
+<size=60%>由 <color=#FCCE03FF>Eisbison</color>, <color=#FCCE03FF>EndOfFile</color>
 <color=#FCCE03FF>Thunderstorm584</color> 及 <color=#FCCE03FF>Mallöris</color> 製作模組
 由 <color=#FCCE03FF>Bavari</color> 設計按鈕
 由 <color=#00d3ff>bluegreensea(青海)</color> 繁體中文化</size>";
@@ -19,6 +19,8 @@ $@"<size=130%><color=#ff351f>TheOtherRoles</color></size> v{TheOtherRolesPlugin.
     public static string mainMenuCredentials = 
 $@"由 <color=#FCCE03FF>Eisbison</color>, <color=#FCCE03FF>Thunderstorm584</color>, <color=#FCCE03FF>EndOfFile</color> 及 <color=#FCCE03FF>Mallöris</color> 製作模組
 由 <color=#FCCE03FF>Bavari</color> 設計      由 <color=#00d3ff>bluegreensea(青海)</color> 繁體中文化";
+
+        public static string contributorsCredentials = "<size=80%>GitHub Contributors: Alex2911, gendelo3</size>";
 
         [HarmonyPatch(typeof(VersionShower), nameof(VersionShower.Start))]
         private static class VersionShowerPatch
@@ -28,17 +30,12 @@ $@"由 <color=#FCCE03FF>Eisbison</color>, <color=#FCCE03FF>Thunderstorm584</colo
                 if (amongUsLogo == null) return;
 
                 var credentials = UnityEngine.Object.Instantiate<TMPro.TextMeshPro>(__instance.text);
-                credentials.transform.position = new Vector3(0, 0.1f, 0);
-                credentials.SetText(mainMenuCredentials);
+                credentials.transform.position = new Vector3(0, 0, 0);
+                credentials.SetText($"v{TheOtherRolesPlugin.Version.ToString()}\n<size=30f%>\n</size>{mainMenuCredentials}\n<size=30%>\n</size>{contributorsCredentials}");
                 credentials.alignment = TMPro.TextAlignmentOptions.Center;
                 credentials.fontSize *= 0.75f;
 
-                var version = UnityEngine.Object.Instantiate<TMPro.TextMeshPro>(credentials);
-                version.transform.position = new Vector3(0, -0.25f, 0);
-                version.SetText($"v{TheOtherRolesPlugin.Version.ToString()}");
-
                 credentials.transform.SetParent(amongUsLogo.transform);
-                version.transform.SetParent(amongUsLogo.transform);
             }
         }
 
