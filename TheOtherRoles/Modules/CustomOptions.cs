@@ -44,7 +44,7 @@ namespace TheOtherRoles {
         }
 
         public static CustomOption Create(int id, string name, string[] selections, CustomOption parent = null, bool isHeader = false) {
-            if (selections.Equals(CustomOptionHolder.rates)) name = "<size=90%>" + name + "</size>";
+            if (selections.Equals(CustomOptionHolder.rates) && isHeader == true) name = "<size=90%>" + name + "</size>";
             return new CustomOption(id, name, selections, "", parent, isHeader);
         }
 
