@@ -335,7 +335,7 @@ namespace TheOtherRoles {
             medicShowShielded = CustomOption.Create(143, "顯示被上盾者", new string[] {"所有人", "被上盾者 + 醫生", "醫生"}, medicSpawnRate);
             medicShowAttemptToShielded = CustomOption.Create(144, "被上盾者可看到謀殺未遂", false, medicSpawnRate);
             medicSetShieldAfterMeeting = CustomOption.Create(145, "盾在會議後生效", false, medicSpawnRate);
-            medicShowAttemptToMedic = CustomOption.Create(146, "醫生看到對被上盾者的謀殺未遂", false, medicSpawnRate);
+            medicShowAttemptToMedic = CustomOption.Create(146, "醫生可看到對被上盾者的謀殺未遂", false, medicSpawnRate);
 
             swapperSpawnRate = CustomOption.Create(150, cs(Swapper.color, "換票師"), rates, null, true);
             swapperCanCallEmergency = CustomOption.Create(151, "換票師可召開緊急會議", false, swapperSpawnRate);

@@ -469,20 +469,20 @@ docker run -d -p 22023:22023/udp --env IMPOSTOR_AntiCheat__Enabled=false --env I
 [Goose-Goose-Duck](https://store.steampowered.com/app/1568590/Goose_Goose_Duck) - Idea for the Vulture role come from **Slushygoose**
 
 # 設定
-The mod adds a few new settings to Among Us (in addition to the role settings):
-- **Streamer Mode:** You can activate the streamer mode in the Among Us settings. It hides the lobby code, the custom server ip and the custom server port. You can set a custom lobby code replacement text, by changing the *Streamer Mode Replacement Text* in the `BepInEx\config\me.eisbison.theotherroles.cfg` file.
-- **Number of Impostors:** The number of Impostor count be set inside a lobby
-- **Map:** The map can be changed inside a lobby
-- **Maximum Number Of Meetings:** You can set the maximum number of meetings that can be called in total (Every player still has personal maximum of buttons, but if the maximum number of meetings is reached you can't use your meetings even if you have some left. Impostor and Jackal meetings also count)
-- **Allow Skips On Emergency Meetings:** If set to false, there will not be a skip button in emergency meetings. If a player does not vote, he'll vote himself.
-- **Hide Player Names:** Hides the names of all players that have role which is unknown to you. Team Lovers/Impostors/Jackal still see the names of their teammates. Impostors can also see the name of the Spy and everyone can still see the age of the mini.
-- **Allow Parallel MedBay Scans:** Allows players to perform their MedBay scans at the same time
-- **Ghosts Can See Roles**
-- **Ghosts Can See Votes**
-- **Ghosts Can See The Number Of Remaining Tasks**
-- **Dleks:** You are now able to select the Dleks map.
-- **Task Counts:** You are now able to select more tasks.
-- **Role Summary:** When a game ends there will be a list of all players and their roles and their task progress
+該模組在 Among Us 添加了一些新設定(除了職業設定)：
+- **直播模式:** 您可以在 Among Us 的設定中開啟直播模式。它隱藏了大廳代碼、自定義伺服器 ip 和自定義伺服器通訊埠。您可以通過更改 `BepInEx\config\me.eisbison.theotherroles.cfg` 中的 *Streamer Mode Replacement Text* 來設定自定義大廳代碼替換文字。
+- **偽裝者數量:** 可以在大廳內設定偽裝者的數量
+- **地圖:** 可以在大廳內更改地圖
+- **最大緊急會議次數 :** 您可以設定總共可以招開的最大緊急會議數(每個玩家仍有個人最大招開數，但如果達到最大會議數，即使您還有一些緊急會議也無法使用。偽裝者和豺狼也算)
+- **允許跳過緊急會議:** 如果設定為關，緊急會議中將不會有跳過按鈕。如果玩家不投票，他將投票給自己。
+- **隱藏玩家名稱:** 隱藏所有有您不知職業玩家的名稱。戀人/偽裝者/豺狼隊伍仍可以看到他們隊友的名字。偽裝者還可以看到間諜的名字，每個人仍可以看到迷你的年齡。
+- **允許並行醫務室掃描:** 允許玩家同時進行他們的醫務室掃描
+- **死者可看到職業**
+- **死者可看到投票**
+- **死者可看到剩餘任務**
+- **Dleks:** 您現在可以選擇地圖 Dleks 。
+- **任務數量:** 您現在可以選擇更多任務。
+- **職業總結:** 當遊戲結束時，列出所有玩家及其職業與任務進度
 
 ### 地圖任務數上限
 你可以設定:
@@ -539,11 +539,11 @@ Here are a few instructions, on how to create a custom hat:
 We are still improving the role assignment system. It's not that intuitive right now, but it's more flexible than the older one
 if you're using it right.
 
-First you need to choose how many special roles of each kind (偽裝者/Neutral/Crewmate) you want in the game.
-The count you set will only be reached, if there are enough Crewmates/偽裝者s in the game and if enough roles are set to be in the game (i.e. they are set to > 0%). The roles are then being distributed as follows:
+First you need to choose how many special roles of each kind (偽裝者/獨立/船員) you want in the game.
+The count you set will only be reached, if there are enough 船員/偽裝者 in the game and if enough roles are set to be in the game (i.e. they are set to > 0%). The roles are then being distributed as follows:
 - First all roles that are set to 100% are being assigned to arbitrary players.
-- After that each role that has 10%-90% selected adds 1-9 tickets to a ticket pool (there exists a ticket pool for Crewmates, Neutrals and 偽裝者s). Then the roles will be selected randomly from the pools as long it's possible (until the selected number is reached, until there are no more Crewmates/偽裝者s or until there are no more tickets). If a role is selected from the pool, obviously all the tickets of that role are being removed.
-- The 黑手黨, 戀人 and 迷你 are being selected independently (without using the ticket system) according to the spawn chance you selected. After that the Crewmate, Neutral and 偽裝者 roles are selected and assigned in a random order.
+- After that each role that has 10%-90% selected adds 1-9 tickets to a ticket pool (there exists a ticket pool for 船員, Neutrals and 偽裝者). Then the roles will be selected randomly from the pools as long it's possible (until the selected number is reached, until there are no more Crewmates/偽裝者s or until there are no more tickets). If a role is selected from the pool, obviously all the tickets of that role are being removed.
+- The 黑手黨, 戀人 and 迷你 are being selected independently (without using the ticket system) according to the spawn chance you selected. After that the 船員, 獨立 and 偽裝者 roles are selected and assigned in a random order.
 
 **Example:**\
 Settings: 2 special Crewmate roles, Snitch: 100%, Hacker: 10%, Tracker: 30%\
@@ -673,17 +673,17 @@ If the boxes are converted to a vent network, the Trickster gains a new ability 
 
 ## 清除者
 ### **隊伍:偽裝者**
-The Cleaner is an 偽裝者 who has the ability to clean up dead bodies.\
+清除者是一個偽裝者，擁有清理屍體的能力。 \
 
 \
 **NOTE:**
-- The Kill and Clean cooldown are shared, preventing him from immediately cleaning his own kills.
+- 殺死和清除的冷卻時間是共享的，防止他立即清理自己的殺人。
 
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
 | 清除者生成機率 | -
-| 清除者冷卻 | Cooldown for cleaning dead bodies
+| 清除者冷卻 | 清理屍體的冷卻時間
 -----------------------
 
 
@@ -759,8 +759,8 @@ Depending on the options, the Guesser can't guess the shielded player and depend
 | 賭徒是個偽裝者的機率 | -
 | 一場遊戲中賭徒的猜測次數 | -
 | 賭徒每個會議可以猜測多次 | -
-| Guesses Visible In Ghost Chat| -
-| Guesses Ignore The Medic Shield| -
+| 賭徒在死者聊天中可見 | -
+| 賭徒忽略醫生盾 | -
 
 -----------------------
 
@@ -810,7 +810,7 @@ Depending on the options, the Guesser can't guess the shielded player and depend
 
 ## 小丑
 ### **隊伍:獨立**
-The Jester does not have any tasks. They win the game as a solo, if they get voted out during a meeting.
+小丑沒有任何任務。如果他們在緊急會議上被票出，他們會以單人身份獲勝。
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -935,7 +935,7 @@ The Lighter can turn on his Lighter every now and then, which increases his visi
 如果在選項中設定開啟，有人(偽裝者、警長...)試圖謀殺被上盾的玩家，被上盾的玩家和/或醫生將在螢幕上閃爍紅色。
 如果醫生死了，盾也會隨之消失。\
 如果警長試圖殺死一個有盾的船員，他們不會死，如果他們試圖殺死一個有盾的偽裝者，他們也不會執行射殺。\
-Depending on the options, guesses from the Guesser will be blocked by the shield and the shielded player/medic might be notified.\
+根據選項，來自賭徒的猜測將被盾阻止，並且可能會通知被上盾的玩家/醫生。\
 醫生的另一個功能是在他們舉報屍體時可以看到玩家死了多久
 \
 **NOTE:**
@@ -951,7 +951,7 @@ Depending on the options, guesses from the Guesser will be blocked by the shield
 | 顯示被上盾者 | Sets who sees if a player has a shield | "Everyone", "Shielded + Medic", "Medic"
 | 裝盾玩家可看到謀殺未遂 | Whether a shielded player sees if someone tries to kill him | True/false |
 | 盾在會議後生效 | - | 開/關
-| Medic Sees Murder Attempt On Shielded Player | - | If anyone tries to harm the shielded player (Impostor, Sheriff, Guesser, ...), the Medic will see a red flash
+| 醫生可看到對被上盾者的謀殺未遂 | - | If anyone tries to harm the shielded player (Impostor, Sheriff, Guesser, ...), the Medic will see a red flash
 -----------------------
 
 ## 市長
@@ -1063,9 +1063,9 @@ Depending on the options, the Tracker has another ability: He can track all corp
 | 追踪者生成機率 | -
 | 追踪更新間隔 | Sets how often the position is being updated
 | 會議後重置追踪 | -
-| Tracker Can Track Corpses | -
-| Corpses Tracking Cooldown | -
-| Corpses Tracking Duration | -
+| 追踪者可以追踪屍體 | -
+| 屍體追踪冷卻 | -
+| 屍體追踪持續時間 | -
 -----------------------
 
 ## 密探
@@ -1234,7 +1234,7 @@ During the meetings you can see, whether a player wears a darker or a lighter co
 \
 Created by [Mallöris](https://github.com/Mallaris)\
 \
-禿鷲沒有任何任務，他必須自己贏得比賽。\
+禿鷲沒有任何任務，他必須自己取得勝利。\
 禿鷲是一個獨立職業，必須吃掉指定數量的屍體(取決於選項)才能獲勝。\
 根據選項，當有玩家死亡時，禿鷲會得到一個指向屍體的箭頭。 
 

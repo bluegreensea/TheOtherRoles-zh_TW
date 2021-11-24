@@ -35,6 +35,7 @@ namespace TheOtherRoles {
             this.defaultSelection = index >= 0 ? index : 0;
             this.parent = parent;
             this.isHeader = isHeader;
+            if ((selections.Equals(CustomOptionHolder.rates) && isHeader == true) || (parent != null)) this.name = "<size=85%>" + this.name + "</size>";
             selection = 0;
             if (id != 0) {
                 entry = TheOtherRolesPlugin.Instance.Config.Bind($"Preset{preset}", id.ToString(), defaultSelection);
@@ -44,7 +45,6 @@ namespace TheOtherRoles {
         }
 
         public static CustomOption Create(int id, string name, string[] selections, CustomOption parent = null, bool isHeader = false) {
-            if (selections.Equals(CustomOptionHolder.rates) && isHeader == true) name = "<size=85%>" + name + "</size>";
             return new CustomOption(id, name, selections, "", parent, isHeader);
         }
 

@@ -90,12 +90,12 @@ namespace TheOtherRoles.Patches {
             }
             
             if ((showRoleSummaryButton == null || showRoleSummaryButton.gameObject == null)) {
-                showRoleSummaryButton = createCustomToggle("角色總結: ", TheOtherRolesPlugin.ShowRoleSummary.Value, new Vector2(xOffset, yOffset), (UnityEngine.Events.UnityAction)showRoleSummaryToggle, __instance);
+                showRoleSummaryButton = createCustomToggle("職業總結: ", TheOtherRolesPlugin.ShowRoleSummary.Value, new Vector2(xOffset, yOffset), (UnityEngine.Events.UnityAction)showRoleSummaryToggle, __instance);
 
                 void showRoleSummaryToggle() {
                     TheOtherRolesPlugin.ShowRoleSummary.Value = !TheOtherRolesPlugin.ShowRoleSummary.Value;
                     MapOptions.showRoleSummary = TheOtherRolesPlugin.ShowRoleSummary.Value; 
-                    updateToggle(showRoleSummaryButton, "角色總結: ", TheOtherRolesPlugin.ShowRoleSummary.Value);
+                    updateToggle(showRoleSummaryButton, "職業總結: ", TheOtherRolesPlugin.ShowRoleSummary.Value);
                 }
             }
         }
