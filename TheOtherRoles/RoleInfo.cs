@@ -61,9 +61,12 @@ namespace TheOtherRoles
         public static RoleInfo bait = new RoleInfo("誘餌", Bait.color, "引誘你的敵人", "引誘你的敵人", RoleId.Bait);
         public static RoleInfo vulture = new RoleInfo("禿鷲", Vulture.color, "吃屍體來獲勝 ", "吃屍體 ", RoleId.Vulture, true);
         public static RoleInfo medium = new RoleInfo("通靈師", Medium.color, "詢問靈魂來取得資訊", "詢問靈魂", RoleId.Medium);
+        public static RoleInfo lawyer = new RoleInfo("Lawyer", Lawyer.color, "Defend your client", "Defend your client", RoleId.Lawyer, true);
+        public static RoleInfo pursuer = new RoleInfo("Pursuer", Pursuer.color, "Blank the Impostors", "Blank the Impostors", RoleId.Pursuer);
         public static RoleInfo impostor = new RoleInfo("偽裝者", Palette.ImpostorRed, Helpers.cs(Palette.ImpostorRed, "破壞跟殺死所有人"), "破壞跟殺死所有人", RoleId.Impostor);
         public static RoleInfo crewmate = new RoleInfo("船員", Color.white, "找到偽裝者", "找到偽裝者", RoleId.Crewmate);
         public static RoleInfo lover = new RoleInfo("戀人", Lovers.color, $"你正在戀愛中", $"你正在戀愛中", RoleId.Lover);
+        public static RoleInfo witch = new RoleInfo("Witch", Witch.color, "Cast a spell upon your foes", "Cast a spell upon your foes", RoleId.Witch);
 
         public static List<RoleInfo> allRoleInfos = new List<RoleInfo>() {
             impostor,
@@ -78,6 +81,7 @@ namespace TheOtherRoles
             cleaner,
             warlock,
             bountyHunter,
+            witch,
             niceMini,
             evilMini,
             goodGuesser,
@@ -88,6 +92,8 @@ namespace TheOtherRoles
             jackal,
             sidekick,
             vulture,
+            pursuer,
+            lawyer,
             crewmate,
             shifter,
             mayor,
@@ -128,6 +134,7 @@ namespace TheOtherRoles
             if (p == Trickster.trickster) infos.Add(trickster);
             if (p == Cleaner.cleaner) infos.Add(cleaner);
             if (p == Warlock.warlock) infos.Add(warlock);
+            if (p == Witch.witch) infos.Add(witch);
             if (p == Detective.detective) infos.Add(detective);
             if (p == TimeMaster.timeMaster) infos.Add(timeMaster);
             if (p == Medic.medic) infos.Add(medic);
@@ -148,6 +155,8 @@ namespace TheOtherRoles
             if (p == Bait.bait) infos.Add(bait);
             if (p == Vulture.vulture) infos.Add(vulture);
             if (p == Medium.medium) infos.Add(medium);
+            if (p == Lawyer.lawyer) infos.Add(lawyer);
+            if (p == Pursuer.pursuer) infos.Add(pursuer);
 
             // Default roles
             if (infos.Count == 0 && p.Data.Role.IsImpostor) infos.Add(impostor); // Just Impostor
@@ -161,8 +170,9 @@ namespace TheOtherRoles
 
         public static String GetRole(PlayerControl p) {
             string roleName;
-            roleName = String.Join("", getRoleInfoForPlayer(p).Select(x => x.name).ToArray());
-            if (roleName.Contains("Lover")) roleName.Replace("Lover", "");
+            roleName = String.Join("", getRoleInfoForPlayer(p).Select(x => Helpers.cs(x.color, x.name)).ToArray());
+            if (roleName.Contains("Lover")) roleName.Replace("Lover", Helpers.cs(Lovers.color, " Lover"));
+            if (Lawyer.target != null && p.PlayerId == Lawyer.target.PlayerId && PlayerControl.LocalPlayer != Lawyer.target) roleName += Helpers.cs(Pursuer.color, " §");
             return roleName;
         }
     }
