@@ -1,7 +1,7 @@
 .vs
 .vscode/tasks.json
 TODO
-Images/.DS_Store
+.DS_Store
 
 TheOtherRoles/bin
 TheOtherRoles/obj
