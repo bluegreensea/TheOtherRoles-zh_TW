@@ -19,7 +19,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 | [賞金獵人](#賞金獵人) | [偵探](#偵探) | [豺狼](#豺狼) |  |
 | [魔術師](#魔術師) | [工程師](#工程師) | [跟班](#跟班) |  |
 | [清除者](#清除者) | [駭客](#駭客) | [禿鷲](#禿鷲) |  |
-| [抹除者](#抹除者) | [點燈人](#點燈人) |  |  |
+| [抹除者](#抹除者) | [點燈人](#點燈人) | [律師](#律師) |  |
 | [教父 (黑手黨)](#黑手黨) | [市長](#市長) |  |  |
 | [黑手黨員 (黑手黨)](#黑手黨) | [醫生](#醫生) |  |  |
 | [守墓人 (黑手黨)](#黑手黨)  | [守衛](#守衛) |  |  |
@@ -27,7 +27,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 | [詭騙師](#詭騙師) | [警長](#警長) |  |  |
 | [吸血鬼](#吸血鬼) | [轉職者](#轉職者) |  |  |
 | [咒詛師](#咒詛師) | [密探](#密探) |  |  |
-|  | [間諜](#間諜) |  |  |
+| [巫師](#巫師) | [間諜](#間諜) |  |  |
 |  | [換票師](#換票師) |  |  |
 |  | [時間管理大師](#時間管理大師) |  |  |
 |  |  [追踪者](#追踪者) |  |  |
@@ -39,6 +39,8 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
+| 2021.11.9.5s| v3.2.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.2.1/TheOtherRoles.zip)
+| 2021.11.9.5s| v3.2.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.2.0/TheOtherRoles.zip)
 | 2021.11.9.5s| v3.1.2| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.1.2/TheOtherRoles.zip)
 | 2021.11.9.5s| v3.1.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.1.1/TheOtherRoles.zip)
 | 2021.11.9.5s| v3.1.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.1.0/TheOtherRoles.zip)
@@ -84,6 +86,17 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 <details>
   <summary>Click to show the Changelog</summary>
 
+**Version 3.2.1**
+- Hotfix for 3.2.0
+
+**Version 3.2.0**
+- **New Role:** [Witch](#巫師) created by [Alex2911](https://github.com/Alex2911)
+- **New Role:** [Lawyer](#律師)
+- Bug fix: Choosing an Impostor as a Sidekick won't resulted in an Impostor/Sidekick mix anymore.
+- Bug fix: The Guesser info now shows the right information, when the Guesser guesses the wrong role and kills himself.
+- Bug fix: Hats are being displayed in alphabetic order. Hats demo in freeplay is working again. Fixed a bug where hats would not load when accessed from the main menu.
+- Bug fix: The Detective now shows the name of the players in any case.
+
 **Hotfix 3.1.2**
 - Don't ask, just update. I messed up.
 
@@ -124,7 +137,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 - Added Vulture Option: "Show Arrows Pointing Towards The Corpes"
 - Removed Medium Question: "What is your name?" (name of the soul is added after each question)
 
-  
+
 **Version 2.9.0**
 - **New Role:** [Medium](#通靈師)
 - **New Role:** [Vulture](#禿鷲)
@@ -476,7 +489,7 @@ docker run -d -p 22023:22023/udp --env IMPOSTOR_AntiCheat__Enabled=false --env I
 - **最大緊急會議次數 :** 您可以設定總共可以招開的最大緊急會議數(每個玩家仍有個人最大招開數，但如果達到最大會議數，即使您還有一些緊急會議也無法使用。偽裝者和豺狼也算)
 - **允許跳過緊急會議:** 如果設定為關，緊急會議中將不會有跳過按鈕。如果玩家不投票，他將投票給自己。
 - **隱藏玩家名稱:** 隱藏所有有您不知職業玩家的名稱。戀人/偽裝者/豺狼隊伍仍可以看到他們隊友的名字。偽裝者還可以看到間諜的名字，每個人仍可以看到迷你的年齡。
-- **允許並行醫務室掃描:** 允許玩家同時進行他們的醫務室掃描
+- **允許並列醫務室掃描:** 允許玩家同時進行他們的醫務室掃描
 - **死者可看到職業**
 - **死者可看到投票**
 - **死者可看到剩餘任務**
@@ -734,6 +747,27 @@ Depending on the options, there'll be an arrow pointing towards the current targ
 | 殺死其他人後的額外冷卻 | 如果賞金獵人殺死了非懸賞玩家後，那麼正常的偽裝者冷卻時間將額外增加
 | 顯示指向懸賞的指示箭頭 | If set to true an arrow will appear (only visiable for the Bounty Hunter)
 | 指示箭頭更新間隔 | Sets how often the position is being updated
+-----------------------
+
+## 巫師
+### **隊伍:偽裝者**
+The Witch is an Impostor who has the ability to cast a spell on other players.\
+During the next meeting, the spellbound player will be highlighted and he'll die right after the meeting.\
+There are multiple options listed down below with which you can configure to fit your taste.\
+\
+**NOTE:**
+- Similar to the Vampire, shields and blanks will be checked twice (at the end of casting the spell on the player and at the end of the meeting, when the spell will be activated). This can result in players being marked as spelled during the meeting, but not dying in the end (when they get a shield or the Witch gets blanked after they were spelled by the Witch).
+
+\
+### 遊戲選項
+| 名稱 | 描述 |
+|----------|:-------------:|
+| Witch Spawn Chance | -
+| Witch Spell Casting Cooldown | -
+| Witch Additional Cooldown | The spell casting cooldown will be increased by the amount you set here after each spell
+| Witch Can Spell Everyone | If set to false, the witch can't spell the Spy and other Impostors
+| Witch Spell Casting Duration | The time that you need to stay next to the target in order to cast a spell on it
+| Trigger Both Cooldowns | If set to true, casting a spell will also trigger cooldown of the kill button and vice versa (but the two cooldowns may vary)
 -----------------------
 
 
@@ -1247,6 +1281,40 @@ Created by [Mallöris](https://github.com/Mallaris)\
 | 禿鷲可以使用通風口 | -
 | 顯示指向屍體的箭頭 | -
 -----------------------
+
+## 律師
+### **隊伍:獨立**
+The Lawyer is a neutral role that has a client.
+The client might be an Impostor, Jackal or Sidekick which is no Lover.
+The Lawyer needs to keep his client alive in order to win as a Lawyer.
+If his client dies or gets voted out, the Lawyer gets changes his role and becomes the [Pursuer](#pursuer), which has a different goal to win the game.
+The main goal of the Lawyer is to win as Lawyer, he is not allowed to betray his client.
+
+The Lawyer can win in multiple ways:
+- Lawyer dead and client alive: The Lawyer wins together with the winning team because he kept his client alive
+- Lawyer alive and client alive: The Lawyer wins with the winning team because he kept his client alive. The client **doesn't** win (even if his Impostor/Team Jackal mate wins). Hence the client should keep the Lawyer alive for some time, to get some help during the meetings, but has to eliminate him soon enough to not get his win stolen.
+
+**NOTE:**
+- If the client disconnects, the Lawyer will also turn into the Pursuer
+- If "Lawyer Target Knows" is set to true, the client will know that he someone is his Lawyer, but he won't know who.
+
+### 遊戲選項
+| 名稱 | 描述
+|----------|:-------------:|
+| Lawyer Target Knows | The target knows that it is the target (marked with "§", if lawyer dies the mark will disappear)
+| Lawyer Wins After Meetings | If set to true, the Lawyer wins after a configurable amount of meetings (can`t start meetings himself)
+| Lawyer Needed Meetings To Win | -
+| Lawyer Vision | Pursuer has normal vision
+| Pursuer Blank Cooldwon | -
+| Pursuer Number Of Blanks | -
+-----------------------
+
+## 原告
+### **隊伍:獨立**
+The Pursuer is still a neutral role, but has a different goal to win the game: He has to be alive, when the game ends (no matter who caused the win).
+In order to achieve this goal, the Pursuer has the ability "Blank": He can fill a killers (this also includes the Sheriff) weapon with a blank, so if the killer attempts to kill someone, the killer will miss the target and all cooldowns will be triggered as usual.
+If the killer blanks, no shields (e.g. Medic shield or Time Master shield) will be triggered.
+The Pursuer has tasks (which can already be done while being a Lawyer), that count towards the task win for the Crewmates. If the Pursuer dies, his tasks won't be counted anymore.
 
 # 原始碼
 It's bad I know, this is a side project and my second week of modding. So there are no best practices around here.

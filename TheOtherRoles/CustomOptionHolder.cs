@@ -273,7 +273,7 @@ namespace TheOtherRoles {
             bountyHunterShowArrow = CustomOption.Create(324, "顯示指向懸賞的指示箭頭", true, bountyHunterSpawnRate);
             bountyHunterArrowUpdateIntervall = CustomOption.Create(325, "指示箭頭更新間隔", 15f, 2.5f, 60f, 2.5f, bountyHunterShowArrow);
 
-            witchSpawnRate = CustomOption.Create(370, cs(Witch.color, "Witch"), rates, null, true);
+            witchSpawnRate = CustomOption.Create(370, cs(Witch.color, "巫師"), rates, null, true);
             witchCooldown = CustomOption.Create(371, "Witch Spell Casting Cooldown", 30f, 10f, 120f, 5f, witchSpawnRate);
             witchAdditionalCooldown = CustomOption.Create(372, "Witch Additional Cooldown", 10f, 0f, 60f, 5f, witchSpawnRate);
             witchCanSpellAnyone = CustomOption.Create(373, "Witch Can Spell Anyone", false, witchSpawnRate);
@@ -321,7 +321,7 @@ namespace TheOtherRoles {
             vultureCanUseVents = CustomOption.Create(343, "禿鷲可以使用通風口", true, vultureSpawnRate);
             vultureShowArrows = CustomOption.Create(344, "顯示指向屍體的箭頭", true, vultureSpawnRate);
 
-            lawyerSpawnRate = CustomOption.Create(350, cs(Lawyer.color, "Lawyer"), rates, null, true);
+            lawyerSpawnRate = CustomOption.Create(350, cs(Lawyer.color, "律師"), rates, null, true);
             lawyerTargetKnows = CustomOption.Create(351, "Lawyer Target Knows", true, lawyerSpawnRate);
             lawyerWinsAfterMeetings = CustomOption.Create(352, "Lawyer Wins After Meetings", false, lawyerSpawnRate);
             lawyerNeededMeetings = CustomOption.Create(353, "Lawyer Needed Meetings To Win", 5f, 1f, 15f, 1f, lawyerWinsAfterMeetings);
@@ -419,7 +419,7 @@ namespace TheOtherRoles {
             blockSkippingInEmergencyMeetings = CustomOption.Create(4, "在緊急會議中封鎖跳過", false);
             noVoteIsSelfVote = CustomOption.Create(5, "不能投票給自己", false, blockSkippingInEmergencyMeetings);
             hidePlayerNames = CustomOption.Create(6, "隱藏玩家名稱", false);
-            allowParallelMedBayScans = CustomOption.Create(7, "允許並行醫務室掃描", false);
+            allowParallelMedBayScans = CustomOption.Create(7, "允許並列醫務室掃描", false);
 
             blockedRolePairings.Add((byte)RoleId.Vampire, new [] { (byte)RoleId.Warlock});
             blockedRolePairings.Add((byte)RoleId.Warlock, new [] { (byte)RoleId.Vampire});

@@ -240,7 +240,7 @@ namespace TheOtherRoles.Patches {
                 textRenderer.color = Vulture.color;
             }
             else if (AdditionalTempData.winCondition == WinCondition.LawyerSoloWin) {
-                textRenderer.text = "Lawyer Wins";
+                textRenderer.text = "律師 獲勝";
                 textRenderer.color = Lawyer.color;
             }
             else if (AdditionalTempData.winCondition == WinCondition.LoversTeamWin) {
