@@ -183,6 +183,7 @@ namespace TheOtherRoles {
         public static CustomOption baitSpawnRate;
         public static CustomOption baitHighlightAllVents;
         public static CustomOption baitReportDelay;
+        public static CustomOption baitShowKillFlash;
 
         public static CustomOption vultureSpawnRate;
         public static CustomOption vultureCooldown;
@@ -412,6 +413,7 @@ namespace TheOtherRoles {
             baitSpawnRate = CustomOption.Create(330, cs(Bait.color, "誘餌"), rates, null, true);
             baitHighlightAllVents = CustomOption.Create(331, "如果通風口被佔用所有通風口發光", false, baitSpawnRate);
             baitReportDelay = CustomOption.Create(332, "誘餌舉報延遲", 0f, 0f, 10f, 1f, baitSpawnRate);
+            baitShowKillFlash = CustomOption.Create(333, "Warn The Killer With A Flash", true, baitSpawnRate);
 
             mediumSpawnRate = CustomOption.Create(360, cs(Medium.color, "通靈師"), rates, null, true);
             mediumCooldown = CustomOption.Create(361, "通靈師詢問冷卻", 30f, 5f, 120f, 5f, mediumSpawnRate);
