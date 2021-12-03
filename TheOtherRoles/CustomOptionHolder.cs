@@ -424,7 +424,7 @@ namespace TheOtherRoles {
             noVoteIsSelfVote = CustomOption.Create(5, "不能投票給自己", false, blockSkippingInEmergencyMeetings);
             hidePlayerNames = CustomOption.Create(6, "隱藏玩家名稱", false);
             allowParallelMedBayScans = CustomOption.Create(7, "允許並列醫務室掃描", false);
-            dynamicMap = CustomOption.Create(8, "Play On A Random Map", false, null, false);
+            dynamicMap = CustomOption.Create(8, "隨機地圖", false, null, false);
 
             blockedRolePairings.Add((byte)RoleId.Vampire, new [] { (byte)RoleId.Warlock});
             blockedRolePairings.Add((byte)RoleId.Warlock, new [] { (byte)RoleId.Vampire});
