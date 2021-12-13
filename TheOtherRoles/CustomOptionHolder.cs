@@ -263,8 +263,8 @@ namespace TheOtherRoles {
             tricksterLightsOutCooldown = CustomOption.Create(252, "詭騙師關燈冷卻", 30f, 10f, 60f, 5f, tricksterSpawnRate);
             tricksterLightsOutDuration = CustomOption.Create(253, "詭騙師關燈持續時間", 15f, 5f, 60f, 2.5f, tricksterSpawnRate);
 
-            cleanerSpawnRate = CustomOption.Create(260, cs(Cleaner.color, "清除者"), rates, null, true);
-            cleanerCooldown = CustomOption.Create(261, "清除者冷卻", 30f, 10f, 60f, 2.5f, cleanerSpawnRate);
+            cleanerSpawnRate = CustomOption.Create(260, cs(Cleaner.color, "清道夫"), rates, null, true);
+            cleanerCooldown = CustomOption.Create(261, "清道夫冷卻", 30f, 10f, 60f, 2.5f, cleanerSpawnRate);
 
             warlockSpawnRate = CustomOption.Create(270, cs(Cleaner.color, "咒詛師"), rates, null, true);
             warlockCooldown = CustomOption.Create(271, "咒詛師冷卻", 30f, 10f, 60f, 2.5f, warlockSpawnRate);
@@ -278,12 +278,12 @@ namespace TheOtherRoles {
             bountyHunterArrowUpdateIntervall = CustomOption.Create(325, "指示箭頭更新間隔", 15f, 2.5f, 60f, 2.5f, bountyHunterShowArrow);
 
             witchSpawnRate = CustomOption.Create(370, cs(Witch.color, "巫師"), rates, null, true);
-            witchCooldown = CustomOption.Create(371, "Witch Spell Casting Cooldown", 30f, 10f, 120f, 5f, witchSpawnRate);
-            witchAdditionalCooldown = CustomOption.Create(372, "Witch Additional Cooldown", 10f, 0f, 60f, 5f, witchSpawnRate);
-            witchCanSpellAnyone = CustomOption.Create(373, "Witch Can Spell Anyone", false, witchSpawnRate);
-            witchSpellCastingDuration = CustomOption.Create(374, "Spell Casting Duration", 1f, 0f, 10f, 1f, witchSpawnRate);
-            witchTriggerBothCooldowns = CustomOption.Create(375, "Trigger Both Cooldowns", true, witchSpawnRate);
-            witchVoteSavesTargets = CustomOption.Create(376, "Voting The Witch Saves All The Targets", true, witchSpawnRate);
+            witchCooldown = CustomOption.Create(371, "巫師施術冷卻時間", 30f, 10f, 120f, 5f, witchSpawnRate);
+            witchAdditionalCooldown = CustomOption.Create(372, "巫師額外冷卻時間", 10f, 0f, 60f, 5f, witchSpawnRate);
+            witchCanSpellAnyone = CustomOption.Create(373, "巫師可以對任何人施術", false, witchSpawnRate);
+            witchSpellCastingDuration = CustomOption.Create(374, "巫師施術持續時間", 1f, 0f, 10f, 1f, witchSpawnRate);
+            witchTriggerBothCooldowns = CustomOption.Create(375, "觸發兩個冷卻時間", true, witchSpawnRate);
+            witchVoteSavesTargets = CustomOption.Create(376, "票出巫師拯救所有目標", true, witchSpawnRate);
 
             miniSpawnRate = CustomOption.Create(180, cs(Mini.color, "迷你"), rates, null, true);
             miniGrowingUpDuration = CustomOption.Create(181, "迷你成長時間", 400f, 100f, 1500f, 100f, miniSpawnRate);
@@ -326,13 +326,13 @@ namespace TheOtherRoles {
             vultureShowArrows = CustomOption.Create(344, "顯示指向屍體的箭頭", true, vultureSpawnRate);
 
             lawyerSpawnRate = CustomOption.Create(350, cs(Lawyer.color, "律師"), rates, null, true);
-            lawyerTargetKnows = CustomOption.Create(351, "Lawyer Target Knows", true, lawyerSpawnRate);
-            lawyerWinsAfterMeetings = CustomOption.Create(352, "Lawyer Wins After Meetings", false, lawyerSpawnRate);
-            lawyerNeededMeetings = CustomOption.Create(353, "Lawyer Needed Meetings To Win", 5f, 1f, 15f, 1f, lawyerWinsAfterMeetings);
-            lawyerVision = CustomOption.Create(354, "Lawyer Vision", 1f, 0.25f, 3f, 0.25f, lawyerSpawnRate);
-            lawyerKnowsRole = CustomOption.Create(355, "Lawyer Knows Target Role", false, lawyerSpawnRate);
-            pursuerCooldown = CustomOption.Create(356, "Pursuer Blank Cooldown", 30f, 5f, 60f, 2.5f, lawyerSpawnRate);
-            pursuerBlanksNumber = CustomOption.Create(357, "Pursuer Number Of Blanks", 5f, 0f, 20f, 1f, lawyerSpawnRate);
+            lawyerTargetKnows = CustomOption.Create(351, "律師目標知情", true, lawyerSpawnRate);
+            lawyerWinsAfterMeetings = CustomOption.Create(352, "律師會議後獲勝", false, lawyerSpawnRate);
+            lawyerNeededMeetings = CustomOption.Create(353, "律師需要會議才能獲勝", 5f, 1f, 15f, 1f, lawyerWinsAfterMeetings);
+            lawyerVision = CustomOption.Create(354, "律師視野", 1f, 0.25f, 3f, 0.25f, lawyerSpawnRate);
+            lawyerKnowsRole = CustomOption.Create(355, "律師知道目標職業", false, lawyerSpawnRate);
+            pursuerCooldown = CustomOption.Create(356, "原告填空冷卻", 30f, 5f, 60f, 2.5f, lawyerSpawnRate);
+            pursuerBlanksNumber = CustomOption.Create(357, "原告填空次數", 5f, 0f, 20f, 1f, lawyerSpawnRate);
 
             shifterSpawnRate = CustomOption.Create(70, cs(Shifter.color, "轉職者"), rates, null, true);
             shifterShiftsModifiers = CustomOption.Create(71, "轉職者轉移調整", false, shifterSpawnRate);
@@ -413,7 +413,7 @@ namespace TheOtherRoles {
             baitSpawnRate = CustomOption.Create(330, cs(Bait.color, "誘餌"), rates, null, true);
             baitHighlightAllVents = CustomOption.Create(331, "如果通風口被佔用所有通風口發光", false, baitSpawnRate);
             baitReportDelay = CustomOption.Create(332, "誘餌舉報延遲", 0f, 0f, 10f, 1f, baitSpawnRate);
-            baitShowKillFlash = CustomOption.Create(333, "Warn The Killer With A Flash", true, baitSpawnRate);
+            baitShowKillFlash = CustomOption.Create(333, "用閃爍燈警告殺手", true, baitSpawnRate);
 
             mediumSpawnRate = CustomOption.Create(360, cs(Medium.color, "通靈師"), rates, null, true);
             mediumCooldown = CustomOption.Create(361, "通靈師詢問冷卻", 30f, 5f, 120f, 5f, mediumSpawnRate);

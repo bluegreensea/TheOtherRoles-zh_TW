@@ -881,15 +881,15 @@ namespace TheOtherRoles
                     string msg = "";
 
                     int randomNumber = Medium.target.killerIfExisting?.PlayerId == Mini.mini?.PlayerId ? TheOtherRoles.rnd.Next(3) : TheOtherRoles.rnd.Next(4);
-                    string typeOfColor = Helpers.isLighterColor(Medium.target.killerIfExisting.Data.DefaultOutfit.ColorId) ? "lighter" : "darker";
+                    string typeOfColor = Helpers.isLighterColor(Medium.target.killerIfExisting.Data.DefaultOutfit.ColorId) ? "亮" : "暗";
                     float timeSinceDeath = ((float)(Medium.meetingStartTime - Medium.target.timeOfDeath).TotalMilliseconds);
                     string name = " (" + Medium.target.player.Data.PlayerName + ")";
 
 
-                    if (randomNumber == 0) msg = "What is your role? My role is " + RoleInfo.GetRolesString(Medium.target.player, false) + name;
-                    else if (randomNumber == 1) msg = "What is your killer`s color type? My killer is a " + typeOfColor + " color" + name;
-                    else if (randomNumber == 2) msg = "When did you die? I have died " + Math.Round(timeSinceDeath / 1000) + "s before meeting started" + name;
-                    else msg = "What is your killer`s role? My killer is " + RoleInfo.GetRolesString(Medium.target.killerIfExisting, false) + name; //exlude mini 
+                    if (randomNumber == 0) msg = "你的職業是什麼? 我的職業是" + RoleInfo.GetRolesString(Medium.target.player, false) + name;
+                    else if (randomNumber == 1) msg = "殺你的殺手顏色類型是什麼? 殺手是" + typeOfColor + "色系" + name;
+                    else if (randomNumber == 2) msg = "你什麼時候死的? 我在開始會議前" + Math.Round(timeSinceDeath / 1000) + "秒死的" + name;
+                    else msg = "殺你的殺手職業是什麼? 殺手是" + RoleInfo.GetRolesString(Medium.target.killerIfExisting, false) + name; //exlude mini 
 
                     DestroyableSingleton<HudManager>.Instance.Chat.AddChat(PlayerControl.LocalPlayer, $"{msg}");
 

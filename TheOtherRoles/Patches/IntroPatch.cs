@@ -85,7 +85,7 @@ namespace TheOtherRoles.Patches {
             if (roleInfo.isNeutral) {
                 var neutralColor = new Color32(76, 84, 78, 255);
                 __instance.BackgroundBar.material.color = neutralColor;
-                __instance.TeamTitle.text = "Neutral";
+                __instance.TeamTitle.text = "獨立隊伍";
                 __instance.TeamTitle.color = neutralColor;
             }
         }

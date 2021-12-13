@@ -311,11 +311,11 @@ namespace TheOtherRoles.Patches {
 
             foreach (WinCondition cond in AdditionalTempData.additionalWinConditions) {
                 if (cond == WinCondition.AdditionalLawyerStolenWin) {
-                    textRenderer.text += $"\n{Helpers.cs(Lawyer.color, "The Lawyer stole the win from the client")}";
+                    textRenderer.text += $"\n{Helpers.cs(Lawyer.color, "律師從客戶竊取了勝利")}";
                 } else if (cond == WinCondition.AdditionalLawyerBonusWin) {
-                    textRenderer.text += $"\n{Helpers.cs(Lawyer.color, "The Lawyer wins with the client")}";
+                    textRenderer.text += $"\n{Helpers.cs(Lawyer.color, "律師與客戶共贏")}";
                 } else if (cond == WinCondition.AdditionalAlivePursuerWin) {
-                    textRenderer.text += $"\n{Helpers.cs(Pursuer.color, "The Pursuer survived")}";
+                    textRenderer.text += $"\n{Helpers.cs(Pursuer.color, "原告倖存了下來")}";
                 }
             }
 

@@ -18,7 +18,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 | [壞賭徒](#賭徒) | [好賭徒](#賭徒) | [小丑](#小丑) |  |
 | [賞金獵人](#賞金獵人) | [偵探](#偵探) | [豺狼](#豺狼) |  |
 | [魔術師](#魔術師) | [工程師](#工程師) | [跟班](#跟班) |  |
-| [清除者](#清除者) | [駭客](#駭客) | [禿鷲](#禿鷲) |  |
+| [清道夫](#清道夫) | [駭客](#駭客) | [禿鷲](#禿鷲) |  |
 | [抹除者](#抹除者) | [點燈人](#點燈人) | [律師](#律師) |  |
 | [教父 (黑手黨)](#黑手黨) | [市長](#市長) |  |  |
 | [黑手黨員 (黑手黨)](#黑手黨) | [醫生](#醫生) |  |  |
@@ -39,6 +39,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
+| 2021.11.9.5s| v3.2.4| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.2.4/TheOtherRoles.zip)
 | 2021.11.9.5s| v3.2.3| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.2.3/TheOtherRoles.zip)
 | 2021.11.9.5s| v3.2.2| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.2.2/TheOtherRoles.zip)
 | 2021.11.9.5s| v3.2.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.2.1/TheOtherRoles.zip)
@@ -88,18 +89,22 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 <details>
   <summary>Click to show the Changelog</summary>
 
+**Version 3.2.4**
+- Fixed a bug where the Vampire teleported when the bitten player died
+- The settings UI has been improved by [Amsyar Rasyiq](https://github.com/amsyarasyiq)
+- New option to the Bait "Warn The Killer With A Flash", created by [gendelo3](https://github.com/gendelo3)
+
 **Version 3.2.3**
 - Fixed a bug where the role of a dead client was visible to the Pursuer
 - Fixed a bug where the Morphling changed their color when killing players
 - Fixed a bug where voting the Lover partner of a Lover Witch did not safe the spellbound players
-- Fixed a bug where the Vampire would teleport to the bitten player in some cases
 - When the Lawyer dies, the client doesn't have the client mark (§) anymore, making the client aware of the fact that the Lawyer can't steal the win anymore (only relevant if the "Client Knows" option is on)
 
 **Version 3.2.2**
 - Add new option "Play On A Random Map" created by [Alex2911](https://github.com/Alex2911)
 - Add Witch option "Voting The Witch Saves All The Targets"
 - Add Lawyer option "Lawyer Knows Target Role"
-- We changed the win conditions of the [Lawyer](#lawyer), to make it more viable
+- We changed the win conditions of the [Lawyer](#律師), to make it more viable
 - Bug fix: The Medium now shows the roles of players in the right format
 - The name and the role of all winners is now being displayed on the end screen
 - We changed the way settings are being shared among the players (which caused some people to be unable to join the lobby). This might resolve the problem or make it even worse... we'll see.
@@ -279,7 +284,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 - Added a way to get the 2 Hidden [Colors](#顏色)
 
 **Version 2.3.0**
-- **New Role:** [Cleaner](#清除者)
+- **New Role:** [Cleaner](#清道夫)
 - Added 12 new [Colors](#顏色)
 - We added support for creating [Custom Hats](#自定義帽子). New hats are coming with the next version, but you can already create and submit your own hats on [Discord](https://discord.gg/77RkMJHWsM).
 - Added the option to hide the name of players with an unknown role
@@ -704,9 +709,9 @@ If the boxes are converted to a vent network, the Trickster gains a new ability 
 | 詭騙師關燈持續時間 | Duration after which the light is automatically restored
 -----------------------
 
-## 清除者
+## 清道夫
 ### **隊伍:偽裝者**
-清除者是一個偽裝者，擁有清理屍體的能力。 \
+清道夫是一個偽裝者，擁有清理屍體的能力。 \
 
 \
 **NOTE:**
@@ -715,8 +720,8 @@ If the boxes are converted to a vent network, the Trickster gains a new ability 
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
-| 清除者生成機率 | -
-| 清除者冷卻 | 清理屍體的冷卻時間
+| 清道夫生成機率 | -
+| 清道夫冷卻 | 清理屍體的冷卻時間
 -----------------------
 
 
@@ -755,7 +760,7 @@ Depending on the options, there'll be an arrow pointing towards the current targ
 
 \
 **NOTE:**
-- The target won't be an 偽裝者 or a Spy
+- 目標不會是偽裝者跟間諜
 - Killing the target resets the timer and a new target will be selected.
 
 ### 遊戲選項
@@ -771,36 +776,36 @@ Depending on the options, there'll be an arrow pointing towards the current targ
 
 ## 巫師
 ### **隊伍:偽裝者**
-The Witch is an Impostor who has the ability to cast a spell on other players.\
-During the next meeting, the spellbound player will be highlighted and they'll die right after the meeting.\
-There are multiple options listed down below with which you can configure to fit your taste.\
-Similar to the Vampire, shields and blanks will be checked twice (at the end of casting the spell on the player and at the end of the meeting, when the spell will be activated).\
-This can result in players being marked as spelled during the meeting, but not dying in the end (when they get a shield or the Witch gets blanked after they were spelled by the Witch).\
-If the Witch dies before the meeting starts or if the Witch is being guessed during the meeting, the spellbound players will be highlighted but they'll survive in any case.\
-Depending on the options you can choose whether voting the Witch out will save all the spellbound players or not.\
+巫師是個偽裝者，有能力對其他玩家施放巫術。\
+在下一次會議期間，被下蠱的玩家將被突顯，他們將在會議結束後立即死亡。\
+下面列出了多個選項，您可以根據自己的喜好進行配置。\
+與吸血鬼類似，盾牌和填空將被檢查兩次(在對玩家施放法術結束時和會議結束巫術發動時)。\
+這可能導致玩家在會議期間被標記為被下蠱，但最後不會死亡(當他們獲得盾牌或女巫在施放巫術後被填空)。\
+如果女巫在會議開始前死亡，或者在會議期間被賭徒猜出女巫，那麼被下蠱的玩家將被突顯，但他們會活下來。\
+根據選項，您可以選擇將女巫票出是否會拯救所有被下蠱的玩家。\
 
 \
 **NOTE:**
-- The spellbound players will die before the voted player dies (which might trigger e.g. trigger an Impostor win condition, even if the Witch is the one being voted)
+- 被下蠱的玩家將在被投票的玩家死亡之前死亡(這可能會觸發例如偽裝者獲勝條件，即使女巫是被投票的那個)
 
 \
 ### 遊戲選項
-| 名稱 | 描述 |
-|----------|:-------------:|
-| Witch Spawn Chance | -
-| Witch Spell Casting Cooldown | -
-| Witch Additional Cooldown | The spell casting cooldown will be increased by the amount you set here after each spell
-| Witch Can Spell Everyone | If set to false, the witch can't spell the Spy and other Impostors
-| Witch Spell Casting Duration | The time that you need to stay next to the target in order to cast a spell on it
-| Trigger Both Cooldowns | If set to true, casting a spell will also trigger cooldown of the kill button and vice versa (but the two cooldowns may vary)
-| Voting The Witch Saves All The Targets | If set to true, all the cursed targets will survive at the end of the meeting
+| 名稱         | 描述 |
+|------------|:-------------:|
+| 巫師生成機率     | -
+| 巫師施術冷卻時間   | -
+| 巫師額外冷卻時間   | 施術冷卻時間在每個巫術後增加的時間
+| 巫師可以對任何人施術 | 如果設置為關，女巫不能對間諜和其他偽裝者施術
+| 巫師施法持續時間   | 你需要留在目標旁邊以便對其施術的時間
+| 觸發兩個冷卻時間   | 如果設置為開，施術也會觸發殺死按鈕的冷卻時間，反之亦然(但兩個冷卻時間可能會有所不同)
+| 票出巫師拯救所有目標 | 如果設置為開，所有被詛咒的目標都會在會議結束時存活下來
 -----------------------
 
 
 ## 賭徒
 ### **隊伍:船員或偽裝者**
-The 賭徒 can be a Crewmate or an 偽裝者 (depending on the settings).\
-The 賭徒 can shoot players during the meeting, by guessing its role. If the guess is wrong, the 賭徒 dies instead.\
+賭徒可能是船員或是偽裝者 (depending on the settings).\
+賭徒 can shoot players during the meeting, by guessing its role. If the guess is wrong, the 賭徒 dies instead.\
 You can select how many players can be shot per game and if multiple players can be shot during a single meeting.\
 The guesses 偽裝者 and Crewmate are only right, if the player is part of the corresponding team and has no special role.\
 You can only shoot during the voting time.\
@@ -931,7 +936,7 @@ Because of the vents the Engineer might not be able to start some tasks using th
 ## 偵探
 ### **隊伍:船員**
 偵探可以看到其他玩家留下的腳印。
-偵探的另一個特點是在他們報告屍體時將顯示：他們收到有關兇手身份的線索。他們獲得的信息類型取決於他們找到屍體所花的時間。
+偵探的另一個特點是在他們舉報屍體時將顯示: 他們收到有關兇手身份的線索。他們獲得的資訊類型取決於他們找到屍體所花的時間。
 \
 **NOTE:**
 - When people change their colors (because of a morph or camouflage), all the footprints also change their colors (also the ones that were already on the ground). If the effects are over, all footprints switch back to the original color.
@@ -946,20 +951,20 @@ Because of the vents the Engineer might not be able to start some tasks using th
 | 匿名足跡 | If set to true, all footprints will have the same color. Otherwise they will have the color of the respective player.
 | 足跡間隔 | The interval between two footprints
 | 足跡持續時間 | Sets how long the footprints remain visible.
-| 偵探報告將有名字的時間 | The amount of time that the Detective will have to report the body since death to get the killer's name.  |
-| 偵探報告將有顏色類型的時間 | The amount of time that the Detective will have to report the body since death to get the killer's color type. |
+| 偵探舉報將有名字的時間 | The amount of time that the Detective will have to report the body since death to get the killer's name.  |
+| 偵探舉報將有顏色類型的時間 | The amount of time that the Detective will have to report the body since death to get the killer's color type. |
 -----------------------
 
 ## 點燈人
 ### **隊伍:船員**
-The Lighter can turn on their Lighter every now and then, which increases their vision by a customizable amount.
+點燈人可以不時地開燈，讓他們增加設定的視野。
 
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
 | 點燈人生成機率 | -
-| 開燈時點燈視野 | The vision the Lighter has when the lights are on and the Lighter mode is on
-| 關燈時點燈視野 | The vision the Lighter has when the lights are down and the Lighter mode is on
+| 開燈時點燈視野 | 當燈泡亮起且點燈人開燈時點燈人的視野
+| 關燈時點燈視野 | 當燈泡熄滅且點燈人開燈時點燈人的視野
 | 點燈人冷卻 | -
 | 點燈持續時間 | -
 -----------------------
@@ -1264,6 +1269,7 @@ Created by [Mallöris](https://github.com/Mallaris)\
 | 誘餌生成機率 | -
 | 誘餌所有通風口發光 | 如果設置為開，玩家在其中一個通風口內，所有通風口都將發光。 如果設置為關，則只會發光玩家所在的通風口。
 | 誘餌舉報延遲 | -
+| 用閃爍燈警告殺手 | -
 -----------------------
 
 ## 通靈師
@@ -1271,8 +1277,8 @@ Created by [Mallöris](https://github.com/Mallaris)\
 \
 Created by [Mallöris](https://github.com/Mallaris)\
 \
-通靈師是一個可以詢問靈魂來得到資訊的船員。和靈媒一樣，他將看到玩家死亡的地方(下次會議後)並可以詢問祂們。然後他會在聊天欄中取得有關靈魂或殺手的隨機信息。靈魂只停留一回合，即只到下次會議。根據選項，靈魂只能被詢問一次然後消失。
-During the meetings you can see, whether a player wears a darker or a lighter color, represented by (D) or (L) in the names.
+通靈師是一個可以詢問靈魂來得到資訊的船員。和靈媒一樣，他將看到玩家死亡的地方(下次會議後)並可以詢問祂們。然後他會在聊天欄中取得有關靈魂或殺手的隨機資訊。靈魂只停留一回合，即只到下次會議。根據選項，靈魂只能被詢問一次然後消失。
+在會議期間，您可以看到玩家有著更深或更淺的顏色，在名稱中有 (暗) 或 (亮) 來表示。
 
 問題:
 你的職業是什麼？
@@ -1310,38 +1316,38 @@ Created by [Mallöris](https://github.com/Mallaris)\
 
 ## 律師
 ### **隊伍:獨立**
-The Lawyer is a neutral role that has a client.
-The client might be an Impostor or Jackal which is no Lover.
-The Lawyer needs their client to win in order to win the game.
-If their client dies or gets voted out, the Lawyer changes their role and becomes the [Pursuer](#pursuer), which has a different goal to win the game.
-The main goal of the Lawyer is to win as Lawyer, as it is not allowed to betray their client.
+律師是一個有客戶的獨立職業。
+客戶會是沒有戀人的偽裝者或豺狼。
+律師需要他們的客戶獲勝來獲勝。
+如果他們的客戶死亡或被票出，律師會改變他們的職業成為[原告](#原告)，他有不同的目標來獲勝。
+律師的主要目標是作為律師獲勝，因為他們不被允許背叛自己的客戶。
 
-The Lawyer can win in multiple ways:
-- Lawyer dead, client alive and client team won: The Lawyer wins together with the team of the client
-- Lawyer and client alive and client team won: The Lawyer wins with the team of the client. The client **doesn't** win (even if their Impostor/Team Jackal mate wins), the Lawyer steals their win. Hence the client should keep the Lawyer alive for some time, to get some help during the meetings, but has to eliminate them soon enough to not get their win stolen.
+律師可以通過多種方式獲勝:
+- 律師死了客戶還活著並客戶隊伍獲勝: 律師與客戶團隊一起獲勝。
+- 律師和客戶活著並客戶隊伍獲勝: 律師與客戶團隊一起獲勝。客戶**沒有**獲勝(即使他們的偽裝者/豺狼隊隊友獲勝)，律師竊取了他們的勝利。因此，客戶應該讓律師活著一段時間，以便在會議期間獲得一些幫助，但必須盡快消除他們，以免他們的勝利竊取。
 
 **NOTE:**
-- If the client disconnects, the Lawyer will also turn into the Pursuer
-- If "Lawyer Target Knows" is set to true, the client will know that someone is their Lawyer, but won't know who.
+- 如果客戶端斷開連接，律師也將變成原告
+- 如果"律師目標知情"設置為開，客戶將知道他們是某律師的客戶，但不會知道是誰。
 
 ### 遊戲選項
 | 名稱 | 描述
 |----------|:-------------:|
-| Lawyer Target Knows | The target knows that it is the target (marked with "§", if the Lawyer dies, the mark will disappear)
-| Lawyer Wins After Meetings | If set to true, the Lawyer wins after a configurable amount of meetings (can't start meetings himself)
-| Lawyer Needed Meetings To Win | -
-| Lawyer Vision | Pursuer has normal vision
-| Lawyer Knows Target Role | -
-| Pursuer Blank Cooldown | -
-| Pursuer Number Of Blanks | -
+| 律師目標知情 | 目標知道自己是目標(有"§"標記，如果律師死了，標記就會消失)
+| 律師會議後獲勝 | 如果設置為開，律師在可配置的會議數量後獲勝(不能自己開始會議)
+| 律師需要會議才能獲勝 | -
+| 律師視野 | 原告視野正常
+| 律師知道目標職業 | -
+| 原告填空冷卻 | -
+| 原告填空次數 | -
 -----------------------
 
 ## 原告
 ### **隊伍:獨立**
-The Pursuer is still a neutral role, but has a different goal to win the game: Them has to be alive, when the game ends (no matter who caused the win).
-In order to achieve this goal, the Pursuer has the ability "Blank": Them can fill a killers (this also includes the Sheriff) weapon with a blank, so if the killer attempts to kill someone, the killer will miss the target and all cooldowns will be triggered as usual.
-If the killer blanks, no shields (e.g. Medic shield or Time Master shield) will be triggered.
-The Pursuer has tasks (which can already be done while being a Lawyer), that count towards the task win for the Crewmates. If the Pursuer dies, their tasks won't be counted anymore.
+原告也是個獨立職業，但有個不同的目標來獲勝: 他們必須活到遊戲結束時(不管是誰獲勝)。
+為了實現這個目標，原告擁有"填空"能力: 他們可以用空包彈填充殺手(包括警長)的武器，所以如果殺手試圖殺死某人將錯過目標並照常觸發所有冷卻時間。
+如果殺手被填空不會觸發任何盾(例如醫生盾或時間管理大師盾)。
+原告有任務(在律師時就可以做)，這些任務計入船員的任務勝利。如果原告死了，他們的任務將不被計算在內。
 
 # 原始碼
 It's bad I know, this is a side project and my second week of modding. So there are no best practices around here.
