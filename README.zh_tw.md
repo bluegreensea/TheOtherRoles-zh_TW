@@ -39,6 +39,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
+| 2021.12.14s| v3.3.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.3.0/TheOtherRoles.zip)
 | 2021.11.9.5s| v3.2.4| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.2.4/TheOtherRoles.zip)
 | 2021.11.9.5s| v3.2.3| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.2.3/TheOtherRoles.zip)
 | 2021.11.9.5s| v3.2.2| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.2.2/TheOtherRoles.zip)
@@ -88,6 +89,17 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # Changelog
 <details>
   <summary>Click to show the Changelog</summary>
+
+**Version 3.3.0**
+- Update to Among Us version 2021.12.14s
+- Fixed a bug where the Pursuer won if the Pursuer was the last killed or voted player
+- Fixed a bug where the option "Enable Mod Roles And Block Vanilla Roles" was not set correctly
+- New option for the Guesser "Evil Guesser can guess spy"
+- New option for the Guesser "Other Guesser Spawn Rate"
+- New ability for the Hacker "Mobile Gadgets" (including vitals & admin table)
+- New option for the Hacker "Max Mobile Gadget Charges"
+- New option for the Hacker "Number Of Tasks Needed For Recharging"
+- Fixed some UI bugs during the meeting  
 
 **Version 3.2.4**
 - Fixed a bug where the Vampire teleported when the bitten player died
@@ -826,6 +838,8 @@ Depending on the options, the Guesser can't guess the shielded player and depend
 | 賭徒每個會議可以猜測多次 | -
 | 賭徒在死者聊天中可見 | -
 | 賭徒忽略醫生盾 | -
+| 壞賭徒可以猜出間諜 | -
+| 其他賭徒的生成機率 | -
 
 -----------------------
 
@@ -1013,16 +1027,16 @@ Because of the vents the Engineer might not be able to start some tasks using th
 | 名稱 | 描述 | 選項 |
 |----------|:-------------:|:-------------:|
 | 醫生生成機率 | - | -
-| 顯示被上盾者 | Sets who sees if a player has a shield | "Everyone", "Shielded + Medic", "Medic"
-| 裝盾玩家可看到謀殺未遂 | Whether a shielded player sees if someone tries to kill them | 開/關 |
+| 顯示被上盾者 | 設置誰能查看玩家是否有盾牌 | "所有人", "被上盾者 + 醫生", "醫生"
+| 裝盾玩家可看到謀殺未遂 | 被上盾的玩家是否看到有人試圖殺死他們 | 開/關 |
 | 盾在會議後生效 | - | 開/關
-| 醫生可看到對被上盾者的謀殺未遂 | - | If anyone tries to harm the shielded player (Impostor, Sheriff, Guesser, ...), the Medic will see a red flash
+| 醫生可看到對被上盾者的謀殺未遂 | - | 如果有人試圖傷害被上盾的玩家(偽裝者、警長、賭徒……)，醫生將看到紅色閃光
 -----------------------
 
 ## 市長
 ### **隊伍:船員**
-The Mayor leads the Crewmates by having a vote that counts twice.\
-The Mayor can always use their meeting, even if the maximum number of meetings was reached.
+市長通過兩票來領導船員。\
+市長始終可以使用他們的會議，即使已達到最大會議次數。
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -1032,27 +1046,31 @@ The Mayor can always use their meeting, even if the maximum number of meetings w
 
 ## 駭客
 ### **隊伍:船員**
-If the Hacker activates the "Hacker mode", the Hacker gets more information than others from the admin table and vitals for a set duration.\
-Otherwise they see the same information as everyone else.
-**Admin table:** The Hacker can see the colors (or color types) of the players on the table.\
-**Vitals**: The Hacker can see how long dead players have been dead for.\
+如果駭客啟動"駭客模式"，駭客在設定的時間內從管理室地圖和生命監測器中獲得更多資訊。\
+否則，他們只會看到與其他人相同的資訊。
+**管理室地圖**: 駭客可以看到地圖上玩家的顏色(或顏色類型)。\
+**生命監測器**: 駭客可以看到死去的玩家死了多久。\
+駭客可以使用他的攜帶式小工具(生命監測器和管理室地圖)，可配置的最大充能(使用)和充能所需任務量。\
 \
 **NOTE:**
-- If the Morphling morphs or the Camouflager camouflages, the colors on the admin table change accordingly
-- More information about the [顏色](#顏色)
-- During the meetings you can see, whether a player wears a darker or a lighter color, represented by (D) or (L) in the names.
+- 如果百變怪變形或魔術師偽裝，管理表上的顏色會相應改變
+- 更多 [顏色](#顏色) 資訊
+- 在會議期間，您可以看到玩家有深或淺的顏色，以名稱中的 (暗) 或 (亮) 表示。
+- 其他賭徒只是以設定的生成機率添加到票證系統中，與上述設置無關
 
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
 | 駭客生成機率 | -
 | 駭客冷卻 | -
-| 駭客持續時間 | Sets how long the "Hacker mode" remains active
-| 駭客只可看到有顏色類型 | Sets if the Hacker sees the player colors on the admin table or only white/gray (for Lighter and darker colors)
+| 駭客持續時間 | 設置"駭客模式"保持啟動的時間
+| 駭客只可看到有顏色類型 | 設定駭客是在管理室地圖上看到玩家顏色還是只能看到白色/灰色(淺和深的顏色)
+| 最大攜帶式小工具充能 | -
+| 充能所需要的任務數 | 獲得充能的任務數
 -----------------------
 
 
-## 轉職者
+## 轉職師
 ### **隊伍:船員**
 The Shifter can take over the role of another Crewmate, the other player will transform into a Crewmate.\
 The Shift will always be performed at the end of the next meeting right before a player is exiled. The target needs to be chosen during the round.\
@@ -1071,8 +1089,8 @@ can only use them, if the previous player did not use them before)
 ### 遊戲選項
 | 名稱 | 描述
 |----------|:-------------:|
-| 轉職者生成機率 | -
-| 轉職者轉移調整 | 設定戀人和/或醫生盾是否會轉移
+| 轉職師生成機率 | -
+| 轉職師轉移調整 | 設定戀人和/或醫生盾是否會轉移
 -----------------------
 
 ## 時間管理大師
@@ -1346,7 +1364,7 @@ Created by [Mallöris](https://github.com/Mallaris)\
 ### **隊伍:獨立**
 原告也是個獨立職業，但有個不同的目標來獲勝: 他們必須活到遊戲結束時(不管是誰獲勝)。
 為了實現這個目標，原告擁有"填空"能力: 他們可以用空包彈填充殺手(包括警長)的武器，所以如果殺手試圖殺死某人將錯過目標並照常觸發所有冷卻時間。
-如果殺手被填空不會觸發任何盾(例如醫生盾或時間管理大師盾)。
+如果殺手發射空包彈不會觸發任何盾(例如醫生盾或時間管理大師盾)。
 原告有任務(在律師時就可以做)，這些任務計入船員的任務勝利。如果原告死了，他們的任務將不被計算在內。
 
 # 原始碼

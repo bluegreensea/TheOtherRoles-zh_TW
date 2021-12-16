@@ -303,8 +303,8 @@ namespace TheOtherRoles {
             guesserHasMultipleShotsPerMeeting = CustomOption.Create(313, "賭徒每個會議可以猜測多次", false, guesserSpawnRate);
             guesserShowInfoInGhostChat = CustomOption.Create(314, "賭徒在死者聊天中可見 ", true, guesserSpawnRate);
             guesserKillsThroughShield  = CustomOption.Create(315, "賭徒忽略醫生盾", true, guesserSpawnRate);
-            guesserEvilCanKillSpy  = CustomOption.Create(316, "Evil Guesser Can Guess The Spy", true, guesserSpawnRate);
-            guesserSpawnBothRate = CustomOption.Create(317, "Other Guesser Spawn Rate", rates, guesserSpawnRate);
+            guesserEvilCanKillSpy  = CustomOption.Create(316, "壞賭徒可以猜出間諜", true, guesserSpawnRate);
+            guesserSpawnBothRate = CustomOption.Create(317, "其他賭徒的生成機率", rates, guesserSpawnRate);
 
             jesterSpawnRate = CustomOption.Create(60, cs(Jester.color, "小丑"), rates, null, true);
             jesterCanCallEmergency = CustomOption.Create(61, "小丑可召開緊急會議", true, jesterSpawnRate);
@@ -340,8 +340,8 @@ namespace TheOtherRoles {
             pursuerCooldown = CustomOption.Create(356, "原告填空冷卻", 30f, 5f, 60f, 2.5f, lawyerSpawnRate);
             pursuerBlanksNumber = CustomOption.Create(357, "原告填空次數", 5f, 0f, 20f, 1f, lawyerSpawnRate);
 
-            shifterSpawnRate = CustomOption.Create(70, cs(Shifter.color, "轉職者"), rates, null, true);
-            shifterShiftsModifiers = CustomOption.Create(71, "轉職者轉移調整", false, shifterSpawnRate);
+            shifterSpawnRate = CustomOption.Create(70, cs(Shifter.color, "轉職師"), rates, null, true);
+            shifterShiftsModifiers = CustomOption.Create(71, "轉職師轉移調整", false, shifterSpawnRate);
 
             mayorSpawnRate = CustomOption.Create(80, cs(Mayor.color, "市長"), rates, null, true);
 
@@ -391,8 +391,8 @@ namespace TheOtherRoles {
             hackerCooldown = CustomOption.Create(171, "駭客冷卻", 30f, 0f, 60f, 5f, hackerSpawnRate);
             hackerHackeringDuration = CustomOption.Create(172, "駭客持續時間", 10f, 2.5f, 60f, 2.5f, hackerSpawnRate);
             hackerOnlyColorType = CustomOption.Create(173, "駭客只可看到有顏色類型", false, hackerSpawnRate);
-            hackerToolsNumber = CustomOption.Create(174, "Max Mobile Gadget Charges", 5f, 1f, 30f, 1f, hackerSpawnRate);
-            hackerRechargeTasksNumber = CustomOption.Create(175, "Number Of Tasks Needed For Recharging", 2f, 1f, 5f, 1f, hackerSpawnRate);
+            hackerToolsNumber = CustomOption.Create(174, "最大攜帶式小工具充能", 5f, 1f, 30f, 1f, hackerSpawnRate);
+            hackerRechargeTasksNumber = CustomOption.Create(175, "充能所需要的任務數", 2f, 1f, 5f, 1f, hackerSpawnRate);
 
             trackerSpawnRate = CustomOption.Create(200, cs(Tracker.color, "追踪者"), rates, null, true);
             trackerUpdateIntervall = CustomOption.Create(201, "追踪更新間隔", 5f, 2.5f, 30f, 2.5f, trackerSpawnRate);

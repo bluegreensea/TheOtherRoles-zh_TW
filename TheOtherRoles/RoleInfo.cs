@@ -43,7 +43,7 @@ namespace TheOtherRoles
         public static RoleInfo detective = new RoleInfo("偵探", Detective.color, "通過檢查腳印來找到<color=#FF1919FF>偽裝者</color>", "檢查腳印", RoleId.Detective);
         public static RoleInfo timeMaster = new RoleInfo("時間管理大師", TimeMaster.color, "用你的時間之盾保護自己", "用你的時間之盾", RoleId.TimeMaster);
         public static RoleInfo medic = new RoleInfo("醫生", Medic.color, "用盾牌保護某人", "保護其他人", RoleId.Medic);
-        public static RoleInfo shifter = new RoleInfo("轉職者", Shifter.color, "轉移你的職業", "轉移你的職業", RoleId.Shifter);
+        public static RoleInfo shifter = new RoleInfo("轉職師", Shifter.color, "轉移你的職業", "轉移你的職業", RoleId.Shifter);
         public static RoleInfo swapper = new RoleInfo("換票師", Swapper.color, "掉包得票來放逐<color=#FF1919FF>偽裝者</color>", "掉包得票", RoleId.Swapper);
         public static RoleInfo seer = new RoleInfo("靈媒", Seer.color, "你可以看到玩家的死亡", "你可以看到玩家的死亡", RoleId.Seer);
         public static RoleInfo hacker = new RoleInfo("駭客", Hacker.color, "駭入系統來找到<color=#FF1919FF>偽裝者</color>", "駭入來找到偽裝者", RoleId.Hacker);
