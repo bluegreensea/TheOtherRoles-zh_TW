@@ -56,8 +56,8 @@ namespace TheOtherRoles
         public static RoleInfo spy = new RoleInfo("間諜", Spy.color, "讓<color=#FF1919FF>偽裝者</color>混亂", "讓偽裝者混亂", RoleId.Spy);
         public static RoleInfo securityGuard = new RoleInfo("守衛", SecurityGuard.color, "封鎖通風口跟放置攝影機", "封鎖通風口跟放置攝影機", RoleId.SecurityGuard);
         public static RoleInfo arsonist = new RoleInfo("縱火狂", Arsonist.color, "燒了大家", "燒了大家", RoleId.Arsonist, true);
-        public static RoleInfo goodGuesser = new RoleInfo("好賭徒", Guesser.color, "猜測並放逐", "猜測並放逐", RoleId.Guesser);
-        public static RoleInfo badGuesser = new RoleInfo("壞賭徒", Palette.ImpostorRed, "猜測並放逐", "猜測並放逐", RoleId.Guesser);
+        public static RoleInfo goodGuesser = new RoleInfo("好賭徒", Guesser.color, "猜測並放逐", "猜測並放逐", RoleId.NiceGuesser);
+        public static RoleInfo badGuesser = new RoleInfo("壞賭徒", Palette.ImpostorRed, "猜測並放逐", "猜測並放逐", RoleId.EvilGuesser);
         public static RoleInfo bait = new RoleInfo("誘餌", Bait.color, "引誘你的敵人", "引誘你的敵人", RoleId.Bait);
         public static RoleInfo vulture = new RoleInfo("禿鷲", Vulture.color, "吃屍體來獲勝 ", "吃屍體 ", RoleId.Vulture, true);
         public static RoleInfo medium = new RoleInfo("通靈師", Medium.color, "詢問靈魂來取得資訊", "詢問靈魂", RoleId.Medium);
@@ -150,7 +150,8 @@ namespace TheOtherRoles
             if (p == Spy.spy) infos.Add(spy);
             if (p == SecurityGuard.securityGuard) infos.Add(securityGuard);
             if (p == Arsonist.arsonist) infos.Add(arsonist);
-            if (p == Guesser.guesser) infos.Add(p.Data.Role.IsImpostor ? badGuesser : goodGuesser);
+            if (p == Guesser.niceGuesser) infos.Add(goodGuesser);
+            if (p == Guesser.evilGuesser) infos.Add(badGuesser);
             if (p == BountyHunter.bountyHunter) infos.Add(bountyHunter);
             if (p == Bait.bait) infos.Add(bait);
             if (p == Vulture.vulture) infos.Add(vulture);

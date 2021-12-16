@@ -20,6 +20,7 @@ $@"<size=130%><color=#ff351f>TheOtherRoles</color></size> v{TheOtherRolesPlugin.
 $@"由 <color=#FCCE03FF>Eisbison</color>, <color=#FCCE03FF>Thunderstorm584</color>, <color=#FCCE03FF>EndOfFile</color> 及 <color=#FCCE03FF>Mallöris</color> 製作模組
 由 <color=#FCCE03FF>Bavari</color> 設計      由 <color=#00d3ff>bluegreensea(青海)</color> 繁體中文化";
 
+
         public static string contributorsCredentials = "<size=80%>GitHub 貢獻者: Alex2911, amsyarasyiq, gendelo3</size>";
 
         [HarmonyPatch(typeof(VersionShower), nameof(VersionShower.Start))]
