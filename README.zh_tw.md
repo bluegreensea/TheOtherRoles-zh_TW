@@ -39,6 +39,9 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
+| 2021.12.15s| v3.3.3| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.3.3/TheOtherRoles.zip)
+| 2021.12.15s| v3.3.2| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.3.2/TheOtherRoles.zip)
+| 2021.12.14s| v3.3.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.3.1/TheOtherRoles.zip)
 | 2021.12.14s| v3.3.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.3.0/TheOtherRoles.zip)
 | 2021.11.9.5s| v3.2.4| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.2.4/TheOtherRoles.zip)
 | 2021.11.9.5s| v3.2.3| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.2.3/TheOtherRoles.zip)
@@ -89,6 +92,19 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # Changelog
 <details>
   <summary>Click to show the Changelog</summary>
+
+**Version 3.3.3**
+- Fixed a bug where a guessed Guesser could guess
+- Fixed a bug where buttons were visible during the meeting
+- Removed Hacker vitals for Skeld & dlekS
+- Changed the Guesser option "Other Guesser Spawn Rate" to "Both Guesser Spawn Rate" (now only take effect when the chance for the first guesser was successful)
+- Changed Hacker vitals to doorlog for MIRA HQ
+
+**Version 3.3.2**
+- Fixed a bug where you can't create a lobby on Among Us 2021.12.15
+
+**Version 3.3.1**
+- Fixed a bug where sometimes the Evil Guesser could not guess. Thanks @tomarai
 
 **Version 3.3.0**
 - Update to Among Us version 2021.12.14s
@@ -839,7 +855,7 @@ Depending on the options, the Guesser can't guess the shielded player and depend
 | 賭徒在死者聊天中可見 | -
 | 賭徒忽略醫生盾 | -
 | 壞賭徒可以猜出間諜 | -
-| 其他賭徒的生成機率 | -
+| 雙賭徒的生成機率 | -
 
 -----------------------
 
@@ -1056,7 +1072,6 @@ Because of the vents the Engineer might not be able to start some tasks using th
 - 如果百變怪變形或魔術師偽裝，管理表上的顏色會相應改變
 - 更多 [顏色](#顏色) 資訊
 - 在會議期間，您可以看到玩家有深或淺的顏色，以名稱中的 (暗) 或 (亮) 表示。
-- 其他賭徒只是以設定的生成機率添加到票證系統中，與上述設置無關
 
 ### 遊戲選項
 | 名稱 | 描述 |
