@@ -304,7 +304,7 @@ namespace TheOtherRoles {
             guesserShowInfoInGhostChat = CustomOption.Create(314, "賭徒在死者聊天中可見 ", true, guesserSpawnRate);
             guesserKillsThroughShield  = CustomOption.Create(315, "賭徒忽略醫生盾", true, guesserSpawnRate);
             guesserEvilCanKillSpy  = CustomOption.Create(316, "壞賭徒可以猜出間諜", true, guesserSpawnRate);
-            guesserSpawnBothRate = CustomOption.Create(317, "其他賭徒的生成機率", rates, guesserSpawnRate);
+            guesserSpawnBothRate = CustomOption.Create(317, "雙賭徒的生成機率", rates, guesserSpawnRate);
 
             jesterSpawnRate = CustomOption.Create(60, cs(Jester.color, "小丑"), rates, null, true);
             jesterCanCallEmergency = CustomOption.Create(61, "小丑可召開緊急會議", true, jesterSpawnRate);
