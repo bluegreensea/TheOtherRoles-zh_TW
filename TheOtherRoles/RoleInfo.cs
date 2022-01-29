@@ -28,6 +28,7 @@ namespace TheOtherRoles
         public static RoleInfo mayor = new RoleInfo("市長", Mayor.color, "投票會變兩票", "投票會變兩票", RoleId.Mayor);
         public static RoleInfo engineer = new RoleInfo("工程師",  Engineer.color, "維護船上的重要系統 ", "修復船隻", RoleId.Engineer);
         public static RoleInfo sheriff = new RoleInfo("警長", Sheriff.color, "射擊 <color=#FF1919FF>偽裝者</color>", "射擊偽裝者", RoleId.Sheriff);
+        public static RoleInfo deputy = new RoleInfo("Deputy", Sheriff.color, "Handcuff the <color=#FF1919FF>Impostors</color>", "Handcuff the Impostors", RoleId.Deputy);
         public static RoleInfo lighter = new RoleInfo("點燈人", Lighter.color, "你的燈永不熄滅", "你的燈永不熄滅", RoleId.Lighter);
         public static RoleInfo godfather = new RoleInfo("教父", Godfather.color, "殺死所有船員", "殺死所有船員", RoleId.Godfather);
         public static RoleInfo mafioso = new RoleInfo("黑手黨員", Mafioso.color, "在<color=#FF1919FF>黑手黨</color>工作，教父死後殺死船員", "殺死所有船員", RoleId.Mafioso);
@@ -99,6 +100,7 @@ namespace TheOtherRoles
             mayor,
             engineer,
             sheriff,
+            deputy,
             lighter,
             detective,
             timeMaster,
@@ -122,7 +124,8 @@ namespace TheOtherRoles
             if (p == Jester.jester) infos.Add(jester);
             if (p == Mayor.mayor) infos.Add(mayor);
             if (p == Engineer.engineer) infos.Add(engineer);
-            if (p == Sheriff.sheriff) infos.Add(sheriff);
+            if (p == Sheriff.sheriff || p == Sheriff.formerSheriff) infos.Add(sheriff);
+            if (p == Deputy.deputy) infos.Add(deputy);
             if (p == Lighter.lighter) infos.Add(lighter);
             if (p == Godfather.godfather) infos.Add(godfather);
             if (p == Mafioso.mafioso) infos.Add(mafioso);

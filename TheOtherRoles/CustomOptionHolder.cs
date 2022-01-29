@@ -50,6 +50,7 @@ namespace TheOtherRoles {
         public static CustomOption loversImpLoverRate;
         public static CustomOption loversBothDie;
         public static CustomOption loversCanHaveAnotherRole;
+        public static CustomOption loversEnableChat;
 
         public static CustomOption guesserSpawnRate;
         public static CustomOption guesserIsImpGuesserRate;
@@ -59,9 +60,11 @@ namespace TheOtherRoles {
         public static CustomOption guesserKillsThroughShield;
         public static CustomOption guesserEvilCanKillSpy;
         public static CustomOption guesserSpawnBothRate;
+        public static CustomOption guesserCantGuessSnitchIfTaksDone;
 
         public static CustomOption jesterSpawnRate;
         public static CustomOption jesterCanCallEmergency;
+        public static CustomOption jesterHasImpostorVision;
 
         public static CustomOption arsonistSpawnRate;
         public static CustomOption arsonistCooldown;
@@ -107,6 +110,14 @@ namespace TheOtherRoles {
         public static CustomOption sheriffSpawnRate;
         public static CustomOption sheriffCooldown;
         public static CustomOption sheriffCanKillNeutrals;
+        public static CustomOption deputySpawnRate;
+
+        public static CustomOption deputyNumberOfHandcuffs;
+        public static CustomOption deputyHandcuffCooldown;
+        public static CustomOption deputyGetsPromoted;
+        public static CustomOption deputyKeepsHandcuffs;
+        public static CustomOption deputyHandcuffDuration;
+        public static CustomOption deputyKnowsSheriff;
 
         public static CustomOption lighterSpawnRate;
         public static CustomOption lighterModeLightsOnVision;
@@ -147,6 +158,7 @@ namespace TheOtherRoles {
         public static CustomOption hackerOnlyColorType;
         public static CustomOption hackerToolsNumber;
         public static CustomOption hackerRechargeTasksNumber;
+        public static CustomOption hackerNoMove;
 
         public static CustomOption trackerSpawnRate;
         public static CustomOption trackerUpdateIntervall;
@@ -183,6 +195,10 @@ namespace TheOtherRoles {
         public static CustomOption securityGuardTotalScrews;
         public static CustomOption securityGuardCamPrice;
         public static CustomOption securityGuardVentPrice;
+        public static CustomOption securityGuardCamDuration;
+        public static CustomOption securityGuardCamMaxCharges;
+        public static CustomOption securityGuardCamRechargeTasksNumber;
+        public static CustomOption securityGuardNoMove;
 
         public static CustomOption baitSpawnRate;
         public static CustomOption baitHighlightAllVents;
@@ -214,7 +230,13 @@ namespace TheOtherRoles {
         public static CustomOption noVoteIsSelfVote;
         public static CustomOption hidePlayerNames;
         public static CustomOption allowParallelMedBayScans;
+
         public static CustomOption dynamicMap;
+        public static CustomOption dynamicMapEnableSkeld;
+        public static CustomOption dynamicMapEnableMira;
+        public static CustomOption dynamicMapEnablePolus;
+        public static CustomOption dynamicMapEnableDleks;
+        public static CustomOption dynamicMapEnableAirShip;
 
 
         internal static Dictionary<byte, byte[]> blockedRolePairings = new Dictionary<byte, byte[]>();
@@ -263,7 +285,7 @@ namespace TheOtherRoles {
             eraserCanEraseAnyone = CustomOption.Create(232, "抹除者可抹除任何人", false, eraserSpawnRate);
 
             tricksterSpawnRate = CustomOption.Create(250, cs(Trickster.color, "詭騙師"), rates, null, true);
-            tricksterPlaceBoxCooldown = CustomOption.Create(251, "詭騙箱冷卻", 10f, 0f, 30f, 2.5f, tricksterSpawnRate);
+            tricksterPlaceBoxCooldown = CustomOption.Create(251, "詭騙箱冷卻", 10f, 2.5f, 30f, 2.5f, tricksterSpawnRate);
             tricksterLightsOutCooldown = CustomOption.Create(252, "詭騙師關燈冷卻", 30f, 10f, 60f, 5f, tricksterSpawnRate);
             tricksterLightsOutDuration = CustomOption.Create(253, "詭騙師關燈持續時間", 15f, 5f, 60f, 2.5f, tricksterSpawnRate);
 
@@ -296,6 +318,7 @@ namespace TheOtherRoles {
             loversImpLoverRate = CustomOption.Create(51, "一個戀人是偽裝者的機率", rates, loversSpawnRate);
             loversBothDie = CustomOption.Create(52, "戀人雙死", true, loversSpawnRate);
             loversCanHaveAnotherRole = CustomOption.Create(53, "戀人可有其他職業", true, loversSpawnRate);
+            loversEnableChat = CustomOption.Create(54, "Enable Lover Chat", true, loversSpawnRate);
 
             guesserSpawnRate = CustomOption.Create(310, cs(Guesser.color, "賭徒"), rates, null, true);
             guesserIsImpGuesserRate = CustomOption.Create(311, "賭徒是個偽裝者的機率", rates, guesserSpawnRate);
@@ -305,9 +328,11 @@ namespace TheOtherRoles {
             guesserKillsThroughShield  = CustomOption.Create(315, "賭徒忽略醫生盾", true, guesserSpawnRate);
             guesserEvilCanKillSpy  = CustomOption.Create(316, "壞賭徒可以猜出間諜", true, guesserSpawnRate);
             guesserSpawnBothRate = CustomOption.Create(317, "雙賭徒的生成機率", rates, guesserSpawnRate);
+            guesserCantGuessSnitchIfTaksDone = CustomOption.Create(318, "Guesser Can't Guess Snitch When Tasks Completed", true, guesserSpawnRate);
 
             jesterSpawnRate = CustomOption.Create(60, cs(Jester.color, "小丑"), rates, null, true);
             jesterCanCallEmergency = CustomOption.Create(61, "小丑可召開緊急會議", true, jesterSpawnRate);
+            jesterHasImpostorVision = CustomOption.Create(62, "小丑有偽裝者視野", false, jesterSpawnRate);
 
             arsonistSpawnRate = CustomOption.Create(290, cs(Arsonist.color, "縱火狂"), rates, null, true);
             arsonistCooldown = CustomOption.Create(291, "縱火狂冷卻", 12.5f, 2.5f, 60f, 2.5f, arsonistSpawnRate);
@@ -338,7 +363,7 @@ namespace TheOtherRoles {
             lawyerVision = CustomOption.Create(354, "律師視野", 1f, 0.25f, 3f, 0.25f, lawyerSpawnRate);
             lawyerKnowsRole = CustomOption.Create(355, "律師知道目標職業", false, lawyerSpawnRate);
             pursuerCooldown = CustomOption.Create(356, "原告填空冷卻", 30f, 5f, 60f, 2.5f, lawyerSpawnRate);
-            pursuerBlanksNumber = CustomOption.Create(357, "原告填空次數", 5f, 0f, 20f, 1f, lawyerSpawnRate);
+            pursuerBlanksNumber = CustomOption.Create(357, "原告填空次數", 5f, 1f, 20f, 1f, lawyerSpawnRate);
 
             shifterSpawnRate = CustomOption.Create(70, cs(Shifter.color, "轉職師"), rates, null, true);
             shifterShiftsModifiers = CustomOption.Create(71, "轉職師轉移調整", false, shifterSpawnRate);
@@ -346,13 +371,20 @@ namespace TheOtherRoles {
             mayorSpawnRate = CustomOption.Create(80, cs(Mayor.color, "市長"), rates, null, true);
 
             engineerSpawnRate = CustomOption.Create(90, cs(Engineer.color, "工程師"), rates, null, true);
-            engineerNumberOfFixes = CustomOption.Create(91, "破壞修復數量", 1f, 0f, 3f, 1f, engineerSpawnRate);
+            engineerNumberOfFixes = CustomOption.Create(91, "破壞修復數量", 1f, 1f, 3f, 1f, engineerSpawnRate);
             engineerHighlightForImpostors = CustomOption.Create(92, "偽裝者可看到通風口發光", true, engineerSpawnRate);
             engineerHighlightForTeamJackal = CustomOption.Create(93, "豺狼與跟班可看到通風口發光", true, engineerSpawnRate);
 
             sheriffSpawnRate = CustomOption.Create(100, cs(Sheriff.color, "警長"), rates, null, true);
             sheriffCooldown = CustomOption.Create(101, "警長冷卻", 30f, 10f, 60f, 2.5f, sheriffSpawnRate);
             sheriffCanKillNeutrals = CustomOption.Create(102, "警長可擊殺獨立職業", false, sheriffSpawnRate);
+            deputySpawnRate = CustomOption.Create(103, "Sheriff Has A Deputy", rates, sheriffSpawnRate);
+            deputyNumberOfHandcuffs = CustomOption.Create(104, "Deputy Number Of Handcuffs", 3f, 1f, 10f, 1f, deputySpawnRate);
+            deputyHandcuffCooldown = CustomOption.Create(105, "Handcuff Cooldown", 30f, 10f, 60f, 2.5f, deputySpawnRate);
+            deputyHandcuffDuration = CustomOption.Create(106, "Handcuff Duration", 15f, 5f, 60f, 2.5f, deputySpawnRate);
+            deputyKnowsSheriff = CustomOption.Create(107, "Sheriff And Deputy Know Each Other ", true, deputySpawnRate);
+            deputyGetsPromoted = CustomOption.Create(108, "Deputy Gets Promoted To Sheriff", new string[] { "Off", "On (Immediately)", "On (After Meeting)" }, deputySpawnRate);
+            deputyKeepsHandcuffs = CustomOption.Create(109, "Deputy Keeps Handcuffs When Promoted", true, deputyGetsPromoted);
 
             lighterSpawnRate = CustomOption.Create(110, cs(Lighter.color, "點燈人"), rates, null, true);
             lighterModeLightsOnVision = CustomOption.Create(111, "開燈時點燈視野", 2f, 0.25f, 5f, 0.25f, lighterSpawnRate);
@@ -385,20 +417,21 @@ namespace TheOtherRoles {
             seerSpawnRate = CustomOption.Create(160, cs(Seer.color, "靈媒"), rates, null, true);
             seerMode = CustomOption.Create(161, "靈媒能力模式", new string[]{ "顯示死亡閃爍 + 靈魂", "顯示死亡閃爍", "顯示靈魂"}, seerSpawnRate);
             seerLimitSoulDuration = CustomOption.Create(163, "靈魂有持續時間限制", false, seerSpawnRate);
-            seerSoulDuration = CustomOption.Create(162, "靈魂持續時間", 15f, 0f, 60f, 5f, seerLimitSoulDuration);
+            seerSoulDuration = CustomOption.Create(162, "靈魂持續時間", 15f, 0f, 120f, 5f, seerLimitSoulDuration);
         
             hackerSpawnRate = CustomOption.Create(170, cs(Hacker.color, "駭客"), rates, null, true);
-            hackerCooldown = CustomOption.Create(171, "駭客冷卻", 30f, 0f, 60f, 5f, hackerSpawnRate);
+            hackerCooldown = CustomOption.Create(171, "駭客冷卻", 30f, 5f, 60f, 5f, hackerSpawnRate);
             hackerHackeringDuration = CustomOption.Create(172, "駭客持續時間", 10f, 2.5f, 60f, 2.5f, hackerSpawnRate);
             hackerOnlyColorType = CustomOption.Create(173, "駭客只可看到有顏色類型", false, hackerSpawnRate);
             hackerToolsNumber = CustomOption.Create(174, "最大攜帶式小工具充能", 5f, 1f, 30f, 1f, hackerSpawnRate);
             hackerRechargeTasksNumber = CustomOption.Create(175, "充能所需要的任務數", 2f, 1f, 5f, 1f, hackerSpawnRate);
+            hackerNoMove = CustomOption.Create(176, "Cant Move During Mobile Gadget Duration", true, hackerSpawnRate);
 
             trackerSpawnRate = CustomOption.Create(200, cs(Tracker.color, "追踪者"), rates, null, true);
-            trackerUpdateIntervall = CustomOption.Create(201, "追踪更新間隔", 5f, 2.5f, 30f, 2.5f, trackerSpawnRate);
+            trackerUpdateIntervall = CustomOption.Create(201, "追踪更新間隔", 5f, 1f, 30f, 1f, trackerSpawnRate);
             trackerResetTargetAfterMeeting = CustomOption.Create(202, "會議後重置追踪", false, trackerSpawnRate);
             trackerCanTrackCorpses = CustomOption.Create(203, "追踪者可以追踪屍體", true, trackerSpawnRate);
-            trackerCorpsesTrackingCooldown = CustomOption.Create(204, "屍體追踪冷卻", 30f, 0f, 120f, 5f, trackerCanTrackCorpses);
+            trackerCorpsesTrackingCooldown = CustomOption.Create(204, "屍體追踪冷卻", 30f, 5f, 120f, 5f, trackerCanTrackCorpses);
             trackerCorpsesTrackingDuration = CustomOption.Create(205, "屍體追踪持續時間", 5f, 2.5f, 30f, 2.5f, trackerCanTrackCorpses);
                            
             snitchSpawnRate = CustomOption.Create(210, cs(Snitch.color, "密探"), rates, null, true);
@@ -417,6 +450,10 @@ namespace TheOtherRoles {
             securityGuardTotalScrews = CustomOption.Create(282, "初始守衛螺絲數量", 7f, 1f, 15f, 1f, securityGuardSpawnRate);
             securityGuardCamPrice = CustomOption.Create(283, "設置攝影機消耗螺絲數量", 2f, 1f, 15f, 1f, securityGuardSpawnRate);
             securityGuardVentPrice = CustomOption.Create(284, "封鎖通風口消耗螺絲數量", 1f, 1f, 15f, 1f, securityGuardSpawnRate);
+            securityGuardCamDuration = CustomOption.Create(285, "Security Guard Duration", 10f, 2.5f, 60f, 2.5f, securityGuardSpawnRate);
+            securityGuardCamMaxCharges = CustomOption.Create(286, "Gadged Max Charges", 5f, 1f, 30f, 1f, securityGuardSpawnRate);
+            securityGuardCamRechargeTasksNumber = CustomOption.Create(287, "Number Of Tasks Needed For Recharging", 3f, 1f, 10f, 1f, securityGuardSpawnRate);
+            securityGuardNoMove = CustomOption.Create(288, "Cant Move During Cam Duration", true, securityGuardSpawnRate);
 
             baitSpawnRate = CustomOption.Create(330, cs(Bait.color, "誘餌"), rates, null, true);
             baitHighlightAllVents = CustomOption.Create(331, "如果通風口被佔用所有通風口發光", false, baitSpawnRate);
@@ -434,7 +471,13 @@ namespace TheOtherRoles {
             noVoteIsSelfVote = CustomOption.Create(5, "不能投票給自己", false, blockSkippingInEmergencyMeetings);
             hidePlayerNames = CustomOption.Create(6, "隱藏玩家名稱", false);
             allowParallelMedBayScans = CustomOption.Create(7, "允許並列醫務室掃描", false);
+
             dynamicMap = CustomOption.Create(8, "隨機地圖", false, null, false);
+            dynamicMapEnableSkeld = CustomOption.Create(501, "Enable Skeld Rotation", true, dynamicMap, false);
+            dynamicMapEnableMira = CustomOption.Create(502, "Enable Mira Rotation", true, dynamicMap, false);
+            dynamicMapEnablePolus = CustomOption.Create(503, "Enable Polus Rotation", true, dynamicMap, false);
+            dynamicMapEnableAirShip = CustomOption.Create(504, "Enable Airship Rotation", true, dynamicMap, false);
+            dynamicMapEnableDleks = CustomOption.Create(505, "Enable dlekS Rotation", false, dynamicMap, false);
 
             blockedRolePairings.Add((byte)RoleId.Vampire, new [] { (byte)RoleId.Warlock});
             blockedRolePairings.Add((byte)RoleId.Warlock, new [] { (byte)RoleId.Vampire});

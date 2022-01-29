@@ -20,8 +20,7 @@ $@"<size=130%><color=#ff351f>TheOtherRoles</color></size> v{TheOtherRolesPlugin.
 $@"由 <color=#FCCE03FF>Eisbison</color>, <color=#FCCE03FF>Thunderstorm584</color>, <color=#FCCE03FF>EndOfFile</color> 及 <color=#FCCE03FF>Mallöris</color> 製作模組
 由 <color=#FCCE03FF>Bavari</color> 設計      由 <color=#00d3ff>bluegreensea(青海)</color> 繁體中文化";
 
-
-        public static string contributorsCredentials = "<size=80%>GitHub 貢獻者: Alex2911, amsyarasyiq, gendelo3</size>";
+        public static string contributorsCredentials = "<size=60%>GitHub 貢獻者: Alex2911, amsyarasyiq, gendelo3, MaximeGillot</size>";
 
         [HarmonyPatch(typeof(VersionShower), nameof(VersionShower.Start))]
         private static class VersionShowerPatch
@@ -61,7 +60,7 @@ $@"由 <color=#FCCE03FF>Eisbison</color>, <color=#FCCE03FF>Thunderstorm584</colo
                 __instance.text.alignment = TMPro.TextAlignmentOptions.TopRight;
                 if (AmongUsClient.Instance.GameState == InnerNet.InnerNetClient.GameStates.Started) {
                     __instance.text.text = $"<size=130%><color=#ff351f>TheOtherRoles</color></size> v{TheOtherRolesPlugin.Version.ToString()}\n" + __instance.text.text;
-                    if (PlayerControl.LocalPlayer.Data.IsDead) {
+                    if (PlayerControl.LocalPlayer.Data.IsDead || (!(PlayerControl.LocalPlayer == null) && (PlayerControl.LocalPlayer == Lovers.lover1 || PlayerControl.LocalPlayer == Lovers.lover2))) {
                         __instance.transform.localPosition = new Vector3(3.45f, __instance.transform.localPosition.y, __instance.transform.localPosition.z);
                     } else {
                         __instance.transform.localPosition = new Vector3(4.2f, __instance.transform.localPosition.y, __instance.transform.localPosition.z);
@@ -86,7 +85,7 @@ $@"由 <color=#FCCE03FF>Eisbison</color>, <color=#FCCE03FF>Thunderstorm584</colo
                 var torLogo = new GameObject("bannerLogo_TOR");
                 torLogo.transform.position = Vector3.up;
                 var renderer = torLogo.AddComponent<SpriteRenderer>();
-                renderer.sprite = Helpers.loadSpriteFromResources("TheOtherRoles.Resources.Banner.png", 300f);                                
+                renderer.sprite = Helpers.loadSpriteFromResources("TheOtherRoles.Resources.Banner.png", 300f);
             }
         }
     }
