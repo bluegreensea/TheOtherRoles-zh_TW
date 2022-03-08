@@ -328,7 +328,7 @@ namespace TheOtherRoles {
             guesserKillsThroughShield  = CustomOption.Create(315, "賭徒忽略醫生盾", true, guesserSpawnRate);
             guesserEvilCanKillSpy  = CustomOption.Create(316, "壞賭徒可以猜出間諜", true, guesserSpawnRate);
             guesserSpawnBothRate = CustomOption.Create(317, "雙賭徒的生成機率", rates, guesserSpawnRate);
-            guesserCantGuessSnitchIfTaksDone = CustomOption.Create(318, "Guesser Can't Guess Snitch When Tasks Completed", true, guesserSpawnRate);
+            guesserCantGuessSnitchIfTaksDone = CustomOption.Create(318, "當密探任務完成後，賭徒無法猜出密探", true, guesserSpawnRate);
 
             jesterSpawnRate = CustomOption.Create(60, cs(Jester.color, "小丑"), rates, null, true);
             jesterCanCallEmergency = CustomOption.Create(61, "小丑可召開緊急會議", true, jesterSpawnRate);
@@ -378,13 +378,13 @@ namespace TheOtherRoles {
             sheriffSpawnRate = CustomOption.Create(100, cs(Sheriff.color, "警長"), rates, null, true);
             sheriffCooldown = CustomOption.Create(101, "警長冷卻", 30f, 10f, 60f, 2.5f, sheriffSpawnRate);
             sheriffCanKillNeutrals = CustomOption.Create(102, "警長可擊殺獨立職業", false, sheriffSpawnRate);
-            deputySpawnRate = CustomOption.Create(103, "Sheriff Has A Deputy", rates, sheriffSpawnRate);
-            deputyNumberOfHandcuffs = CustomOption.Create(104, "Deputy Number Of Handcuffs", 3f, 1f, 10f, 1f, deputySpawnRate);
-            deputyHandcuffCooldown = CustomOption.Create(105, "Handcuff Cooldown", 30f, 10f, 60f, 2.5f, deputySpawnRate);
-            deputyHandcuffDuration = CustomOption.Create(106, "Handcuff Duration", 15f, 5f, 60f, 2.5f, deputySpawnRate);
-            deputyKnowsSheriff = CustomOption.Create(107, "Sheriff And Deputy Know Each Other ", true, deputySpawnRate);
-            deputyGetsPromoted = CustomOption.Create(108, "Deputy Gets Promoted To Sheriff", new string[] { "Off", "On (Immediately)", "On (After Meeting)" }, deputySpawnRate);
-            deputyKeepsHandcuffs = CustomOption.Create(109, "Deputy Keeps Handcuffs When Promoted", true, deputyGetsPromoted);
+            deputySpawnRate = CustomOption.Create(103, "警長有個警員", rates, sheriffSpawnRate);
+            deputyNumberOfHandcuffs = CustomOption.Create(104, "警員手銬數量", 3f, 1f, 10f, 1f, deputySpawnRate);
+            deputyHandcuffCooldown = CustomOption.Create(105, "上銬冷卻", 30f, 10f, 60f, 2.5f, deputySpawnRate);
+            deputyHandcuffDuration = CustomOption.Create(106, "手銬持續時間", 15f, 5f, 60f, 2.5f, deputySpawnRate);
+            deputyKnowsSheriff = CustomOption.Create(107, "警長與警員互相認識", true, deputySpawnRate);
+            deputyGetsPromoted = CustomOption.Create(108, "警員晉升為警長", new string[] { "關", "開(立即)", "開(會議後)" }, deputySpawnRate);
+            deputyKeepsHandcuffs = CustomOption.Create(109, "警員升職後保持手銬", true, deputyGetsPromoted);
 
             lighterSpawnRate = CustomOption.Create(110, cs(Lighter.color, "點燈人"), rates, null, true);
             lighterModeLightsOnVision = CustomOption.Create(111, "開燈時點燈視野", 2f, 0.25f, 5f, 0.25f, lighterSpawnRate);
@@ -425,7 +425,7 @@ namespace TheOtherRoles {
             hackerOnlyColorType = CustomOption.Create(173, "駭客只可看到有顏色類型", false, hackerSpawnRate);
             hackerToolsNumber = CustomOption.Create(174, "最大攜帶式小工具充能", 5f, 1f, 30f, 1f, hackerSpawnRate);
             hackerRechargeTasksNumber = CustomOption.Create(175, "充能所需要的任務數", 2f, 1f, 5f, 1f, hackerSpawnRate);
-            hackerNoMove = CustomOption.Create(176, "Cant Move During Mobile Gadget Duration", true, hackerSpawnRate);
+            hackerNoMove = CustomOption.Create(176, "使用攜帶式小工具時無法移動", true, hackerSpawnRate);
 
             trackerSpawnRate = CustomOption.Create(200, cs(Tracker.color, "追踪者"), rates, null, true);
             trackerUpdateIntervall = CustomOption.Create(201, "追踪更新間隔", 5f, 1f, 30f, 1f, trackerSpawnRate);
@@ -450,10 +450,10 @@ namespace TheOtherRoles {
             securityGuardTotalScrews = CustomOption.Create(282, "初始守衛螺絲數量", 7f, 1f, 15f, 1f, securityGuardSpawnRate);
             securityGuardCamPrice = CustomOption.Create(283, "設置攝影機消耗螺絲數量", 2f, 1f, 15f, 1f, securityGuardSpawnRate);
             securityGuardVentPrice = CustomOption.Create(284, "封鎖通風口消耗螺絲數量", 1f, 1f, 15f, 1f, securityGuardSpawnRate);
-            securityGuardCamDuration = CustomOption.Create(285, "Security Guard Duration", 10f, 2.5f, 60f, 2.5f, securityGuardSpawnRate);
-            securityGuardCamMaxCharges = CustomOption.Create(286, "Gadged Max Charges", 5f, 1f, 30f, 1f, securityGuardSpawnRate);
-            securityGuardCamRechargeTasksNumber = CustomOption.Create(287, "Number Of Tasks Needed For Recharging", 3f, 1f, 10f, 1f, securityGuardSpawnRate);
-            securityGuardNoMove = CustomOption.Create(288, "Cant Move During Cam Duration", true, securityGuardSpawnRate);
+            securityGuardCamDuration = CustomOption.Create(285, "守衛攝影機持續時間", 10f, 2.5f, 60f, 2.5f, securityGuardSpawnRate);
+            securityGuardCamMaxCharges = CustomOption.Create(286, "最大攝影機充能", 5f, 1f, 30f, 1f, securityGuardSpawnRate);
+            securityGuardCamRechargeTasksNumber = CustomOption.Create(287, "充能所需要的任務數", 3f, 1f, 10f, 1f, securityGuardSpawnRate);
+            securityGuardNoMove = CustomOption.Create(288, "使用攝影機時無法移動", true, securityGuardSpawnRate);
 
             baitSpawnRate = CustomOption.Create(330, cs(Bait.color, "誘餌"), rates, null, true);
             baitHighlightAllVents = CustomOption.Create(331, "如果通風口被佔用所有通風口發光", false, baitSpawnRate);
@@ -473,11 +473,11 @@ namespace TheOtherRoles {
             allowParallelMedBayScans = CustomOption.Create(7, "允許並列醫務室掃描", false);
 
             dynamicMap = CustomOption.Create(8, "隨機地圖", false, null, false);
-            dynamicMapEnableSkeld = CustomOption.Create(501, "Enable Skeld Rotation", true, dynamicMap, false);
-            dynamicMapEnableMira = CustomOption.Create(502, "Enable Mira Rotation", true, dynamicMap, false);
-            dynamicMapEnablePolus = CustomOption.Create(503, "Enable Polus Rotation", true, dynamicMap, false);
-            dynamicMapEnableAirShip = CustomOption.Create(504, "Enable Airship Rotation", true, dynamicMap, false);
-            dynamicMapEnableDleks = CustomOption.Create(505, "Enable dlekS Rotation", false, dynamicMap, false);
+            dynamicMapEnableSkeld = CustomOption.Create(501, "啟用 Skeld", true, dynamicMap, false);
+            dynamicMapEnableMira = CustomOption.Create(502, "啟用 Mira", true, dynamicMap, false);
+            dynamicMapEnablePolus = CustomOption.Create(503, "啟用 Polus", true, dynamicMap, false);
+            dynamicMapEnableAirShip = CustomOption.Create(504, "啟用 Airship ", true, dynamicMap, false);
+            dynamicMapEnableDleks = CustomOption.Create(505, "啟用 dlekS", false, dynamicMap, false);
 
             blockedRolePairings.Add((byte)RoleId.Vampire, new [] { (byte)RoleId.Warlock});
             blockedRolePairings.Add((byte)RoleId.Warlock, new [] { (byte)RoleId.Vampire});

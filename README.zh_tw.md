@@ -1,4 +1,6 @@
 ![eisbison banner](./Images/TOR_logo.png)
+<p align="center"><a href="https://github.com/bluegreensea/TheOtherRoles/releases/"><img src="https://badgen.net/github/release/eisbison/theotherroles"></a></p>
+
 [![en](https://img.shields.io/static/v1?label=lang&message=en&color=blue&style=for-the-badge)](./README.md)
 <p style="text-align: center">
 This mod is not affiliated with Among Us or Innersloth LLC, and the content contained therein is not endorsed or otherwise sponsored by Innersloth LLC. Portions of the materials contained herein are property of Innersloth LLC. © Innersloth LLC.</p>
@@ -13,8 +15,8 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 更多職業即將推出 :)
 
 | 偽裝者 | 船員 | 獨立 | 第二 |
-|----------|-------------|-----------------|----------------|
-| [好迷你](#迷你) | [壞迷你](#迷你) | [縱火狂](#縱火狂) | [戀人](#戀人) |
+|----------|------------|-----------------|----------------|
+| [壞迷你](#迷你) | [好迷你](#迷你) | [縱火狂](#縱火狂) | [戀人](#戀人) |
 | [壞賭徒](#賭徒) | [好賭徒](#賭徒) | [小丑](#小丑) |  |
 | [賞金獵人](#賞金獵人) | [偵探](#偵探) | [豺狼](#豺狼) |  |
 | [魔術師](#魔術師) | [工程師](#工程師) | [跟班](#跟班) |  |
@@ -25,9 +27,10 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 | [守墓人 (黑手黨)](#黑手黨)  | [守衛](#守衛) |  |  |
 | [百變怪](#百變怪) | [靈媒](#靈媒) |  |  |
 | [詭騙師](#詭騙師) | [警長](#警長) |  |  |
-| [吸血鬼](#吸血鬼) | [轉職者](#轉職者) |  |  |
-| [咒詛師](#咒詛師) | [密探](#密探) |  |  |
-| [巫師](#巫師) | [間諜](#間諜) |  |  |
+| [吸血鬼](#吸血鬼) | [警員](#警員) |  |  |
+| [咒詛師](#咒詛師) | [轉職師](#轉職師) |  |  |
+| [巫師](#巫師) | [密探](#密探) |  |  |
+|  | [間諜](#間諜) |  |  |
 |  | [換票師](#換票師) |  |  |
 |  | [時間管理大師](#時間管理大師) |  |  |
 |  |  [追踪者](#追踪者) |  |  |
@@ -39,6 +42,10 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
+| 2021.12.15s| v3.4.3| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.4.3/TheOtherRoles.zip)
+| 2021.12.15s| v3.4.2| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.4.2/TheOtherRoles.zip)
+| 2021.12.15s| v3.4.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.4.1/TheOtherRoles.zip)
+| 2021.12.15s| v3.4.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.4.0/TheOtherRoles.zip)
 | 2021.12.15s| v3.3.3| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.3.3/TheOtherRoles.zip)
 | 2021.12.15s| v3.3.2| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.3.2/TheOtherRoles.zip)
 | 2021.12.14s| v3.3.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.3.1/TheOtherRoles.zip)
@@ -92,6 +99,44 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # Changelog
 <details>
   <summary>Click to show the Changelog</summary>
+
+**Version 3.4.3**
+- Fixed a bug where "Guesser Is Impostor Chance" crashed the role system
+- Fixed a bug where a sidekicked Hacker was stuck
+- Fixed a bug where a sidekicked Security Guard was stuck
+- Fixed a bug where a disabled Report Button triggered handcuffs
+- Fixed a bug where the Evil Guesser spawn rate was not correct
+- Changed that Cleaner & Vulture exclude each other
+- Changed that the lighter/darker color indicator can be displayed as dead
+
+**Version 3.4.2**
+- Fixed a game breaking bug
+  
+**Version 3.4.2**
+- Fixed a game breaking bug
+  
+**Version 3.4.1**
+- Added a new mod option "Show Lighter/Darker" for meetings
+- Added options for choosing which maps are enabled for random maps thanks [EvilScum](https://github.com/JustASysAdmin)
+- Added Jester option "Jester Has Impostor Vision" thanks [EvilScum](https://github.com/JustASysAdmin)
+- Fixed a bug where the Bounty Hunter had no bounty
+- Fixed a bug where the Guesser & Sheriff were not assigned properly (fingers crossed)
+- Fixed a bug where Hacker buttons didn't work as intended with "random map" option
+- Fixed a bug where the Security Guard could not access cams on Skeld, dlekS & Airship
+- Changed Tracker update intervall to a minimum of 1 thanks [LaicosVK](https://github.com/LaicosVK)
+
+**Version 3.4.0**
+- Added new Role [Deputy](#警員) thanks [gendelo3](https://github.com/gendelo3)
+- Added Hacker option "Cant Move During Mobile Gadget Duration"
+- Added Security Guard mobile cams after placing all screws
+- Added Lover option "Enable Lover Chat"
+- Added return votes in meetings: You'll now get your votes back if your target got shot by the Guesser
+- Added New Option for Guesser: Guesser can't guess Snitch if they has done all tasks (created by [MaximeGillot](https://github.com/MaximeGillot))
+- Added The Other Roles changelog announcement popup
+- Changed that the Bounty Hunter exclude their Lover
+- Changed the position of the Witch icon in meetings for better visibility
+- Fixed a bug where the spy had a white name for Impostors in chat
+- Fixed a bug where the Guesser and Swapper UI in meetings was behind the visor cosmetics
 
 **Version 3.3.3**
 - Fixed a bug where a guessed Guesser could guess
@@ -223,7 +268,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 **Version 2.7.0**
 - **New Role:** [Bounty Hunter](#賞金獵人)
 - Added more new [colors](#顏色) (Thanks to [Drakoni](https://twitter.com/Drakoni13) for sorting them)
-- Added a setting to the [Shifter](#轉職者), that will prevent [Medic Shield](#醫生) & [Lover](#戀人) Roles to be shifted
+- Added a setting to the [Shifter](#轉職師), that will prevent [Medic Shield](#醫生) & [Lover](#戀人) Roles to be shifted
 - Changed [Jackal](#豺狼) & [Sidekick](#跟班) to always be killable by [Sheriff](#警長)
 - Changed [Jackal](#豺狼) & [Sidekick](#跟班) to not be [erasable](#抹除者) anymore
 - Changed [Role Assignment](#職業分配) slightly to make chances more consistent
@@ -377,7 +422,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 - **Detective:** The Detective now sees the name/color type of the killer when they report a dead body (ability moved from the Medic to the Detective)
 - **Lighter:** We changed and tried to nerf the Lighter, see the [Lighter](#點燈人) section for more details.
 - **Seer:** As the role didn't work the way it was, we completely changed it. We're still working on the role, for now we're trying a few things. Check the [Seer](#靈媒) section to get more details about the new Seer.
-- **Shifter:** We reworked the Shifter, they are now part of the crew. Check out the [Shifter](#轉職者) sections for more details.
+- **Shifter:** We reworked the Shifter, they are now part of the crew. Check out the [Shifter](#轉職師) sections for more details.
 - **Hacker:** The Hacker is basically the old Spy. We added the option to only show the color type instead of the color on the admin table.
 - **Camouflager:** Now also overrides the information of other roles, check the [Camouflager](#魔術師) section for more details.
 - **Morphling:** Now also overrides the information of other roles, check the [Morphling](#百變怪) section for more details
@@ -548,6 +593,7 @@ docker run -d -p 22023:22023/udp --env IMPOSTOR_AntiCheat__Enabled=false --env I
 - **Dleks:** 您現在可以選擇地圖 Dleks 。
 - **任務數量:** 您現在可以選擇更多任務。
 - **職業總結:** 當遊戲結束時，列出所有玩家及其職業與任務進度
+- **暗/亮:** 在會議顯示玩家的色系
 
 ### 地圖任務數上限
 你可以設定:
@@ -744,6 +790,7 @@ If the boxes are converted to a vent network, the Trickster gains a new ability 
 \
 **NOTE:**
 - 殺死和清除的冷卻時間是共享的，防止他們立即清理自己的殺的人。
+- If there is a Cleaner in the game, there can't be a Vulture.
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -778,17 +825,14 @@ The Warlock can still perform normal kills, but the two buttons share the same c
 ## 賞金獵人
 ### **隊伍:偽裝者**
 \
-Created by  [Mallöris](https://github.com/Mallaris)\
-\
 The Bounty Hunter is an Impostor, that continuously get bounties (the targeted player doesn't get notified).\
 The target of the Bounty Hunter swaps after every meeting and after a configurable amount of time.\
 If the Bounty Hunter kills their target, their kill cooldown will be a lot less than usual.\
 Killing a player that's not their current target results in an increased kill cooldown.\
 Depending on the options, there'll be an arrow pointing towards the current target.\
-
 \
 **NOTE:**
-- 目標不會是偽裝者跟間諜
+- 目標不會是偽裝者跟間諜還有賞金獵人的戀人
 - Killing the target resets the timer and a new target will be selected.
 
 ### 遊戲選項
@@ -816,7 +860,7 @@ Depending on the options, there'll be an arrow pointing towards the current targ
 **NOTE:**
 - 被下蠱的玩家將在被投票的玩家死亡之前死亡(這可能會觸發例如偽裝者獲勝條件，即使女巫是被投票的那個)
 
-\
+
 ### 遊戲選項
 | 名稱         | 描述 |
 |------------|:-------------:|
@@ -840,7 +884,7 @@ You can only shoot during the voting time.\
 Depending on the options, the Guesser can't guess the shielded player and depending on the Medic options the Medic/shielded player might be notified (no one will die, independently of what the Guesser guessed).\
 \
 **NOTE:**
-- The vote of a shot player, won't be counted
+- If a player gets shot, you'll get back your votes
 - You can't guess the role **好迷你** for obvious reasons
 - You can't guess the role **戀人**, you'll have to guess the primary role of one of the 戀人, to kill both of them
 - Jester wins won't be triggered, if the 賭徒 shoots the Jester before the Jester gets voted out
@@ -856,6 +900,7 @@ Depending on the options, the Guesser can't guess the shielded player and depend
 | 賭徒忽略醫生盾 | -
 | 壞賭徒可以猜出間諜 | -
 | 雙賭徒的生成機率 | -
+| 當密探任務完成後，賭徒無法猜出密探 | -
 
 -----------------------
 
@@ -871,10 +916,11 @@ Depending on the options, the Guesser can't guess the shielded player and depend
 如果其中一個戀人是殺手(即豺狼/跟班/偽裝者)，他們可以實現只有戀人獲勝的"戀人獨贏"。\
 如果情人中沒有殺手(例如縱火狂戀人+船員戀人)，並且遊戲結束時他們都還活著，則他們與船員一起獲勝。\
 如果遊戲中有一個團隊偽裝者/豺狼戀人，只要他們還活著，就不會計算船員戀人的任務(任務勝利)。如果戀人死了，他們的任務才會被計算在內。\
+您可以為戀人開啟專屬聊天室\
 \
 **NOTE:**
 - 在 2 船員 vs 2 偽裝者(或豺狼團隊的 2 名成員)和戀人不在同一個團隊中，遊戲不會自動結束，因為戀人仍然可以取得單人勝利。例如:如果還剩下以下角色 偽裝者+偽裝者戀人+戀人+船員，則遊戲不會結束，下一個殺人將決定偽裝者或戀人勝利。
-- 如果轉職者轉移戀人，戀人將轉移。
+- 如果轉職師轉移戀人，戀人將轉移。
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -883,6 +929,7 @@ Depending on the options, the Guesser can't guess the shielded player and depend
 | 一個戀人是偽裝者的機率 | -
 | 戀人雙死 | 如果第一個情人死了，第二個情人是否自殺
 | 戀人可有其他職業 | 如果設置為開，戀人可以有第二個職業
+| 開啟戀人私訊 | -
 -----------------------
 
 
@@ -900,7 +947,33 @@ Depending on the options, the Guesser can't guess the shielded player and depend
 |----------|:-------------:|
 | 警長生成機率 | -
 | 警長冷卻 | -
-| 警長可擊殺獨立職業 | -
+| 警長射殺獨立職業 | -
+| 警長有個警員 | 沒有警長警員不會在遊戲中
+-----------------------
+
+## 警員
+### **隊伍:船員**
+警員可將玩家上銬。
+手銬是隱藏的，直到被上銬的玩家嘗試使用禁用的能力。
+手銬禁用:
+- 殺戮
+- 能力
+- 通風口
+- 舉報
+
+**NOTE:**
+- 持續時間從手銬變得可見後開始倒數。
+- 沒有警長就不會有警員。
+
+### 遊戲選項
+| 名稱 | 描述 |
+|----------|:-------------:|
+| 警員手銬數量 | -
+| 上銬冷卻 | -
+| 手銬持續時間 | -
+| 警長與警員互相認識 | -
+| 警員晉升為警長 | "關", "開(立即)" 或 "開(會議後)"
+| 警員升職後保持手銬 | -
 -----------------------
 
 ## 小丑
@@ -1035,7 +1108,7 @@ Because of the vents the Engineer might not be able to start some tasks using th
 \
 **NOTE:**
 - 如果被上盾的玩家是戀人而另一個戀人死亡，仍會自殺。
-- 如果轉職者有盾或他們的目標有盾，則盾轉移。
+- 如果轉職師有盾或他們的目標有盾，則盾轉移。
 - 盾在會議後生效，在進行可能的轉移之前生效。
 
 
@@ -1067,6 +1140,7 @@ Because of the vents the Engineer might not be able to start some tasks using th
 **管理室地圖**: 駭客可以看到地圖上玩家的顏色(或顏色類型)。\
 **生命監測器**: 駭客可以看到死去的玩家死了多久。\
 駭客可以使用他的攜帶式小工具(生命監測器和管理室地圖)，可配置的最大充能(使用)和充能所需任務量。\
+駭客在使用這些工具時不能移動。\
 \
 **NOTE:**
 - 如果百變怪變形或魔術師偽裝，管理表上的顏色會相應改變
@@ -1082,6 +1156,7 @@ Because of the vents the Engineer might not be able to start some tasks using th
 | 駭客只可看到有顏色類型 | 設定駭客是在管理室地圖上看到玩家顏色還是只能看到白色/灰色(淺和深的顏色)
 | 最大攜帶式小工具充能 | -
 | 充能所需要的任務數 | 獲得充能的任務數
+| 使用攜帶式小工具時無法移動 | -
 -----------------------
 
 
@@ -1171,6 +1246,7 @@ Depending on the options, the Tracker has another ability: They can track all co
 When the Snitch finishes all the tasks, arrows will appear (only visible to the Snitch) that point to the Impostors (depending on the options also to members of team Jackal).
 When the Snitch has one task left (configurable) the Snitch will be revealed to the Impostors (depending on the options also to members of team Jackal) with an arrow pointing to the Snitch.
 
+
 ### 遊戲選項
 | 名稱 | 描述
 |----------|:-------------:|
@@ -1178,6 +1254,7 @@ When the Snitch has one task left (configurable) the Snitch will be revealed to 
 | 告密者可看到偽裝者在哪的任務數 | -
 | 包含豺狼團隊 | -
 | 對豺狼團隊使用不同顏色的箭頭 | -
+| Snitch can't be guessed after finishing all their tasks | -
 -----------------------
 
 ## 豺狼
@@ -1271,12 +1348,15 @@ The Security Guard is a Crewmate that has a certain number of screws that they c
 Placing a new camera and sealing vents takes a configurable amount of screws. The total number of screws that a Security Guard has can also be configured.\
 The new camera will be visible after the next meeting and accessible by everyone.\
 The vents will be sealed after the next meeting, players can't enter or exit sealed vents, but they can still "move to them" underground.\
+\
 **NOTE:**
-- Trickster boxes can't be sealed
-- The Security Guard can't place Cameras on MiraHQ
-- The remaining number of screws can be seen above their special button
-- On Skeld the four cameras will be replaced every 3 seconds (with the next four cameras). You can also navigate manually using the arrow keys.
 
+- Trickster boxes can't be sealed
+- The Security Guard can't place cameras on MiraHQ
+- The remaining number of screws can be seen above their special button.
+- On Skeld the four cameras will be replaced every 3 seconds (with the next four cameras). You can also navigate manually using the arrow keys
+- Security Guard can access mobile cameras after placing all screws
+- While accessing the mobile cameras, the Security Guard is not able to move
 
 ### 遊戲選項
 | 名稱 | 描述
@@ -1286,13 +1366,15 @@ The vents will be sealed after the next meeting, players can't enter or exit sea
 | 初始守衛螺絲數量 | The number of screws that a Security Guard can use in a game
 | 設置攝影機消耗螺絲數量 | The number of screws it takes to place a camera
 | 封鎖通風口消耗螺絲數量 | The number of screws it takes to seal a vent
+| 守衛持續時間 | -
+| 最大小工具充能 | -
+| 充能所需要的任務數 | -
+| 使用攝影機時無法移動 | -
 -----------------------
 
 ## 誘餌
 ### **隊伍:船員**
-\
-Created by [Mallöris](https://github.com/Mallaris)\
-\
+
 誘餌是一個船員如果他被殺死，他會強制殺手舉報該誘餌(您可以在選項中設定延遲)。
 此外，誘餌可以查看是否有人在通風口內(取決於設定，發光準確的通風口或所有通風口都可以)。
 
@@ -1307,9 +1389,7 @@ Created by [Mallöris](https://github.com/Mallaris)\
 
 ## 通靈師
 ### **隊伍:船員**
-\
-Created by [Mallöris](https://github.com/Mallaris)\
-\
+
 通靈師是一個可以詢問靈魂來得到資訊的船員。和靈媒一樣，他將看到玩家死亡的地方(下次會議後)並可以詢問祂們。然後他會在聊天欄中取得有關靈魂或殺手的隨機資訊。靈魂只停留一回合，即只到下次會議。根據選項，靈魂只能被詢問一次然後消失。
 在會議期間，您可以看到玩家有著更深或更淺的顏色，在名稱中有 (暗) 或 (亮) 來表示。
 
@@ -1330,12 +1410,11 @@ Created by [Mallöris](https://github.com/Mallaris)\
 
 ## 禿鷲
 ### **隊伍:獨立**
-\
-Created by [Mallöris](https://github.com/Mallaris)\
-\
+
 禿鷲沒有任何任務，他們必須自己取得勝利。\
 禿鷲是一個獨立職業，必須吃掉指定數量的屍體(取決於選項)才能獲勝。\
-根據選項，當有玩家死亡時，禿鷲會得到一個指向屍體的箭頭。 
+根據選項，當有玩家死亡時，禿鷲會得到一個指向屍體的箭頭。
+If there is a Vulture in the game, there can't be a Cleaner.
 
 ### 遊戲選項
 | 名稱 | 描述
