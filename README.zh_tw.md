@@ -42,6 +42,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
+| 2022.2.23s| v3.4.4| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.4.4/TheOtherRoles.zip)
 | 2021.12.15s| v3.4.3| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.4.3/TheOtherRoles.zip)
 | 2021.12.15s| v3.4.2| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.4.2/TheOtherRoles.zip)
 | 2021.12.15s| v3.4.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.4.1/TheOtherRoles.zip)
@@ -100,6 +101,9 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 <details>
   <summary>Click to show the Changelog</summary>
 
+**Version 3.4.4**
+- Fixed a bug where games were not finished properly on official servers (special thanks to miniduikboot & 6pak)
+  
 **Version 3.4.3**
 - Fixed a bug where "Guesser Is Impostor Chance" crashed the role system
 - Fixed a bug where a sidekicked Hacker was stuck
@@ -593,7 +597,7 @@ docker run -d -p 22023:22023/udp --env IMPOSTOR_AntiCheat__Enabled=false --env I
 - **Dleks:** 您現在可以選擇地圖 Dleks 。
 - **任務數量:** 您現在可以選擇更多任務。
 - **職業總結:** 當遊戲結束時，列出所有玩家及其職業與任務進度
-- **暗/亮:** 在會議顯示玩家的色系
+- **深/淺:** 在會議顯示玩家的色系
 
 ### 地圖任務數上限
 你可以設定:
@@ -1145,7 +1149,7 @@ Because of the vents the Engineer might not be able to start some tasks using th
 **NOTE:**
 - 如果百變怪變形或魔術師偽裝，管理表上的顏色會相應改變
 - 更多 [顏色](#顏色) 資訊
-- 在會議期間，您可以看到玩家有深或淺的顏色，以名稱中的 (暗) 或 (亮) 表示。
+- 在會議期間，您可以看到玩家有深或淺的顏色，以名稱中的 (深) 或 (淺) 表示。
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -1153,7 +1157,7 @@ Because of the vents the Engineer might not be able to start some tasks using th
 | 駭客生成機率 | -
 | 駭客冷卻 | -
 | 駭客持續時間 | 設置"駭客模式"保持啟動的時間
-| 駭客只可看到有顏色類型 | 設定駭客是在管理室地圖上看到玩家顏色還是只能看到白色/灰色(淺和深的顏色)
+| 駭客只可看到顏色色系 | 設定駭客是在管理室地圖上看到玩家顏色還是只能看到白色/灰色(淺和深的顏色)
 | 最大攜帶式小工具充能 | -
 | 充能所需要的任務數 | 獲得充能的任務數
 | 使用攜帶式小工具時無法移動 | -
@@ -1391,7 +1395,7 @@ The vents will be sealed after the next meeting, players can't enter or exit sea
 ### **隊伍:船員**
 
 通靈師是一個可以詢問靈魂來得到資訊的船員。和靈媒一樣，他將看到玩家死亡的地方(下次會議後)並可以詢問祂們。然後他會在聊天欄中取得有關靈魂或殺手的隨機資訊。靈魂只停留一回合，即只到下次會議。根據選項，靈魂只能被詢問一次然後消失。
-在會議期間，您可以看到玩家有著更深或更淺的顏色，在名稱中有 (暗) 或 (亮) 來表示。
+在會議期間，您可以看到玩家有著更深或更淺的顏色，在名稱中有 (深) 或 (淺) 來表示。
 
 問題:
 你的職業是什麼？

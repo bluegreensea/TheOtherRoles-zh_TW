@@ -318,7 +318,7 @@ namespace TheOtherRoles {
             loversImpLoverRate = CustomOption.Create(51, "一個戀人是偽裝者的機率", rates, loversSpawnRate);
             loversBothDie = CustomOption.Create(52, "戀人雙死", true, loversSpawnRate);
             loversCanHaveAnotherRole = CustomOption.Create(53, "戀人可有其他職業", true, loversSpawnRate);
-            loversEnableChat = CustomOption.Create(54, "Enable Lover Chat", true, loversSpawnRate);
+            loversEnableChat = CustomOption.Create(54, "開啟戀人私訊", true, loversSpawnRate);
 
             guesserSpawnRate = CustomOption.Create(310, cs(Guesser.color, "賭徒"), rates, null, true);
             guesserIsImpGuesserRate = CustomOption.Create(311, "賭徒是個偽裝者的機率", rates, guesserSpawnRate);
@@ -422,7 +422,7 @@ namespace TheOtherRoles {
             hackerSpawnRate = CustomOption.Create(170, cs(Hacker.color, "駭客"), rates, null, true);
             hackerCooldown = CustomOption.Create(171, "駭客冷卻", 30f, 5f, 60f, 5f, hackerSpawnRate);
             hackerHackeringDuration = CustomOption.Create(172, "駭客持續時間", 10f, 2.5f, 60f, 2.5f, hackerSpawnRate);
-            hackerOnlyColorType = CustomOption.Create(173, "駭客只可看到有顏色類型", false, hackerSpawnRate);
+            hackerOnlyColorType = CustomOption.Create(173, "駭客只可看到顏色色系", false, hackerSpawnRate);
             hackerToolsNumber = CustomOption.Create(174, "最大攜帶式小工具充能", 5f, 1f, 30f, 1f, hackerSpawnRate);
             hackerRechargeTasksNumber = CustomOption.Create(175, "充能所需要的任務數", 2f, 1f, 5f, 1f, hackerSpawnRate);
             hackerNoMove = CustomOption.Create(176, "使用攜帶式小工具時無法移動", true, hackerSpawnRate);
