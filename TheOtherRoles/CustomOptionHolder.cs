@@ -235,7 +235,6 @@ namespace TheOtherRoles {
         public static CustomOption dynamicMapEnableSkeld;
         public static CustomOption dynamicMapEnableMira;
         public static CustomOption dynamicMapEnablePolus;
-        public static CustomOption dynamicMapEnableDleks;
         public static CustomOption dynamicMapEnableAirShip;
 
 
@@ -477,7 +476,6 @@ namespace TheOtherRoles {
             dynamicMapEnableMira = CustomOption.Create(502, "啟用 Mira", true, dynamicMap, false);
             dynamicMapEnablePolus = CustomOption.Create(503, "啟用 Polus", true, dynamicMap, false);
             dynamicMapEnableAirShip = CustomOption.Create(504, "啟用 Airship ", true, dynamicMap, false);
-            dynamicMapEnableDleks = CustomOption.Create(505, "啟用 dlekS", false, dynamicMap, false);
 
             blockedRolePairings.Add((byte)RoleId.Vampire, new [] { (byte)RoleId.Warlock});
             blockedRolePairings.Add((byte)RoleId.Warlock, new [] { (byte)RoleId.Vampire});
