@@ -744,7 +744,7 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 **NOTE:**
 - 如果在召開會議時被咬的玩家還活著，他們會在會議開始時死亡。
 - 咬人冷卻時間與殺人冷卻時間相同(如果吸血鬼咬目標則外加死亡延遲時間)。
-- 如果遊戲中有吸血鬼，就不可能有咒詛師。
+- 如果遊戲中有吸血鬼，就不會有咒詛師。
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -757,7 +757,7 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 
 ## 抹除者
 ### **隊伍:偽裝者**
-The Eraser is an 偽裝者 that can erase the role of every player.\
+抹除者是個偽裝者，可以抹去玩家的職業。\
 The targeted players will lose their role after the meeting right before a player is exiled.\
 After every erase, the cooldown increases by 10 seconds.\
 The erase will be performed, even if the Eraser or their target die before the next meeting.\
@@ -805,7 +805,7 @@ If the boxes are converted to a vent network, the Trickster gains a new ability 
 \
 **NOTE:**
 - 殺死和清除的冷卻時間是共享的，防止他們立即清理自己的殺的人。
-- If there is a Cleaner in the game, there can't be a Vulture.
+- 如果遊戲中有清道夫，就不會有禿鷹。
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -1274,34 +1274,34 @@ When the Snitch has one task left (configurable) the Snitch will be revealed to 
 
 ## 豺狼
 ### **隊伍:豺狼**
-The Jackal is part of an extra team, that tries to eliminate all the other players.\
-The Jackal has no tasks and can kill 偽裝者s, Crewmates and Neutrals.\
-The Jackal (if allowed by the options) can select another player to be their Sidekick.
-Creating a Sidekick removes all tasks of the Sidekick and adds them to the team Jackal. The Sidekick loses their current role (except if they're a Lover, then they play in two teams).
-The "Create Sidekick Action" may only be used once per Jackal or once per game (depending on the options).
-The Jackal can also promote 偽裝者s to be their Sidekick but, depending on the options the 偽裝者 will either really turn into the Sidekick and leave the team 偽裝者s or he will just look like the Sidekick to the Jackal and remain as he was.\
+豺狼是一個額外隊伍的一部分，需要消滅所有其他玩家。\
+豺狼沒有任務，可以殺死偽裝者，船員和獨立玩家。\
+豺狼(如果設定開啟)可以選擇另一個玩家作為他們的同伴。
+建立跟班會移除跟班的所有任務，並讓它們加入到豺狼隊伍中。跟班將會失去他們目前的職業(除非他們是戀人，這樣他們會被分成兩隊)。
+"建立跟班"每個豺狼只能使用一次，或者每個遊戲使用一次(取決於設定)。
+豺狼也可以讓偽裝者成為他們的同伴，但是根據設定的不同，偽裝者要麼真的變成同伴並離開偽裝者，要麼他只會看起來像豺狼的同伴並保持原來不變。\
 \
-The team Jackal enables multiple new outcomes of the game, listing some examples here:
-- The 偽裝者s could be eliminated and then the crew plays against the team Jackal.
-- The Crew could be eliminated, then the Team Jackal fight against the 偽裝者s (The Crew can still make a task win in this scenario)
+豺狼隊伍讓遊戲的多個新結果，此處列出了一些範例：
+- 偽裝者被淘汰，然後船員與豺狼對抗。
+- 船員被淘汰，然後豺狼隊與偽裝者對抗(這種情況下，船員仍然可以解完任務獲勝)
 
-The priority of the win conditions is the following:
-1. Crewmate 迷你 lose by vote
-2. Jester wins by vote
-3. Arsonist win
-4. Team 偽裝者 wins by sabotage
-5. Team Crew wins by tasks (also possible if the whole Crew is dead)
-6. 戀人 among the last three players win
-7. Team Jackal wins by outnumbering (When the team Jackal contains an equal or greater amount of players than the Crew and there are 0 偽裝者s left and team Jackal contains no Lover)
-8. Team 偽裝者 wins by outnumbering (When the team 偽裝者s contains an equal or greater amount of players than the Crew and there are 0 players of the team Jackal left and team 偽裝者s contains no Lover)
-9. Team Crew wins by outnumbering (When there is no player of the team Jackal and the team Impostors left)
+獲勝條件的優先順序如下：
+1. 迷你船員被投出輸掉
+2. 小丑被投出獲勝
+3. 縱火犯獲勝
+4. 偽裝者以破壞勝利
+5. 船員解完任務獲勝(就算都死了還是能)
+6. 戀人在最後三名玩家中獲勝
+7. 豺狼隊伍以多數獲勝(當豺狼包含的玩家數量等於或多於船員，並剩下0個偽裝者與豺狼隊伍不包含戀人時)
+8. 偽裝者隊伍以多數獲勝(當偽裝者包含的玩家數量等於或多於豺狼，並剩下0個豺狼與偽裝者隊伍不包含戀人時)
+9. 船員隊伍以多數獲勝(當沒有豺狼並且偽裝者離開時)
 
 **NOTE:**
-- The Jackal (and their Sidekick) may be killed by a Sheriff.
-- A Jackal cannot target the 迷你, while it's growing up. After that they can kill it or select it as its Sidekick.
-- The Crew can still win, even if all of their members are dead, if they finish their tasks fast enough (That's why converting the last Crewmate with tasks left into a Sidekick results in a task win for the crew.)
+- 豺狼(和跟班)可能會被警長殺死。
+- 當迷你還在成長，豺狼不能瞄準他。成年之後，他們可以殺死他或選擇他作為跟班。
+- 即使所有船員都死了，他們夠快地完成任務，船員仍然可以獲勝(這就是為什麼將剩下最後一個未解完任務的船員轉換為跟班將導致船員獲勝。)
 
-If both 偽裝者s and Jackals are in the game the game, continues even if all Crewmates are dead. Crewmates may still win in this case by completing their tasks. Jackal and 偽裝者 have to kill each other.
+如果偽裝者和豺狼都在遊戲中，就算所有船員都死了，遊戲也還是會繼續。在這種情況下，船員仍然可以通過完成他們的任務來獲勝。豺狼和偽裝者必須互相殘殺。
 
 
 
@@ -1309,33 +1309,33 @@ If both 偽裝者s and Jackals are in the game the game, continues even if all C
 | 名稱 | 描述
 |----------|:-------------:|
 | 豺狼生成機率 | - |
-| 豺狼/跟班殺人冷卻 | Kill 冷卻 |
-| 狐狼製造跟班冷卻 | Cooldown before a Sidekick can be created |
-| 豺狼可使用通風口 | Yes/No |
-| 豺狼可製造跟班 | Yes/No |
-| 從跟班升職的豺狼可製造跟班 | Yes/No (to prevent the Jackal team from growing) |
-| 豺狼可讓偽裝者轉成他們的跟班 | Yes/No (to prevent a Jackal from turning an 偽裝者 into a Sidekick, if he uses the ability on an 偽裝者 he sees the 偽裝者 as Sidekick, but the 偽裝者 isn't converted to Sidekick. If this option is set to "No" Jackal and Sidekick can kill each other.) |
+| 豺狼/跟班殺人冷卻 | 殺死冷卻 |
+| 豺狼製造跟班冷卻 | 建立同伴的冷卻時間 |
+| 豺狼可使用通風口 | 開/關 |
+| 豺狼可製造跟班 | 開/關 |
+| 從跟班升職的豺狼可製造跟班 | 開/關 (防止豺狼團隊成長擴大) |
+| 豺狼可讓偽裝者轉成他們的跟班 | 開/關 (為了防止豺狼將偽裝者變成跟班，如果他在偽裝者身上使用該能力，他會將偽裝者視為跟班，但偽裝者不會轉換為跟班。如果此選項設置為「關」，豺狼和跟班可以互相殘殺。) |
 | 豺狼與跟班有偽裝者視野 | - |
 
 -----------------------
 
 ## 跟班
 ### **隊伍:豺狼**
-Gets assigned to a player during the game by the "Create Sidekick Action" of the Jackal and joins the Jackal in their quest to eliminate all other players.\
-Upon the death of the Jackal (depending on the options), they might get promoted to Jackal themself and potentially even assign a Sidekick of their own.
+在遊戲期間由豺狼"建立跟班"的玩家，加入豺狼的任務以消滅所有其他玩家。\
+在豺狼死後(取決於設定)，他們可能會自己晉升為豺狼，甚至可能建立自己的跟班。
 \
 **NOTE:**
-- A player that converts into a Sidekick loses their previous role and tasks (if they had one), except the Lover role.
-- The Sidekick may be killed by a Sheriff.
-- The Sidekick cannot target the 迷你, while it's growing up.
+- 轉換成跟班的玩家會失去他們以前的職業與任務(如果他們有的話)，除了戀人角色。
+- 跟班可能會被警長射殺。
+- 當迷你還在成長，跟班不能瞄準他。
 
 ### 遊戲選項
 | 名稱 | 描述
 |----------|:-------------:|
-| 豺狼/跟班殺人冷卻 | Uses the same kill cooldown setting as the Jackal |
-| 在豺狼死亡後跟班可升職成豺狼 |  Yes/No |
-| 跟班可以殺人 | Yes/No |
-| 跟班可使用通風口 | Yes/No |
+| 豺狼/跟班殺人冷卻 | 使用與豺狼相同的殺人冷卻時間 |
+| 在豺狼死亡後跟班可升職成豺狼 | 開/關 |
+| 跟班可以殺人 | 開/關 |
+| 跟班可使用通風口 | 開/關 |
 -----------------------
 
 ## 間諜
@@ -1352,35 +1352,35 @@ There are two possibilities (depending on the set options):
 |----------|:-------------:|
 | 間諜生成機率 |
 | 間諜可被警長殺死 |
-| 如果偽裝者中有間諜可以殺死任何人 | This allows the 偽裝者s to kill both the Spy and their 偽裝者 partners
+| 如果偽裝者中有間諜可以殺死任何人 | 這將允許偽裝者殺死間諜和他們的偽裝者夥伴
 | 間諜可進入通風口 | Allow the Spy to enter/exit vents (but not actually move to connected vents)
 | 間諜有偽裝者視野 | Give the Spy the same vision as the 偽裝者s have
 -----------------------
 
 ## 守衛
 ### **隊伍:船員**
-The Security Guard is a Crewmate that has a certain number of screws that they can use for either sealing vents or for placing new cameras.\
-Placing a new camera and sealing vents takes a configurable amount of screws. The total number of screws that a Security Guard has can also be configured.\
-The new camera will be visible after the next meeting and accessible by everyone.\
-The vents will be sealed after the next meeting, players can't enter or exit sealed vents, but they can still "move to them" underground.\
+守衛是名船員，它有一定數量的螺絲，可以用來封鎖通風口或設置攝影機。\
+設置攝影機與封鎖通風口需要螺絲的數量，還有守衛擁有的螺絲總數都可設定。\
+新攝影機將在會議後可用，每個人都可以觀看。\
+封鎖通風口也是在會議後封鎖，玩家將無法進入或離開被封鎖的通風口，但仍然可以"經過它們"。\
 \
 **NOTE:**
 
-- Trickster boxes can't be sealed
-- The Security Guard can't place cameras on MiraHQ
-- The remaining number of screws can be seen above their special button.
-- On Skeld the four cameras will be replaced every 3 seconds (with the next four cameras). You can also navigate manually using the arrow keys
-- Security Guard can access mobile cameras after placing all screws
-- While accessing the mobile cameras, the Security Guard is not able to move
+- 詭騙箱不能封鎖
+- 守衛不能在MiraHQ設置攝影機
+- 剩餘的螺絲數量可以在按鈕上方看到。
+- 在Skeld上，四個攝影機將每3秒切換一次(與新的四個攝影機)。也可以使用方向鍵手動切換
+- 守衛使用完螺絲後可以使用攜帶式小工具觀看攝影機
+- 在觀看攝影機時，守衛不能移動
 
 ### 遊戲選項
 | 名稱 | 描述
 |----------|:-------------:|
 | 守衛生成機率 |
 | 守衛冷卻 |
-| 初始守衛螺絲數量 | The number of screws that a Security Guard can use in a game
-| 設置攝影機消耗螺絲數量 | The number of screws it takes to place a camera
-| 封鎖通風口消耗螺絲數量 | The number of screws it takes to seal a vent
+| 初始守衛螺絲數量 | 守衛在遊戲中可以使用的螺絲數量
+| 設置攝影機消耗螺絲數量 | 設置攝影機所需的螺絲數量
+| 封鎖通風口消耗螺絲數量 | 封鎖通風口所需的螺絲數量
 | 守衛持續時間 | -
 | 最大小工具充能 | -
 | 充能所需要的任務數 | -
@@ -1429,7 +1429,7 @@ The vents will be sealed after the next meeting, players can't enter or exit sea
 禿鷲沒有任何任務，他們必須自己取得勝利。\
 禿鷲是一個獨立職業，必須吃掉指定數量的屍體(取決於選項)才能獲勝。\
 根據選項，當有玩家死亡時，禿鷲會得到一個指向屍體的箭頭。
-If there is a Vulture in the game, there can't be a Cleaner.
+如果遊戲中有禿鷹，就不會有清道夫。
 
 ### 遊戲選項
 | 名稱 | 描述
