@@ -13,14 +13,16 @@ namespace TheOtherRoles.Patches {
 $@"<size=130%><color=#ff351f>TheOtherRoles</color></size> v{TheOtherRolesPlugin.Version.ToString()}
 <size=60%>由 <color=#FCCE03FF>Eisbison</color>, <color=#FCCE03FF>EndOfFile</color>
 <color=#FCCE03FF>Thunderstorm584</color> 及 <color=#FCCE03FF>Mallöris</color> 製作模組
-由 <color=#FCCE03FF>Bavari</color> 設計按鈕
+由 <color=#FCCE03FF>Bavari</color> 設計
 由 <color=#00d3ff>DC:bluegreensea#5449 (青海)</color> 繁體中文化</size>";
 
     public static string mainMenuCredentials = 
 $@"由 <color=#FCCE03FF>Eisbison</color>, <color=#FCCE03FF>Thunderstorm584</color>, <color=#FCCE03FF>EndOfFile</color> 及 <color=#FCCE03FF>Mallöris</color> 製作模組
 由 <color=#FCCE03FF>Bavari</color> 設計      由 <color=#00d3ff>bluegreensea(青海)</color> 繁體中文化";
 
-        public static string contributorsCredentials = "<size=60%>GitHub 貢獻者: Alex2911, amsyarasyiq, gendelo3, MaximeGillot</size>";
+        public static string contributorsCredentials =
+$@"<size=60%> <color=#FCCE03FF>Special thanks to K3ndo & Smeggy</color> 
+GitHub 貢獻者: Gendelo3, Alex2911, amsyarasyiq, MaximeGillot, Psynomit</size>";
 
         [HarmonyPatch(typeof(VersionShower), nameof(VersionShower.Start))]
         private static class VersionShowerPatch

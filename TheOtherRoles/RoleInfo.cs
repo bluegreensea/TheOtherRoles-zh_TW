@@ -14,18 +14,21 @@ namespace TheOtherRoles
         public string shortDescription;
         public RoleId roleId;
         public bool isNeutral;
+        public bool isModifier;
 
-        RoleInfo(string name, Color color, string introDescription, string shortDescription, RoleId roleId, bool isNeutral = false) {
+        RoleInfo(string name, Color color, string introDescription, string shortDescription, RoleId roleId, bool isNeutral = false, bool isModifier = false) {
             this.color = color;
             this.name = name;
             this.introDescription = introDescription;
             this.shortDescription = shortDescription;
             this.roleId = roleId;
             this.isNeutral = isNeutral;
+            this.isModifier = isModifier;
         }
 
         public static RoleInfo jester = new RoleInfo("小丑", Jester.color, "被投出去", "被投出去", RoleId.Jester, true);
         public static RoleInfo mayor = new RoleInfo("市長", Mayor.color, "投票會變兩票", "投票會變兩票", RoleId.Mayor);
+        public static RoleInfo portalmaker = new RoleInfo("Portalmaker", Portalmaker.color, "You can create portals", "You can create portals", RoleId.Portalmaker);
         public static RoleInfo engineer = new RoleInfo("工程師",  Engineer.color, "維護船上的重要系統 ", "修復船隻", RoleId.Engineer);
         public static RoleInfo sheriff = new RoleInfo("警長", Sheriff.color, "射擊 <color=#FF1919FF>偽裝者</color>", "射擊偽裝者", RoleId.Sheriff);
         public static RoleInfo deputy = new RoleInfo("警員", Sheriff.color, "上銬<color=#FF1919FF>偽裝者</color>", "上銬偽裝者", RoleId.Deputy);
@@ -48,8 +51,6 @@ namespace TheOtherRoles
         public static RoleInfo swapper = new RoleInfo("換票師", Swapper.color, "掉包得票來放逐<color=#FF1919FF>偽裝者</color>", "掉包得票", RoleId.Swapper);
         public static RoleInfo seer = new RoleInfo("靈媒", Seer.color, "你可以看到玩家的死亡", "你可以看到玩家的死亡", RoleId.Seer);
         public static RoleInfo hacker = new RoleInfo("駭客", Hacker.color, "駭入系統來找到<color=#FF1919FF>偽裝者</color>", "駭入來找到偽裝者", RoleId.Hacker);
-        public static RoleInfo niceMini = new RoleInfo("好迷你", Mini.color, "在你長大之前沒有人可以傷害你", "沒有人可以傷害你", RoleId.Mini);
-        public static RoleInfo evilMini = new RoleInfo("壞迷你", Palette.ImpostorRed, "在你長大之前沒有人可以傷害你", "沒有人可以傷害你", RoleId.Mini);
         public static RoleInfo tracker = new RoleInfo("追踪者", Tracker.color, "追踪<color=#FF1919FF>偽裝者</color>", "追踪偽裝者", RoleId.Tracker);
         public static RoleInfo snitch = new RoleInfo("密探", Snitch.color, "完成你的任務來找出<color=#FF1919FF>偽裝者</color>", "完成你的任務", RoleId.Snitch);
         public static RoleInfo jackal = new RoleInfo("豺狼", Jackal.color, "殺死所有船員與<color=#FF1919FF>偽裝者</color>來勝利", "殺死所有人", RoleId.Jackal, true);
@@ -59,15 +60,28 @@ namespace TheOtherRoles
         public static RoleInfo arsonist = new RoleInfo("縱火狂", Arsonist.color, "燒了大家", "燒了大家", RoleId.Arsonist, true);
         public static RoleInfo goodGuesser = new RoleInfo("好賭徒", Guesser.color, "猜測並放逐", "猜測並放逐", RoleId.NiceGuesser);
         public static RoleInfo badGuesser = new RoleInfo("壞賭徒", Palette.ImpostorRed, "猜測並放逐", "猜測並放逐", RoleId.EvilGuesser);
-        public static RoleInfo bait = new RoleInfo("誘餌", Bait.color, "引誘你的敵人", "引誘你的敵人", RoleId.Bait);
         public static RoleInfo vulture = new RoleInfo("禿鷲", Vulture.color, "吃屍體來獲勝 ", "吃屍體 ", RoleId.Vulture, true);
         public static RoleInfo medium = new RoleInfo("通靈師", Medium.color, "詢問靈魂來取得資訊", "詢問靈魂", RoleId.Medium);
         public static RoleInfo lawyer = new RoleInfo("律師", Lawyer.color, "保護您的客戶", "保護您的客戶", RoleId.Lawyer, true);
         public static RoleInfo pursuer = new RoleInfo("原告", Pursuer.color, "填空偽裝者", "填空偽裝者", RoleId.Pursuer);
         public static RoleInfo impostor = new RoleInfo("偽裝者", Palette.ImpostorRed, Helpers.cs(Palette.ImpostorRed, "破壞跟殺死所有人"), "破壞跟殺死所有人", RoleId.Impostor);
         public static RoleInfo crewmate = new RoleInfo("船員", Color.white, "找到偽裝者", "找到偽裝者", RoleId.Crewmate);
-        public static RoleInfo lover = new RoleInfo("戀人", Lovers.color, $"你正在戀愛中", $"你正在戀愛中", RoleId.Lover);
         public static RoleInfo witch = new RoleInfo("巫師", Witch.color, "對你的敵人施法", "對你的敵人施法", RoleId.Witch);
+        public static RoleInfo ninja = new RoleInfo("忍者", Ninja.color, "Surprise and assassinate your foes", "Surprise and assassinate your foes", RoleId.Ninja);
+
+
+
+        // Modifier
+        public static RoleInfo bloody = new RoleInfo("Bloody", Color.yellow, "Your killer leaves a bloody trail", "Your killer leaves a bloody trail", RoleId.Bloody, false, true);
+        public static RoleInfo antiTeleport = new RoleInfo("Anti tp", Color.yellow, "You will not get teleported", "You will not get teleported", RoleId.AntiTeleport, false, true);
+        public static RoleInfo tiebreaker = new RoleInfo("Tiebreaker", Color.yellow, "Your vote break the tie", "Break the tie", RoleId.Tiebreaker, false, true);
+        public static RoleInfo bait = new RoleInfo("誘餌", Color.yellow, "Bait your enemies", "Bait your enemies", RoleId.Bait, false, true);
+        public static RoleInfo sunglasses = new RoleInfo("Sunglasses", Color.yellow, "You got the sunglasses", "Your vision is reduced", RoleId.Sunglasses, false, true);
+        public static RoleInfo lover = new RoleInfo("戀人", Lovers.color, $"You are in love", $"You are in love", RoleId.Lover, false, true);
+        public static RoleInfo mini = new RoleInfo("迷你", Color.yellow, "No one will harm you until you grow up", "No one will harm you", RoleId.Mini, false, true);
+        public static RoleInfo vip = new RoleInfo("VIP", Color.yellow, "You are the VIP", "Everyone is notified when you die", RoleId.Vip, false, true);
+        public static RoleInfo invert = new RoleInfo("Invert", Color.yellow, "Your movement is inverted", "Your movement is inverted", RoleId.Invert, false, true);
+        
 
         public static List<RoleInfo> allRoleInfos = new List<RoleInfo>() {
             impostor,
@@ -83,8 +97,7 @@ namespace TheOtherRoles
             warlock,
             bountyHunter,
             witch,
-            niceMini,
-            evilMini,
+            ninja,
             goodGuesser,
             badGuesser,
             lover,
@@ -98,6 +111,7 @@ namespace TheOtherRoles
             crewmate,
             shifter,
             mayor,
+            portalmaker,
             engineer,
             sheriff,
             deputy,
@@ -113,16 +127,37 @@ namespace TheOtherRoles
             spy,
             securityGuard,
             bait,
-            medium
+            medium,
+            bloody,
+            antiTeleport,
+            tiebreaker,
+            sunglasses,
+            mini,
+            vip,
+            invert
         };
 
-        public static List<RoleInfo> getRoleInfoForPlayer(PlayerControl p) {
+        public static List<RoleInfo> getRoleInfoForPlayer(PlayerControl p, bool showModifier = true) {
             List<RoleInfo> infos = new List<RoleInfo>();
             if (p == null) return infos;
+
+            // Modifier
+            if (showModifier) {
+                if (p == Lovers.lover1 || p == Lovers.lover2) infos.Add(lover);
+                if (p == Tiebreaker.tiebreaker) infos.Add(tiebreaker);
+                if (Bait.bait.Any(x => x.PlayerId == p.PlayerId)) infos.Add(bait);
+                if (Bloody.bloody.Any(x => x.PlayerId == p.PlayerId)) infos.Add(bloody);
+                if (AntiTeleport.antiTeleport.Any(x => x.PlayerId == p.PlayerId)) infos.Add(antiTeleport);
+                if (Sunglasses.sunglasses.Any(x => x.PlayerId == p.PlayerId)) infos.Add(sunglasses);
+                if (p == Mini.mini) infos.Add(mini);
+                if (Vip.vip.Any(x => x.PlayerId == p.PlayerId)) infos.Add(vip);
+                if (Invert.invert.Any(x => x.PlayerId == p.PlayerId)) infos.Add(invert);
+            }
 
             // Special roles
             if (p == Jester.jester) infos.Add(jester);
             if (p == Mayor.mayor) infos.Add(mayor);
+            if (p == Portalmaker.portalmaker) infos.Add(portalmaker);
             if (p == Engineer.engineer) infos.Add(engineer);
             if (p == Sheriff.sheriff || p == Sheriff.formerSheriff) infos.Add(sheriff);
             if (p == Deputy.deputy) infos.Add(deputy);
@@ -138,6 +173,7 @@ namespace TheOtherRoles
             if (p == Cleaner.cleaner) infos.Add(cleaner);
             if (p == Warlock.warlock) infos.Add(warlock);
             if (p == Witch.witch) infos.Add(witch);
+            if (p == Ninja.ninja) infos.Add(ninja);
             if (p == Detective.detective) infos.Add(detective);
             if (p == TimeMaster.timeMaster) infos.Add(timeMaster);
             if (p == Medic.medic) infos.Add(medic);
@@ -145,7 +181,6 @@ namespace TheOtherRoles
             if (p == Swapper.swapper) infos.Add(swapper);
             if (p == Seer.seer) infos.Add(seer);
             if (p == Hacker.hacker) infos.Add(hacker);
-            if (p == Mini.mini) infos.Add(p.Data.Role.IsImpostor ? evilMini : niceMini);
             if (p == Tracker.tracker) infos.Add(tracker);
             if (p == Snitch.snitch) infos.Add(snitch);
             if (p == Jackal.jackal || (Jackal.formerJackals != null && Jackal.formerJackals.Any(x => x.PlayerId == p.PlayerId))) infos.Add(jackal);
@@ -156,7 +191,6 @@ namespace TheOtherRoles
             if (p == Guesser.niceGuesser) infos.Add(goodGuesser);
             if (p == Guesser.evilGuesser) infos.Add(badGuesser);
             if (p == BountyHunter.bountyHunter) infos.Add(bountyHunter);
-            if (p == Bait.bait) infos.Add(bait);
             if (p == Vulture.vulture) infos.Add(vulture);
             if (p == Medium.medium) infos.Add(medium);
             if (p == Lawyer.lawyer) infos.Add(lawyer);
@@ -166,15 +200,12 @@ namespace TheOtherRoles
             if (infos.Count == 0 && p.Data.Role.IsImpostor) infos.Add(impostor); // Just Impostor
             if (infos.Count == 0 && !p.Data.Role.IsImpostor) infos.Add(crewmate); // Just Crewmate
 
-            // Modifier
-            if (p == Lovers.lover1|| p == Lovers.lover2) infos.Add(lover);
-
             return infos;
         }
 
-        public static String GetRolesString(PlayerControl p, bool useColors) {
+        public static String GetRolesString(PlayerControl p, bool useColors, bool showModifier = true) {
             string roleName;
-            roleName = String.Join(" ", getRoleInfoForPlayer(p).Select(x => useColors ? Helpers.cs(x.color, x.name) : x.name).ToArray());
+            roleName = String.Join(" ", getRoleInfoForPlayer(p, showModifier).Select(x => useColors ? Helpers.cs(x.color, x.name) : x.name).ToArray());
             if (Lawyer.target != null && p.PlayerId == Lawyer.target.PlayerId && PlayerControl.LocalPlayer != Lawyer.target) roleName += (useColors ? Helpers.cs(Pursuer.color, " §") : " §");
             return roleName;
         }
