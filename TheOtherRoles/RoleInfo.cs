@@ -28,7 +28,7 @@ namespace TheOtherRoles
 
         public static RoleInfo jester = new RoleInfo("小丑", Jester.color, "被投出去", "被投出去", RoleId.Jester, true);
         public static RoleInfo mayor = new RoleInfo("市長", Mayor.color, "投票會變兩票", "投票會變兩票", RoleId.Mayor);
-        public static RoleInfo portalmaker = new RoleInfo("Portalmaker", Portalmaker.color, "You can create portals", "You can create portals", RoleId.Portalmaker);
+        public static RoleInfo portalmaker = new RoleInfo("傳送師", Portalmaker.color, "你可以建造傳送門", "你可以建造傳送門", RoleId.Portalmaker);
         public static RoleInfo engineer = new RoleInfo("工程師",  Engineer.color, "維護船上的重要系統 ", "修復船隻", RoleId.Engineer);
         public static RoleInfo sheriff = new RoleInfo("警長", Sheriff.color, "射擊 <color=#FF1919FF>偽裝者</color>", "射擊偽裝者", RoleId.Sheriff);
         public static RoleInfo deputy = new RoleInfo("警員", Sheriff.color, "上銬<color=#FF1919FF>偽裝者</color>", "上銬偽裝者", RoleId.Deputy);
@@ -67,20 +67,20 @@ namespace TheOtherRoles
         public static RoleInfo impostor = new RoleInfo("偽裝者", Palette.ImpostorRed, Helpers.cs(Palette.ImpostorRed, "破壞跟殺死所有人"), "破壞跟殺死所有人", RoleId.Impostor);
         public static RoleInfo crewmate = new RoleInfo("船員", Color.white, "找到偽裝者", "找到偽裝者", RoleId.Crewmate);
         public static RoleInfo witch = new RoleInfo("巫師", Witch.color, "對你的敵人施法", "對你的敵人施法", RoleId.Witch);
-        public static RoleInfo ninja = new RoleInfo("忍者", Ninja.color, "Surprise and assassinate your foes", "Surprise and assassinate your foes", RoleId.Ninja);
+        public static RoleInfo ninja = new RoleInfo("忍者", Ninja.color, "驚嚇並暗殺你的敵人", "驚嚇並暗殺你的敵人", RoleId.Ninja);
 
 
 
         // Modifier
-        public static RoleInfo bloody = new RoleInfo("Bloody", Color.yellow, "Your killer leaves a bloody trail", "Your killer leaves a bloody trail", RoleId.Bloody, false, true);
-        public static RoleInfo antiTeleport = new RoleInfo("Anti tp", Color.yellow, "You will not get teleported", "You will not get teleported", RoleId.AntiTeleport, false, true);
-        public static RoleInfo tiebreaker = new RoleInfo("Tiebreaker", Color.yellow, "Your vote break the tie", "Break the tie", RoleId.Tiebreaker, false, true);
-        public static RoleInfo bait = new RoleInfo("誘餌", Color.yellow, "Bait your enemies", "Bait your enemies", RoleId.Bait, false, true);
-        public static RoleInfo sunglasses = new RoleInfo("Sunglasses", Color.yellow, "You got the sunglasses", "Your vision is reduced", RoleId.Sunglasses, false, true);
-        public static RoleInfo lover = new RoleInfo("戀人", Lovers.color, $"You are in love", $"You are in love", RoleId.Lover, false, true);
-        public static RoleInfo mini = new RoleInfo("迷你", Color.yellow, "No one will harm you until you grow up", "No one will harm you", RoleId.Mini, false, true);
-        public static RoleInfo vip = new RoleInfo("VIP", Color.yellow, "You are the VIP", "Everyone is notified when you die", RoleId.Vip, false, true);
-        public static RoleInfo invert = new RoleInfo("Invert", Color.yellow, "Your movement is inverted", "Your movement is inverted", RoleId.Invert, false, true);
+        public static RoleInfo bloody = new RoleInfo("血族", Color.yellow, "殺你的殺手將留下血跡", "殺你的殺手將留下血跡", RoleId.Bloody, false, true);
+        public static RoleInfo antiTeleport = new RoleInfo("反傳送", Color.yellow, "你不會被傳送", "你不會被傳送", RoleId.AntiTeleport, false, true);
+        public static RoleInfo tiebreaker = new RoleInfo("決勝者", Color.yellow, "你的票將打破平票", "打破平票", RoleId.Tiebreaker, false, true);
+        public static RoleInfo bait = new RoleInfo("誘餌", Color.yellow, "引誘你的敵人", "引誘你的敵人", RoleId.Bait, false, true);
+        public static RoleInfo sunglasses = new RoleInfo("墨鏡", Color.yellow, "你有墨鏡", "你的視野將下降", RoleId.Sunglasses, false, true);
+        public static RoleInfo lover = new RoleInfo("戀人", Lovers.color, $"你正在戀愛中", $"你正在戀愛中", RoleId.Lover, false, true);
+        public static RoleInfo mini = new RoleInfo("迷你", Color.yellow, "在你長大之前沒有人可以傷害你", "沒有人可以傷害你", RoleId.Mini, false, true);
+        public static RoleInfo vip = new RoleInfo("VIP", Color.yellow, "你是VIP", "每個人都會知道你的死亡", RoleId.Vip, false, true);
+        public static RoleInfo invert = new RoleInfo("反轉", Color.yellow, "你的移動是相反的", "你的移動是相反的", RoleId.Invert, false, true);
         
 
         public static List<RoleInfo> allRoleInfos = new List<RoleInfo>() {
