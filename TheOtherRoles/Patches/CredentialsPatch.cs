@@ -21,7 +21,7 @@ $@"由 <color=#FCCE03FF>Eisbison</color>, <color=#FCCE03FF>Thunderstorm584</colo
 由 <color=#FCCE03FF>Bavari</color> 設計      由 <color=#00d3ff>bluegreensea(青海)</color> 繁體中文化";
 
         public static string contributorsCredentials =
-$@"<size=60%> <color=#FCCE03FF>Special thanks to K3ndo & Smeggy</color> 
+$@"<size=60%> <color=#FCCE03FF>特別感謝 K3ndo & Smeggy</color> 
 GitHub 貢獻者: Gendelo, Alex2911, amsyarasyiq, MaximeGillot, Psynomit</size>";
 
         [HarmonyPatch(typeof(VersionShower), nameof(VersionShower.Start))]
