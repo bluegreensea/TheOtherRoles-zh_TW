@@ -349,17 +349,17 @@ namespace TheOtherRoles {
 
             witchSpawnRate = CustomOption.Create(370, Types.Impostor, cs(Witch.color, "巫師"), rates, null, true);
             witchCooldown = CustomOption.Create(371, Types.Impostor, "巫師施術冷卻時間", 30f, 10f, 120f, 5f, witchSpawnRate);
-            witchAdditionalCooldown = CustomOption.Create(372, Types.Impostor, "巫師額外冷卻時間", 10f, 0f, 60f, 5f, witchSpawnRate);
+            witchAdditionalCooldown = CustomOption.Create(372, Types.Impostor, "巫師額外冷卻", 10f, 0f, 60f, 5f, witchSpawnRate);
             witchCanSpellAnyone = CustomOption.Create(373, Types.Impostor, "巫師可以對任何人施術", false, witchSpawnRate);
             witchSpellCastingDuration = CustomOption.Create(374, Types.Impostor, "巫師施術持續時間", 1f, 0f, 10f, 1f, witchSpawnRate);
             witchTriggerBothCooldowns = CustomOption.Create(375, Types.Impostor, "觸發兩個冷卻時間", true, witchSpawnRate);
             witchVoteSavesTargets = CustomOption.Create(376, Types.Impostor, "票出巫師拯救所有目標", true, witchSpawnRate);
 
             ninjaSpawnRate = CustomOption.Create(380, Types.Impostor, cs(Ninja.color, "忍者"), rates, null, true);
-            ninjaCooldown = CustomOption.Create(381, Types.Impostor, "Ninja Mark Cooldown", 30f, 10f, 120f, 5f, ninjaSpawnRate);
-            ninjaKnowsTargetLocation = CustomOption.Create(382, Types.Impostor, "Ninja Knows Location Of Target", true, ninjaSpawnRate);
-            ninjaTraceTime = CustomOption.Create(383, Types.Impostor, "Trace Duration", 5f, 1f, 20f, 0.5f, ninjaSpawnRate);
-            ninjaTraceColorTime = CustomOption.Create(384, Types.Impostor, "Time Till Trace Color Has Faded", 2f, 0f, 20f, 0.5f, ninjaSpawnRate);
+            ninjaCooldown = CustomOption.Create(381, Types.Impostor, "忍者標記冷卻", 30f, 10f, 120f, 5f, ninjaSpawnRate);
+            ninjaKnowsTargetLocation = CustomOption.Create(382, Types.Impostor, "忍者知道目標位置", true, ninjaSpawnRate);
+            ninjaTraceTime = CustomOption.Create(383, Types.Impostor, "痕跡持續時間", 5f, 1f, 20f, 0.5f, ninjaSpawnRate);
+            ninjaTraceColorTime = CustomOption.Create(384, Types.Impostor, "痕跡褪色的時間", 2f, 0f, 20f, 0.5f, ninjaSpawnRate);
             
             guesserSpawnRate = CustomOption.Create(310, Types.Neutral, cs(Guesser.color, "賭徒"), rates, null, true);
             guesserIsImpGuesserRate = CustomOption.Create(311, Types.Neutral, "賭徒是個偽裝者的機率", rates, guesserSpawnRate);
@@ -410,7 +410,7 @@ namespace TheOtherRoles {
             mayorSpawnRate = CustomOption.Create(80, Types.Crewmate, cs(Mayor.color, "市長"), rates, null, true);
             mayorCanSeeVoteColors = CustomOption.Create(81, Types.Crewmate, "市長可以看到是誰投票", false, mayorSpawnRate);
             mayorTasksNeededToSeeVoteColors = CustomOption.Create(82, Types.Crewmate, "可以看到是誰投票所需要的任務數", 5f, 0f, 20f, 1f, mayorCanSeeVoteColors);
-            mayorMeetingButton = CustomOption.Create(83, Types.Crewmate, "Mobile Emergency Button", true, mayorSpawnRate);
+            mayorMeetingButton = CustomOption.Create(83, Types.Crewmate, "攜帶式緊急會議按鈕", true, mayorSpawnRate);
 
             engineerSpawnRate = CustomOption.Create(90, Types.Crewmate, cs(Engineer.color, "工程師"), rates, null, true);
             engineerNumberOfFixes = CustomOption.Create(91, Types.Crewmate, "破壞修復數量", 1f, 1f, 3f, 1f, engineerSpawnRate);
@@ -555,7 +555,7 @@ namespace TheOtherRoles {
             noVoteIsSelfVote = CustomOption.Create(5, Types.General, "不能投票給自己", false, blockSkippingInEmergencyMeetings);
             hidePlayerNames = CustomOption.Create(6, Types.General, "隱藏玩家名稱", false);
             allowParallelMedBayScans = CustomOption.Create(7, Types.General, "允許並列醫務室掃描", false);
-            shieldFirstKill = CustomOption.Create(8, Types.General, "Shield Last Game First Kill", false);
+            shieldFirstKill = CustomOption.Create(8, Types.General, "免死金牌", false);
 
             dynamicMap = CustomOption.Create(500, Types.General, "隨機地圖", false, null, false);
             dynamicMapEnableSkeld = CustomOption.Create(501, Types.General, "啟用 Skeld", true, dynamicMap, false);
@@ -563,7 +563,7 @@ namespace TheOtherRoles {
             dynamicMapEnablePolus = CustomOption.Create(503, Types.General, "啟用 Polus", true, dynamicMap, false);
             dynamicMapEnableAirShip = CustomOption.Create(504, Types.General, "啟用 Airship ", true, dynamicMap, false);
 
-            dynamicMapEnableSubmerged = CustomOption.Create(505, Types.General, "Enable Submerged Rotation", true, dynamicMap, false);
+            dynamicMapEnableSubmerged = CustomOption.Create(505, Types.General, "啟用 Submerged", true, dynamicMap, false);
 
             blockedRolePairings.Add((byte)RoleId.Vampire, new [] { (byte)RoleId.Warlock});
             blockedRolePairings.Add((byte)RoleId.Warlock, new [] { (byte)RoleId.Vampire});

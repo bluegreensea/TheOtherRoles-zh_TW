@@ -41,7 +41,9 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
-| 2022.3.29| v4.0.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.0.0/TheOtherRoles.zip)
+| 2022.3.29| v4.1.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.1/TheOtherRoles.zip)
+| 2022.3.29| v4.1.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.0/TheOtherRoles.zip)
+| 2022.3.29s| v4.0.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.0.0/TheOtherRoles.zip)
 | 2022.3.29s| v3.4.5| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.4.5/TheOtherRoles.zip)
 | 2022.2.23s| v3.4.4| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.4.4/TheOtherRoles.zip)
 | 2021.12.15s| v3.4.3| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.4.3/TheOtherRoles.zip)
@@ -102,6 +104,21 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 <details>
   <summary>Click to show the Changelog</summary>
 
+**Version 4.1.1**
+- Fixed a bug where the download submerged button did not work
+- Fixed a bug where the medium revealed a evil mini
+- Fixed a bug where the teleporter teleported while meeting is called
+- Fixed a bug where buttons appeared in meeting
+- Fixed the Popup  
+- Fixed some ui bugs  
+  
+**Version 4.1.0**
+- Added support for the Submerged map (https://github.com/SubmergedAmongUs/Submerged), which can be downloaded ingame with the Update button. If there is also a mod update, it will be prioritized
+- Added an option to give the Mayor a portable Meeting Button
+- Fixed a bug where the Lawyer didn't die with their client when voted out
+- Removed Lawyer option "Wins after Meetings"
+- Changed Medium question if the killer of a body is the Mini, the medium can now randomly ask the role question
+  
 **Version 4.0.0**
 - Added new role [Ninja](#忍者) thanks [gendelo3](https://github.com/gendelo3)
 - Added new role [Portalmaker](#傳送師) thanks [gendelo3](https://github.com/gendelo3)
@@ -624,12 +641,12 @@ docker run -d -p 22023:22023/udp --env IMPOSTOR_AntiCheat__Enabled=false --env I
 - **允許跳過緊急會議:** 如果設定為關，緊急會議中將不會有跳過按鈕。如果玩家不投票，他們將投票給自己。
 - **隱藏玩家名稱:** 隱藏所有有您不知職業玩家的名稱。戀人/偽裝者/豺狼隊伍仍可以看到他們隊友的名字。偽裝者還可以看到間諜的名字，每個人仍可以看到迷你的年齡。
 - **允許並列醫務室掃描:** 允許玩家同時進行他們的醫務室掃描。
-- **Shield Last Game First Kill** The first killed player of the previous round will be shielded for all players visible until the first meeting.
-- **Play On A Random Map** If enabled it allows you to set a rotation of all current maps, except ehT dlekS
+- **免死金牌** 上一輪第一個被殺死的玩家將被上盾並且所有玩家可見直到第一次會議時。
+- **隨機地圖** 如果啟用，它允許你設定隨機當前除了 ehT dlekS 的所有地圖
 - **死者可看到職業**
 - **死者可看到投票**
 - **死者可看到剩餘任務**
-- **The map is accessable during a meeting and will show your last location when a body gets reported/meeting gets called**
+- **地圖可在會議期間開啟，並會在有人舉報/召集會議時顯示您的最後位置**
 - **任務數量:** 您現在可以選擇更多任務。
 - **職業總結:** 當遊戲結束時，列出所有玩家及其職業與任務進度
 - **深/淺:** 在會議顯示玩家的色系
@@ -695,7 +712,7 @@ The count you set will only be reached, if there are enough 船員/偽裝者 in 
 - After that each role that has 10%-90% selected adds 1-9 tickets to a ticket pool (there exists a ticket pool for 船員, Neutrals and 偽裝者). Then the roles will be selected randomly from the pools as long it's possible (until the selected number is reached, until there are no more Crewmates/偽裝者s or until there are no more tickets). If a role is selected from the pool, obviously all the tickets of that role are being removed.
 - The 黑手黨, 戀人 and 迷你 are being selected independently (without using the ticket system) according to the spawn chance you selected. After that the 船員, 獨立 and 偽裝者 roles are selected and assigned in a random order.
 
-**Example:**\
+**範例:**\
 Settings: 2 special Crewmate roles, Snitch: 100%, Hacker: 10%, Tracker: 30%\
 Result: Snitch is assigned, then one role out of the pool [Hacker, Tracker, Tracker, Tracker] is being selected\
 Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically result in the same outcome .
@@ -906,7 +923,7 @@ Depending on the options, there'll be an arrow pointing towards the current targ
 -----------------------
 
 ## 忍者
-### **Team: Impostors**
+### **隊伍:偽裝者**
 The Ninja is an Impostor who has the ability to kill another player all over the map.\
 You can mark a player with your ability and by using the ability again, you jump to the position of the marked player and kill it.\
 Depending on the options you know where your marked player is.\
@@ -918,6 +935,7 @@ If the Ninja uses its ability, it will leave a trace (leaves) for a configurable
 - The mark on the marked player will reset after a meeting or after using the ability to kill the marked player. Performing a normal kill will **NOT** reset the mark
 - If the Ninja tries to kill a shielded player (e.g. Medic shield, Shield last game first kill ), the kill will not be performed
 - If the Ninja tries to kill the Time Master while the shield is active, the Ninja won't teleport to the players position, but the Time Master shield will still be activated
+- If the marked target is on a different floor on Submerged, the arrow will always point to the elevator
 
 ### Game Options
 | Name | Description |
@@ -1057,6 +1075,9 @@ The Vulture is a neutral role that must eat a specified number of corpses (depen
 Depending on the options, when a player dies, the Vulture gets an arrow pointing to the corpse.\
 If there is a Vulture in the game, there can't be a Cleaner.
 
+**NOTE**
+- If the corpse is on a different floor on Submerged, the arrow will always point to the elevator
+
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
@@ -1134,6 +1155,7 @@ can only use them, if the previous player did not use them before)
 ### **Team: Crewmates**
 The Mayor leads the Crewmates by having a vote that counts twice.\
 The Mayor can always use their meeting, even if the maximum number of meetings was reached.\
+The Mayor has a portable Meeting Button, depending on the options.\
 The Mayor can see the vote colors after completing a configurable amount of tasks, depending on the options.
 
 ### 遊戲選項
@@ -1141,7 +1163,8 @@ The Mayor can see the vote colors after completing a configurable amount of task
 |----------|:-------------:|
 | Mayor Spawn Chance | -
 | Mayor Can See Vote Colors | -
-| Mayor Completed Tasks Needed To See Vote Colors | -
+| Completed Tasks Needed To See Vote Colors | -
+| Mobile Emergency Button | -
 -----------------------
 
 ## 工程師
@@ -1359,6 +1382,9 @@ An arrow points to the last tracked position of the player.\
 The arrow updates its position every few seconds (configurable).\
 Depending on the options, the Tracker has another ability: They can track all corpses on the map for a set amount of time. They will keep tracking corpses, even if they were cleaned or eaten by the Vulture.
 
+**NOTE**
+- If the tracked player is on a different floor on Submerged, the arrow will always point to the elevator
+
 ### 遊戲選項
 | 名稱 | 描述
 |----------|:-------------:|
@@ -1374,6 +1400,9 @@ Depending on the options, the Tracker has another ability: They can track all co
 ### **隊伍:船員**
 When the Snitch finishes all the tasks, arrows will appear (only visible to the Snitch) that point to the Impostors (depending on the options also to members of team Jackal).\
 When the Snitch has one task left (configurable) the Snitch will be revealed to the Impostors (depending on the options also to members of team Jackal) with an arrow pointing to the Snitch.
+
+**NOTE**
+- If the Impostor(s)/Jackal(s) is/are on a different floor on Submerged when the Snitch finished their tasks, the arrow will always point to the elevator
 
 ### 遊戲選項
 | 名稱 | 描述
@@ -1419,7 +1448,7 @@ Additionally to that, the Portalmaker gets information about who used the portal
 - While one player uses a portal, it is blocked for any other player until the player got teleported.
 - All ghosts can still use the portals, but won't block any living player from using it and the Portalmaker won't get any information about it in chat.
 - If a morphed person uses a portal it will show the morphed name/color depending on the options.
-- If a comouflaged person uses a portal it will show "A comouflaged person used the portal."
+- If a camouflaged person uses a portal it will show "A comouflaged person used the portal."
 
 ### Game Options
 | Name | Description
@@ -1470,7 +1499,7 @@ Additionally to that, the Portalmaker gets information about who used the portal
 你的職業是什麼？
 殺你的殺手顏色類型是什麼？
 你什麼時候死的？
-殺你的殺手職業是什麼？ (迷你除外)
+殺你的殺手職業是什麼？
 
 ### 遊戲選項
 | 名稱 | 描述
@@ -1483,6 +1512,7 @@ Additionally to that, the Portalmaker gets information about who used the portal
 
 # 特殊標籤
 特殊標籤是對偽裝者/獨立/船員角色的額外擴充。
+一些標籤可以在遊戲中有多人擁有(數量選項)。
 
 ## 血族
 
@@ -1525,6 +1555,9 @@ Everyone will know if the Tie Breaker was involved in the Meeting or not.
 
 The Bait forces the killer to self report the body (you can configure a delay in the options).\
 There can be more than one Bait.
+
+**NOTE:**
+- If the Sheriff has the Bait modifier and dies while trying to kill a Crewmate, the Sheriff will *NOT* report themself.
 
 ### Game Options
 | Name | Description
