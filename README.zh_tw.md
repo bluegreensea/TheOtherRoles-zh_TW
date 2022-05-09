@@ -978,93 +978,93 @@ Depending on the options, the Guesser can't guess the shielded player and depend
 -----------------------
 
 ## 小丑
-### **Team: Neutral**
-The Jester does not have any tasks. They win the game as a solo, if they get voted out during a meeting.
+### **隊伍:獨立**
+小丑沒有任何任務。如果他們在緊急會議上被票出，他們會以單人身份獲勝。
 
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
-| Jester Spawn Chance | -
-| Jester Can Call Emergency Meeting | Option to disable the emergency button for the Jester
+| 小丑生成機率 | -
+| 小丑可召開緊急會議 | 禁止小丑使用緊急按鈕的設定
 -----------------------
 
 ## 縱火狂
-### **Team: Neutral**
+### **隊伍:獨立**
 The Arsonist does not have any tasks, they have to win the game as a solo.\
 The Arsonist can douse other players by pressing the douse button and remaining next to the player for a few seconds.\
 If the player that the Arsonist douses walks out of range, the cooldown will reset to 0.\
 After dousing everyone alive the Arsonist can ignite all the players which results in an Arsonist win.
 
-### Game Options
-| Name | Description |
+### 遊戲選項
+| 名稱 | 描述 |
 |----------|:-------------:|
-| Arsonist Spawn Chance | -
-| Arsonist Countdown | -
-| Arsonist Douse Duration | The time it takes to douse a player
+| 縱火狂生成機率 | -
+| 縱火狂冷卻 | -
+| 縱火狂澆油持續時間 | The time it takes to douse a player
 -----------------------
 
 ## 豺狼
-### **Team: Jackal**
-The Jackal is part of an extra team, that tries to eliminate all the other players.\
-The Jackal has no tasks and can kill Impostors, Crewmates and Neutrals.\
-The Jackal (if allowed by the options) can select another player to be their Sidekick.
-Creating a Sidekick removes all tasks of the Sidekick and adds them to the team Jackal. The Sidekick loses their current role (except if they're a Lover, then they play in two teams).
-The "Create Sidekick Action" may only be used once per Jackal or once per game (depending on the options).
-The Jackal can also promote Impostors to be their Sidekick, but depending on the options the Impostor will either really turn into the Sidekick and leave the team Impostors or they will just look like the Sidekick to the Jackal and remain as they were.\
+### **隊伍:豺狼**
+豺狼是一個額外隊伍的一部分，需要消滅所有其他玩家。\
+豺狼沒有任務，可以殺死偽裝者，船員和獨立玩家。\
+豺狼(如果設定開啟)可以選擇另一個玩家作為他們的同伴。
+建立跟班會移除跟班的所有任務，並讓它們加入到豺狼隊伍中。跟班將會失去他們目前的職業(除非他們是戀人，這樣他們會被分成兩隊)。
+"建立跟班"每個豺狼只能使用一次，或者每個遊戲使用一次(取決於設定)。
+豺狼也可以讓偽裝者成為他們的同伴，但是根據設定的不同，偽裝者要麼真的變成同伴並離開偽裝者，要麼他只會看起來像豺狼的同伴並保持原來不變。\
 Also if a Spy or Impostor gets sidekicked, they still will appear red to the Impostors.
 
-The team Jackal enables multiple new outcomes of the game, listing some examples here:
-- The Impostors could be eliminated and then the crew plays against the team Jackal.
-- The Crew could be eliminated, then the Team Jackal fight against the Impostors (The Crew can still make a task win in this scenario)
+豺狼隊伍讓遊戲的多個新結果，此處列出了一些範例：
+- 偽裝者被淘汰，然後船員與豺狼對抗。
+- 船員被淘汰，然後豺狼隊與偽裝者對抗(這種情況下，船員仍然可以解完任務獲勝)
 
-The priority of the win conditions is the following:
-1. Crewmate Mini lose by vote
-2. Jester wins by vote
-3. Arsonist win
-4. Team Impostor wins by sabotage
-5. Team Crew wins by tasks (also possible if the whole Crew is dead)
-6. Lovers among the last three players win
-7. Team Jackal wins by outnumbering (When the team Jackal contains an equal or greater amount of players than the Crew and there are 0 Impostors left and team Jackal contains no Lover)
-8. Team Impostor wins by outnumbering (When the team Impostors contains an equal or greater amount of players than the Crew and there are 0 players of the team Jackal left and team Impostors contains no Lover)
-9. Team Crew wins by outnumbering (When there is no player of the team Jackal and the team Impostors left)
+獲勝條件的優先順序如下：
+1. 迷你船員被投出輸掉
+2. 小丑被投出獲勝
+3. 縱火犯獲勝
+4. 偽裝者以破壞勝利
+5. 船員解完任務獲勝(就算都死了還是能)
+6. 戀人在最後三名玩家中獲勝
+7. 豺狼隊伍以多數獲勝(當豺狼包含的玩家數量等於或多於船員，並剩下0個偽裝者與豺狼隊伍不包含戀人時)
+8. 偽裝者隊伍以多數獲勝(當偽裝者包含的玩家數量等於或多於豺狼，並剩下0個豺狼與偽裝者隊伍不包含戀人時)
+9. 船員隊伍以多數獲勝(當沒有豺狼並且偽裝者離開時)
 
 **NOTE:**
-- The Jackal (and their Sidekick) may be killed by a Sheriff.
-- A Jackal cannot target the Mini, while it's growing up. After that they can kill it or select it as its Sidekick.
-- The Crew can still win, even if all of their members are dead, if they finish their tasks fast enough (That's why converting the last Crewmate with tasks left into a Sidekick results in a task win for the crew.)
+- 豺狼(和跟班)可能會被警長殺死。
+- 當迷你還在成長，豺狼不能瞄準他。成年之後，他們可以殺死他或選擇他作為跟班。
+- 即使所有船員都死了，他們夠快地完成任務，船員仍然可以獲勝(這就是為什麼將剩下最後一個未解完任務的船員轉換為跟班將導致船員獲勝。)
 
-If both Impostors and Jackals are in the game, the game continues even if all Crewmates are dead. Crewmates may still win in this case by completing their tasks. Jackal and Impostor have to kill each other.
+如果偽裝者和豺狼都在遊戲中，就算所有船員都死了，遊戲也還是會繼續。在這種情況下，船員仍然可以通過完成他們的任務來獲勝。豺狼和偽裝者必須互相殘殺。
 
 ### 遊戲選項
 | 名稱 | 描述
 |----------|:-------------:|
-| Jackal Spawn Chance | - |
-| Jackal/Sidekick Kill Cooldown | Kill cooldown |
-| Jackal Create Sidekick Cooldown | Cooldown before a Sidekick can be created |
-| Jackal can use vents | Yes/No |
-| Jackal can create a Sidekick | Yes/No |
-| Jackals promoted from Sidekick can create a Sidekick | Yes/No (to prevent the Jackal team from growing) |
-| Jackals can make an Impostor to their Sidekick | Yes/No (to prevent a Jackal from turning an Impostor into a Sidekick, if they use the ability on an Impostor they see the Impostor as Sidekick, but the Impostor isn't converted to Sidekick. If this option is set to "No" Jackal and Sidekick can kill each other.) |
-| Jackal and Sidekick have Impostor vision | - |
+| 豺狼生成機率 | - |
+| 豺狼/跟班殺人冷卻 | 殺死冷卻 |
+| 豺狼製造跟班冷卻 | 建立同伴的冷卻時間 |
+| 豺狼可使用通風口 | 開/關 |
+| 豺狼可製造跟班 | 開/關 |
+| 從跟班升職的豺狼可製造跟班 | 開/關 (防止豺狼團隊成長擴大) |
+| 豺狼可讓偽裝者轉成他們的跟班 | 開/關 (為了防止豺狼將偽裝者變成跟班，如果他在偽裝者身上使用該能力，他會將偽裝者視為跟班，但偽裝者不會轉換為跟班。如果此選項設置為「關」，豺狼和跟班可以互相殘殺。) |
+| 豺狼與跟班有偽裝者視野 | - |
 -----------------------
 
 ## 跟班
-### **Team: Jackal**
-Gets assigned to a player during the game by the "Create Sidekick Action" of the Jackal and joins the Jackal in their quest to eliminate all other players.\
-Upon the death of the Jackal (depending on the options), they might get promoted to Jackal themself and potentially even assign a Sidekick of their own.\
+### **隊伍:豺狼**
+在遊戲期間由豺狼"建立跟班"的玩家，加入豺狼的任務以消滅所有其他玩家。\
+在豺狼死後(取決於設定)，他們可能會自己晉升為豺狼，甚至可能建立自己的跟班。\
 \
 **NOTE:**
-- A player that converts into a Sidekick loses their previous role and tasks (if they had one).
-- The Sidekick may be killed by a Sheriff.
-- The Sidekick cannot target the Mini, while it's growing up.
+- 轉換成跟班的玩家會失去他們以前的職業與任務(如果他們有的話)，除了戀人角色。
+- 跟班可能會被警長射殺。
+- 當迷你還在成長，跟班不能瞄準他。
 
 ### 遊戲選項
 | 名稱 | 描述
 |----------|:-------------:|
-| Jackal/Sidekick Kill Cooldown | Uses the same kill cooldown setting as the Jackal |
-| Sidekick gets promoted to Jackal on Jackal death |  Yes/No |
-| Sidekick can kill | Yes/No |
-| Sidekick can use vents | Yes/No |
+| 豺狼/跟班殺人冷卻 | 使用與豺狼相同的殺人冷卻時間 |
+| 在豺狼死亡後跟班可升職成豺狼 | 開/關 |
+| 跟班可以殺人 | 開/關 |
+| 跟班可使用通風口 | 開/關 |
 -----------------------
 
 ## 禿鷲
@@ -1090,41 +1090,41 @@ If there is a Vulture in the game, there can't be a Cleaner.
 
 ## 律師
 ### **隊伍:獨立**
-The Lawyer is a neutral role that has a client.\
-The client might be an Impostor or Jackal which is no Lover.\
-Depending on the options, the client can also be a Jester.\
-The Lawyer needs their client to win in order to win the game.\
-Their client doesn't know that it is their client.\
-If their client gets voted out, the Lawyer dies with the client.\
-If their client dies, the Lawyer changes their role and becomes the [Pursuer](#pursuer), which has a different goal to win the game.\
+律師是一個有客戶的獨立職業。\
+客戶會是沒有戀人的偽裝者或豺狼。\
+根據選項，客戶也可以是小丑。\
+律師需要他們的客戶獲勝來獲勝。\
+他們的客戶不知道他們是客戶。\
+如果他們的客戶被票出，律師會跟他一起死。\
+如果他們的客戶死亡，律師會改變他們的職業成為[原告](#原告)，他有不同的目標來獲勝。\
 \
 How the Lawyer wins:
 - Lawyer dead/alive, client alive and client wins: The Lawyer wins together with the team of the client.
 - If their client is Jester and the Jester gets voted out, the Lawyer wins together with the Jester.
 
 **NOTE:**
-- If the client disconnects, the Lawyer will also turn into the Pursuer
+- 如果客戶端斷開連接，律師也將變成原告
 - The Lawyer needs to figure out the role of their client depending on the options
 
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
-| Lawyer Spawn Chance | -
-| Lawyer Target Can Be The Jester | -
-| Lawyer Wins After Meetings | If set to true, the Lawyer wins after a configurable amount of meetings (can't start meetings himself)
-| Lawyer Needed Meetings To Win | -
-| Lawyer Vision | Pursuer has normal vision
-| Lawyer Knows Target Role | -
-| Pursuer Blank Cooldown | -
-| Pursuer Number Of Blanks | -
+| 律師生成機率 | -
+| 律師目標可能是小丑 | -
+| 律師會議後獲勝 | 如果設置為開，律師在可配置的會議數量後獲勝(不能自己開始會議)
+| 律師需要會議才能獲勝 | -
+| 律師視野 | 原告視野正常
+| 律師知道目標職業 | -
+| 原告填空冷卻 | -
+| 原告填空次數 | -
 -----------------------
 
-## Pursuer
-### **Team: Neutral**
-The Pursuer is still a neutral role, but has a different goal to win the game; they have to be alive when the game ends and the Crew wins.\
-In order to achieve this goal, the Pursuer has an ability called "Blank", where they can fill a killers (this also includes the Sheriff) weapon with a blank. So, if the killer attempts to kill someone, the killer will miss their target, and their cooldowns will be triggered as usual.\
-If the killer fires the "Blank", shields (e.g. Medic shield or Time Master shield) will not be triggered.\
-The Pursuer has tasks (which can already be done while being a Lawyer), that count towards the task win for the Crewmates. If the Pursuer dies, their tasks won't be counted anymore.
+## 原告
+### **隊伍:獨立**
+原告也是個獨立職業，但有個不同的目標來獲勝: 他們必須活到遊戲結束時(不管是誰獲勝)。
+為了實現這個目標，原告擁有"填空"能力: 他們可以用空包彈填充殺手(包括警長)的武器，所以如果殺手試圖殺死某人將錯過目標並照常觸發所有冷卻時間。
+如果殺手發射空包彈不會觸發任何盾(例如醫生盾或時間管理大師盾)。
+原告有任務(在律師時就可以做)，這些任務計入船員的任務勝利。如果原告死了，他們的任務將不被計算在內。
 
 -----------------------
 
@@ -1188,45 +1188,45 @@ Because of the vents the Engineer might not be able to start some tasks using th
 
 ## 警長
 ### **隊伍:船員**
-The Sheriff has the ability to kill Impostors.\
-If they try to kill a Crewmate, they die instead.\
+警長有能力殺死偽裝者。\
+如果試圖射殺一名船員，他們反而會死。
 \
 **NOTE:**
-- If the Sheriff shoots the person the Medic shielded, the Sheriff and the shielded person **both remain unharmed**.
-- If the Sheriff shoots a Mini Impostor, the Sheriff dies if the Mini is still growing up. If it's 18, the Mini Impostor dies.
+- 如果警長射殺醫生保護的人，警長和被保護的人**都不會死**。
+- 如果警長射殺迷你偽裝者，如果迷你還在成長，警長就會死亡。如果 18 歲成年，則迷你偽裝者死亡。
 
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
-| Sheriff Spawn Chance | -
-| Sheriff Cooldown | -
-| Sheriff Can Kill Neutrals | -
-| Sheriff Has A Deputy | Deputy can not be in game without Sheriff
+| 警長生成機率 | -
+| 警長冷卻 | -
+| 警長射殺獨立職業 | -
+| 警長有個警員 | 沒有警長警員不會在遊戲中
 -----------------------
 
 ## 警員
-### **Team: Crewmates**
-The Deputy has the ability to handcuff player.\
-Handcuffs will be hidden until the handcuffed player try to use a disabled button/hotkey.\
-Handcuffs disable:
-- Kill
-- Abilities
-- Vent
-- Report\
+### **隊伍:船員**
+警員可將玩家上銬。\
+手銬是隱藏的，直到被上銬的玩家嘗試使用禁用的能力。\
+手銬禁用:
+- 殺戮
+- 能力
+- 通風口
+- 舉報\
   \
   **NOTE:**
-- Duration starts after the handcuffs become visible.
-- Deputy can not be in game without Sheriff.
+- 持續時間從手銬變得可見後開始倒數。
+- 沒有警長就不會有警員。
 
-### Game Options
-| Name | Description |
+### 遊戲選項
+| 名稱 | 描述 |
 |----------|:-------------:|
-| Deputy Number Of Handcuffs | -
-| Handcuff Cooldown| -
-| Handcuff Duration | -
-| Sheriff And Deputy Know Each Other | -
-| Deputy Gets Promoted To Sheriff | "Off", "On (Immediately)" or "On (After Meeting)"
-| Deputy Keeps Handcuffs When Promoted |-
+| 警員手銬數量 | -
+| 上銬冷卻 | -
+| 手銬持續時間 | -
+| 警長與警員互相認識 | -
+| 警員晉升為警長 | "關", "開(立即)" 或 "開(會議後)"
+| 警員升職後保持手銬 | -
 -----------------------
 
 ## 點燈人
@@ -1571,28 +1571,28 @@ There can be more than one Bait.
 
 ## 戀人
 
-There are always two Lovers which are linked together.\
-Their primary goal is it to stay alive together until the end of the game.\
-If one Lover dies (and the option is activated), the other Lover suicides.\
-You can specify the chance of one Lover being an Impostor.\
-The Lovers never know the role of their partner, they only see who their partner is.\
-The Lovers win, if they are both alive when the game ends. They can also win with their original team (e.g. a dead Impostor Lover can win with the Impostors, an Arsonist Lover can still achieve an Arsonist win).\
-If one of the Lovers is a killer (i.e. Jackal/Sidekick/Impostor), they can achieve a "Lovers solo win" where only the Lovers win.\
-If there is no killer among the Lovers (e.g. an Arsonist Lover + Crewmate Lover) and they are both alive when the game ends, they win together with the Crewmates.\
-If there's an Impostor/Jackal + Crewmate Lover in the game, the tasks of a Crewmate Lover won't be counted (for a task win) as long as they're alive.\
-If the Lover dies, their tasks will also be counted.\
-You can enable an exclusive chat only for Lovers.
+總有兩個情人。\
+主要目標是一起活到遊戲結束。\
+如果一個情人死了(並且雙死選項被打開)，另一個情人會自殺。\
+您可以選擇戀人是否可以擔任第二個角色(可以是獨立、船員或冒名頂替者角色)。\
+您可以設定一個情人成為偽裝者的機率。\
+戀人不知道他們伴侶的職業，只知道伴侶是誰。\
+如果在遊戲結束時他們都還活著，則戀人獲勝。他們也可以用他們原來的團隊獲勝(例如，一個死得去的偽裝者可以用偽裝者獲勝，縱火狂戀人仍可以贏縱火狂的勝利）\
+如果其中一個戀人是殺手(即豺狼/跟班/偽裝者)，他們可以實現只有戀人獲勝的"戀人獨贏"。\
+如果情人中沒有殺手(例如縱火狂戀人+船員戀人)，並且遊戲結束時他們都還活著，則他們與船員一起獲勝。\
+如果遊戲中有一個團隊偽裝者/豺狼戀人，只要他們還活著，就不會計算船員戀人的任務(任務勝利)。如果戀人死了，他們的任務才會被計算在內。\
+您可以為戀人開啟專屬聊天室
 
 **NOTE:**
-In a 2 Crewmates vs 2 Impostors (or 2 members of team Jackal) and the Lovers are not in the same team, the game is not automatically over since the Lovers can still achieve a solo win. E.g. if there are the following roles Impostor + ImpLover + Lover + Crewmate left, the game will not end and the next kill will decide if the Impostors or Lovers win.
+在 2 船員 vs 2 偽裝者(或豺狼團隊的 2 名成員)和戀人不在同一個團隊中，遊戲不會自動結束，因為戀人仍然可以取得單人勝利。例如:如果還剩下以下角色 偽裝者+偽裝者戀人+戀人+船員，則遊戲不會結束，下一個殺人將決定偽裝者或戀人勝利。
 
 ### 遊戲選項
 | 名稱 | 描述
 |----------|:-------------:|
-| Lovers Spawn Chance | -
-| Chance That One Lover Is Impostor | -
-| Both Lovers Die | Whether the second Lover suicides, if the first one dies
-| Enable Lover Chat | -
+| 戀人生成機率 | -
+| 一個戀人是偽裝者的機率 | -
+| 戀人雙死 | 如果第一個情人死了，第二個情人是否自殺
+| 開啟戀人私訊 | -
 -----------------------
 
 ## 墨鏡
