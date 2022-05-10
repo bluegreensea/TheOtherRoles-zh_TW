@@ -1070,10 +1070,10 @@ Also if a Spy or Impostor gets sidekicked, they still will appear red to the Imp
 ## 禿鷲
 ### **隊伍:獨立**
 
-The Vulture does not have any tasks, they have to win the game as a solo.\
-The Vulture is a neutral role that must eat a specified number of corpses (depending on the options) in order to win.\
-Depending on the options, when a player dies, the Vulture gets an arrow pointing to the corpse.\
-If there is a Vulture in the game, there can't be a Cleaner.
+禿鷲沒有任何任務，他們必須自己取得勝利。\
+禿鷲是一個獨立職業，必須吃掉指定數量的屍體(取決於選項)才能獲勝。\
+根據選項，當有玩家死亡時，禿鷲會得到一個指向屍體的箭頭。\
+如果遊戲中有禿鷹，就不會有清道夫。
 
 **NOTE**
 - If the corpse is on a different floor on Submerged, the arrow will always point to the elevator
@@ -1081,11 +1081,11 @@ If there is a Vulture in the game, there can't be a Cleaner.
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
-| Vulture Spawn Chance | -
-| Vulture Countdown | -
-| Number Of Corpses Needed To Be Eaten | Corpes needed to be eaten to win the game
-| Vulture Can Use Vents | -
-| Show Arrows Pointing Towards The Corpes | -
+| 禿鷲生成機率 | -
+| 禿鷲冷卻 | -
+| 需要吃的屍體數量 | 獲勝需要吃的屍體數量
+| 禿鷲可以使用通風口 | -
+| 顯示指向屍體的箭頭 | -
 -----------------------
 
 ## 律師
@@ -1144,27 +1144,27 @@ The **special interactions** with the Shifter are noted in the chapters of the r
 - One time use abilities (e.g. shielding a player or Engineer sabotage fix) can only used by one player in the game (i.e. the Shifter
 can only use them, if the previous player did not use them before)
 
-### Game Options
-| Name | Description
+### 遊戲選項
+| 名稱 | 描述
 |----------|:-------------:|
-| Shifter Spawn Chance | -
-| Shifter Shifts Modifiers | Sets if Lovers and/or Medic Shield will be shifted
+| 轉職師生成機率 | -
+| 轉職師轉移調整 | 設定戀人和/或醫生盾是否會轉移
 -----------------------
 
 ## 市長
-### **Team: Crewmates**
-The Mayor leads the Crewmates by having a vote that counts twice.\
-The Mayor can always use their meeting, even if the maximum number of meetings was reached.\
+### **隊伍:船員**
+市長通過兩票來領導船員。\
+市長始終可以使用他們的會議，即使已達到最大會議次數。\
 The Mayor has a portable Meeting Button, depending on the options.\
 The Mayor can see the vote colors after completing a configurable amount of tasks, depending on the options.
 
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
-| Mayor Spawn Chance | -
-| Mayor Can See Vote Colors | -
-| Completed Tasks Needed To See Vote Colors | -
-| Mobile Emergency Button | -
+| 市長生成機率 | -
+| 市長可以看到是誰投票 | -
+| 可以看到是誰投票所需要的任務數 | -
+| 攜帶式緊急會議按鈕 | -
 -----------------------
 
 ## 工程師
@@ -1244,28 +1244,28 @@ Because of the vents the Engineer might not be able to start some tasks using th
 -----------------------
 
 ## 偵探
-### **Team: Crewmates**
-The Detective can see footprints that other players leave behind.\
-The Detective's other feature shows when they report a corpse: they receive clues about the killer's identity. The type of information they get is based on the time it took them to find the corpse.
+### **隊伍:船員**
+偵探可以看到其他玩家留下的腳印。\
+偵探的另一個特點是在他們舉報屍體時將顯示: 他們收到有關兇手身份的線索。他們獲得的資訊類型取決於他們找到屍體所花的時間。
 
 **NOTE:**
 - When people change their colors (because of a morph or camouflage), all the footprints also change their colors (also the ones that were already on the ground). If the effects are over, all footprints switch back to the original color.
 - The Detective does not see footprints of players that sit in vents
-- More information about the [colors](#colors)
+- 更多[顏色](#顏色)資訊
 
-### Game Options
-| Name | Description |
+### 遊戲選項
+| 名稱 | 描述 |
 |----------|:-------------:|
-| Detective Spawn Chance | -
-| Anonymous Footprints | If set to true, all footprints will have the same color. Otherwise they will have the color of the respective player.
-| Footprint Interval | The interval between two footprints
-| Footprint Duration | Sets how long the footprints remain visible.
-| Time Where Detective Reports Will Have Name | The amount of time that the Detective will have to report the body since death to get the killer's name.  |
-| Time Where Detective Reports Will Have Color Type| The amount of time that the Detective will have to report the body since death to get the killer's color type. |
+| 偵探生成機率 | -
+| 匿名足跡 | If set to true, all footprints will have the same color. Otherwise they will have the color of the respective player.
+| 足跡間隔 | The interval between two footprints
+| 足跡持續時間 | Sets how long the footprints remain visible.
+| 偵探舉報將有名字的時間 | The amount of time that the Detective will have to report the body since death to get the killer's name.  |
+| 偵探舉報將有顏色類型的時間 | The amount of time that the Detective will have to report the body since death to get the killer's color type. |
 -----------------------
 
 ## 時間管理大師
-### **Team: Crewmates**
+### **隊伍:船員**
 The Time Master has a time shield which they can activate. The time shield remains active for a configurable amount of time.\
 If a player tries to kill the Time Master while the time shield is active, the kill won't happen and the
 time will rewind for a set amount of time.\
@@ -1283,10 +1283,10 @@ The Time Master won't be affected by the rewind.
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
-| Time Master Spawn Chance | - |
-| Time Master Cooldown | - |
-| Rewind Duration | How much time to rewind |
-| Time Master Shield Duration |
+| 時間管理大師生成機率 | - |
+| 時間管理大師冷卻 | - |
+| 回溯時間 | 回溯多久的時間 |
+| 回溯時間護盾持續時間 |
 -----------------------
 
 ## 醫生
@@ -1325,18 +1325,18 @@ The Swapper now has initial swap charges and can recharge those charges after co
 - The remaining charges will be displayed in brackets next to the players role while not in a meeting
 - In a meeting the charges will appear next to the Confirm Swap button
 
-### Game Options
-| Name | Description
+### 遊戲選項
+| 名稱 | 描述
 |----------|:-------------:|
-| Swapper Spawn Chance | -
-| Swapper can call emergency meeting | Option to disable the emergency button for the Swapper
-| Swapper can only swap others | Sets whether the Swapper can swap themself or not
-| Initial Swap Charges | -
-| Number Of Tasks Needed For Recharging | -
+| 掉包者生成機率 | -
+| 掉包者可召開緊急會議 | Option to disable the emergency button for the Swapper
+| 掉包者只可掉包其他人的票 | Sets whether the Swapper can swap themself or not
+| 初始掉包充能 | -
+| 充能所需要的任務數 | -
 -----------------------
 
 ## 靈媒
-### **Team: Crewmates**
+### **隊伍:船員**
 The Seer has two abilities (one can activate one of them or both in the options).\
 The Seer sees the souls of players that died a round earlier, the souls slowly fade away.\
 The Seer gets a blue flash on their screen, if a player dies somewhere on the map.
@@ -1344,10 +1344,10 @@ The Seer gets a blue flash on their screen, if a player dies somewhere on the ma
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
-| Seer Spawn Chance | -
-| Seer Mode | Options: Show death flash and souls, show death flash, show souls
-| Seer Limit Soul Duration | Toggle if souls should turn invisible after a while
-| Seer Soul Duration | Sets how long it will take the souls to turn invisible after a meeting
+| 靈媒生成機率 | -
+| 靈媒能力模式 | Options: Show death flash and souls, show death flash, show souls
+| 靈魂有持續時間限制 | Toggle if souls should turn invisible after a while
+| 靈魂持續時間 | Sets how long it will take the souls to turn invisible after a meeting
 -----------------------
 
 ## 駭客
@@ -1361,7 +1361,7 @@ The Seer gets a blue flash on their screen, if a player dies somewhere on the ma
 
 **NOTE:**
 - 如果百變怪變形或魔術師偽裝，管理表上的顏色會相應改變
-- 更多 [顏色](#顏色) 資訊
+- 更多[顏色](#顏色)資訊
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -1553,8 +1553,8 @@ Everyone will know if the Tie Breaker was involved in the Meeting or not.
 
 ## 誘餌
 
-The Bait forces the killer to self report the body (you can configure a delay in the options).\
-There can be more than one Bait.
+誘餌會讓強制殺手舉報該屍體(您可以在選項中設定延遲)。\
+可以不止一個誘餌
 
 **NOTE:**
 - If the Sheriff has the Bait modifier and dies while trying to kill a Crewmate, the Sheriff will *NOT* report themself.
@@ -1562,11 +1562,11 @@ There can be more than one Bait.
 ### Game Options
 | Name | Description
 |----------|:-------------:|
-| Bait Spawn Chance | -
-| Bait Quantity | -
-| Bait Report Delay Min | -
-| Bait Report Delay Max | -
-| Warn The Killer With A Flash | -
+| 誘餌生成機率 | -
+| 誘餌數量 | -
+| 誘餌舉報延遲最小值 | -
+| 誘餌舉報延遲最大值 | -
+| 用閃爍燈警告殺手 | -
 -----------------------
 
 ## 戀人
@@ -1617,16 +1617,16 @@ The vision will also be affected when lights out.
 The Mini's character is smaller and hence visible to everyone in the game.\
 The Mini cannot be killed until it turns 18 years old, however it can be voted out.
 
-**Impostor/Jackal Mini:**
-- While growing up the kill cooldown is doubled. When it's fully grown up its kill cooldown is 2/3 of the default one.
-- If it gets thrown out of the ship, everything is fine.
+**迷你偽裝者/豺狼:**
+- 成長時殺人冷卻加倍，成年後則是 2/3 的時間。
+- 如果他被票出船外，一切依然正常。
 
-**Crewmate Mini:**
-- The Crewmate Mini aims to play out the strength its invincibility in the early game.
-- If it gets thrown out of the ship before it turns 18, everyone loses. So think twice before you vote out a Mini.
+**迷你船員:**
+- 迷你船員的目標是在遊戲前期發揮其無敵的力量。
+- 如果他在 18 歲成年前被扔出船，那麼每個人都會輸。所以請投票之前三思而後行。
 
-**Neutral Mini:**
-- The cooldown is not effected, except for the Team Jackal/Sidekick.
+**迷你獨立:**
+- The cooldown is not effected, except for the 豺狼/跟班團隊。
 - If it gets thrown out of the ship, everything is fine except for the Jester.
 - If the Jester Mini gets voted out the game will end in a Jester win.
 
@@ -1634,11 +1634,11 @@ The Mini cannot be killed until it turns 18 years old, however it can be voted o
 - If the Sheriff tries to kill the Mini before it's fully grown, nothing happens.
 - The Sheriff can kill the Impostor/Neutral Mini, but only if it's fully grown up.
 
-### Game Options
-| Name | Description |
+### 遊戲選項
+| 名稱 | 描述 |
 |----------|:-------------:|
-| Mini Spawn Chance | -
-| Mini  | Mini Growing Up Duration
+| 迷你生成機率 | -
+| 迷你成長時間 | 迷你成長時長
 -----------------------
 
 ## VIP
@@ -1652,7 +1652,7 @@ Teams:
 - Neutral = Blue
 - Crewmate = White
 
-### Game Options
+### 遊戲選項
 | Name | Description
 |----------|:-------------:|
 | VIP Spawn Chance | -
@@ -1665,7 +1665,7 @@ Teams:
 The Invert Modifier inverts your controls (no matter if keyboard or mouse).\
 The Invert can affect all teams (Impostor, Neutral, Crewmate).
 
-### Game Options
+### 遊戲選項
 | Name | Description
 |----------|:-------------:|
 | Invert Spawn Chance | -
