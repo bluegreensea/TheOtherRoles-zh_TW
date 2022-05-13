@@ -516,7 +516,7 @@ namespace TheOtherRoles {
             // Modifier
             modifierBloody = CustomOption.Create(1000, Types.Modifier, cs(Color.yellow, "血族"), rates, null, true);
             modifierBloodyQuantity = CustomOption.Create(1001, Types.Modifier, cs(Color.yellow, "血族數量"), ratesModifier, modifierBloody);
-            modifierBloodyDuration = CustomOption.Create(1002, Types.Modifier, "追踪持續時間", 10f, 3f, 60f, 1f, modifierBloody);
+            modifierBloodyDuration = CustomOption.Create(1002, Types.Modifier, "血跡持續時間", 10f, 3f, 60f, 1f, modifierBloody);
 
             modifierAntiTeleport = CustomOption.Create(1010, Types.Modifier, cs(Color.yellow, "反傳送"), rates, null, true);
             modifierAntiTeleportQuantity = CustomOption.Create(1011, Types.Modifier, cs(Color.yellow, "反傳送數量"), ratesModifier, modifierAntiTeleport);

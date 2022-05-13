@@ -882,7 +882,7 @@ namespace TheOtherRoles
             PlayerControl guessedTarget = Helpers.playerById(guessedTargetId);
             if (Guesser.showInfoInGhostChat && PlayerControl.LocalPlayer.Data.IsDead && guessedTarget != null) {
                 RoleInfo roleInfo = RoleInfo.allRoleInfos.FirstOrDefault(x => (byte)x.roleId == guessedRoleId);
-                string msg = $"賭徒猜{guessedTarget.Data.PlayerName}的職業是{roleInfo?.name ?? ""}!";
+                string msg = $"賭徒猜了{guessedTarget.Data.PlayerName}的職業是{roleInfo?.name ?? ""}!";
                 if (AmongUsClient.Instance.AmClient && DestroyableSingleton<HudManager>.Instance)
                     DestroyableSingleton<HudManager>.Instance.Chat.AddChat(guesser, msg);
                 if (msg.IndexOf("who", StringComparison.OrdinalIgnoreCase) >= 0)

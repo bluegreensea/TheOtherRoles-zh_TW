@@ -913,12 +913,12 @@ Depending on the options, there'll be an arrow pointing towards the current targ
 ### 遊戲選項
 | 名稱         | 描述 |
 |------------|:-------------:|
-| 巫師生成機率     | -
-| 巫師施術冷卻時間   | -
-| 巫師額外冷卻時間   | 施術冷卻時間在每個巫術後增加的時間
+| 巫師生成機率 | -
+| 巫師施術冷卻時間 | -
+| 巫師額外冷卻時間 | 施術冷卻時間在每個巫術後增加的時間
 | 巫師可以對任何人施術 | 如果設置為關，女巫不能對間諜和其他偽裝者施術
-| 巫師施法持續時間   | 你需要留在目標旁邊以便對其施術的時間
-| 觸發兩個冷卻時間   | 如果設置為開，施術也會觸發殺死按鈕的冷卻時間，反之亦然(但兩個冷卻時間可能會有所不同)
+| 巫師施法持續時間 | 你需要留在目標旁邊以便對其施術的時間
+| 觸發兩個冷卻時間 | 如果設置為開，施術也會觸發殺死按鈕的冷卻時間，反之亦然(但兩個冷卻時間可能會有所不同)
 | 票出巫師拯救所有目標 | 如果設置為開，所有被詛咒的目標都會在會議結束時存活下來
 -----------------------
 
@@ -937,14 +937,14 @@ If the Ninja uses its ability, it will leave a trace (leaves) for a configurable
 - If the Ninja tries to kill the Time Master while the shield is active, the Ninja won't teleport to the players position, but the Time Master shield will still be activated
 - If the marked target is on a different floor on Submerged, the arrow will always point to the elevator
 
-### Game Options
-| Name | Description |
+### 遊戲選項
+| 名稱 | 描述 |
 |----------|:-------------:|
-| Ninja Spawn Chance | -
-| Ninja Mark Cooldown | -
-| Ninja Knows Location Of Target | -
-| Trace Duration | -
-| Time Till Trace Color Has Faded | -
+| 忍者生成機率 | -
+| 忍者標記冷卻 | -
+| 忍者知道目標位置 | -
+| 痕跡持續時間 | -
+| 痕跡褪色的時間 | -
 -----------------------
 
 ## 賭徒
@@ -1310,7 +1310,7 @@ The Time Master won't be affected by the rewind.
 | 醫生生成機率 | - | -
 | 顯示被上盾者 | 設置誰能查看玩家是否有盾牌 | "所有人", "被上盾者 + 醫生", "醫生"
 | 裝盾玩家可看到謀殺未遂 | 被上盾的玩家是否看到有人試圖殺死他們 | 開/關 |
-| Shield Will Be Activated | Sets when the shield will be active | "Instantly", "Instantly, Visible After Meeting", "After Meeting"
+| 盾生效時間 | Sets when the shield will be active | "Instantly", "Instantly, Visible After Meeting", "After Meeting"
 | 醫生可看到對被上盾者的謀殺未遂 | - | 如果有人試圖傷害被上盾的玩家(偽裝者、警長、賭徒……)，醫生將看到紅色閃光
 -----------------------
 
@@ -1437,7 +1437,7 @@ There are two possibilities (depending on the set options):
 -----------------------
 
 ## 傳送師
-### **Team: Crewmates**
+### **隊伍:船員**
 The Portalmaker is a Crewmate that can place two portals on the map.\
 These two portals are connected to each other.\
 Those portals will be visible after the next meeting and can be used by everyone.\
@@ -1450,14 +1450,14 @@ Additionally to that, the Portalmaker gets information about who used the portal
 - If a morphed person uses a portal it will show the morphed name/color depending on the options.
 - If a camouflaged person uses a portal it will show "A comouflaged person used the portal."
 
-### Game Options
-| Name | Description
+### 遊戲選項
+| 名稱 | 描述
 |----------|:-------------:|
-| Portalmaker Spawn Chance | -
-| Portalmaker Cooldown | -
-| Use Portal Cooldown | -
-| Portalmaker Log Only Shows Color Type | -
-| Log Shows Time | -
+| 傳送師生成機率 | -
+| 傳送師冷卻 | -
+| 傳送門冷卻 | -
+| 傳送師記錄只顯示顏色類型 | -
+| 記錄顯示時間 | -
 -----------------------
 
 ## 守衛
@@ -1523,9 +1523,9 @@ Additionally to that, the Portalmaker gets information about who used the portal
 ### 遊戲選項
 | 名稱 | 描述
 |----------|:-------------:|
-| Bloody Spawn Chance | -
-| Bloody Quantity | -
-| Trail duration | -
+| 血族生成機率 | -
+| 血族數量 | -
+| 血跡持續時間 | -
 -----------------------
 
 ## 反傳送
@@ -1533,11 +1533,11 @@ Additionally to that, the Portalmaker gets information about who used the portal
 如果有人舉報屍體或召開緊急會議，反傳送將防止玩家被傳送到會議桌。\
 玩家將從前一輪結束的地方開始(緊急會議/身體報告)。
 
-### Game Options
-| Name | Description |
+### 遊戲選項
+| 名稱 | 描述 |
 |----------|:-------------:|
-| Anti Teleport Spawn Chance | -
-| Anti Teleport Quantity | -
+| 反傳送生成機率 | -
+| 反傳送數量 | -
 -----------------------
 
 ## 決勝者
@@ -1545,10 +1545,10 @@ Additionally to that, the Portalmaker gets information about who used the portal
 If the Voting ends in a tie, the Tie Breaker takes place and the player with the Tie Breaker Modifier gets an extra vote thats not visible to anyone.\
 Everyone will know if the Tie Breaker was involved in the Meeting or not.
 
-### Game Options
-| Name | Description |
+### 遊戲選項
+| 名稱 | 描述 |
 |----------|:-------------:|
-| Tie Breaker Spawn Chance | -
+| 決勝者生成機率 | -
 -----------------------
 
 ## 誘餌
@@ -1559,8 +1559,8 @@ Everyone will know if the Tie Breaker was involved in the Meeting or not.
 **NOTE:**
 - If the Sheriff has the Bait modifier and dies while trying to kill a Crewmate, the Sheriff will *NOT* report themself.
 
-### Game Options
-| Name | Description
+### 遊戲選項
+| 名稱 | 描述
 |----------|:-------------:|
 | 誘餌生成機率 | -
 | 誘餌數量 | -
@@ -1604,12 +1604,12 @@ The vision will also be affected when lights out.
 - Sunglasses only affects Crewmates.
 - If you have the Sunglasses modifier and get sidekicked, you lose the modifier.
 
-### Game Options
-| Name | Description
+### 遊戲選項
+| 名稱 | 描述
 |----------|:-------------:|
-| Sunglasses Spawn Chance | -
-| Sunglasses Quantity | -
-| Vision with sunglasses | -
+| 墨鏡生成機率 | -
+| 墨鏡數量 | -
+| 墨鏡視野影響度 | -
 -----------------------
 
 ## 迷你
@@ -1647,17 +1647,17 @@ An Impostor, Jackal or Crewmate can be affected by the VIP (Very Important Playe
 The VIP will show everyone when he dies with a flash similar to the Seer Flash.\
 If the option Show Team Color is On, then everyone will get a flash in the color of the team the player was part of.
 
-Teams:
-- Impostor = Red
-- Neutral = Blue
-- Crewmate = White
+隊伍:
+- 偽裝者 = 紅
+- 獨立 = 藍
+- 船員 = 白
 
 ### 遊戲選項
-| Name | Description
+| 名稱 | 描述
 |----------|:-------------:|
-| VIP Spawn Chance | -
-| VIP Quantity | -
-| Show Team Color | -
+| VIP 生成機率 | -
+| VIP 數量 | -
+| 顯示隊伍顏色 | -
 -----------------------
 
 ## 反轉
@@ -1666,7 +1666,7 @@ The Invert Modifier inverts your controls (no matter if keyboard or mouse).\
 The Invert can affect all teams (Impostor, Neutral, Crewmate).
 
 ### 遊戲選項
-| Name | Description
+| 名稱 | 描述
 |----------|:-------------:|
 | Invert Spawn Chance | -
 | Invert Quantity | -
