@@ -1542,8 +1542,8 @@ Additionally to that, the Portalmaker gets information about who used the portal
 
 ## 決勝者
 
-If the Voting ends in a tie, the Tie Breaker takes place and the player with the Tie Breaker Modifier gets an extra vote thats not visible to anyone.\
-Everyone will know if the Tie Breaker was involved in the Meeting or not.
+如果投票以平票結束，則進行決勝，擁有決勝者標籤的玩家將獲得額外的投票，任何人都看不到。\
+每個人都會知道決勝者是否參與了會議。
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -1554,10 +1554,10 @@ Everyone will know if the Tie Breaker was involved in the Meeting or not.
 ## 誘餌
 
 誘餌會讓強制殺手舉報該屍體(您可以在選項中設定延遲)。\
-可以不止一個誘餌
+可以不止一個誘餌。
 
 **NOTE:**
-- If the Sheriff has the Bait modifier and dies while trying to kill a Crewmate, the Sheriff will *NOT* report themself.
+- 如果警長擁有誘餌標籤並在試圖殺死一名船員時自殺，警長將*不會*舉報自己。
 
 ### 遊戲選項
 | 名稱 | 描述
@@ -1597,12 +1597,12 @@ Everyone will know if the Tie Breaker was involved in the Meeting or not.
 
 ## 墨鏡
 
-The Sunglasses will lower the Crewmate's vision by small percentage. The percentage is configurable in the options.\
-The vision will also be affected when lights out.
+墨鏡會降低船員的一部分視野。影響百分比可在選項中設置。\
+熄燈時視野也會受到影響。
 
 **NOTE:**
-- Sunglasses only affects Crewmates.
-- If you have the Sunglasses modifier and get sidekicked, you lose the modifier.
+- 墨鏡。
+- 如果您有墨鏡標籤被轉成跟班會失去標籤。
 
 ### 遊戲選項
 | 名稱 | 描述
@@ -1614,9 +1614,8 @@ The vision will also be affected when lights out.
 
 ## 迷你
 
-The Mini's character is smaller and hence visible to everyone in the game.\
-The Mini cannot be killed until it turns 18 years old, however it can be voted out.
-
+迷你的角色較小，對每個人都可見。\
+迷你到 18 歲成年前不會被殺死，但可以被票出。
 **迷你偽裝者/豺狼:**
 - 成長時殺人冷卻加倍，成年後則是 2/3 的時間。
 - 如果他被票出船外，一切依然正常。
@@ -1626,13 +1625,13 @@ The Mini cannot be killed until it turns 18 years old, however it can be voted o
 - 如果他在 18 歲成年前被扔出船，那麼每個人都會輸。所以請投票之前三思而後行。
 
 **迷你獨立:**
-- The cooldown is not effected, except for the 豺狼/跟班團隊。
-- If it gets thrown out of the ship, everything is fine except for the Jester.
-- If the Jester Mini gets voted out the game will end in a Jester win.
+- 冷卻不受影響，除了豺狼/跟班團隊。
+- 如果它被票出船外，一切照常，除了小丑。
+- 如果迷你小丑被票出，則遊戲將以小丑獲勝而結束。
 
 **NOTE:**
-- If the Sheriff tries to kill the Mini before it's fully grown, nothing happens.
-- The Sheriff can kill the Impostor/Neutral Mini, but only if it's fully grown up.
+- 如果警長試圖在迷你成年之前射殺他，什麼事都不會發生。
+- 警長可以射殺迷你偽裝者，但前提是他成年了。
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -1643,9 +1642,9 @@ The Mini cannot be killed until it turns 18 years old, however it can be voted o
 
 ## VIP
 
-An Impostor, Jackal or Crewmate can be affected by the VIP (Very Important Player) Modifier.\
-The VIP will show everyone when he dies with a flash similar to the Seer Flash.\
-If the option Show Team Color is On, then everyone will get a flash in the color of the team the player was part of.
+偽裝者, 豺狼與船員可以被 VIP (Very Important Player) 標籤影響.\
+VIP會在他死時向所有人發出類似於靈媒閃光的閃爍。\
+如果"顯示隊伍顏色"選項為"開"，每個人會看到該玩家所屬隊伍的顏色。
 
 隊伍:
 - 偽裝者 = 紅
@@ -1662,14 +1661,14 @@ If the option Show Team Color is On, then everyone will get a flash in the color
 
 ## 反轉
 
-The Invert Modifier inverts your controls (no matter if keyboard or mouse).\
-The Invert can affect all teams (Impostor, Neutral, Crewmate).
+反轉標籤會將控制反轉(包含鍵盤與滑鼠)。\
+反轉可以影響所有隊伍(偽裝者,獨立,船員)。
 
 ### 遊戲選項
 | 名稱 | 描述
 |----------|:-------------:|
-| Invert Spawn Chance | -
-| Invert Quantity | -
+| 反轉生成機率 | -
+| 反轉數量 | -
 -----------------------
 
 # 原始碼

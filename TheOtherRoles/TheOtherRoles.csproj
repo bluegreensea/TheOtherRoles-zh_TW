@@ -5,6 +5,8 @@
         <Description>TheOtherRoles</Description>
         <Authors>Eisbison</Authors>
 		<LangVersion>latest</LangVersion>
+		<Configurations>Debug;Release;ReleaseJL</Configurations>
+		<Platforms>AnyCPU</Platforms>
     </PropertyGroup>
 
     <PropertyGroup>
