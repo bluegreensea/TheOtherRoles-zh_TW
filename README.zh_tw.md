@@ -41,6 +41,8 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
+| 2022.3.29 & 2022.4.19e| v4.1.3| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.3/TheOtherRoles.zip)
+| 2022.3.29| v4.1.2| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.2/TheOtherRoles.zip)
 | 2022.3.29| v4.1.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.1/TheOtherRoles.zip)
 | 2022.3.29| v4.1.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.0/TheOtherRoles.zip)
 | 2022.3.29s| v4.0.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.0.0/TheOtherRoles.zip)
@@ -103,6 +105,21 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # Changelog
 <details>
   <summary>Click to show the Changelog</summary>
+
+**Version 4.1.3**
+- Fixed morphling's being morphed during meetings
+- Fixed hide player names hiding the player's name during meetings
+- Added an option to the mayor: "Number Of Remote Meetings", so that the amount of mobile meetings is limited.
+
+**Version 4.1.2**
+- Made some general performance fixes. Special thanks to [probablyadnf](https://github.com/simonkellly)
+- Added an option to the ninja to get invisible after kill for x-seconds
+- Added a zoom out/overview function if you're dead and done with tasks
+- Added the sampled player to the morphling button
+- Fixed a bug where footsteps of the Detective and certain other game objects were visible in the fog of war
+- Fixed lawyer being exiled when their client is guessed in a meeting
+- Fixed multiple mod icons being shown when Submerged is loaded
+
 
 **Version 4.1.1**
 - Fixed a bug where the download submerged button did not work
@@ -645,8 +662,10 @@ docker run -d -p 22023:22023/udp --env IMPOSTOR_AntiCheat__Enabled=false --env I
 - **隨機地圖** 如果啟用，它允許你設定隨機當前除了 ehT dlekS 的所有地圖
 - **死者可看到職業**
 - **死者可看到投票**
+- **Ghosts Can Additionally See Modifier**
 - **死者可看到剩餘任務**
 - **地圖可在會議期間開啟，並會在有人舉報/召集會議時顯示您的最後位置**
+- **When you're a ghost and done with tasks, you'll get a zoom out/overview function**
 - **任務數量:** 您現在可以選擇更多任務。
 - **職業總結:** 當遊戲結束時，列出所有玩家及其職業與任務進度
 - **深/淺:** 在會議顯示玩家的色系
@@ -703,8 +722,6 @@ Here are a few instructions, on how to create a custom hat:
 # 職業
 
 ## 職業分配
-We are still improving the role assignment system. It's not that intuitive right now, but it's more flexible than the older one
-if you're using it right.
 
 First you need to choose how many special roles of each kind (偽裝者/獨立/船員) you want in the game.
 The count you set will only be reached, if there are enough 船員/偽裝者 in the game and if enough roles are set to be in the game (i.e. they are set to > 0%). The roles are then being distributed as follows:
@@ -928,6 +945,7 @@ The Ninja is an Impostor who has the ability to kill another player all over the
 You can mark a player with your ability and by using the ability again, you jump to the position of the marked player and kill it.\
 Depending on the options you know where your marked player is.\
 If the Ninja uses its ability, it will leave a trace (leaves) for a configurable amount of time where it activated the ability and additionally where it killed the before marked player.\
+When performing a ninja ability kill, the ninja can be invisible for some seconds (depends on options)\
 \
 **NOTE:**
 - The Ninja has a 5 second cooldown after marking a player
@@ -945,6 +963,7 @@ If the Ninja uses its ability, it will leave a trace (leaves) for a configurable
 | 忍者知道目標位置 | -
 | 痕跡持續時間 | -
 | 痕跡褪色的時間 | -
+| Time The Ninja Is Invisible | -
 -----------------------
 
 ## 賭徒
@@ -1616,6 +1635,7 @@ Additionally to that, the Portalmaker gets information about who used the portal
 
 迷你的角色較小，對每個人都可見。\
 迷你到 18 歲成年前不會被殺死，但可以被票出。
+
 **迷你偽裝者/豺狼:**
 - 成長時殺人冷卻加倍，成年後則是 2/3 的時間。
 - 如果他被票出船外，一切依然正常。
@@ -1672,7 +1692,6 @@ VIP會在他死時向所有人發出類似於靈媒閃光的閃爍。\
 -----------------------
 
 # 原始碼
-It's bad I know, this is a side project and my second week of modding. So there are no best practices around here.
 You can use parts of the code but don't copy paste the whole thing. Make sure you give credits to the other developers, because some parts of the code are based on theirs.
 
 # Bugs, suggestions and requests

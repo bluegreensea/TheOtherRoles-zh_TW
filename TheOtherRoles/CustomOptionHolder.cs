@@ -522,7 +522,7 @@ namespace TheOtherRoles {
             modifierTieBreaker = CustomOption.Create(1020, Types.Modifier, cs(Color.yellow, "決勝者"), rates, null, true);
 
             modifierBait = CustomOption.Create(1030, Types.Modifier, cs(Color.yellow, "誘餌"), rates, null, true);
-            modifierBaitQuantity = CustomOption.Create(1031, Types.Modifier, cs(Color.yellow, "如果通風口被佔用所有通風口發光"), ratesModifier, modifierBait);
+            modifierBaitQuantity = CustomOption.Create(1031, Types.Modifier, cs(Color.yellow, "誘餌數量"), ratesModifier, modifierBait);
             modifierBaitReportDelayMin = CustomOption.Create(1032, Types.Modifier, "誘餌舉報延遲最小值", 0f, 0f, 10f, 1f, modifierBait);
             modifierBaitReportDelayMax = CustomOption.Create(1033, Types.Modifier, "誘餌舉報延遲最大值", 0f, 0f, 10f, 1f, modifierBait);
             modifierBaitShowKillFlash = CustomOption.Create(1034, Types.Modifier, "用閃爍燈警告殺手", true, modifierBait);
