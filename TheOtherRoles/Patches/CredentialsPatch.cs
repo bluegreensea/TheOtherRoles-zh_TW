@@ -15,7 +15,7 @@ $@"<size=130%><color=#ff351f>TheOtherRoles</color></size> v{TheOtherRolesPlugin.
 
     public static string mainMenuCredentials = 
 $@"由 <color=#FCCE03FF>Eisbison</color>, <color=#FCCE03FF>Thunderstorm584</color>, <color=#FCCE03FF>EndOfFile</color> 及 <color=#FCCE03FF>Mallöris</color> 製作模組
-由 <color=#FCCE03FF>Bavari</color> 設計      由 <color=#00d3ff>bluegreensea(青海)</color> 繁體中文化";
+由 <color=#FCCE03FF>Bavari</color> 設計      由 <color=#00d3ff>bluegreensea(青海)</color> 繁體中文化      由 <color=#ffca18>JL漢化組</color> 中文化按鈕";
 
         public static string contributorsCredentials =
 $@"<size=60%> <color=#FCCE03FF>特別感謝 K3ndo & Smeggy</color> 
