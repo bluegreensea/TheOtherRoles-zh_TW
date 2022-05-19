@@ -354,7 +354,11 @@ namespace TheOtherRoles {
             writer.Write((byte)TheOtherRolesPlugin.Version.Build);
             writer.WritePacked(AmongUsClient.Instance.ClientId);
             writer.Write((byte)(TheOtherRolesPlugin.Version.Revision < 0 ? 0xFF : TheOtherRolesPlugin.Version.Revision));
+#if RELEASEJL
+            writer.Write(FakeGuid.guid.ToByteArray());
+#else
             writer.Write(Assembly.GetExecutingAssembly().ManifestModule.ModuleVersionId.ToByteArray());
+#endif
             AmongUsClient.Instance.FinishRpcImmediately(writer);
             RPCProcedure.versionHandshake(TheOtherRolesPlugin.Version.Major, TheOtherRolesPlugin.Version.Minor, TheOtherRolesPlugin.Version.Build, TheOtherRolesPlugin.Version.Revision, Assembly.GetExecutingAssembly().ManifestModule.ModuleVersionId, AmongUsClient.Instance.ClientId);
         }

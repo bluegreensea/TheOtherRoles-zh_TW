@@ -347,7 +347,9 @@ namespace TheOtherRoles.Modules {
                 var orderedKeys = packages.Keys.OrderBy((string x) => {
                     if (x == innerslothPackageName) return 1000;
                     if (x == "Developer Hats") return 0;
+#if !RELEASEJL
                     if (x == "Translator Hats") return 50;
+#endif
                     return 500;
                 });
                 foreach (string key in orderedKeys) {
@@ -364,7 +366,9 @@ namespace TheOtherRoles.Modules {
     public class CustomHatLoader {
         public static bool running = false;
         private const string REPO = "https://raw.githubusercontent.com/Eisbison/TheOtherHats/master";
+#if !RELEASEJL
         private const string REPOT = "https://raw.githubusercontent.com/bluegreensea/TheOtherTranslatorHats/master";
+#endif
 
         public static List<CustomHatOnline> hatdetails = new List<CustomHatOnline>();
         private static Task hatFetchTask = null;
@@ -401,7 +405,9 @@ namespace TheOtherRoles.Modules {
             HttpClient http = new HttpClient();
             http.DefaultRequestHeaders.CacheControl = new CacheControlHeaderValue{ NoCache = true };
 			var response = await http.GetAsync(new System.Uri($"{REPO}/CustomHats.json"), HttpCompletionOption.ResponseContentRead);
+#if !RELEASEJL
             var responseT = await http.GetAsync(new System.Uri($"{REPOT}/CustomHats.json"), HttpCompletionOption.ResponseContentRead);
+#endif
             try {
                 if (response.StatusCode != HttpStatusCode.OK) return response.StatusCode;
                 if (response.Content == null) {
@@ -412,6 +418,7 @@ namespace TheOtherRoles.Modules {
                 JToken jobj = JObject.Parse(json)["hats"];
                 if (!jobj.HasValues) return HttpStatusCode.ExpectationFailed;
                 
+#if !RELEASEJL
                 string jsonT = "";
                 bool tSwitch = false,tCheck = false;
                 if (responseT.StatusCode == HttpStatusCode.OK) {
@@ -424,6 +431,7 @@ namespace TheOtherRoles.Modules {
                     tSwitch = true;
                     tCheck = true;
                 }
+#endif
 
                 List<CustomHatOnline> hatdatas = new List<CustomHatOnline>();
 
@@ -453,10 +461,12 @@ namespace TheOtherRoles.Modules {
                         info.behind = current["behind"] != null;
                         hatdatas.Add(info);
                     }
+#if !RELEASEJL
                     if (tSwitch && current.Next == null) {
                         current = jobjT.First;
                         tSwitch = false;
                     }
+#endif
                 }
 
                 List<string> markedfordownload = new List<string>();
@@ -480,7 +490,9 @@ namespace TheOtherRoles.Modules {
                 foreach(var file in markedfordownload) {
                     
                     var hatFileResponse = await http.GetAsync($"{REPO}/hats/{file}", HttpCompletionOption.ResponseContentRead);
+#if !RELEASEJL
                     if (hatFileResponse.StatusCode != HttpStatusCode.OK && tCheck) hatFileResponse = await http.GetAsync($"{REPOT}/hats/{file}", HttpCompletionOption.ResponseContentRead);
+#endif
                     if (hatFileResponse.StatusCode != HttpStatusCode.OK) continue;
                     using (var responseStream = await hatFileResponse.Content.ReadAsStreamAsync()) {
                         using (var fileStream = File.Create($"{filePath}\\{file}")) {
