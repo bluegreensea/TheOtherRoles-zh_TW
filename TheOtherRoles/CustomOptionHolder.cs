@@ -1,12 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using BepInEx.Configuration;
-using System;
-using System.Linq;
-using HarmonyLib;
-using Hazel;
-using System.Reflection;
-using System.Text;
 using static TheOtherRoles.TheOtherRoles;
 using Types = TheOtherRoles.CustomOption.CustomOptionType;
 
@@ -96,6 +89,7 @@ namespace TheOtherRoles {
         public static CustomOption ninjaKnowsTargetLocation;
         public static CustomOption ninjaTraceTime;
         public static CustomOption ninjaTraceColorTime;
+        public static CustomOption ninjaInvisibleDuration;
 
         public static CustomOption shifterSpawnRate;
         public static CustomOption shifterShiftsModifiers;
@@ -104,6 +98,7 @@ namespace TheOtherRoles {
         public static CustomOption mayorCanSeeVoteColors;
         public static CustomOption mayorTasksNeededToSeeVoteColors;
         public static CustomOption mayorMeetingButton;
+        public static CustomOption mayorMaxRemoteMeetings;
 
         public static CustomOption portalmakerSpawnRate;
         public static CustomOption portalmakerCooldown;
@@ -361,6 +356,8 @@ namespace TheOtherRoles {
             ninjaTraceTime = CustomOption.Create(383, Types.Impostor, "痕跡持續時間", 5f, 1f, 20f, 0.5f, ninjaSpawnRate);
             ninjaTraceColorTime = CustomOption.Create(384, Types.Impostor, "痕跡褪色的時間", 2f, 0f, 20f, 0.5f, ninjaSpawnRate);
             
+            ninjaInvisibleDuration = CustomOption.Create(385, Types.Impostor, "Time The Ninja Is Invisble", 3f, 0f, 20f, 1f, ninjaSpawnRate);
+
             guesserSpawnRate = CustomOption.Create(310, Types.Neutral, cs(Guesser.color, "賭徒"), rates, null, true);
             guesserIsImpGuesserRate = CustomOption.Create(311, Types.Neutral, "賭徒是個偽裝者的機率", rates, guesserSpawnRate);
             guesserNumberOfShots = CustomOption.Create(312, Types.Neutral, "賭徒的猜測次數", 2f, 1f, 15f, 1f, guesserSpawnRate);
@@ -411,6 +408,7 @@ namespace TheOtherRoles {
             mayorCanSeeVoteColors = CustomOption.Create(81, Types.Crewmate, "市長可以看到是誰投票", false, mayorSpawnRate);
             mayorTasksNeededToSeeVoteColors = CustomOption.Create(82, Types.Crewmate, "可以看到是誰投票所需要的任務數", 5f, 0f, 20f, 1f, mayorCanSeeVoteColors);
             mayorMeetingButton = CustomOption.Create(83, Types.Crewmate, "攜帶式緊急會議按鈕", true, mayorSpawnRate);
+            mayorMaxRemoteMeetings = CustomOption.Create(84, Types.Crewmate, "Number Of Remote Meetings", 1f, 1f, 5f, 1f, mayorMeetingButton);
 
             engineerSpawnRate = CustomOption.Create(90, Types.Crewmate, cs(Engineer.color, "工程師"), rates, null, true);
             engineerNumberOfFixes = CustomOption.Create(91, Types.Crewmate, "破壞修復數量", 1f, 1f, 3f, 1f, engineerSpawnRate);
