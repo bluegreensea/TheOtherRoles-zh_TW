@@ -41,7 +41,8 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
-| 2022.3.29 & 2022.4.19e| v4.1.3| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.3/TheOtherRoles.zip)
+| 2022.3.29| v4.1.4| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.4/TheOtherRoles.zip)
+| 2022.3.29| v4.1.3| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.3/TheOtherRoles.zip)
 | 2022.3.29| v4.1.2| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.2/TheOtherRoles.zip)
 | 2022.3.29| v4.1.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.1/TheOtherRoles.zip)
 | 2022.3.29| v4.1.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.0/TheOtherRoles.zip)
@@ -105,6 +106,17 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # Changelog
 <details>
   <summary>Click to show the Changelog</summary>
+  
+**Version 4.1.4**
+- Added auto updating for BepInEx
+- Fixed hat testing in freeplay for meetings / exile etc.
+- Fixed players not being able to move
+- Fixed getting stuck on the polus laboratory vent
+- Fixed Sherrif suicide with bloody modifier having a trail as a ghost
+- Fixed being able to kill the first killed protected player when a meeting was starting
+- Fixed some cases of the Reliable Packet Not Ack'ed disconnections
+- Fixed the double mod stamp being shown in game
+- Further improvements towards rubberbanding
 
 **Version 4.1.3**
 - Fixed morphling's being morphed during meetings
@@ -662,10 +674,10 @@ docker run -d -p 22023:22023/udp --env IMPOSTOR_AntiCheat__Enabled=false --env I
 - **隨機地圖** 如果啟用，它允許你設定隨機當前除了 ehT dlekS 的所有地圖
 - **死者可看到職業**
 - **死者可看到投票**
-- **Ghosts Can Additionally See Modifier**
+- **死者可看到特殊標籤**
 - **死者可看到剩餘任務**
 - **地圖可在會議期間開啟，並會在有人舉報/召集會議時顯示您的最後位置**
-- **When you're a ghost and done with tasks, you'll get a zoom out/overview function**
+- **死者完成任務時，將獲得縮放/概覽功能**
 - **任務數量:** 您現在可以選擇更多任務。
 - **職業總結:** 當遊戲結束時，列出所有玩家及其職業與任務進度
 - **深/淺:** 在會議顯示玩家的色系
@@ -941,19 +953,19 @@ Depending on the options, there'll be an arrow pointing towards the current targ
 
 ## 忍者
 ### **隊伍:偽裝者**
-The Ninja is an Impostor who has the ability to kill another player all over the map.\
-You can mark a player with your ability and by using the ability again, you jump to the position of the marked player and kill it.\
-Depending on the options you know where your marked player is.\
-If the Ninja uses its ability, it will leave a trace (leaves) for a configurable amount of time where it activated the ability and additionally where it killed the before marked player.\
-When performing a ninja ability kill, the ninja can be invisible for some seconds (depends on options)\
+忍者是個偽裝者，他有能力殺死地圖上的另一個玩家。\
+你可以用你的能力標記一個玩家，然後再次使用這個能力，將飛到被標記玩家的位置並殺死他。\
+根據選項，可以知道被標記玩家的位置。\
+如果忍者使用能力，會在可設定的時間內留下痕跡，在他使用能力的地方和殺死被標記玩家的地方。\
+忍者使用技能殺死時，忍者可以隱身幾秒鐘(根據選項)\
 \
 **NOTE:**
-- The Ninja has a 5 second cooldown after marking a player
-- The trace has a darker (black) or lighter (white) color depending on the players color that will fade into green
-- The mark on the marked player will reset after a meeting or after using the ability to kill the marked player. Performing a normal kill will **NOT** reset the mark
-- If the Ninja tries to kill a shielded player (e.g. Medic shield, Shield last game first kill ), the kill will not be performed
-- If the Ninja tries to kill the Time Master while the shield is active, the Ninja won't teleport to the players position, but the Time Master shield will still be activated
-- If the marked target is on a different floor on Submerged, the arrow will always point to the elevator
+- 忍者在標記玩家後有5秒的冷卻時間
+- 根據玩家的顏色，痕跡有較深(黑色)或較淺(白色)的顏色，最後將逐漸變成綠色
+- 被標記玩家的標記將在會議後或使用能力殺死被標記玩家後重置。正常殺死將**不**重置標記
+- 如果忍者試圖殺死一個被上盾的玩家(例如，醫生的盾，免死金牌的盾)，則不會殺死
+- 如果忍者試圖在時間之盾起動時殺死時間管理大師，忍者不會傳送到時間管理大師的位置，但時間之盾仍會被啟動
+- 如果標記的目標在 Submerged 的其他樓層，箭頭將指向電梯
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -963,7 +975,7 @@ When performing a ninja ability kill, the ninja can be invisible for some second
 | 忍者知道目標位置 | -
 | 痕跡持續時間 | -
 | 痕跡褪色的時間 | -
-| Time The Ninja Is Invisible | -
+| 忍者隱形持續時間 | -
 -----------------------
 
 ## 賭徒
@@ -1174,8 +1186,8 @@ can only use them, if the previous player did not use them before)
 ### **隊伍:船員**
 市長通過兩票來領導船員。\
 市長始終可以使用他們的會議，即使已達到最大會議次數。\
-The Mayor has a portable Meeting Button, depending on the options.\
-The Mayor can see the vote colors after completing a configurable amount of tasks, depending on the options.
+根據選項，市長可以有個攜帶式緊急會議按鈕。\
+根據選項，市長可以在完成可設定數量的任務後看到是誰投票的顏色。
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -1285,27 +1297,27 @@ Because of the vents the Engineer might not be able to start some tasks using th
 
 ## 時間管理大師
 ### **隊伍:船員**
-The Time Master has a time shield which they can activate. The time shield remains active for a configurable amount of time.\
-If a player tries to kill the Time Master while the time shield is active, the kill won't happen and the
-time will rewind for a set amount of time.\
-The kill cooldown of the killer won't be reset, so the Time Master
-has to make sure that the game won't result in the same situation.\
-The Time Master won't be affected by the rewind.
+時間管理大師有一個時間之盾。時間之盾將在可設定的時間內保持啟動狀態。\
+如果試圖在時間之盾啟動時殺死時間管理大師，則不會殺死，並且
+將回溯設定的時間。\
+殺手的殺死冷卻時間也不會重置，因此時間管理大師
+必須確保不會遇到相同的情況。\
+時間管理大師不會受到回溯的影響。
 
 **NOTE:**
-- Only the movement is affected by the rewind.
-- A Vampire bite will trigger the rewind. If the Time Master misses shielding the bite, they can still shield the kill which happens a few seconds later.
-- If the Time Master was bitten and has their shield active before when a meeting is called, they survive but the time won't be rewound.
-- If the Time Master has a Medic shield, they won't rewind.
-- The shield itself ends immediately when triggered. So the Time Master can be attacked again as soon as the rewind ends.
+- 只有移動會受到回溯的影響。
+- 吸血鬼咬會觸發回溯。如果時間管理大師在被咬時錯過了啟動時間之盾，他仍然可以啟動時間之盾來避免幾秒鐘後被殺死。
+- 如果時間管理大師被咬，並且在會議召開之前啟動他的時間之盾，他們會存活下來，但時間不會回溯。
+- 如果時間管理大師有被醫生上盾，時間不會回溯。
+- 時間之盾會在觸發時立刻結束。因此一旦回溯結束，時間管理大師就可以再次被受到攻擊。
 
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
 | 時間管理大師生成機率 | - |
 | 時間管理大師冷卻 | - |
-| 回溯時間 | 回溯多久的時間 |
-| 回溯時間護盾持續時間 |
+| 回溯的時間 | 回溯多久的時間 |
+| 時間之盾持續時間 |
 -----------------------
 
 ## 醫生
@@ -1457,17 +1469,17 @@ There are two possibilities (depending on the set options):
 
 ## 傳送師
 ### **隊伍:船員**
-The Portalmaker is a Crewmate that can place two portals on the map.\
-These two portals are connected to each other.\
-Those portals will be visible after the next meeting and can be used by everyone.\
-Additionally to that, the Portalmaker gets information about who used the portals and when in the chat during each meeting, depending on the options.
+傳送師是個船員，可以在地圖上放置兩個傳送門。\
+這兩個傳送門將相連。\
+這些傳送門會在會議後可見，每個人都可以使用。\
+除此之外，根據選項傳送師還可以知道誰使用了傳送門以及開始會議多久前使用的資訊在聊天欄中。
 
 **NOTE:**
-- The extra button to use a portal will appear after the Portalmaker set his portals and a meeting/body report was called.
-- While one player uses a portal, it is blocked for any other player until the player got teleported.
-- All ghosts can still use the portals, but won't block any living player from using it and the Portalmaker won't get any information about it in chat.
-- If a morphed person uses a portal it will show the morphed name/color depending on the options.
-- If a camouflaged person uses a portal it will show "A comouflaged person used the portal."
+- 額外使用傳送門的按鈕將會在傳送師建造完傳送門並過了拍桌會議/屍體報告後出現。
+- 當一個玩家使用傳送門時，其他玩家會被阻止，直到該玩家被傳送。
+- 所有死者仍然可以使用傳送門，但不會阻止活著的玩家使用它，傳送師也不會在聊天欄中獲得有關死者使用的資訊。
+- 如果變形的人使用傳送門，將根據選項顯示變形的名稱/顏色。
+- 如果迷彩的人使用傳送門，將顯示「一個迷彩玩家 使用了傳送門」。
 
 ### 遊戲選項
 | 名稱 | 描述
@@ -1491,7 +1503,7 @@ Additionally to that, the Portalmaker gets information about who used the portal
 - 詭騙箱不能封鎖
 - 守衛不能在MiraHQ設置攝影機
 - 剩餘的螺絲數量可以在按鈕上方看到。
-- 在Skeld上，四個攝影機將每3秒切換一次(與新的四個攝影機)。也可以使用方向鍵手動切換
+- 在 Skeld 上，四個攝影機將每3秒切換一次(與新的四個攝影機)。也可以使用方向鍵手動切換
 - 守衛使用完螺絲後可以使用攜帶式小工具觀看攝影機
 - 在觀看攝影機時，守衛不能移動
 

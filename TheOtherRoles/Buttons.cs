@@ -1283,7 +1283,7 @@ namespace TheOtherRoles
 
                     if (randomNumber == 0) msg = "你的職業是什麼? 我的職業是" + RoleInfo.GetRolesString(Medium.target.player, false) + name;
                     else if (randomNumber == 1) msg = "殺你的殺手顏色類型是什麼? 殺手是" + typeOfColor + "色系" + name;
-                    else if (randomNumber == 2) msg = "你什麼時候死的? 我在開始會議前" + Math.Round(timeSinceDeath / 1000) + "秒死的" + name;
+                    else if (randomNumber == 2) msg = "你什麼時候死的? 我在開始會議" + Math.Round(timeSinceDeath / 1000) + "秒前死的" + name;
                     else msg = "殺你的殺手職業是什麼? 殺手是" + RoleInfo.GetRolesString(Medium.target.killerIfExisting, false, false) + name;
 
                     FastDestroyableSingleton<HudManager>.Instance.Chat.AddChat(CachedPlayer.LocalPlayer.PlayerControl, $"{msg}");
