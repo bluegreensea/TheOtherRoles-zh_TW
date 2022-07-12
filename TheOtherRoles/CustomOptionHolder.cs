@@ -352,14 +352,6 @@ namespace TheOtherRoles {
             witchTriggerBothCooldowns = CustomOption.Create(375, Types.Impostor, "觸發兩個冷卻時間", true, witchSpawnRate);
             witchVoteSavesTargets = CustomOption.Create(376, Types.Impostor, "票出巫師拯救所有目標", true, witchSpawnRate);
 
-            witchSpawnRate = CustomOption.Create(370, Types.Impostor, cs(Witch.color, "Witch"), rates, null, true);
-            witchCooldown = CustomOption.Create(371, Types.Impostor, "Witch Spell Casting Cooldown", 30f, 10f, 120f, 5f, witchSpawnRate);
-            witchAdditionalCooldown = CustomOption.Create(372, Types.Impostor, "Witch Additional Cooldown", 10f, 0f, 60f, 5f, witchSpawnRate);
-            witchCanSpellAnyone = CustomOption.Create(373, Types.Impostor, "Witch Can Spell Anyone", false, witchSpawnRate);
-            witchSpellCastingDuration = CustomOption.Create(374, Types.Impostor, "Spell Casting Duration", 1f, 0f, 10f, 1f, witchSpawnRate);
-            witchTriggerBothCooldowns = CustomOption.Create(375, Types.Impostor, "Trigger Both Cooldowns", true, witchSpawnRate);
-            witchVoteSavesTargets = CustomOption.Create(376, Types.Impostor, "Voting The Witch Saves All The Targets", true, witchSpawnRate);
-
             ninjaSpawnRate = CustomOption.Create(380, Types.Impostor, cs(Ninja.color, "忍者"), rates, null, true);
             ninjaCooldown = CustomOption.Create(381, Types.Impostor, "忍者標記冷卻", 30f, 10f, 120f, 5f, ninjaSpawnRate);
             ninjaKnowsTargetLocation = CustomOption.Create(382, Types.Impostor, "忍者知道目標位置", true, ninjaSpawnRate);
@@ -462,9 +454,9 @@ namespace TheOtherRoles {
 
             swapperSpawnRate = CustomOption.Create(150, Types.Crewmate, cs(Swapper.color, "換票師"), rates, null, true);
             swapperCanCallEmergency = CustomOption.Create(151, Types.Crewmate, "換票師可召開緊急會議", false, swapperSpawnRate);
-            swapperCanOnlySwapOthers = CustomOption.Create(152, Types.Crewmate, "換票師只可掉包其他人的得票", false, swapperSpawnRate);
+            swapperCanOnlySwapOthers = CustomOption.Create(152, Types.Crewmate, "換票師只可交換其他人的得票", false, swapperSpawnRate);
 
-            swapperSwapsNumber = CustomOption.Create(153, Types.Crewmate, "初始掉包充能", 1f, 0f, 5f, 1f, swapperSpawnRate);
+            swapperSwapsNumber = CustomOption.Create(153, Types.Crewmate, "初始換票充能", 1f, 0f, 5f, 1f, swapperSpawnRate);
             swapperRechargeTasksNumber = CustomOption.Create(154, Types.Crewmate, "充能所需要的任務數", 2f, 1f, 10f, 1f, swapperSpawnRate);
 
 
@@ -521,7 +513,7 @@ namespace TheOtherRoles {
             mediumOneTimeUse = CustomOption.Create(363, Types.Crewmate, "每個靈魂只能被詢問一次", false, mediumSpawnRate);
 
             // Modifier
-            modifiersAreHidden = CustomOption.Create(1009, Types.Modifier, cs(Color.yellow, "Hide After Death Modifiers"), true, null, true);
+            modifiersAreHidden = CustomOption.Create(1009, Types.Modifier, cs(Color.yellow, "死後隱藏標籤"), true, null, true);
 
             modifierBloody = CustomOption.Create(1000, Types.Modifier, cs(Color.yellow, "血族"), rates, null, true);
             modifierBloodyQuantity = CustomOption.Create(1001, Types.Modifier, cs(Color.yellow, "血族數量"), ratesModifier, modifierBloody);

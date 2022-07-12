@@ -446,7 +446,7 @@ namespace TheOtherRoles.Patches {
                 Transform infoTransform = __instance.playerStates[0].NameText.transform.parent.FindChild("Info");
                 TMPro.TextMeshPro meetingInfo = infoTransform != null ? infoTransform.GetComponent<TMPro.TextMeshPro>() : null;
                 swapperChargesText = UnityEngine.Object.Instantiate(__instance.playerStates[0].NameText, confirmSwapButtonParent);
-                swapperChargesText.text = $"Swaps: {Swapper.charges}";
+                swapperChargesText.text = $"可換票次數: {Swapper.charges}";
                 swapperChargesText.enableWordWrapping = false;
                 swapperChargesText.transform.localScale = Vector3.one * 1.7f;
                 swapperChargesText.transform.localPosition = new Vector3(-2.5f, 0f, 0f);
@@ -456,7 +456,7 @@ namespace TheOtherRoles.Patches {
                 confirmSwapButton.GetComponent<SpriteRenderer>().sprite = FastDestroyableSingleton<HatManager>.Instance.GetNamePlateById("nameplate_NoPlate")?.viewData?.viewData?.Image;
                 confirmSwapButtonParent.localPosition = new Vector3(0, -2.225f, -5);
                 confirmSwapButtonParent.localScale = new Vector3(0.55f, 0.55f, 1f);
-                swapperConfirmButtonLabel.text = Helpers.cs(Color.red, "Confirm Swap");
+                swapperConfirmButtonLabel.text = Helpers.cs(Color.red, "確認交換");
                 swapperConfirmButtonLabel.alignment = TMPro.TextAlignmentOptions.Center;
                 swapperConfirmButtonLabel.transform.localPosition = new Vector3(0, 0, swapperConfirmButtonLabel.transform.localPosition.z);
                 swapperConfirmButtonLabel.transform.localScale *= 1.7f;
