@@ -804,7 +804,7 @@ namespace TheOtherRoles
             Trickster.lightsOutTimer = Trickster.lightsOutDuration;
             // If the local player is impostor indicate lights out
             if(CachedPlayer.LocalPlayer.Data.Role.IsImpostor) {
-                new CustomMessage("Lights are out", Trickster.lightsOutDuration);
+                new CustomMessage("燈被詭騙師關了", Trickster.lightsOutDuration);
             }
         }
 

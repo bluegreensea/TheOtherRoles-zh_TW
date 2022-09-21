@@ -854,43 +854,43 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 ## 抹除者
 ### **隊伍:偽裝者**
 抹除者是個偽裝者，可以抹去玩家的職業。\
-The targeted players will lose their role after the meeting right before a player is exiled.\
-After every erase, the cooldown increases by 10 seconds.\
-The erase will be performed, even if the Eraser or their target die before the next meeting.\
-By default the Eraser can erase everyone but the Spy and other 偽裝者s.\
-Depending on the options they can also erase them (偽裝者s will lose their special 偽裝者 ability).\
+被使用抹除的玩家會在會議結束後，玩家被票出前，失去他們的職業。\
+每次使用抹除後，除原冷卻時間外還將多出 10 秒。\
+即使抹除者或抹除目標在下次會議前死亡，也還是會執行抹除。\
+預設情況下，抹除者可以抹除除了間諜和偽裝者之外的所有人。\
+根據選項設定，他們也可以抹除他們(偽裝者將失去他們特殊偽裝者的能力)。\
 \
 **NOTE:**
-- The Shifter shift will always be triggered before the Erase (hence either the new role of the Shifter will be erased or the Shifter saves the role of their target, depending on whom the Eraser erased)
-- Erasing a Lover automatically erases the other Lover as well (if the second Lover is an ImpLover, they will turn into an Impostor)
-- Erasing a Jackal that has a Sidekick, triggers the Sidekick promotion if it's activated in the settings
-- As the erase is being triggered before the ejection of a player, erasing and voting out a Lover in the same round, would result in the
-  ex-Lover surviving, as the partnership was erased before. Also a Jester win would not happen, as the erase will be triggered before.
+- 轉職師將始終在抹除之前轉移 (因此轉職師的新職業被抹除/能轉移成其目標的職業，取決於抹除者抹除的對象)
+- 抹除一個戀人也會自動抹除另一個戀人 (如果他的戀人是一個偽裝者戀人，他會變成一個偽裝者)
+- 抹除具有跟班的豺狼，如果在選項中有開啟，會觸發跟班升職
+- 由於抹除是在玩家被票出前觸發的，因此在同一天中抹除並票出一個戀人，將導致
+  另一個前戀人存活下來，因為之間的戀人關係會被抹去。 也不會發生小丑獲勝，因為獲勝前職業就被抹除。
 
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
 | 抹除者生成機率 | -
-| 抹除者冷卻 | The Erasers cooldown will increase by 10 seconds after every erase.
-| 抹除者可抹除任何人 | If set to false, they can't erase the Spy and other 偽裝者s
+| 抹除者冷卻 | 每次抹除後，抹除者的冷卻時間將增加 10 秒。
+| 抹除者可抹除任何人 | 如果設為關，他們將無法抹除間諜和其他偽裝者
 -----------------------
 
 ## 詭騙師
 ### **隊伍:偽裝者**
-The Trickster is an 偽裝者 that can place 3 jack-in-the-boxes that are invisible at first to other players.\
-If the Trickster has placed all of their boxes they will be converted into a vent network usable only by the Trickster themself, but the boxes are revealed to the others.\
-If the boxes are converted to a vent network, the Trickster gains a new ability "Lights out" to limit the visibility of Non-Impostors, that cannot be fixed by other players. Lights are automatically restored after a while.\
+詭騙師是一個偽裝者，可以放置 3 個最初對其他玩家不可視的盒子。\
+如果詭騙師放完了他的所有盒子，它們將轉換成一個只能由詭騙師自己使用的通風口，但這些盒子將讓其他玩家可視。\
+如果盒子轉換為通風口，詭騙師將獲得一項新能力"關燈"以限制非偽裝者的能見度，這是其他玩家無法修復的。能見度會在一段時間後自動恢復。\
 \
 **NOTE:**
-- 偽裝者s will get a text indicator at the bottom of the screen to notify them if the lights are out due to the Trickster ability, as there is no sabotage arrows or task to sabotage text to otherwise notify them about it.
+- 偽裝者們將在畫面底部獲得一個文本指示，以在能見度因詭騙師能力而下降時通知他們，因為偽裝者沒有破壞箭頭與關燈任務能通知他們。
 
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
 | 詭騙師生成機率 | -
-| 詭騙箱冷卻 | Cooldown for placing jack-in-the-boxes
-| 詭騙師關燈冷卻 | Cooldown for their "lights out" ability
-| 詭騙師關燈持續時間 | Duration after which the light is automatically restored
+| 詭騙箱冷卻 | 放置詭騙箱的冷卻時間
+| 詭騙師關燈冷卻 | "關燈"能力的冷卻
+| 詭騙師關燈持續時間 | 恢復能見度前的持續時間
 -----------------------
 
 ## 清道夫
@@ -931,15 +931,15 @@ The Warlock can still perform normal kills, but the two buttons share the same c
 ## 賞金獵人
 ### **隊伍:偽裝者**
 \
-The Bounty Hunter is an Impostor, that continuously get bounties (the targeted player doesn't get notified).\
-The target of the Bounty Hunter swaps after every meeting and after a configurable amount of time.\
-If the Bounty Hunter kills their target, their kill cooldown will be a lot less than usual.\
-Killing a player that's not their current target results in an increased kill cooldown.\
-Depending on the options, there'll be an arrow pointing towards the current target.\
+賞金獵人是一個偽裝者，將不斷有懸賞目標 (被作為目標的玩家不會有通知)。\
+賞金獵人的目標在每次會議後和可設置的時間後更換。\
+如果賞金獵人殺死他們的懸賞目標，他們的擊殺冷卻會比原本少很多。\
+反之，殺死不是他們目前懸賞目標的玩家會增加擊殺冷卻。\
+根據選項設定，可以有一個指向目前懸賞目標的箭頭。\
 \
 **NOTE:**
 - 目標不會是偽裝者跟間諜還有賞金獵人的戀人
-- Killing the target resets the timer and a new target will be selected.
+- 殺死目標會重置計時並選擇一個新目標。
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -948,8 +948,8 @@ Depending on the options, there'll be an arrow pointing towards the current targ
 | 懸賞改變後的持續時間 | -
 | 擊殺懸賞後的冷卻 | -
 | 殺死其他人後的額外冷卻 | 如果賞金獵人殺死了非懸賞玩家後，那麼正常的偽裝者冷卻時間將額外增加
-| 顯示指向懸賞的指示箭頭 | If set to true an arrow will appear (only visiable for the Bounty Hunter)
-| 指示箭頭更新間隔 | Sets how often the position is being updated
+| 顯示指向懸賞的指示箭頭 | 如果設置為開，則會出現一個箭頭(僅對賞金獵人可見)
+| 指示箭頭更新間隔 | 設定指向懸賞目標位置箭頭的更新頻率
 -----------------------
 
 ## 巫師
@@ -960,7 +960,7 @@ Depending on the options, there'll be an arrow pointing towards the current targ
 與吸血鬼類似，盾牌和填空將被檢查兩次(在對玩家施放法術結束時和會議結束巫術發動時)。\
 這可能導致玩家在會議期間被標記為被下蠱，但最後不會死亡(當他們獲得盾牌或女巫在施放巫術後被填空)。\
 如果女巫在會議開始前死亡，或者在會議期間被賭徒猜出女巫，那麼被下蠱的玩家將被突顯，但他們會活下來。\
-根據選項，您可以選擇將女巫票出是否會拯救所有被下蠱的玩家。\
+根據選項設定，您可以選擇將女巫票出是否會拯救所有被下蠱的玩家。\
 \
 **NOTE:**
 - 被下蠱的玩家將在被投票的玩家死亡之前死亡(這可能會觸發例如偽裝者獲勝條件，即使女巫是被投票的那個)
@@ -981,9 +981,9 @@ Depending on the options, there'll be an arrow pointing towards the current targ
 ### **隊伍:偽裝者**
 忍者是個偽裝者，他有能力殺死地圖上的另一個玩家。\
 你可以用你的能力標記一個玩家，然後再次使用這個能力，將飛到被標記玩家的位置並殺死他。\
-根據選項，可以知道被標記玩家的位置。\
+根據選項設定，可以知道被標記玩家的位置。\
 如果忍者使用能力，會在可設定的時間內留下痕跡，在他使用能力的地方和殺死被標記玩家的地方。\
-忍者使用技能殺死時，忍者可以隱身幾秒鐘(根據選項)\
+忍者使用技能殺死時，忍者可以隱身幾秒鐘(根據選項設定)\
 \
 **NOTE:**
 - 忍者在標記玩家後有5秒的冷卻時間
@@ -1045,17 +1045,17 @@ Depending on the options, the Guesser can't guess the shielded player and depend
 
 ## 縱火狂
 ### **隊伍:獨立**
-The Arsonist does not have any tasks, they have to win the game as a solo.\
-The Arsonist can douse other players by pressing the douse button and remaining next to the player for a few seconds.\
-If the player that the Arsonist douses walks out of range, the cooldown will reset to 0.\
-After dousing everyone alive the Arsonist can ignite all the players which results in an Arsonist win.
+縱火狂沒有任何任務，他們必須以個人的身份贏得遊戲。\
+縱火狂可以通過按下澆油按鈕並在玩家旁邊停留幾秒鐘來澆其他玩家。\
+如果縱火犯澆油的玩家走出射程，冷卻時間將重置為 0。\
+在將所有活著的人被澆油後，縱火狂可以點燃玩家，縱火狂獲勝。
 
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
 | 縱火狂生成機率 | -
 | 縱火狂冷卻 | -
-| 縱火狂澆油持續時間 | The time it takes to douse a player
+| 縱火狂澆油持續時間 | 對玩家澆油所需的時間
 -----------------------
 
 ## 豺狼
@@ -1063,10 +1063,10 @@ After dousing everyone alive the Arsonist can ignite all the players which resul
 豺狼是一個額外隊伍的一部分，需要消滅所有其他玩家。\
 豺狼沒有任務，可以殺死偽裝者，船員和獨立玩家。\
 豺狼(如果設定開啟)可以選擇另一個玩家作為他們的同伴。
-建立跟班會移除跟班的所有任務，並讓它們加入到豺狼隊伍中。跟班將會失去他們目前的職業(除非他們是戀人，這樣他們會被分成兩隊)。
-"建立跟班"每個豺狼只能使用一次，或者每個遊戲使用一次(取決於設定)。
+招募跟班會移除跟班的所有任務，並讓它們加入到豺狼隊伍中。跟班將會失去他們目前的職業(除非他們是戀人，這樣他們會被分成兩隊)。
+"招募跟班"每個豺狼只能使用一次，或者每個遊戲使用一次(取決於設定)。
 豺狼也可以讓偽裝者成為他們的同伴，但是根據設定的不同，偽裝者要麼真的變成同伴並離開偽裝者，要麼他只會看起來像豺狼的同伴並保持原來不變。\
-Also if a Spy or Impostor gets sidekicked, they still will appear red to the Impostors.
+此外，如果間諜或偽裝者被招募，他們在偽裝者眼裡仍然還會是紅色的。
 
 豺狼隊伍讓遊戲的多個新結果，此處列出了一些範例：
 - 偽裝者被淘汰，然後船員與豺狼對抗。
@@ -1127,11 +1127,11 @@ Also if a Spy or Impostor gets sidekicked, they still will appear red to the Imp
 
 禿鷲沒有任何任務，他們必須自己取得勝利。\
 禿鷲是一個獨立職業，必須吃掉指定數量的屍體(取決於選項)才能獲勝。\
-根據選項，當有玩家死亡時，禿鷲會得到一個指向屍體的箭頭。\
+根據選項設定，當有玩家死亡時，禿鷲會得到一個指向屍體的箭頭。\
 如果遊戲中有禿鷹，就不會有清道夫。
 
 **NOTE**
-- If the corpse is on a different floor on Submerged, the arrow will always point to the elevator
+- 在 Submerged 中，屍體在不同樓層，箭頭將始終指向電梯
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -1145,21 +1145,21 @@ Also if a Spy or Impostor gets sidekicked, they still will appear red to the Imp
 
 ## 律師
 ### **隊伍:獨立**
-律師是一個有客戶的獨立職業。\
-客戶會是沒有戀人的偽裝者或豺狼。\
-根據選項，客戶也可以是小丑。\
-律師需要他們的客戶獲勝來獲勝。\
-他們的客戶不知道他們是客戶。\
-如果他們的客戶被票出，律師會跟他一起死。\
-如果他們的客戶死亡，律師會改變他們的職業成為[原告](#原告)，他有不同的目標來獲勝。\
+律師是一個有委託人的獨立職業。\
+委託人會是沒有戀人的偽裝者或豺狼。\
+根據選項設定，委託人也可以是小丑。\
+律師需要他們的委託人獲勝來獲勝。\
+他們的委託人不知道他們自己是委託人。\
+如果他們的委託人被票出，律師會跟他一起死。\
+如果他們的委託人被殺死，律師會改變他們的職業成為[原告](#原告)，他有不同的目標來獲勝。\
 \
-How the Lawyer wins:
-- Lawyer dead/alive, client alive and client wins: The Lawyer wins together with the team of the client.
-- If their client is Jester and the Jester gets voted out, the Lawyer wins together with the Jester.
+律師如何獲勝:
+- 律師死/活，委託人活著，委託人獲勝: 律師與委託人一起獲勝。
+- 如果他們的委託人是小丑，小丑被票出，則律師與小丑一起獲勝。
 
 **NOTE:**
-- 如果客戶端斷開連接，律師也將變成原告
-- The Lawyer needs to figure out the role of their client depending on the options
+- 如果委託人中斷連線，律師也將變成原告
+- 根據選項設定律師需要弄清楚客戶的職業
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -1168,8 +1168,8 @@ How the Lawyer wins:
 | 律師目標可能是小丑 | -
 | 律師會議後獲勝 | 如果設置為開，律師在可配置的會議數量後獲勝(不能自己開始會議)
 | 律師需要會議才能獲勝 | -
-| 律師視野 | 原告視野正常
-| 律師知道目標職業 | -
+| 律師視野 | 原告有正常視野
+| 律師知道委託人職業 | -
 | 原告填空冷卻 | -
 | 原告填空次數 | -
 -----------------------
@@ -1185,19 +1185,19 @@ How the Lawyer wins:
 
 ## 轉職師
 ### **隊伍:船員**
-The Shifter can take over the role of another Crewmate, the other player will transform into a Crewmate.\
-The Shift will always be performed at the end of the next meeting right before a player is exiled. The target needs to be chosen during the round.\
-Even if the Shifter or the target dies before the meeting, the Shift will still be performed.\
-Swapping roles with an Impostor or Neutral fails and the Shifter commits suicide after the next meeting (there won't be any body).\
-The Shifter aims to save roles from leaving the game, by e.g. taking over a Sheriff or Medic that is known to the Impostors.\
-This works especially well against the Eraser, but also gives the Eraser the possibility to act like a Shifter.\
-The **special interactions** with the Shifter are noted in the chapters of the respective roles.\
+轉職師可以轉移另一個船員的職業，另一個玩家將轉變為船員。\
+轉移在會議結束後玩家被票出前執行。需要在遊玩中選擇目標。\
+即使轉職師或目標在會議前死亡，轉移仍然會執行。\
+與偽裝者或獨立職業轉移職業將失敗，並且轉職師會在下次會議自殺(不會有任何屍體)。\
+轉職師目標在防止職業離開遊戲，例如接掌被偽裝者知道的警長、醫生。\
+這對抹除者特別有效，但抹除者也可能像轉職師有一樣想法。\
+與轉職師的**特殊互動**在相應職業的說明中註明。\
 \
 **NOTE:**
-- The Shifter shift will always be triggered before the Erase (hence either the new role of the Shifter will be erased or the Shifter saves the role of their target, depending on whom the Eraser erased)
-- If the Shifter takes over a role, their new cooldowns will start at the maximum cooldown of the ability
-- One time use abilities (e.g. shielding a player or Engineer sabotage fix) can only used by one player in the game (i.e. the Shifter
-can only use them, if the previous player did not use them before)
+- 轉職師將始終在抹除之前轉移 (因此轉職師的新職業被抹除/能轉移成其目標的職業，取決於抹除者抹除的對象)
+- 如果轉職師接掌了一個職業，他們的新冷卻時間將從技能的最大冷卻時間開始
+- 一次性使用能力 (例如上盾玩家或工程師破壞修復) 只能由遊戲中的一名玩家使用 (即原本的玩家之前沒有使用，
+轉職師才能使用)
 
 ### 遊戲選項
 | 名稱 | 描述
@@ -1210,8 +1210,8 @@ can only use them, if the previous player did not use them before)
 ### **隊伍:船員**
 市長通過兩票來領導船員。\
 市長始終可以使用他們的會議，即使已達到最大會議次數。\
-根據選項，市長可以有個攜帶式緊急會議按鈕。\
-根據選項，市長可以在完成可設定數量的任務後看到是誰投票的顏色。
+根據選項設定，市長可以有個攜帶式緊急會議按鈕。\
+根據選項設定，市長可以在完成可設定數量的任務後看到是誰投票的顏色。
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -1304,8 +1304,8 @@ Because of the vents the Engineer might not be able to start some tasks using th
 偵探的另一個特點是在他們舉報屍體時將顯示: 他們收到有關兇手身份的線索。他們獲得的資訊類型取決於他們找到屍體所花的時間。
 
 **NOTE:**
-- When people change their colors (because of a morph or camouflage), all the footprints also change their colors (also the ones that were already on the ground). If the effects are over, all footprints switch back to the original color.
-- The Detective does not see footprints of players that sit in vents
+- 當人們改變顏色時(由於變形或偽裝)，腳印也會改變顏色(還有已經在地面上的)。 效果結束，所有腳印將變回原始顏色。
+- 偵探看不到在通風口裡玩家的腳印
 - 更多[顏色](#顏色)資訊
 
 ### 遊戲選項
@@ -1351,7 +1351,7 @@ Because of the vents the Engineer might not be able to start some tasks using th
 如果在選項中設定開啟，有人(偽裝者、警長...)試圖謀殺被上盾的玩家，被上盾的玩家和/或醫生將在螢幕上閃爍紅色。\
 如果醫生死了，盾也會隨之消失。\
 如果警長試圖殺死一個有盾的船員，他們不會死，如果他們試圖殺死一個有盾的偽裝者，他們也不會執行射殺。\
-根據選項，來自賭徒的猜測將被盾阻止，並且可能會通知被上盾的玩家/醫生。\
+根據選項設定，來自賭徒的猜測將被盾阻止，並且可能會通知被上盾的玩家/醫生。\
 醫生的另一個功能是在他們舉報屍體時可以看到玩家死了多久
 
 **NOTE:**
@@ -1432,13 +1432,13 @@ The Seer gets a blue flash on their screen, if a player dies somewhere on the ma
 
 ## 追踪者
 ### **隊伍:船員**
-The Tracker can select one player to track. Depending on the options the Tracker can track a different person after each meeting or the Tracker tracks the same person for the whole game.\
-An arrow points to the last tracked position of the player.\
-The arrow updates its position every few seconds (configurable).\
-Depending on the options, the Tracker has another ability: They can track all corpses on the map for a set amount of time. They will keep tracking corpses, even if they were cleaned or eaten by the Vulture.
+追踪者可以選擇一名玩家進行追踪。 根據選項設定，追踪者可以在每次會議後追踪不同的人，或者在整個遊戲中追踪同一個人。\
+有個箭頭指向玩家的最後位置。\
+箭頭每隔幾秒更新一次位置 (可設定)。\
+根據選項設定的不同，追踪者還有另一種能力：他們可以在一定時間內追踪地圖上的所有屍體。 即使屍體被禿鷲清理或吃掉，他們也會繼續追踪屍體。
 
 **NOTE**
-- If the tracked player is on a different floor on Submerged, the arrow will always point to the elevator
+- 在 Submerged 中，被跟踪的玩家在不同樓層，箭頭將始終指向電梯
 
 ### 遊戲選項
 | 名稱 | 描述
@@ -1453,11 +1453,11 @@ Depending on the options, the Tracker has another ability: They can track all co
 
 ## 密探
 ### **隊伍:船員**
-When the Snitch finishes all the tasks, arrows will appear (only visible to the Snitch) that point to the Impostors (depending on the options also to members of team Jackal).\
-When the Snitch has one task left (configurable) the Snitch will be revealed to the Impostors (depending on the options also to members of team Jackal) with an arrow pointing to the Snitch.
+當密探完成所有任務時，將出現指向偽裝者的箭頭 (僅對密探可見) (根據選項也能指向豺狼隊伍的成員)。\
+當密探還剩下一項任務(可設定)時，密探將會被偽裝者知道 (取決於選項也讓豺狼隊伍的成員知道)，出現有指向密探的箭頭。
 
 **NOTE**
-- If the Impostor(s)/Jackal(s) is/are on a different floor on Submerged when the Snitch finished their tasks, the arrow will always point to the elevator
+- 在 Submerged 中，密探完成任務時，偽裝者/豺狼在不同樓層，箭頭將始終指向電梯
 
 ### 遊戲選項
 | 名稱 | 描述
@@ -1496,13 +1496,13 @@ There are two possibilities (depending on the set options):
 傳送師是個船員，可以在地圖上放置兩個傳送門。\
 這兩個傳送門將相連。\
 這些傳送門會在會議後可見，每個人都可以使用。\
-除此之外，根據選項傳送師還可以知道誰使用了傳送門以及開始會議多久前使用的資訊在聊天欄中。
+除此之外，根據選項設定傳送師還可以知道誰使用了傳送門以及開始會議多久前使用的資訊在聊天欄中。
 
 **NOTE:**
 - 額外使用傳送門的按鈕將會在傳送師建造完傳送門並過了拍桌會議/屍體報告後出現。
 - 當一個玩家使用傳送門時，其他玩家會被阻止，直到該玩家被傳送。
 - 所有死者仍然可以使用傳送門，但不會阻止活著的玩家使用它，傳送師也不會在聊天欄中獲得有關死者使用的資訊。
-- 如果變形的人使用傳送門，將根據選項顯示變形的名稱/顏色。
+- 如果變形的人使用傳送門，將根據選項設定顯示變形的名稱/顏色。
 - 如果迷彩的人使用傳送門，將顯示「一個迷彩玩家 使用了傳送門」。
 
 ### 遊戲選項
@@ -1548,7 +1548,7 @@ There are two possibilities (depending on the set options):
 ## 通靈師
 ### **隊伍:船員**
 
-通靈師是一個可以詢問靈魂來得到資訊的船員。和靈媒一樣，他將看到玩家死亡的地方(下次會議後)並可以詢問祂們。然後他會在聊天欄中取得有關靈魂或殺手的隨機資訊。靈魂只停留一回合，即只到下次會議。根據選項，靈魂只能被詢問一次然後消失。\
+通靈師是一個可以詢問靈魂來得到資訊的船員。和靈媒一樣，他將看到玩家死亡的地方(下次會議後)並可以詢問祂們。然後他會在聊天欄中取得有關靈魂或殺手的隨機資訊。靈魂只停留一回合，即只到下次會議。根據選項設定，靈魂只能被詢問一次然後消失。\
 
 問題:
 你的職業是什麼？
@@ -1651,7 +1651,7 @@ There are two possibilities (depending on the set options):
 -----------------------
 
 **NOTE:**
-- The role **戀人** can't be guessed, you'll have to guess the primary role of one of the Lovers, to kill both of them.
+- **戀人**這個職業猜不出來，你必須猜出任何一個戀人的職業，才能殺死他們。
 
 ## 墨鏡
 
@@ -1691,7 +1691,7 @@ There are two possibilities (depending on the set options):
 **NOTE:**
 - 如果警長試圖在迷你成年之前射殺他，什麼事都不會發生。
 - 警長可以射殺迷你偽裝者，但前提是他成年了。
-- If the Mini's primary role is guessed correctly, it dies like every other role and nothing further happens.
+- 如果迷你的職業被猜對了，他會像其他人一樣死去，任何事情都不會發生。
 
 ### 遊戲選項
 | 名稱 | 描述 |

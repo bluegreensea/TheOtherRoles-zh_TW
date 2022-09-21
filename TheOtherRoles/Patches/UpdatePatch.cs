@@ -166,19 +166,19 @@ namespace TheOtherRoles.Patches {
             if (CachedPlayer.LocalPlayer != null && CachedPlayer.LocalPlayer.Data.Role.IsImpostor) {
                 foreach (PlayerControl player in CachedPlayer.AllPlayers)
                     if (Godfather.godfather != null && Godfather.godfather == player)
-                            player.cosmetics.nameText.text = player.Data.PlayerName + " (G)";
+                            player.cosmetics.nameText.text = player.Data.PlayerName + " (教父)";
                     else if (Mafioso.mafioso != null && Mafioso.mafioso == player)
-                            player.cosmetics.nameText.text = player.Data.PlayerName + " (M)";
+                            player.cosmetics.nameText.text = player.Data.PlayerName + " (黑手黨員)";
                     else if (Janitor.janitor != null && Janitor.janitor == player)
-                            player.cosmetics.nameText.text = player.Data.PlayerName + " (J)";
+                            player.cosmetics.nameText.text = player.Data.PlayerName + " (守墓人)";
                 if (MeetingHud.Instance != null)
                     foreach (PlayerVoteArea player in MeetingHud.Instance.playerStates)
                         if (Godfather.godfather != null && Godfather.godfather.PlayerId == player.TargetPlayerId)
-                            player.NameText.text = Godfather.godfather.Data.PlayerName + " (G)";
+                            player.NameText.text = Godfather.godfather.Data.PlayerName + " (教父)";
                         else if (Mafioso.mafioso != null && Mafioso.mafioso.PlayerId == player.TargetPlayerId)
-                            player.NameText.text = Mafioso.mafioso.Data.PlayerName + " (M)";
+                            player.NameText.text = Mafioso.mafioso.Data.PlayerName + " (黑手黨員)";
                         else if (Janitor.janitor != null && Janitor.janitor.PlayerId == player.TargetPlayerId)
-                            player.NameText.text = Janitor.janitor.Data.PlayerName + " (J)";
+                            player.NameText.text = Janitor.janitor.Data.PlayerName + " (守墓人)";
             }
 
             // Lovers

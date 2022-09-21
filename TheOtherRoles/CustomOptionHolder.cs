@@ -398,7 +398,7 @@ namespace TheOtherRoles {
             lawyerSpawnRate = CustomOption.Create(350, Types.Neutral, cs(Lawyer.color, "律師"), rates, null, true);
             lawyerTargetCanBeJester = CustomOption.Create(351, Types.Neutral, "律師目標可能是小丑", false, lawyerSpawnRate);
             lawyerVision = CustomOption.Create(354, Types.Neutral, "律師視野", 1f, 0.25f, 3f, 0.25f, lawyerSpawnRate);
-            lawyerKnowsRole = CustomOption.Create(355, Types.Neutral, "律師知道目標職業", false, lawyerSpawnRate);
+            lawyerKnowsRole = CustomOption.Create(355, Types.Neutral, "律師知道委託人職業", false, lawyerSpawnRate);
             pursuerCooldown = CustomOption.Create(356, Types.Neutral, "原告填空冷卻", 30f, 5f, 60f, 2.5f, lawyerSpawnRate);
             pursuerBlanksNumber = CustomOption.Create(357, Types.Neutral, "原告填空次數", 5f, 1f, 20f, 1f, lawyerSpawnRate);
 
