@@ -43,7 +43,6 @@ namespace TheOtherRoles {
         public static CustomOption guesserIsImpGuesserRate;
         public static CustomOption guesserNumberOfShots;
         public static CustomOption guesserHasMultipleShotsPerMeeting;
-        public static CustomOption guesserShowInfoInGhostChat;
         public static CustomOption guesserKillsThroughShield;
         public static CustomOption guesserEvilCanKillSpy;
         public static CustomOption guesserSpawnBothRate;
@@ -90,9 +89,6 @@ namespace TheOtherRoles {
         public static CustomOption ninjaTraceTime;
         public static CustomOption ninjaTraceColorTime;
         public static CustomOption ninjaInvisibleDuration;
-
-        public static CustomOption shifterSpawnRate;
-        public static CustomOption shifterShiftsModifiers;
 
         public static CustomOption mayorSpawnRate;
         public static CustomOption mayorCanSeeVoteColors;
@@ -219,11 +215,29 @@ namespace TheOtherRoles {
         public static CustomOption mediumOneTimeUse;
 
         public static CustomOption lawyerSpawnRate;
+        public static CustomOption lawyerIsProsecutorChance;
         public static CustomOption lawyerTargetCanBeJester;
         public static CustomOption lawyerVision;
         public static CustomOption lawyerKnowsRole;
+        public static CustomOption lawyerCanCallEmergency;
         public static CustomOption pursuerCooldown;
         public static CustomOption pursuerBlanksNumber;
+
+        public static CustomOption thiefSpawnRate;
+        public static CustomOption thiefCooldown;
+        public static CustomOption thiefHasImpVision;
+        public static CustomOption thiefCanUseVents;
+        public static CustomOption thiefCanKillSheriff;
+
+
+        public static CustomOption trapperSpawnRate;
+        public static CustomOption trapperCooldown;
+        public static CustomOption trapperMaxCharges;
+        public static CustomOption trapperRechargeTasksNumber;
+        public static CustomOption trapperTrapNeededTriggerToReveal;
+        public static CustomOption trapperAnonymousMap;
+        public static CustomOption trapperInfoType;
+        public static CustomOption trapperTrapDuration;
 
         public static CustomOption modifiersAreHidden;
 
@@ -253,6 +267,7 @@ namespace TheOtherRoles {
         
         public static CustomOption modifierMini;
         public static CustomOption modifierMiniGrowingUpDuration;
+        public static CustomOption modifierMiniGrowingUpInMeeting;
 
         public static CustomOption modifierVip;
         public static CustomOption modifierVipQuantity;
@@ -261,7 +276,15 @@ namespace TheOtherRoles {
         public static CustomOption modifierInvert;
         public static CustomOption modifierInvertQuantity;
         public static CustomOption modifierInvertDuration;
-        
+
+        public static CustomOption modifierChameleon;
+        public static CustomOption modifierChameleonQuantity;
+        public static CustomOption modifierChameleonHoldDuration;
+        public static CustomOption modifierChameleonFadeDuration;
+        public static CustomOption modifierChameleonMinVisibility;
+
+        public static CustomOption modifierShifter;
+
         public static CustomOption maxNumberOfMeetings;
         public static CustomOption blockSkippingInEmergencyMeetings;
         public static CustomOption noVoteIsSelfVote;
@@ -276,6 +299,48 @@ namespace TheOtherRoles {
         public static CustomOption dynamicMapEnableAirShip;
         public static CustomOption dynamicMapEnableSubmerged;
 
+        //Guesser Gamemode
+        public static CustomOption guesserGamemodeCrewNumber;
+        public static CustomOption guesserGamemodeNeutralNumber;
+        public static CustomOption guesserGamemodeImpNumber;
+        public static CustomOption guesserForceJackalGuesser;
+        public static CustomOption guesserGamemodeHaveModifier;
+        public static CustomOption guesserGamemodeNumberOfShots;
+        public static CustomOption guesserGamemodeHasMultipleShotsPerMeeting;
+        public static CustomOption guesserGamemodeKillsThroughShield;
+        public static CustomOption guesserGamemodeEvilCanKillSpy;
+        public static CustomOption guesserGamemodeCantGuessSnitchIfTaksDone;
+
+        // Hide N Seek Gamemode
+        public static CustomOption hideNSeekHunterCount;
+        public static CustomOption hideNSeekKillCooldown;
+        public static CustomOption hideNSeekHunterVision;
+        public static CustomOption hideNSeekHuntedVision;
+        public static CustomOption hideNSeekTimer;
+        public static CustomOption hideNSeekCommonTasks;
+        public static CustomOption hideNSeekShortTasks;
+        public static CustomOption hideNSeekLongTasks;
+        public static CustomOption hideNSeekTaskWin;
+        public static CustomOption hideNSeekTaskPunish;
+        public static CustomOption hideNSeekCanSabotage;
+        public static CustomOption hideNSeekMap;
+        public static CustomOption hideNSeekHunterWaiting;
+
+        public static CustomOption hunterLightCooldown;
+        public static CustomOption hunterLightDuration;
+        public static CustomOption hunterLightVision;
+        public static CustomOption hunterLightPunish;
+        public static CustomOption hunterAdminCooldown;
+        public static CustomOption hunterAdminDuration;
+        public static CustomOption hunterAdminPunish;
+        public static CustomOption hunterArrowCooldown;
+        public static CustomOption hunterArrowDuration;
+        public static CustomOption hunterArrowPunish;
+
+        public static CustomOption huntedShieldCooldown;
+        public static CustomOption huntedShieldDuration;
+        public static CustomOption huntedShieldRewindTime;
+        public static CustomOption huntedShieldNumber;
 
         internal static Dictionary<byte, byte[]> blockedRolePairings = new Dictionary<byte, byte[]>();
 
@@ -300,8 +365,8 @@ namespace TheOtherRoles {
             crewmateRolesCountMax = CustomOption.Create(301, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大船員職業數"), 15f, 0f, 15f, 1f);
             neutralRolesCountMin = CustomOption.Create(302, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小獨立職業數"), 15f, 0f, 15f, 1f);
             neutralRolesCountMax = CustomOption.Create(303, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大獨立職業數"), 15f, 0f, 15f, 1f);
-            impostorRolesCountMin = CustomOption.Create(304, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小偽裝者職業數"), 15f, 0f, 3f, 1f);
-            impostorRolesCountMax = CustomOption.Create(305, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大偽裝者職業數"), 15f, 0f, 3f, 1f);
+            impostorRolesCountMin = CustomOption.Create(304, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小偽裝者職業數"), 15f, 0f, 15f, 1f);
+            impostorRolesCountMax = CustomOption.Create(305, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大偽裝者職業數"), 15f, 0f, 15f, 1f);
             modifiersCountMin = CustomOption.Create(306, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小特殊標籤數"), 15f, 0f, 15f, 1f);
             modifiersCountMax = CustomOption.Create(307, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大特殊標籤數"), 15f, 0f, 15f, 1f);
 
@@ -363,11 +428,10 @@ namespace TheOtherRoles {
             guesserIsImpGuesserRate = CustomOption.Create(311, Types.Neutral, "賭徒是個偽裝者的機率", rates, guesserSpawnRate);
             guesserNumberOfShots = CustomOption.Create(312, Types.Neutral, "賭徒的猜測次數", 2f, 1f, 15f, 1f, guesserSpawnRate);
             guesserHasMultipleShotsPerMeeting = CustomOption.Create(313, Types.Neutral, "賭徒每個會議可以猜測多次", false, guesserSpawnRate);
-            guesserShowInfoInGhostChat = CustomOption.Create(314, Types.Neutral, "賭徒在死者聊天中可見", true, guesserSpawnRate);
             guesserKillsThroughShield  = CustomOption.Create(315, Types.Neutral, "賭徒忽略醫生盾", true, guesserSpawnRate);
             guesserEvilCanKillSpy  = CustomOption.Create(316, Types.Neutral, "壞賭徒可以猜出間諜", true, guesserSpawnRate);
-            guesserSpawnBothRate = CustomOption.Create(317, Types.Neutral, "雙賭徒的生成機率", rates, guesserSpawnRate);
-            guesserCantGuessSnitchIfTaksDone = CustomOption.Create(318, Types.Neutral, "當密探任務完成後，賭徒無法猜出密探", true, guesserSpawnRate);
+            guesserSpawnBothRate = CustomOption.Create(317, Types.Neutral, "B雙賭徒的生成機率", rates, guesserSpawnRate);
+            guesserCantGuessSnitchIfTaksDone = CustomOption.Create(318, Types.Neutral, "當密探任務完成後賭徒無法猜出密探", true, guesserSpawnRate);
 
             jesterSpawnRate = CustomOption.Create(60, Types.Neutral, cs(Jester.color, "小丑"), rates, null, true);
             jesterCanCallEmergency = CustomOption.Create(61, Types.Neutral, "小丑可召開緊急會議", true, jesterSpawnRate);
@@ -396,14 +460,13 @@ namespace TheOtherRoles {
             vultureShowArrows = CustomOption.Create(344, Types.Neutral, "顯示指向屍體的箭頭", true, vultureSpawnRate);
 
             lawyerSpawnRate = CustomOption.Create(350, Types.Neutral, cs(Lawyer.color, "律師"), rates, null, true);
-            lawyerTargetCanBeJester = CustomOption.Create(351, Types.Neutral, "律師目標可能是小丑", false, lawyerSpawnRate);
+            lawyerIsProsecutorChance = CustomOption.Create(358, Types.Neutral, "律師目標可能是檢察官", rates, lawyerSpawnRate);
             lawyerVision = CustomOption.Create(354, Types.Neutral, "律師視野", 1f, 0.25f, 3f, 0.25f, lawyerSpawnRate);
-            lawyerKnowsRole = CustomOption.Create(355, Types.Neutral, "律師知道委託人職業", false, lawyerSpawnRate);
+            lawyerKnowsRole = CustomOption.Create(355, Types.Neutral, "律師/檢察官知道委託人職業", false, lawyerSpawnRate);
+            lawyerCanCallEmergency = CustomOption.Create(352, Types.Neutral, "Lawyer/Prosecutor Can Call Emergency Meeting", true, lawyerSpawnRate);
+            lawyerTargetCanBeJester = CustomOption.Create(351, Types.Neutral, "Lawyer Target Can Be The Jester", false, lawyerSpawnRate);
             pursuerCooldown = CustomOption.Create(356, Types.Neutral, "原告填空冷卻", 30f, 5f, 60f, 2.5f, lawyerSpawnRate);
             pursuerBlanksNumber = CustomOption.Create(357, Types.Neutral, "原告填空次數", 5f, 1f, 20f, 1f, lawyerSpawnRate);
-
-            shifterSpawnRate = CustomOption.Create(70, Types.Crewmate, cs(Shifter.color, "轉職師"), rates, null, true);
-            shifterShiftsModifiers = CustomOption.Create(71, Types.Crewmate, "轉職師轉移調整", false, shifterSpawnRate);
 
             mayorSpawnRate = CustomOption.Create(80, Types.Crewmate, cs(Mayor.color, "市長"), rates, null, true);
             mayorCanSeeVoteColors = CustomOption.Create(81, Types.Crewmate, "市長可以看到是誰投票", false, mayorSpawnRate);
@@ -512,7 +575,22 @@ namespace TheOtherRoles {
             mediumDuration = CustomOption.Create(362, Types.Crewmate, "通靈師詢問持續時間", 3f, 0f, 15f, 1f, mediumSpawnRate);
             mediumOneTimeUse = CustomOption.Create(363, Types.Crewmate, "每個靈魂只能被詢問一次", false, mediumSpawnRate);
 
-            // Modifier
+            thiefSpawnRate = CustomOption.Create(400, Types.Neutral, cs(Thief.color, "Thief"), rates, null, true);
+            thiefCooldown = CustomOption.Create(401, Types.Neutral, "Thief Cooldown", 30f, 5f, 120f, 5f, thiefSpawnRate);
+            thiefCanKillSheriff = CustomOption.Create(402, Types.Neutral, "Thief Can Kill Sheriff", true, thiefSpawnRate);
+            thiefHasImpVision = CustomOption.Create(403, Types.Neutral, "Thief Has Impostor Vision", true, thiefSpawnRate);
+            thiefCanUseVents = CustomOption.Create(404, Types.Neutral, "Thief Can Use Vents", true, thiefSpawnRate);
+
+            trapperSpawnRate = CustomOption.Create(410, Types.Crewmate, cs(Trapper.color, "Trapper"), rates, null, true);
+            trapperCooldown = CustomOption.Create(420, Types.Crewmate, "Trapper Cooldown", 30f, 5f, 120f, 5f, trapperSpawnRate);
+            trapperMaxCharges = CustomOption.Create(440, Types.Crewmate, "Max Traps Charges", 5f, 1f, 15f, 1f, trapperSpawnRate);
+            trapperRechargeTasksNumber = CustomOption.Create(450, Types.Crewmate, "Number Of Tasks Needed For Recharging", 2f, 1f, 15f, 1f, trapperSpawnRate);
+            trapperTrapNeededTriggerToReveal = CustomOption.Create(451, Types.Crewmate, "Trap Needed Trigger To Reveal", 3f, 2f, 10f, 1f, trapperSpawnRate);
+            trapperAnonymousMap = CustomOption.Create(452, Types.Crewmate, "Show Anonymous Map", false, trapperSpawnRate);
+            trapperInfoType = CustomOption.Create(453, Types.Crewmate, "Trap Information Type", new string[] { "Role", "Good/Evil Role", "Name" }, trapperSpawnRate);
+            trapperTrapDuration = CustomOption.Create(454, Types.Crewmate, "Trap Duration", 5f, 1f, 15f, 1f, trapperSpawnRate);
+
+            // Modifier (1000 - 1999)
             modifiersAreHidden = CustomOption.Create(1009, Types.Modifier, cs(Color.yellow, "死後隱藏標籤"), true, null, true);
 
             modifierBloody = CustomOption.Create(1000, Types.Modifier, cs(Color.yellow, "血族"), rates, null, true);
@@ -541,6 +619,7 @@ namespace TheOtherRoles {
 
             modifierMini = CustomOption.Create(1061, Types.Modifier, cs(Color.yellow, "迷你"), rates, null, true);
             modifierMiniGrowingUpDuration = CustomOption.Create(1062, Types.Modifier, "迷你成長時間", 400f, 100f, 1500f, 100f, modifierMini);
+            modifierMiniGrowingUpInMeeting = CustomOption.Create(1063, Types.Modifier, "迷你在會議時成長", true, modifierMini);
 
             modifierVip = CustomOption.Create(1070, Types.Modifier, cs(Color.yellow, "VIP"), rates, null, true);
             modifierVipQuantity = CustomOption.Create(1071, Types.Modifier, cs(Color.yellow, "VIP 數量"), ratesModifier, modifierVip);
@@ -549,6 +628,57 @@ namespace TheOtherRoles {
             modifierInvert = CustomOption.Create(1080, Types.Modifier, cs(Color.yellow, "反轉"), rates, null, true);
             modifierInvertQuantity = CustomOption.Create(1081, Types.Modifier, cs(Color.yellow, "反轉數量"), ratesModifier, modifierInvert);
             modifierInvertDuration = CustomOption.Create(1082, Types.Modifier, "反轉的會議次數", 3f, 1f, 15f, 1f, modifierInvert);
+
+            modifierChameleon = CustomOption.Create(1090, Types.Modifier, cs(Color.yellow, "Chameleon"), rates, null, true);
+            modifierChameleonQuantity = CustomOption.Create(1091, Types.Modifier, cs(Color.yellow, "Chameleon Quantity"), ratesModifier, modifierChameleon);
+            modifierChameleonHoldDuration = CustomOption.Create(1092, Types.Modifier, "Time Until Fading Starts", 3f, 1f, 10f, 0.5f, modifierChameleon);
+            modifierChameleonFadeDuration = CustomOption.Create(1093, Types.Modifier, "Fade Duration", 1f, 0.25f, 10f, 0.25f, modifierChameleon);
+            modifierChameleonMinVisibility = CustomOption.Create(1094, Types.Modifier, "Minimum Visibility", new string[] { "0%", "10%", "20%", "30%", "40%", "50%" }, modifierChameleon);
+
+            modifierShifter = CustomOption.Create(1100, Types.Modifier, cs(Color.yellow, "轉職師"), rates, null, true);
+
+            // Guesser Gamemode (2000 - 2999)
+            guesserGamemodeCrewNumber = CustomOption.Create(2001, Types.Guesser, cs(Guesser.color, "Number of Crew Guessers"), 15f, 1f, 15f, 1f, null, true);
+            guesserGamemodeNeutralNumber = CustomOption.Create(2002, Types.Guesser, cs(Guesser.color, "Number of Neutral Guessers"), 15f, 1f, 15f, 1f, null, true);
+            guesserGamemodeImpNumber = CustomOption.Create(2003, Types.Guesser, cs(Guesser.color, "Number of Impostor Guessers"), 15f, 1f, 15f, 1f, null, true);
+            guesserForceJackalGuesser = CustomOption.Create(2007, Types.Guesser, "Force Jackal Guesser", false, null, true);
+            guesserGamemodeHaveModifier = CustomOption.Create(2004, Types.Guesser, "Guessers Can Have A Modifier", true, null);
+            guesserGamemodeNumberOfShots = CustomOption.Create(2005, Types.Guesser, "Guesser Number Of Shots", 3f, 1f, 15f, 1f, null);
+            guesserGamemodeHasMultipleShotsPerMeeting = CustomOption.Create(2006, Types.Guesser, "Guesser Can Shoot Multiple Times Per Meeting", false, null);
+            guesserGamemodeKillsThroughShield = CustomOption.Create(2008, Types.Guesser, "Guesses Ignore The Medic Shield", true, null);
+            guesserGamemodeEvilCanKillSpy = CustomOption.Create(2009, Types.Guesser, "Evil Guesser Can Guess The Spy", true, null);
+            guesserGamemodeCantGuessSnitchIfTaksDone = CustomOption.Create(2010, Types.Guesser, "Guesser Can't Guess Snitch When Tasks Completed", true, null);
+
+            // Hide N Seek Gamemode (3000 - 3999)
+            hideNSeekMap = CustomOption.Create(3020, Types.HideNSeekMain, cs(Color.yellow, "Map"), new string[] { "The Skeld", "Mira", "Polus", "Airship", "Submerged" }, null, true);
+            hideNSeekHunterCount = CustomOption.Create(3000, Types.HideNSeekMain, cs(Color.yellow, "Number Of Hunters"), 1f, 1f, 3f, 1f);
+            hideNSeekKillCooldown = CustomOption.Create(3021, Types.HideNSeekMain, cs(Color.yellow, "Kill Cooldown"), 10f, 2.5f, 60f, 2.5f);
+            hideNSeekHunterVision = CustomOption.Create(3001, Types.HideNSeekMain, cs(Color.yellow, "Hunter Vision"), 0.5f, 0.25f, 2f, 0.25f);
+            hideNSeekHuntedVision = CustomOption.Create(3002, Types.HideNSeekMain, cs(Color.yellow, "Hunted Vision"), 2f, 0.25f, 5f, 0.25f);
+            hideNSeekCommonTasks = CustomOption.Create(3023, Types.HideNSeekMain, cs(Color.yellow, "Common Tasks"), 1f, 0f, 4f, 1f);
+            hideNSeekShortTasks = CustomOption.Create(3024, Types.HideNSeekMain, cs(Color.yellow, "Short Tasks"), 3f, 1f, 23f, 1f);
+            hideNSeekLongTasks = CustomOption.Create(3025, Types.HideNSeekMain, cs(Color.yellow, "Long Tasks"), 3f, 0f, 15f, 1f);
+            hideNSeekTimer = CustomOption.Create(3003, Types.HideNSeekMain, cs(Color.yellow, "Timer In Min"), 5f, 1f, 30f, 1f);
+            hideNSeekTaskWin = CustomOption.Create(3004, Types.HideNSeekMain, cs(Color.yellow, "Task Win Is Possible"), false);
+            hideNSeekTaskPunish = CustomOption.Create(3017, Types.HideNSeekMain, cs(Color.yellow, "Finish Tasks Punish In Sec"), 10f, 0f, 30f, 1f);
+            hideNSeekCanSabotage = CustomOption.Create(3019, Types.HideNSeekMain, cs(Color.yellow, "Enable Sabotages"), false);
+            hideNSeekHunterWaiting = CustomOption.Create(3022, Types.HideNSeekMain, cs(Color.yellow, "Time The Hunter Needs To Wait"), 15f, 2.5f, 60f, 2.5f);
+
+            hunterLightCooldown = CustomOption.Create(3005, Types.HideNSeekRoles, cs(Color.red, "Hunter Light Cooldown"), 30f, 5f, 60f, 1f, null, true);
+            hunterLightDuration = CustomOption.Create(3006, Types.HideNSeekRoles, cs(Color.red, "Hunter Light Duration"), 5f, 1f, 60f, 1f);
+            hunterLightVision = CustomOption.Create(3007, Types.HideNSeekRoles, cs(Color.red, "Hunter Light Vision"), 3f, 1f, 5f, 0.25f);
+            hunterLightPunish = CustomOption.Create(3008, Types.HideNSeekRoles, cs(Color.red, "Hunter Light Punish In Sec"), 5f, 0f, 30f, 1f);
+            hunterAdminCooldown = CustomOption.Create(3009, Types.HideNSeekRoles, cs(Color.red, "Hunter Admin Cooldown"), 30f, 5f, 60f, 1f);
+            hunterAdminDuration = CustomOption.Create(3010, Types.HideNSeekRoles, cs(Color.red, "Hunter Admin Duration"), 5f, 1f, 60f, 1f);
+            hunterAdminPunish = CustomOption.Create(3011, Types.HideNSeekRoles, cs(Color.red, "Hunter Admin Punish In Sec"), 5f, 0f, 30f, 1f);
+            hunterArrowCooldown = CustomOption.Create(3012, Types.HideNSeekRoles, cs(Color.red, "Hunter Arrow Cooldown"), 30f, 5f, 60f, 1f);
+            hunterArrowDuration = CustomOption.Create(3013, Types.HideNSeekRoles, cs(Color.red, "Hunter Arrow Duration"), 5f, 0f, 60f, 1f);
+            hunterArrowPunish = CustomOption.Create(3014, Types.HideNSeekRoles, cs(Color.red, "Hunter Arrow Punish In Sec"), 5f, 0f, 30f, 1f);
+
+            huntedShieldCooldown = CustomOption.Create(3015, Types.HideNSeekRoles, cs(Color.gray, "Hunted Shield Cooldown"), 30f, 5f, 60f, 1f, null, true);
+            huntedShieldDuration = CustomOption.Create(3016, Types.HideNSeekRoles, cs(Color.gray, "Hunted Shield Duration"), 5f, 1f, 60f, 1f);
+            huntedShieldRewindTime = CustomOption.Create(3018, Types.HideNSeekRoles, cs(Color.gray, "Hunted Rewind Time"), 3f, 1f, 10f, 1f);
+            huntedShieldNumber = CustomOption.Create(3026, Types.HideNSeekRoles, cs(Color.gray, "Hunted Shield Number"), 3f, 1f, 15f, 1f);
 
             // Other options  
             maxNumberOfMeetings = CustomOption.Create(3, Types.General, "會議數量(不包括市長會議)", 10, 0, 15, 1, null, true);
@@ -559,12 +689,11 @@ namespace TheOtherRoles {
             shieldFirstKill = CustomOption.Create(8, Types.General, "免死金牌", false);
 
             dynamicMap = CustomOption.Create(500, Types.General, "隨機地圖", false, null, false);
-            dynamicMapEnableSkeld = CustomOption.Create(501, Types.General, "啟用 Skeld", true, dynamicMap, false);
-            dynamicMapEnableMira = CustomOption.Create(502, Types.General, "啟用 Mira", true, dynamicMap, false);
-            dynamicMapEnablePolus = CustomOption.Create(503, Types.General, "啟用 Polus", true, dynamicMap, false);
-            dynamicMapEnableAirShip = CustomOption.Create(504, Types.General, "啟用 Airship ", true, dynamicMap, false);
-
-            dynamicMapEnableSubmerged = CustomOption.Create(505, Types.General, "啟用 Submerged", true, dynamicMap, false);
+            dynamicMapEnableSkeld = CustomOption.Create(501, Types.General, "Skeld", rates, dynamicMap, false);
+            dynamicMapEnableMira = CustomOption.Create(502, Types.General, "Mira", rates, dynamicMap, false);
+            dynamicMapEnablePolus = CustomOption.Create(503, Types.General, "Polus", rates, dynamicMap, false);
+            dynamicMapEnableAirShip = CustomOption.Create(504, Types.General, "Airship", rates, dynamicMap, false);
+            dynamicMapEnableSubmerged = CustomOption.Create(505, Types.General, "Submerged", rates, dynamicMap, false);
 
             blockedRolePairings.Add((byte)RoleId.Vampire, new [] { (byte)RoleId.Warlock});
             blockedRolePairings.Add((byte)RoleId.Warlock, new [] { (byte)RoleId.Vampire});
