@@ -78,7 +78,7 @@ namespace TheOtherRoles {
         }
 
         public static AudioClip loadAudioClipFromResources(string path, string clipName = "UNNAMED_TOR_AUDIO_CLIP") {
-            // must be "raw (headerless) 2-channel signed 32 bit pcm (le)" (can e.g. use Audacity® to export)
+            // must be "raw (headerless) 2-channel signed 32 bit pcm (le)" (can e.g. use AudacityÂ® to export)
             try {
                 Assembly assembly = Assembly.GetExecutingAssembly();
                 Stream stream = assembly.GetManifestResourceStream(path);
@@ -436,10 +436,10 @@ namespace TheOtherRoles {
             writer.Write(AmongUsClient.Instance.AmHost ? Patches.GameStartManagerPatch.timer : -1f);
             writer.WritePacked(AmongUsClient.Instance.ClientId);
             writer.Write((byte)(TheOtherRolesPlugin.Version.Revision < 0 ? 0xFF : TheOtherRolesPlugin.Version.Revision));
-#if RELEASEJL
-            writer.Write(FakeGuid.guid.ToByteArray());
-#else
+#if !RELEASEJL
             writer.Write(Assembly.GetExecutingAssembly().ManifestModule.ModuleVersionId.ToByteArray());
+#else
+            writer.Write(FakeGuid.guid.ToByteArray());
 #endif
             AmongUsClient.Instance.FinishRpcImmediately(writer);
             RPCProcedure.versionHandshake(TheOtherRolesPlugin.Version.Major, TheOtherRolesPlugin.Version.Minor, TheOtherRolesPlugin.Version.Build, TheOtherRolesPlugin.Version.Revision, Assembly.GetExecutingAssembly().ManifestModule.ModuleVersionId, AmongUsClient.Instance.ClientId);

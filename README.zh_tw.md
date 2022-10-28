@@ -14,41 +14,43 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 **The Other Roles** 是個 [Among Us](https://store.steampowered.com/app/945360/Among_Us) 的模組，新增了更多的職業與新的 [設定](#設定) 及 [自定義帽子](#自定義帽子) 到遊戲中。
 更多職業即將推出。 :)
 
-| 偽裝者 | 船員 | 獨立 | 特殊標籤 |
-|----------|------------|-----------------|--------------|
-| [教父 (黑手黨)](#黑手黨) | [轉職師](#轉職師) | [小丑](#小丑) | [血族](#血族) |
-| [黑手黨員 (黑手黨)](#黑手黨) | [市長](#市長) | [縱火狂](#縱火狂) | [反傳送](#反傳送) |
-| [守墓人 (黑手黨)](#黑手黨) | [工程師](#工程師) | [豺狼](#豺狼) | [決勝者](#決勝者) |
-| [百變怪](#百變怪) | [警長](#警長) | [跟班](#跟班) | [誘餌](#誘餌) |
-| [魔術師](#魔術師) | [警員](#警員) | [禿鷲](#禿鷲) | [戀人](#戀人) |
-| [吸血鬼](#吸血鬼) | [點燈人](#點燈人) | [律師](#律師) | [墨鏡](#墨鏡) |
-| [抹除者](#抹除者) | [偵探](#偵探) | | [迷你](#迷你) |
-| [詭騙師](#詭騙師) | [時間管理大師](#時間管理大師) | | [VIP](#vip) |
-| [清道夫](#清道夫) | [醫生](#醫生) |  | [反轉](#反轉) |
-| [咒詛師](#咒詛師) | [換票師](#換票師) |
-| [賞金獵人](#賞金獵人) | [靈媒](#靈媒) |  |
-| [巫師](#巫師) | [駭客](#駭客) |  |  |
-| [忍者](#忍者) | [追踪者](#追踪者) |  |  |
-| [壞賭徒](#賭徒) | [密探](#密探) |  |
-|  | [間諜](#間諜) |  |  |
+| 偽裝者 | 船員 | 獨立 | 特殊標籤 | 遊戲模式 |
+|----------|------------|-----------------|--------------|----------------|
+| [教父 (黑手黨)](#黑手黨) | [市長](#市長) | [小丑](#小丑) | [血族](#血族) | [Classic](#roles) |
+| [黑手黨員 (黑手黨)](#黑手黨) | [工程師](#工程師) | [縱火狂](#縱火狂) | [反傳送](#反傳送) | [Guesser](#guesser-modifier) |
+| [守墓人 (黑手黨)](#黑手黨) | [警長](#警長) | [豺狼](#豺狼) | [決勝者](#決勝者) | [Hide 'n Seek](#hide-n-seek) |
+| [百變怪](#百變怪) | [警員](#警員) | [跟班](#跟班) | [誘餌](#誘餌) |
+| [魔術師](#魔術師) | [點燈人](#點燈人) | [禿鷲](#禿鷲) | [戀人](#戀人) |
+| [吸血鬼](#吸血鬼) | [偵探](#偵探) | [律師](#律師) | [墨鏡](#墨鏡) |
+| [抹除者](#抹除者) | [時間管理大師](#時間管理大師) | [檢察官](#檢察官) | [迷你](#迷你) |
+| [詭騙師](#詭騙師) | [醫生](#醫生) | [原告](#原告) | [VIP](#vip) |
+| [清道夫](#清道夫) | [換票師](#換票師) | [Thief](#thief) | [反轉](#反轉) |
+| [咒詛師](#咒詛師) | [靈媒](#靈媒) |  | [Chameleon](#chameleon) |
+| [賞金獵人](#賞金獵人) | [駭客](#駭客) |  | [轉職師](#轉職師)
+| [巫師](#巫師) | [追踪者](#追踪者) |  |  |
+| [忍者](#忍者) | [密探](#密探) |  |  |
+| [壞賭徒](#賭徒) | [間諜](#間諜) |  |  |
 |  | [傳送師](#傳送師) |  |  |
 |  | [守衛](#守衛) |  |  |
 |  | [通靈師](#通靈師) |  |  |
-|  | [好賭徒](#賭徒) |  |
+|  | [Trapper](#trapper) |  |  |
+|  | [好賭徒](#賭徒) |  |  |
+|  |  |  |
 
 [職業分配](#職業分配) 部分解釋了職業如何分配.
 
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
-| 2022.8.24| v4.1.7| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.7/TheOtherRoles.zip)
-| 2022.6.21| v4.1.6| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.6/TheOtherRoles.zip)
-| 2022.6.21| v4.1.5| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.5/TheOtherRoles.zip)
-| 2022.3.29| v4.1.4| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.4/TheOtherRoles.zip)
-| 2022.3.29| v4.1.3| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.3/TheOtherRoles.zip)
-| 2022.3.29| v4.1.2| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.2/TheOtherRoles.zip)
-| 2022.3.29| v4.1.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.1/TheOtherRoles.zip)
-| 2022.3.29| v4.1.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.0/TheOtherRoles.zip)
+| 2022.10.25s| v4.2.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.2.0/TheOtherRoles.zip)
+| 2022.9.20s| v4.1.7| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.7/TheOtherRoles.zip)
+| 2022.6.21s| v4.1.6| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.6/TheOtherRoles.zip)
+| 2022.6.21s| v4.1.5| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.5/TheOtherRoles.zip)
+| 2022.3.29s| v4.1.4| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.4/TheOtherRoles.zip)
+| 2022.3.29s| v4.1.3| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.3/TheOtherRoles.zip)
+| 2022.3.29s| v4.1.2| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.2/TheOtherRoles.zip)
+| 2022.3.29s| v4.1.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.1/TheOtherRoles.zip)
+| 2022.3.29s| v4.1.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.0/TheOtherRoles.zip)
 | 2022.3.29s| v4.0.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.0.0/TheOtherRoles.zip)
 | 2022.3.29s| v3.4.5| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.4.5/TheOtherRoles.zip)
 | 2022.2.23s| v3.4.4| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v3.4.4/TheOtherRoles.zip)
@@ -109,6 +111,32 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # Changelog
 <details>
   <summary>Click to show the Changelog</summary>
+
+**Version 4.2.0**
+- Added a new Guesser-Gamemode
+- Added a new Hide 'n Seek-Gamemode | Thanks to [Oberbayer](https://twitch.tv/oberbayer)
+- Added a new role for Hide 'n Seek-Gamemode: Hunter
+- Added a new role for Hide 'n Seek-Gamemode: Hunted
+- Added a new role: Thief
+- Added a new role: Trapper
+- Added a new modifier: Chameleon
+- Added a new feature to hide the "Colorblind"-Text when hiding behind obstacles
+- Added a new role: Prosecutor (in the Lawyer settings) | Thanks to [Scoom](https://github.com/JustASysAdmin)
+- Added a new option to the Mini Modifier: "Mini Grows Up In Meeting"
+- Added a new server: Modded Asia (MAS) | Thanks to [miniduikboot](https://github.com/miniduikboot)
+- Added support for joining public TOR lobbies using the "Find Game"-Button **on Modded Servers (only!)** | Thanks to [miniduikboot](https://github.com/miniduikboot)
+- Changed Shifter to be a Modifier instead of being a role
+- Changed Eraser to only erase the role and not the Modifier
+- Changed that neutral roles doesn't have to do tasks anymore to get the overview when they died before their client
+- Changed "Play On Random Map". You can now set percentages for each map (like you can do for roles)
+- Fixed a bug where the trail color of the player with the "Bloody"-Modifier sometimes had the wrong color when they got killed
+- Fixed a bug where the Ninja could target the Spy, but not the Impostor
+- Fixed a bug where the countdown wasn't displayed for all player when starting a game
+- Fixed bugs in Freeplay (hats were always adaptive when testing & Meetingscreen fixed)
+- Fixed a bug where Crewmate/Impostor wasn't displayed correctly in Endscreen
+- Fixed a bug where Crewmate/Impostor wasn't displayed correctly in Meetingscreen
+- Fixed a bug where Lawyer didn't get promoted to Pursuer when client died (in a Meeting)
+- Fixed a bug in Meetings when a Tiebreaker and Swapper where involved
 
 **Version 4.1.7**
 - Updated to Among Us version 2022.8.24
@@ -628,7 +656,7 @@ Not working? You might want to install the dependency [vc_redist](https://aka.ms
 ## Linux Installation
 1. Install Among Us via Steam
 2. Download newest [release](https://github.com/Eisbison/TheOtherRoles/releases/latest) and extract it to ~/.steam/steam/steamapps/common/Among Us
-3. Enable `winhttp.dll` via the proton winecfg (https://docs.bepinex.dev/articles/advanced/steam_interop.html#open-winecfg-for-the-target-game)
+3. Enable winhttp.dll via the proton winecfg (https://docs.bepinex.dev/articles/advanced/proton_wine.html)
 4. Launch the game via Steam
 
 ## The Other Roles Custom Servers
@@ -665,28 +693,28 @@ docker run -d -p 22023:22023/udp --env IMPOSTOR_AntiCheatEnabled=false --env IMP
 
 
 # Credits & Resources
-[OxygenFilter](https://github.com/NuclearPowered/Reactor.OxygenFilter) - For all the version v2.3.0 to v2.6.1, we were using the OxygenFilter for automatic deobfuscation\
-[Reactor](https://github.com/NuclearPowered/Reactor) - The framework used for all version before v2.0.0\
-[BepInEx](https://github.com/BepInEx) - Used to hook game functions\
+[OxygenFilter](https://github.com/NuclearPowered/Reactor.OxygenFilter) - For all the versions between v2.3.0 and v2.6.1, we were using the OxygenFilter for automatic deobfuscation\
+[Reactor](https://github.com/NuclearPowered/Reactor) - The framework used for all versions before v2.0.0\
+[BepInEx](https://github.com/BepInEx) - Used to hook to game functions\
 [Essentials](https://github.com/DorCoMaNdO/Reactor-Essentials) - Custom game options by **DorCoMaNdO**:
 - Before v1.6: We used the default Essentials release
-- v1.6-v1.8: We slightly changed the default Essentials. The changes can be found on this [branch](https://github.com/Eisbison/Reactor-Essentials/tree/feature/TheOtherRoles-Adaption) of our fork.
-- v2.0.0 and later: As we're not using Reactor anymore, we are using our own implementation, inspired by the one from **DorCoMaNdO**
+- v1.6-v1.8: We slightly changed the default Essentials release. The changes can be found on this [branch](https://github.com/Eisbison/Reactor-Essentials/tree/feature/TheOtherRoles-Adaption) of our fork.
+- v2.0.0 and later: We're no longer using Reactor anymore we are using our own implementation inspired by the one from **DorCoMaNdO**
 
-[Jackal and Sidekick](https://www.twitch.tv/dhalucard) - Original idea for the Jackal and Sidekick comes from **Dhalucard**\
-[Among-Us-Love-Couple-Mod](https://github.com/Woodi-dev/Among-Us-Love-Couple-Mod) - Idea for the Lovers role comes from **Woodi-dev**\
-[Jester](https://github.com/Maartii/Jester) - Idea for the Jester role comes from **Maartii**\
-[ExtraRolesAmongUs](https://github.com/NotHunter101/ExtraRolesAmongUs) - Idea for the Engineer and Medic role comes from **NotHunter101**. Also some code snippets come of the implementation were used.\
-[Among-Us-Sheriff-Mod](https://github.com/Woodi-dev/Among-Us-Sheriff-Mod) - Idea for the Sheriff role comes from **Woodi-dev**\
-[TooManyRolesMods](https://github.com/Hardel-DW/TooManyRolesMods) - Idea for the Detective and Time Master roles comes from **Hardel-DW**. Also some code snippets of the implementation were used.\
-[TownOfUs](https://github.com/slushiegoose/Town-Of-Us) - Idea for the Swapper, Shifter, Arsonist and a similar Mayor role come from **Slushiegoose**\
-[Ottomated](https://twitter.com/ottomated_) - Idea for the Morphling, Snitch and Camouflager role come from **Ottomated**\
-[Crowded-Mod](https://github.com/CrowdedMods/CrowdedMod) - Our implementation for 10+ player lobbies is inspired by the one from the **Crowded Mod Team**\
-[Goose-Goose-Duck](https://store.steampowered.com/app/1568590/Goose_Goose_Duck) - Idea for the Vulture role come from **Slushygoose**
+[Jackal and Sidekick](https://www.twitch.tv/dhalucard) - Original idea for the Jackal and Sidekick came from **Dhalucard**\
+[Among-Us-Love-Couple-Mod](https://github.com/Woodi-dev/Among-Us-Love-Couple-Mod) - Idea for the Lovers modifier came from **Woodi-dev**\
+[Jester](https://github.com/Maartii/Jester) - Idea for the Jester role came from **Maartii**\
+[ExtraRolesAmongUs](https://github.com/NotHunter101/ExtraRolesAmongUs) - Idea for the Engineer and Medic role came from **NotHunter101**. Also some code snippets from their implementation were used.\
+[Among-Us-Sheriff-Mod](https://github.com/Woodi-dev/Among-Us-Sheriff-Mod) - Idea for the Sheriff role came from **Woodi-dev**\
+[TooManyRolesMods](https://github.com/Hardel-DW/TooManyRolesMods) - Idea for the Detective and Time Master roles came from **Hardel-DW**. Also some code snippets from their implementation were used.\
+[TownOfUs](https://github.com/slushiegoose/Town-Of-Us) - Idea for the Swapper, Shifter, Arsonist and a similar Mayor role came from **Slushiegoose**\
+[Ottomated](https://twitter.com/ottomated_) - Idea for the Morphling, Snitch and Camouflager role came from **Ottomated**\
+[Crowded-Mod](https://github.com/CrowdedMods/CrowdedMod) - Our implementation for 10+ player lobbies were inspired by the one from the **Crowded Mod Team**\
+[Goose-Goose-Duck](https://store.steampowered.com/app/1568590/Goose_Goose_Duck) - Idea for the Vulture role came from **Slushiegoose**\
+[Ninja](#ninja), [Thief](#thief), [Lawyer](#lawyer) / [Pursuer](#pursuer), [Deputy](#deputy), [Portalmaker](#portalmaker), [Guesser Modifier](#guesser-modifier) - Idea: [K3ndo](https://github.com/K3ndoo) ; Developed by [Gendelo](https://github.com/gendelo3) & [Mallöris](https://github.com/Mallaris)
 
 # 設定
 該模組在 Among Us 添加了一些新設定(除了職業設定)：
-- **直播模式:** 您可以在 Among Us 的設定中開啟直播模式。它隱藏了大廳代碼、自定義伺服器 ip 和自定義伺服器通訊埠。您可以通過更改 `BepInEx\config\me.eisbison.theotherroles.cfg` 中的 *Streamer Mode Replacement Text* 來設定自定義大廳代碼替換文字。
 - **船員數量:** 可以在大廳內設定船員的數量
 - **獨立數量:** 可以在大廳內設定獨立的數量
 - **偽裝者數量:** 可以在大廳內設定偽裝者的數量
@@ -697,7 +725,7 @@ docker run -d -p 22023:22023/udp --env IMPOSTOR_AntiCheatEnabled=false --env IMP
 - **隱藏玩家名稱:** 隱藏所有有您不知職業玩家的名稱。戀人/偽裝者/豺狼隊伍仍可以看到他們隊友的名字。偽裝者還可以看到間諜的名字，每個人仍可以看到迷你的年齡。
 - **允許並列醫務室掃描:** 允許玩家同時進行他們的醫務室掃描。
 - **免死金牌** 上一輪第一個被殺死的玩家將被上盾並且所有玩家可見直到第一次會議時。
-- **隨機地圖** 如果啟用，它允許你設定隨機當前除了 ehT dlekS 的所有地圖
+- **隨機地圖** 如果啟用，它允許你設定除了 ehT dlekS 隨機所有地圖的機率。
 - **死者可看到職業**
 - **死者可看到投票**
 - **死者可看到特殊標籤**
@@ -705,8 +733,8 @@ docker run -d -p 22023:22023/udp --env IMPOSTOR_AntiCheatEnabled=false --env IMP
 - **地圖可在會議期間開啟，並會在有人舉報/召集會議時顯示您的最後位置**
 - **死者完成任務時，將獲得縮放/概覽功能**
 - **任務數量:** 您現在可以選擇更多任務。
-- **職業總結:** 當遊戲結束時，列出所有玩家及其職業與任務進度
-- **深/淺:** 在會議顯示玩家的色系
+- **職業總結:** 當遊戲結束時，列出所有玩家及其職業,任務進度與偽裝者殺死了多少玩家。
+- **深/淺:** 在會議顯示玩家的色系。
 
 ### 地圖任務數上限
 你可以設定:
@@ -862,10 +890,8 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 \
 **NOTE:**
 - 轉職師將始終在抹除之前轉移 (因此轉職師的新職業被抹除/能轉移成其目標的職業，取決於抹除者抹除的對象)
-- 抹除一個戀人也會自動抹除另一個戀人 (如果他的戀人是一個偽裝者戀人，他會變成一個偽裝者)
-- 抹除具有跟班的豺狼，如果在選項中有開啟，會觸發跟班升職
-- 由於抹除是在玩家被票出前觸發的，因此在同一天中抹除並票出一個戀人，將導致
-  另一個前戀人存活下來，因為之間的戀人關係會被抹去。 也不會發生小丑獲勝，因為獲勝前職業就被抹除。
+- 由於抹除是在玩家被票出前觸發的，因此不會發生小丑獲勝，因為獲勝前其職業就被抹除。
+- 特殊標籤將不會被抹除。
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -1158,52 +1184,74 @@ Depending on the options, the Guesser can't guess the shielded player and depend
 - 如果他們的委託人是小丑，小丑被票出，則律師與小丑一起獲勝。
 
 **NOTE:**
-- 如果委託人中斷連線，律師也將變成原告
-- 根據選項設定律師需要弄清楚客戶的職業
+- 如果委託人中斷連線，律師也將變成原告。
+- 根據選項設定律師需要弄清楚客戶的職業。
+- 僅當律師晉升為原告時，任務才算在內。
+- 如果律師比委託人早死亡，他們將失去所有任務並立即獲得概覽。
 
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
 | 律師生成機率 | -
+| 律師是檢察官的機率 | -
+| 律師/檢察官視野 | 原告有正常視野
+| 律師/檢察官知道委託人職業 | -
+| 律師/檢察官可召開緊急會議 | -
 | 律師目標可能是小丑 | -
-| 律師會議後獲勝 | 如果設置為開，律師在可配置的會議數量後獲勝(不能自己開始會議)
-| 律師需要會議才能獲勝 | -
-| 律師視野 | 原告有正常視野
-| 律師知道委託人職業 | -
-| 原告填空冷卻 | -
-| 原告填空次數 | -
 -----------------------
+
+## 檢察官
+### **隊伍: 獨立**
+The Prosecutor is a neutral role that resembles the Lawyer. The Prosecutor has a client who is a Crewmate.\
+The Prosecutor needs their client to be voted out in order to win the game.\
+The Prosecutor's client doesn't know that they are their client.\
+If the client gets sidekicked, the Prosecutor changes their role and becomes the client's [Lawyer](#lawyer) and has to protect the
+client from now on.\
+If the Prosecutor's client dies, the Prosecutor changes their role and becomes the [Pursuer](#pursuer), which has a different goal to win the game.
+
+**NOTE:**
+- The Prosecutor's role settings are shared with the Lawyer settings.
+- If the client disconnects, the Prosecutor will also turn into the Pursuer.
+- The Prosecutor needs to figure out the role of their client depending on the options.
+- The tasks only count, if the Prosecutor gets promoted to Pursuer.
+- If the Prosecutor dies before their client, they will lose all their tasks and will get the overview immediately.
 
 ## 原告
 ### **隊伍:獨立**
 原告也是個獨立職業，但有個不同的目標來獲勝: 他們必須活到遊戲結束時(不管是誰獲勝)。
 為了實現這個目標，原告擁有"填空"能力: 他們可以用空包彈填充殺手(包括警長)的武器，所以如果殺手試圖殺死某人將錯過目標並照常觸發所有冷卻時間。
 如果殺手發射空包彈不會觸發任何盾(例如醫生盾或時間管理大師盾)。
-原告有任務(在律師時就可以做)，這些任務計入船員的任務勝利。如果原告死了，他們的任務將不被計算在內。
+原告有任務(在律師/檢察官時就可以做)，這些任務計入船員的任務勝利。如果原告死了，他們的任務將不被計算在內。
 
+### Game Options
+| Name | Description |
+|----------|:-------------:|
+| Pursuer Blank Cooldown | -
+| Pursuer Number Of Blanks | -
 -----------------------
 
-## 轉職師
-### **隊伍:船員**
-轉職師可以轉移另一個船員的職業，另一個玩家將轉變為船員。\
-轉移在會議結束後玩家被票出前執行。需要在遊玩中選擇目標。\
-即使轉職師或目標在會議前死亡，轉移仍然會執行。\
-與偽裝者或獨立職業轉移職業將失敗，並且轉職師會在下次會議自殺(不會有任何屍體)。\
-轉職師目標在防止職業離開遊戲，例如接掌被偽裝者知道的警長、醫生。\
-這對抹除者特別有效，但抹除者也可能像轉職師有一樣想法。\
-與轉職師的**特殊互動**在相應職業的說明中註明。\
+## Thief
+### **Team: Neutral**
+The Thief has to kill another killer (Impostor, Jackal/Sidekick and if enabled Sheriff)
+in order to have a win condition.\
+If the Thief doesn't kill another killer they will lose the game.\
+If the Thief kills one of the other killers, the Thief overtakes their role (e.g. Ninja) and joins their team (in this case
+team Impostor). They then have the new Role's win condition (e.g. Impostor-Win).\
+If the Thief tries to kill any non-killing role (Crewmate or Neutral), they die similar to a misfiring Sheriff.\
 \
-**NOTE:**
-- 轉職師將始終在抹除之前轉移 (因此轉職師的新職業被抹除/能轉移成其目標的職業，取決於抹除者抹除的對象)
-- 如果轉職師接掌了一個職業，他們的新冷卻時間將從技能的最大冷卻時間開始
-- 一次性使用能力 (例如上盾玩家或工程師破壞修復) 只能由遊戲中的一名玩家使用 (即原本的玩家之前沒有使用，
-轉職師才能使用)
+**NOTE**
+- If the option "Thief Can Kill Sheriff" is On, the Thief has tasks which will ONLY begin to count, if they kill
+  the Sheriff. While the Thief hasn't fired, their tasks do not count towards the taskwin.
+- If the option "Thief Can Kill Sheriff" is Off, the Thief will not have tasks.
 
-### 遊戲選項
-| 名稱 | 描述
+### Game Options
+| Name | Description |
 |----------|:-------------:|
-| 轉職師生成機率 | -
-| 轉職師轉移調整 | 設定戀人和/或醫生盾是否會轉移
+| Thief Spawn Chance | -
+| Thief Countdown | -
+| Thief Can Kill Sheriff | -
+| Thief Has Impostor Vision | -
+| Thief Can Use Vents | -
 -----------------------
 
 ## 市長
@@ -1280,7 +1328,7 @@ Because of the vents the Engineer might not be able to start some tasks using th
 | 上銬冷卻 | -
 | 手銬持續時間 | -
 | 警長與警員互相認識 | -
-| 警員晉升為警長 | "關", "開(立即)" 或 "開(會議後)"
+| 警員升職為警長 | "關", "開(立即)" 或 "開(會議後)"
 | 警員升職後保持手銬 | -
 -----------------------
 
@@ -1523,7 +1571,6 @@ There are two possibilities (depending on the set options):
 封鎖通風口也是在會議後封鎖，玩家將無法進入或離開被封鎖的通風口，但仍然可以"經過它們"。\
 
 **NOTE:**
-
 - 詭騙箱不能封鎖
 - 守衛不能在MiraHQ設置攝影機
 - 剩餘的螺絲數量可以在按鈕上方看到。
@@ -1565,15 +1612,43 @@ There are two possibilities (depending on the set options):
 | 每個靈魂只能被詢問一次 | 如果設置為開，靈魂只能被詢問一次然後消失
 -----------------------
 
+## Trapper
+### **Team: Crewmates**
+The Trapper is a crewmate which can set up traps to trap player and gain information from them.\
+The traps will stuck player for x-seconds (depends on the setting) and reveal information in chat
+about their "Role", if they are a "Good/Evil Role" or their "Name".\
+The trap is not visible until a configurable amount of player were trapped.\
+When the trap gets visible, the Trapper will gain the information in chat (in a random order).\
+If a trap is triggered (and the option is enabled), the map of the Trapper will open up and show which trap
+was triggered.\
+The traps have a maximum of charges (uses) and a configurable amount of tasks are needed to recharge.\
+\
+**NOTE:**
+- The Trapper can't be trapped in their own trap(s).
+
+### Game Options
+| Name | Description
+|----------|:-------------:|
+| Trapper Spawn Chance | -
+| Trapper Cooldown | -
+| Max Traps Charges | -
+| Number Of Tasks Needed For Recharging | -
+| Trap Needed Trigger To Reveal | -
+| Show Anonymous Map | -
+| Trap Information Type | "Name", "Role", "Good/Evil Role"
+| Trap Duration | -
+-----------------------
+
 # 特殊標籤
 特殊標籤是對偽裝者/獨立/船員角色的額外擴充。
 一些標籤可以在遊戲中有多人擁有(數量選項)。
 
-## 血族
+### 血族
 
-
-如果血族被殺，會在殺手身上留下 x 秒的血跡。血跡將具有被殺者的顏色。偽裝者，
-獨立或船員都可以有這個標籤。
+如果血族被殺，會在殺手身上留下 x 秒的血跡。血跡將具有被殺者的顏色。\
+\
+**NOTE**
+- 偽裝者，獨立或船員都可以擁有這個標籤。
 
 ### 遊戲選項
 | 名稱 | 描述
@@ -1586,7 +1661,10 @@ There are two possibilities (depending on the set options):
 ## 反傳送
 
 如果有人舉報屍體或召開緊急會議，反傳送將防止玩家被傳送到會議桌。\
-玩家將從前一輪結束的地方開始(緊急會議/身體報告)。
+玩家將從前一輪結束的地方開始(緊急會議/屍體舉報)。\
+\
+**NOTE**
+- 偽裝者，獨立或船員都可以擁有這個標籤。
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -1598,7 +1676,11 @@ There are two possibilities (depending on the set options):
 ## 決勝者
 
 如果投票以平票結束，則進行決勝，擁有決勝者標籤的玩家將獲得額外的投票，任何人都看不到。\
-每個人都會知道決勝者是否參與了會議。
+每個人都會知道決勝者是否參與了會議。\
+\
+**NOTE**
+- 偽裝者，獨立或船員都可以擁有這個標籤。
+- 此特殊標籤只能一個玩家擁有
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -1613,6 +1695,7 @@ There are two possibilities (depending on the set options):
 
 **NOTE:**
 - 如果警長擁有誘餌標籤並在試圖殺死一名船員時自殺，警長將*不會*舉報自己。
+- 偽裝者、獨立或船員都可以擁有這個標籤。
 
 ### 遊戲選項
 | 名稱 | 描述
@@ -1651,7 +1734,7 @@ There are two possibilities (depending on the set options):
 -----------------------
 
 **NOTE:**
-- **戀人**這個職業猜不出來，你必須猜出任何一個戀人的職業，才能殺死他們。
+- **戀人**這個特殊標籤不會被猜出來，你必須猜出戀人的職業，才能殺死他們。
 
 ## 墨鏡
 
@@ -1660,7 +1743,7 @@ There are two possibilities (depending on the set options):
 
 **NOTE:**
 - 墨鏡。
-- 如果您有墨鏡標籤被轉成跟班會失去標籤。
+- 如果您有墨鏡標籤被招募為跟班將會失去標籤。
 
 ### 遊戲選項
 | 名稱 | 描述
@@ -1698,6 +1781,7 @@ There are two possibilities (depending on the set options):
 |----------|:-------------:|
 | 迷你生成機率 | -
 | 迷你成長時間 | 迷你成長時長
+| 迷你在會議時成長 | -
 -----------------------
 
 ## VIP
@@ -1722,7 +1806,9 @@ VIP會在他死時向所有人發出類似於靈媒閃光的閃爍。\
 ## 反轉
 
 反轉標籤會將控制反轉(包含鍵盤與滑鼠)。\
-反轉可以影響所有隊伍(偽裝者,獨立,船員)。
+\
+**NOTE:**
+- 偽裝者、獨立或船員都可以擁有這個標籤。
 
 ### 遊戲選項
 | 名稱 | 描述
@@ -1730,6 +1816,111 @@ VIP會在他死時向所有人發出類似於靈媒閃光的閃爍。\
 | 反轉生成機率 | -
 | 反轉數量 | -
 -----------------------
+
+## Chameleon
+
+The Chameleon becomes (partially or fully) invisible when standing still for x-seconds (depends on the settings).\
+\
+**NOTE**
+- You can use abilities while being invisible, only moving will make you visible again
+- Impostor, Neutral or Crewmate roles can have this Modifier
+
+### Game Options
+| Name | Description
+|----------|:-------------:|
+| Chameleon Spawn Chance | -
+| Chameleon Quantity | -
+| Time Until Fading Starts | -
+| Fade Duration | - 
+| Minimum Visibility | -
+-----------------------
+
+## 轉職師
+
+The Shifter is a Modifier that can shift with another player. If the other player is Crewmate as well, they will swap their roles.\
+Swapping roles with an Impostor or Neutral fails and the Shifter commits suicide after the next meeting (there won't be a body).\
+The Shift will always be performed at the end of the next meeting right before a player is exiled. The target needs to be chosen during the round.\
+Even if the Shifter or the target dies before the meeting, the Shift will still be performed.\
+\
+**NOTE:**
+- The Shifter shift will always be triggered before the Erase (hence either the new role of the Shifter will be erased or the Shifter gets the role of their target, depending on whom the Eraser erased)
+- One time use abilities (e.g. shielding a player or Engineer sabotage fix) can only used by one player in the game (i.e. the Shifter
+  can only use them, if the previous player did not use them before)
+- The Shifter button is located in the bottom left corner right next to the garlic button (if the Vampire is enabled)
+- Only a Crewmate role can have this Modifier
+
+### 遊戲選項
+| 名稱 | 描述
+|----------|:-------------:|
+| 轉職師生成機率 | -
+-----------------------
+
+# 遊戲模式
+
+## Guesser Modifier
+The **Guesser-Gamemode** is an extension to the Classic-Gamemode and gives you a multitude of new options for Guessers.\
+The Guesser is now like an addition and can be applied to all players IF you want to. Settings are available to set the number of guessers for each team separately (Impostor, Neutral, Crewmate).\
+When playing this game mode, the Guessers can have another role (e.g. Medic Guesser). The same
+applies of course for Impostor and/or Neutral roles.\
+Players can additionally have a modifier, if enabled (e.g. Medic Guesser Mini).
+
+### Game Options
+| Name | Description
+|----------|:-------------:|
+| Number of Crew Guessers | -
+| Number of Neutral Guessers | -
+| Number of Impostor Guessers | -
+| Force Jackal Guesser | If set to "On", the first neutral role who will be Guesser is the Jackal. 
+| Guessers Can Have A Modifier | -
+| Guesser Number Of Shots | -
+| Guesser Can Shoot Multiple Times Per Meeting | -
+| Guesses Ignore The Medic Shield | -
+| Evil Guesser Can Guess The Spy | -
+| Guesser Can't Guess Snitch When Tasks Completed | -
+-----------------------
+
+**NOTE**
+- If a Crewmate Guesser gets sidekicked, they will remain a Guesser even if the host (maybe) has set up only 1 "Neutral role Guesser".
+
+## Hide 'n Seek
+The **Hide 'n Seek-Gamemode** is a standalone Gamemode where Hunter have to catch their prey ("Hunted" players).\
+The Hunter and Hunted player who are still alive are displayed to everyone in the bottom left corner (similar to the Arsonist display).\
+When the game starts, the Hunter's movement is disabled for x-seconds (depends on the settings).\
+There is a time-limit for each round, if the timer runs out and at least one Hunted is still alive, the Crew wins. The Hunted players can also win, if Taskwin is enabled and the Crew completes all tasks.\
+If the Hunters kill all players before one of these conditions is triggered, the Hunters win.\
+
+#### Hunter Abilities:
+- Enable arrows (arrows point to all Hunted players for x-seconds (depending on settings))
+- Mobile Admin table (like Hacker)
+- Lighter ability (gives the Hunter a biggier vision radius for x-seconds (depending on settings))
+
+#### Hunted Ability:
+- Timeshield (like Timemaster, depending on settings)
+
+Each Hunter action or finished Crew task will lower the timer by a configurable amount of time.\
+\
+**NOTE:**
+- We added a vent on Polus (Specimen), but only for this Gamemode. The vent is connected with Admin & Lab.
+- The Report button lights up, but cannot be pressed.
+- The tasks can be configured separately for this mode, without affecting your normal game settings.
+- Only the Hunter will be rewinded if they try to kill a player with an active timeshield.
+
+### Game Options
+| General | Description | Hunter | Description | Hunted | Description |
+|----------|:-------------:|----------|:-------------:|----------|:-------------:|
+| Map | -                                | Hunter Light Cooldown | -                  | Hunted Shield Cooldown | -
+| Number Of Hunters | -                  | Hunter Light Duration | -                  | Hunted Shield Duration | -
+| Kill Cooldown | -                      | Hunter Light Vision | -                    | Hunted Rewind Time | -
+| Hunter Vision | -                      | Hunter Light Punish in Sec | -             | Hunted Shield Number | -
+| Hunted Vision | -                      | Hunter Admin Cooldown | -
+| Common Tasks | -                       | Hunter Admin Duration | -
+| Short Tasks | -                        | Hunter Admin Punish In Sec | -
+| Long Tasks | -                         | Hunter Arrow Cooldown | -
+| Timer In Min | -                       | Hunter Arrow Duration | -
+| Task Win Is Possible | -               | Hunter Arrow Punish In Sec | -
+| Finish Tasks Punish In Sec | -
+| Enable Sabotages | -
+| Time The Hunter Needs To Wait | -
 
 # 原始碼
 You can use parts of the code but don't copy paste the whole thing. Make sure you give credits to the other developers, because some parts of the code are based on theirs.

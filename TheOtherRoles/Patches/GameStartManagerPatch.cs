@@ -250,18 +250,14 @@ namespace TheOtherRoles.Patches {
 
             public PlayerVersion(Version version, Guid guid) {
                 this.version = version;
-#if RELEASEJL
-                this.guid = FakeGuid.guid;
-#else
                 this.guid = guid;
-#endif
             }
 
             public bool GuidMatches() {
-#if RELEASEJL
-                return true;
-#else
+#if !RELEASEJL
                 return Assembly.GetExecutingAssembly().ManifestModule.ModuleVersionId.Equals(this.guid);
+#else
+                return FakeGuid.Equals(this.guid);
 #endif
             }
         }
