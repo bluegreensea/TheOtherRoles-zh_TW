@@ -13,12 +13,12 @@ namespace TheOtherRoles.Patches {
 $@"<size=130%><color=#ff351f>TheOtherRoles</color></size> v{TheOtherRolesPlugin.Version.ToString() + (TheOtherRolesPlugin.betaDays>0 ? "-BETA": "")}";
 public static string fullCredentials =
 $@"<size=60%>由 <color=#FCCE03FF>Eisbison</color>, <color=#FCCE03FF>EndOfFile</color>
-<color=#FCCE03FF>Thunderstorm584</color>, <color=#FCCE03FF>Mallöris</color> 及 <color=#FCCE03FF>Gendelo</color>
-由 <color=#FCCE03FF>Bavari</color> 設計</size>
-由 <color=#00d3ff>DC: bluegreensea#5449 (青海)</color> 繁體中文化</size>";
+<color=#FCCE03FF>Thunderstorm584</color>, <color=#FCCE03FF>Mallöris</color> 及 <color=#FCCE03FF>Gendelo</color> 製作模組
+由 <color=#FCCE03FF>Bavari</color> 設計
+由 <color=#00d3ff>github: bluegreensea</color> 繁體中文化</size>";
 
     public static string mainMenuCredentials = 
-$@"由Modded by <color=#FCCE03FF>Eisbison</color>, <color=#FCCE03FF>Thunderstorm584</color>, <color=#FCCE03FF>EndOfFile</color>, <color=#FCCE03FF>Mallöris</color> 及 <color=#FCCE03FF>Gendelo</color> 製作模組
+$@"由 <color=#FCCE03FF>Eisbison</color>, <color=#FCCE03FF>Thunderstorm584</color>, <color=#FCCE03FF>EndOfFile</color>, <color=#FCCE03FF>Mallöris</color> 及 <color=#FCCE03FF>Gendelo</color> 製作模組
 由 <color=#FCCE03FF>Bavari</color> 設計      由 <color=#00d3ff>bluegreensea(青海)</color> 繁體中文化      由 <color=#ffca18>JL漢化組</color> 提供中文化按鈕";
 
         public static string contributorsCredentials =

@@ -30,7 +30,7 @@
         <PackageReference Include="Reactor" Version="2.0.0" />
     </ItemGroup>	
 
-    <Target Name="Date" BeforeTargets="BeforeBuild">  <!--Will make the compile time available s.t. we can let betas expire-->
+    <Target Name="Date" BeforeTargets="CoreCompile">  <!--Will make the compile time available s.t. we can let betas expire-->
     <WriteLinesToFile File="$(IntermediateOutputPath)gen.cs" Lines="static partial class Builtin { public static long CompileTime = $([System.DateTime]::UtcNow.Ticks) %3B }" Overwrite="true" />
     <ItemGroup>
         <Compile Include="$(IntermediateOutputPath)gen.cs" />

@@ -15,17 +15,17 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 更多職業即將推出。 :)
 
 | 偽裝者 | 船員 | 獨立 | 特殊標籤 | 遊戲模式 |
-|----------|------------|-----------------|--------------|----------------|
-| [教父 (黑手黨)](#黑手黨) | [市長](#市長) | [小丑](#小丑) | [血族](#血族) | [Classic](#roles) |
-| [黑手黨員 (黑手黨)](#黑手黨) | [工程師](#工程師) | [縱火狂](#縱火狂) | [反傳送](#反傳送) | [Guesser](#guesser-modifier) |
-| [守墓人 (黑手黨)](#黑手黨) | [警長](#警長) | [豺狼](#豺狼) | [決勝者](#決勝者) | [Hide 'n Seek](#hide-n-seek) |
+|----------|-------------|-----------------|----------------|----------------|
+| [教父 (黑手黨)](#黑手黨) | [市長](#市長) | [小丑](#小丑) | [血族](#血族) | [經典](#職業) |
+| [黑手黨員 (黑手黨)](#黑手黨) | [工程師](#工程師) | [縱火狂](#縱火狂) | [反傳送](#反傳送) | [賭徒](#特殊賭徒) |
+| [守墓人 (黑手黨)](#黑手黨) | [警長](#警長) | [豺狼](#豺狼) | [決勝者](#決勝者) | [躲貓貓](#躲貓貓) |
 | [百變怪](#百變怪) | [警員](#警員) | [跟班](#跟班) | [誘餌](#誘餌) |
 | [魔術師](#魔術師) | [點燈人](#點燈人) | [禿鷲](#禿鷲) | [戀人](#戀人) |
 | [吸血鬼](#吸血鬼) | [偵探](#偵探) | [律師](#律師) | [墨鏡](#墨鏡) |
 | [抹除者](#抹除者) | [時間管理大師](#時間管理大師) | [檢察官](#檢察官) | [迷你](#迷你) |
 | [詭騙師](#詭騙師) | [醫生](#醫生) | [原告](#原告) | [VIP](#vip) |
-| [清道夫](#清道夫) | [換票師](#換票師) | [Thief](#thief) | [反轉](#反轉) |
-| [咒詛師](#咒詛師) | [靈媒](#靈媒) |  | [Chameleon](#chameleon) |
+| [清道夫](#清道夫) | [換票師](#換票師) | [小偷](#小偷) | [反轉](#反轉) |
+| [咒詛師](#咒詛師) | [靈媒](#靈媒) |  | [變色龍](#變色龍) |
 | [賞金獵人](#賞金獵人) | [駭客](#駭客) |  | [轉職師](#轉職師)
 | [巫師](#巫師) | [追踪者](#追踪者) |  |  |
 | [忍者](#忍者) | [密探](#密探) |  |  |
@@ -33,7 +33,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 |  | [傳送師](#傳送師) |  |  |
 |  | [守衛](#守衛) |  |  |
 |  | [通靈師](#通靈師) |  |  |
-|  | [Trapper](#trapper) |  |  |
+|  | [陷阱師](#陷阱師) |  |  |
 |  | [好賭徒](#賭徒) |  |  |
 |  |  |  |
 
@@ -992,7 +992,7 @@ The Warlock can still perform normal kills, but the two buttons share the same c
 - 被下蠱的玩家將在被投票的玩家死亡之前死亡(這可能會觸發例如偽裝者獲勝條件，即使女巫是被投票的那個)
 
 ### 遊戲選項
-| 名稱         | 描述 |
+| 名稱 | 描述 |
 |----------|:-------------:|
 | 巫師生成機率 | -
 | 巫師施術冷卻時間 | -
@@ -1223,15 +1223,15 @@ If the Prosecutor's client dies, the Prosecutor changes their role and becomes t
 如果殺手發射空包彈不會觸發任何盾(例如醫生盾或時間管理大師盾)。
 原告有任務(在律師/檢察官時就可以做)，這些任務計入船員的任務勝利。如果原告死了，他們的任務將不被計算在內。
 
-### Game Options
-| Name | Description |
+### 遊戲選項
+| 名稱 | 描述 |
 |----------|:-------------:|
-| Pursuer Blank Cooldown | -
-| Pursuer Number Of Blanks | -
+| 原告填空冷卻 | -
+| 原告填空次數 | -
 -----------------------
 
-## Thief
-### **Team: Neutral**
+## 小偷
+### **隊伍:獨立**
 The Thief has to kill another killer (Impostor, Jackal/Sidekick and if enabled Sheriff)
 in order to have a win condition.\
 If the Thief doesn't kill another killer they will lose the game.\
@@ -1244,8 +1244,8 @@ If the Thief tries to kill any non-killing role (Crewmate or Neutral), they die 
   the Sheriff. While the Thief hasn't fired, their tasks do not count towards the taskwin.
 - If the option "Thief Can Kill Sheriff" is Off, the Thief will not have tasks.
 
-### Game Options
-| Name | Description |
+### 遊戲選項
+| 名稱 | 描述 |
 |----------|:-------------:|
 | Thief Spawn Chance | -
 | Thief Countdown | -
@@ -1303,7 +1303,7 @@ Because of the vents the Engineer might not be able to start some tasks using th
 |----------|:-------------:|
 | 警長生成機率 | -
 | 警長冷卻 | -
-| 警長射殺獨立職業 | -
+| 警長可以殺死獨立職業 | -
 | 警長有個警員 | 沒有警長警員不會在遊戲中
 -----------------------
 
@@ -1612,8 +1612,8 @@ There are two possibilities (depending on the set options):
 | 每個靈魂只能被詢問一次 | 如果設置為開，靈魂只能被詢問一次然後消失
 -----------------------
 
-## Trapper
-### **Team: Crewmates**
+## 陷阱師
+### **隊伍: 船員**
 The Trapper is a crewmate which can set up traps to trap player and gain information from them.\
 The traps will stuck player for x-seconds (depends on the setting) and reveal information in chat
 about their "Role", if they are a "Good/Evil Role" or their "Name".\
@@ -1626,17 +1626,17 @@ The traps have a maximum of charges (uses) and a configurable amount of tasks ar
 **NOTE:**
 - The Trapper can't be trapped in their own trap(s).
 
-### Game Options
-| Name | Description
+### 遊戲選項
+| 名稱 | 描述
 |----------|:-------------:|
-| Trapper Spawn Chance | -
-| Trapper Cooldown | -
-| Max Traps Charges | -
-| Number Of Tasks Needed For Recharging | -
-| Trap Needed Trigger To Reveal | -
-| Show Anonymous Map | -
-| Trap Information Type | "Name", "Role", "Good/Evil Role"
-| Trap Duration | -
+| 陷阱師生成機率 | -
+| 陷阱師冷卻 | -
+| 最大陷阱師充能 | -
+| 充能所需要的任務數 | -
+| 陷阱需要被觸發才能顯示 | -
+| 顯示匿名地圖 | -
+| 陷阱資訊類型 | "名稱", "職業", "職業好/壞"
+| 陷阱持續時間 | -
 -----------------------
 
 # 特殊標籤
@@ -1817,37 +1817,37 @@ VIP會在他死時向所有人發出類似於靈媒閃光的閃爍。\
 | 反轉數量 | -
 -----------------------
 
-## Chameleon
+## 變色龍
 
-The Chameleon becomes (partially or fully) invisible when standing still for x-seconds (depends on the settings).\
+當靜止站立 x 秒(取決於選項)時，變色龍變得(部分或完全)不可見。\
 \
 **NOTE**
-- You can use abilities while being invisible, only moving will make you visible again
-- Impostor, Neutral or Crewmate roles can have this Modifier
+- 你有能隱形的能力，只有移動才能讓你再次可見
+- 偽裝者、獨立或船員都可以擁有這個標籤。
 
-### Game Options
-| Name | Description
+### 遊戲選項
+| 名稱 | 描述
 |----------|:-------------:|
-| Chameleon Spawn Chance | -
-| Chameleon Quantity | -
-| Time Until Fading Starts | -
-| Fade Duration | - 
-| Minimum Visibility | -
+| 變色龍生成機率 | -
+| 變色龍數量 | -
+| 淡出需要靜止的時間 | -
+| 淡出持續時間 | - 
+| 最低能見度 | -
 -----------------------
 
 ## 轉職師
 
-The Shifter is a Modifier that can shift with another player. If the other player is Crewmate as well, they will swap their roles.\
-Swapping roles with an Impostor or Neutral fails and the Shifter commits suicide after the next meeting (there won't be a body).\
-The Shift will always be performed at the end of the next meeting right before a player is exiled. The target needs to be chosen during the round.\
-Even if the Shifter or the target dies before the meeting, the Shift will still be performed.\
+轉職師是一種特殊標籤，可以與其他玩家互換職業。如果另一個玩家也是船員，他們將成功互換職業。\
+與偽裝者或獨立職業轉移職業將失敗，並且轉職師會在下次會議自殺(不會有屍體)。\
+轉移在會議結束後玩家被票出前執行。需要在遊玩中選擇目標。\
+即使轉職師或目標在會議前死亡，轉移仍然會執行。\
 \
 **NOTE:**
-- The Shifter shift will always be triggered before the Erase (hence either the new role of the Shifter will be erased or the Shifter gets the role of their target, depending on whom the Eraser erased)
-- One time use abilities (e.g. shielding a player or Engineer sabotage fix) can only used by one player in the game (i.e. the Shifter
-  can only use them, if the previous player did not use them before)
-- The Shifter button is located in the bottom left corner right next to the garlic button (if the Vampire is enabled)
-- Only a Crewmate role can have this Modifier
+- 轉職師將始終在抹除之前轉移 (因此轉職師的新職業被抹除/能轉移成其目標的職業，取決於抹除者抹除的對象)
+- 一次性使用能力 (例如上盾玩家或工程師破壞修復) 只能由遊戲中的一名玩家使用 (即原本的玩家之前沒有使用，
+  轉職師才能使用)
+- 轉職師按鈕位於左下角的大蒜按鈕旁邊(如果啟用了吸血鬼)
+- 只有船員可以擁有這個標籤。
 
 ### 遊戲選項
 | 名稱 | 描述
@@ -1857,44 +1857,44 @@ Even if the Shifter or the target dies before the meeting, the Shift will still 
 
 # 遊戲模式
 
-## Guesser Modifier
-The **Guesser-Gamemode** is an extension to the Classic-Gamemode and gives you a multitude of new options for Guessers.\
-The Guesser is now like an addition and can be applied to all players IF you want to. Settings are available to set the number of guessers for each team separately (Impostor, Neutral, Crewmate).\
-When playing this game mode, the Guessers can have another role (e.g. Medic Guesser). The same
-applies of course for Impostor and/or Neutral roles.\
-Players can additionally have a modifier, if enabled (e.g. Medic Guesser Mini).
+## 特殊賭徒
+**賭徒模式** 是經典模式的擴充，提供了許多賭徒的新選擇。\
+賭徒現在就像一個附加能力，可以根據需要應用於所有玩家。選項可用於分別設定每個團隊的賭徒數量(偽裝者、獨立、船員)。\
+在玩此遊戲模式時，賭徒可以有另一個直接(例如醫生賭徒)。當然，
+這同樣適用於偽裝者和/或獨立職業。\
+如果啟用，玩家還可以擁有一個特殊標籤(例如迷你醫生賭徒)。
 
-### Game Options
-| Name | Description
+### 遊戲選項
+| 名稱 | 描述
 |----------|:-------------:|
-| Number of Crew Guessers | -
-| Number of Neutral Guessers | -
-| Number of Impostor Guessers | -
-| Force Jackal Guesser | If set to "On", the first neutral role who will be Guesser is the Jackal. 
-| Guessers Can Have A Modifier | -
-| Guesser Number Of Shots | -
-| Guesser Can Shoot Multiple Times Per Meeting | -
-| Guesses Ignore The Medic Shield | -
-| Evil Guesser Can Guess The Spy | -
-| Guesser Can't Guess Snitch When Tasks Completed | -
+| 船員賭徒人數 | -
+| 獨立賭徒人數 | -
+| 偽裝者賭徒人數 | -
+| 強制豺狼賭徒 | 如果設為"開"，第一個將成為賭徒的獨立職業是豺狼 
+| 賭徒們可有特殊標籤 | -
+| 賭徒可猜測次數 | -
+| 賭徒在每次會議可猜測多次 | -
+| 賭徒忽略醫生盾 | -
+| 壞賭徒可猜出間諜 | -
+| 當密探完成任務後賭徒不可猜出 | -
 -----------------------
 
 **NOTE**
-- If a Crewmate Guesser gets sidekicked, they will remain a Guesser even if the host (maybe) has set up only 1 "Neutral role Guesser".
+- 如果船員賭徒被招募，即使主持人(可能)僅設置了 1 個"獨立賭徒"，他們仍將成為賭徒。
 
-## Hide 'n Seek
-The **Hide 'n Seek-Gamemode** is a standalone Gamemode where Hunter have to catch their prey ("Hunted" players).\
+## 躲貓貓
+The **躲貓貓模式** is a standalone Gamemode where Hunter have to catch their prey ("Hunted" players).\
 The Hunter and Hunted player who are still alive are displayed to everyone in the bottom left corner (similar to the Arsonist display).\
 When the game starts, the Hunter's movement is disabled for x-seconds (depends on the settings).\
 There is a time-limit for each round, if the timer runs out and at least one Hunted is still alive, the Crew wins. The Hunted players can also win, if Taskwin is enabled and the Crew completes all tasks.\
 If the Hunters kill all players before one of these conditions is triggered, the Hunters win.\
 
-#### Hunter Abilities:
+#### 獵人能力:
 - Enable arrows (arrows point to all Hunted players for x-seconds (depending on settings))
 - Mobile Admin table (like Hacker)
 - Lighter ability (gives the Hunter a biggier vision radius for x-seconds (depending on settings))
 
-#### Hunted Ability:
+#### 獵物能力:
 - Timeshield (like Timemaster, depending on settings)
 
 Each Hunter action or finished Crew task will lower the timer by a configurable amount of time.\
@@ -1905,22 +1905,22 @@ Each Hunter action or finished Crew task will lower the timer by a configurable 
 - The tasks can be configured separately for this mode, without affecting your normal game settings.
 - Only the Hunter will be rewinded if they try to kill a player with an active timeshield.
 
-### Game Options
-| General | Description | Hunter | Description | Hunted | Description |
+### 遊戲選項
+| General | 描述 | 獵人 | 描述 | 獵物 | 描述 |
 |----------|:-------------:|----------|:-------------:|----------|:-------------:|
-| Map | -                                | Hunter Light Cooldown | -                  | Hunted Shield Cooldown | -
-| Number Of Hunters | -                  | Hunter Light Duration | -                  | Hunted Shield Duration | -
-| Kill Cooldown | -                      | Hunter Light Vision | -                    | Hunted Rewind Time | -
-| Hunter Vision | -                      | Hunter Light Punish in Sec | -             | Hunted Shield Number | -
-| Hunted Vision | -                      | Hunter Admin Cooldown | -
-| Common Tasks | -                       | Hunter Admin Duration | -
-| Short Tasks | -                        | Hunter Admin Punish In Sec | -
-| Long Tasks | -                         | Hunter Arrow Cooldown | -
-| Timer In Min | -                       | Hunter Arrow Duration | -
-| Task Win Is Possible | -               | Hunter Arrow Punish In Sec | -
-| Finish Tasks Punish In Sec | -
-| Enable Sabotages | -
-| Time The Hunter Needs To Wait | -
+| 地圖 | -                                | Hunter Light Cooldown | -                  | Hunted Shield Cooldown | -
+| 獵人數量 | -                  | Hunter Light Duration | -                  | Hunted Shield Duration | -
+| 殺人冷卻時間 | -                      | Hunter Light Vision | -                    | Hunted Rewind Time | -
+| 獵人視野 | -                      | Hunter Light Punish in Sec | -             | Hunted Shield Number | -
+| 獵物視野 | -                      | Hunter Admin Cooldown | -
+| 普通任務數 | -                       | Hunter Admin Duration | -
+| 短任務數 | -                        | Hunter Admin Punish In Sec | -
+| 長任務數 | -                         | Hunter Arrow Cooldown | -
+| 倒數計時(分) | -                       | Hunter Arrow Duration | -
+| 任務獲勝 | -               | Hunter Arrow Punish In Sec | -
+| 完成任務懲罰(秒) | -
+| 啟用破壞 | -
+| 獵人釋放等待時間 | -
 
 # 原始碼
 You can use parts of the code but don't copy paste the whole thing. Make sure you give credits to the other developers, because some parts of the code are based on theirs.

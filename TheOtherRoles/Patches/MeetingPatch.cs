@@ -599,13 +599,13 @@ namespace TheOtherRoles.Patches {
                 if (Trapper.trapper != null && CachedPlayer.LocalPlayer.PlayerControl == Trapper.trapper) {
                     foreach (Trap trap in Trap.traps) {
                         if (!trap.revealed) continue;
-                        string message = $"Trap {trap.instanceId}: \n";
+                        string message = $"陷阱 {trap.instanceId}: \n";
                         trap.trappedPlayer = trap.trappedPlayer.OrderBy(x => rnd.Next()).ToList();
                         foreach (PlayerControl p in trap.trappedPlayer) {
                             if (Trapper.infoType == 0) message += RoleInfo.GetRolesString(p, false, false) + "\n";
                             else if (Trapper.infoType == 1) {
-                                if (Helpers.isNeutral(p) || p.Data.Role.IsImpostor) message += "Evil Role \n";
-                                else message += "Good Role \n";
+                                if (Helpers.isNeutral(p) || p.Data.Role.IsImpostor) message += "壞職業 \n";
+                                else message += "好職業 \n";
                             }
                             else message += p.Data.PlayerName + "\n";
                         }

@@ -492,7 +492,7 @@ namespace TheOtherRoles {
 
             sheriffSpawnRate = CustomOption.Create(100, Types.Crewmate, cs(Sheriff.color, "警長"), rates, null, true);
             sheriffCooldown = CustomOption.Create(101, Types.Crewmate, "警長冷卻", 30f, 10f, 60f, 2.5f, sheriffSpawnRate);
-            sheriffCanKillNeutrals = CustomOption.Create(102, Types.Crewmate, "警長可擊殺獨立職業", false, sheriffSpawnRate);
+            sheriffCanKillNeutrals = CustomOption.Create(102, Types.Crewmate, "警長可以殺死獨立職業", false, sheriffSpawnRate);
             deputySpawnRate = CustomOption.Create(103, Types.Crewmate, "警長有個警員", rates, sheriffSpawnRate);
             deputyNumberOfHandcuffs = CustomOption.Create(104, Types.Crewmate, "警員手銬數量", 3f, 1f, 10f, 1f, deputySpawnRate);
             deputyHandcuffCooldown = CustomOption.Create(105, Types.Crewmate, "上銬冷卻", 30f, 10f, 60f, 2.5f, deputySpawnRate);
@@ -560,7 +560,7 @@ namespace TheOtherRoles {
             snitchTeamJackalUseDifferentArrowColor = CustomOption.Create(213, Types.Crewmate, "對豺狼團隊使用不同顏色的箭頭", true, snitchIncludeTeamJackal);
 
             spySpawnRate = CustomOption.Create(240, Types.Crewmate, cs(Spy.color, "間諜"), rates, null, true);
-            spyCanDieToSheriff = CustomOption.Create(241, Types.Crewmate, "間諜可被警長殺死", false, spySpawnRate);
+            spyCanDieToSheriff = CustomOption.Create(241, Types.Crewmate, "間諜可以被警長殺死", false, spySpawnRate);
             spyImpostorsCanKillAnyone = CustomOption.Create(242, Types.Crewmate, "如果偽裝者中有間諜可以殺死任何人", true, spySpawnRate);
             spyCanEnterVents = CustomOption.Create(243, Types.Crewmate, "間諜可進入通風口", false, spySpawnRate);
             spyHasImpostorVision = CustomOption.Create(244, Types.Crewmate, "間諜有偽裝者視野", false, spySpawnRate);
@@ -586,20 +586,20 @@ namespace TheOtherRoles {
             mediumDuration = CustomOption.Create(362, Types.Crewmate, "通靈師詢問持續時間", 3f, 0f, 15f, 1f, mediumSpawnRate);
             mediumOneTimeUse = CustomOption.Create(363, Types.Crewmate, "每個靈魂只能被詢問一次", false, mediumSpawnRate);
 
-            thiefSpawnRate = CustomOption.Create(400, Types.Neutral, cs(Thief.color, "Thief"), rates, null, true);
-            thiefCooldown = CustomOption.Create(401, Types.Neutral, "Thief Cooldown", 30f, 5f, 120f, 5f, thiefSpawnRate);
-            thiefCanKillSheriff = CustomOption.Create(402, Types.Neutral, "Thief Can Kill Sheriff", true, thiefSpawnRate);
-            thiefHasImpVision = CustomOption.Create(403, Types.Neutral, "Thief Has Impostor Vision", true, thiefSpawnRate);
-            thiefCanUseVents = CustomOption.Create(404, Types.Neutral, "Thief Can Use Vents", true, thiefSpawnRate);
+            thiefSpawnRate = CustomOption.Create(400, Types.Neutral, cs(Thief.color, "小偷"), rates, null, true);
+            thiefCooldown = CustomOption.Create(401, Types.Neutral, "小偷冷卻", 30f, 5f, 120f, 5f, thiefSpawnRate);
+            thiefCanKillSheriff = CustomOption.Create(402, Types.Neutral, "小偷可以殺死警長", true, thiefSpawnRate);
+            thiefHasImpVision = CustomOption.Create(403, Types.Neutral, "小偷有偽裝者視野", true, thiefSpawnRate);
+            thiefCanUseVents = CustomOption.Create(404, Types.Neutral, "小偷可使用通風口", true, thiefSpawnRate);
 
-            trapperSpawnRate = CustomOption.Create(410, Types.Crewmate, cs(Trapper.color, "Trapper"), rates, null, true);
-            trapperCooldown = CustomOption.Create(420, Types.Crewmate, "Trapper Cooldown", 30f, 5f, 120f, 5f, trapperSpawnRate);
-            trapperMaxCharges = CustomOption.Create(440, Types.Crewmate, "Max Traps Charges", 5f, 1f, 15f, 1f, trapperSpawnRate);
-            trapperRechargeTasksNumber = CustomOption.Create(450, Types.Crewmate, "Number Of Tasks Needed For Recharging", 2f, 1f, 15f, 1f, trapperSpawnRate);
-            trapperTrapNeededTriggerToReveal = CustomOption.Create(451, Types.Crewmate, "Trap Needed Trigger To Reveal", 3f, 2f, 10f, 1f, trapperSpawnRate);
-            trapperAnonymousMap = CustomOption.Create(452, Types.Crewmate, "Show Anonymous Map", false, trapperSpawnRate);
-            trapperInfoType = CustomOption.Create(453, Types.Crewmate, "Trap Information Type", new string[] { "Role", "Good/Evil Role", "Name" }, trapperSpawnRate);
-            trapperTrapDuration = CustomOption.Create(454, Types.Crewmate, "Trap Duration", 5f, 1f, 15f, 1f, trapperSpawnRate);
+            trapperSpawnRate = CustomOption.Create(410, Types.Crewmate, cs(Trapper.color, "陷阱師"), rates, null, true);
+            trapperCooldown = CustomOption.Create(420, Types.Crewmate, "陷阱師冷卻", 30f, 5f, 120f, 5f, trapperSpawnRate);
+            trapperMaxCharges = CustomOption.Create(440, Types.Crewmate, "最大陷阱師充能", 5f, 1f, 15f, 1f, trapperSpawnRate);
+            trapperRechargeTasksNumber = CustomOption.Create(450, Types.Crewmate, "充能所需要的任務數", 2f, 1f, 15f, 1f, trapperSpawnRate);
+            trapperTrapNeededTriggerToReveal = CustomOption.Create(451, Types.Crewmate, "陷阱需要被觸發才能顯示", 3f, 2f, 10f, 1f, trapperSpawnRate);
+            trapperAnonymousMap = CustomOption.Create(452, Types.Crewmate, "顯示匿名地圖", false, trapperSpawnRate);
+            trapperInfoType = CustomOption.Create(453, Types.Crewmate, "陷阱資訊類型", new string[] { "職業", "職業好/壞", "名稱" }, trapperSpawnRate);
+            trapperTrapDuration = CustomOption.Create(454, Types.Crewmate, "陷阱持續時間", 5f, 1f, 15f, 1f, trapperSpawnRate);
 
             // Modifier (1000 - 1999)
             modifiersAreHidden = CustomOption.Create(1009, Types.Modifier, cs(Color.yellow, "死後隱藏標籤"), true, null, true);
@@ -640,56 +640,56 @@ namespace TheOtherRoles {
             modifierInvertQuantity = CustomOption.Create(1081, Types.Modifier, cs(Color.yellow, "反轉數量"), ratesModifier, modifierInvert);
             modifierInvertDuration = CustomOption.Create(1082, Types.Modifier, "反轉的會議次數", 3f, 1f, 15f, 1f, modifierInvert);
 
-            modifierChameleon = CustomOption.Create(1090, Types.Modifier, cs(Color.yellow, "Chameleon"), rates, null, true);
-            modifierChameleonQuantity = CustomOption.Create(1091, Types.Modifier, cs(Color.yellow, "Chameleon Quantity"), ratesModifier, modifierChameleon);
-            modifierChameleonHoldDuration = CustomOption.Create(1092, Types.Modifier, "Time Until Fading Starts", 3f, 1f, 10f, 0.5f, modifierChameleon);
-            modifierChameleonFadeDuration = CustomOption.Create(1093, Types.Modifier, "Fade Duration", 1f, 0.25f, 10f, 0.25f, modifierChameleon);
-            modifierChameleonMinVisibility = CustomOption.Create(1094, Types.Modifier, "Minimum Visibility", new string[] { "0%", "10%", "20%", "30%", "40%", "50%" }, modifierChameleon);
+            modifierChameleon = CustomOption.Create(1090, Types.Modifier, cs(Color.yellow, "變色龍"), rates, null, true);
+            modifierChameleonQuantity = CustomOption.Create(1091, Types.Modifier, cs(Color.yellow, "變色龍數量"), ratesModifier, modifierChameleon);
+            modifierChameleonHoldDuration = CustomOption.Create(1092, Types.Modifier, "淡出需要靜止的時間", 3f, 1f, 10f, 0.5f, modifierChameleon);
+            modifierChameleonFadeDuration = CustomOption.Create(1093, Types.Modifier, "淡出持續時間", 1f, 0.25f, 10f, 0.25f, modifierChameleon);
+            modifierChameleonMinVisibility = CustomOption.Create(1094, Types.Modifier, "最低能見度", new string[] { "0%", "10%", "20%", "30%", "40%", "50%" }, modifierChameleon);
 
             modifierShifter = CustomOption.Create(1100, Types.Modifier, cs(Color.yellow, "轉職師"), rates, null, true);
 
             // Guesser Gamemode (2000 - 2999)
-            guesserGamemodeCrewNumber = CustomOption.Create(2001, Types.Guesser, cs(Guesser.color, "Number of Crew Guessers"), 15f, 1f, 15f, 1f, null, true);
-            guesserGamemodeNeutralNumber = CustomOption.Create(2002, Types.Guesser, cs(Guesser.color, "Number of Neutral Guessers"), 15f, 1f, 15f, 1f, null, true);
-            guesserGamemodeImpNumber = CustomOption.Create(2003, Types.Guesser, cs(Guesser.color, "Number of Impostor Guessers"), 15f, 1f, 15f, 1f, null, true);
-            guesserForceJackalGuesser = CustomOption.Create(2007, Types.Guesser, "Force Jackal Guesser", false, null, true);
-            guesserGamemodeHaveModifier = CustomOption.Create(2004, Types.Guesser, "Guessers Can Have A Modifier", true, null);
-            guesserGamemodeNumberOfShots = CustomOption.Create(2005, Types.Guesser, "Guesser Number Of Shots", 3f, 1f, 15f, 1f, null);
-            guesserGamemodeHasMultipleShotsPerMeeting = CustomOption.Create(2006, Types.Guesser, "Guesser Can Shoot Multiple Times Per Meeting", false, null);
-            guesserGamemodeKillsThroughShield = CustomOption.Create(2008, Types.Guesser, "Guesses Ignore The Medic Shield", true, null);
-            guesserGamemodeEvilCanKillSpy = CustomOption.Create(2009, Types.Guesser, "Evil Guesser Can Guess The Spy", true, null);
-            guesserGamemodeCantGuessSnitchIfTaksDone = CustomOption.Create(2010, Types.Guesser, "Guesser Can't Guess Snitch When Tasks Completed", true, null);
+            guesserGamemodeCrewNumber = CustomOption.Create(2001, Types.Guesser, cs(Guesser.color, "船員賭徒人數"), 15f, 1f, 15f, 1f, null, true);
+            guesserGamemodeNeutralNumber = CustomOption.Create(2002, Types.Guesser, cs(Guesser.color, "獨立賭徒人數"), 15f, 1f, 15f, 1f, null, true);
+            guesserGamemodeImpNumber = CustomOption.Create(2003, Types.Guesser, cs(Guesser.color, "偽裝者賭徒人數"), 15f, 1f, 15f, 1f, null, true);
+            guesserForceJackalGuesser = CustomOption.Create(2007, Types.Guesser, "強制豺狼賭徒", false, null, true);
+            guesserGamemodeHaveModifier = CustomOption.Create(2004, Types.Guesser, "賭徒們可有特殊標籤", true, null);
+            guesserGamemodeNumberOfShots = CustomOption.Create(2005, Types.Guesser, "賭徒可猜測次數", 3f, 1f, 15f, 1f, null);
+            guesserGamemodeHasMultipleShotsPerMeeting = CustomOption.Create(2006, Types.Guesser, "賭徒在每次會議可猜測多次", false, null);
+            guesserGamemodeKillsThroughShield = CustomOption.Create(2008, Types.Guesser, "賭徒忽略醫生盾", true, null);
+            guesserGamemodeEvilCanKillSpy = CustomOption.Create(2009, Types.Guesser, "壞賭徒可猜出間諜", true, null);
+            guesserGamemodeCantGuessSnitchIfTaksDone = CustomOption.Create(2010, Types.Guesser, "當密探完成任務後賭徒不可猜出", true, null);
 
             // Hide N Seek Gamemode (3000 - 3999)
-            hideNSeekMap = CustomOption.Create(3020, Types.HideNSeekMain, cs(Color.yellow, "Map"), new string[] { "The Skeld", "Mira", "Polus", "Airship", "Submerged" }, null, true);
-            hideNSeekHunterCount = CustomOption.Create(3000, Types.HideNSeekMain, cs(Color.yellow, "Number Of Hunters"), 1f, 1f, 3f, 1f);
-            hideNSeekKillCooldown = CustomOption.Create(3021, Types.HideNSeekMain, cs(Color.yellow, "Kill Cooldown"), 10f, 2.5f, 60f, 2.5f);
-            hideNSeekHunterVision = CustomOption.Create(3001, Types.HideNSeekMain, cs(Color.yellow, "Hunter Vision"), 0.5f, 0.25f, 2f, 0.25f);
-            hideNSeekHuntedVision = CustomOption.Create(3002, Types.HideNSeekMain, cs(Color.yellow, "Hunted Vision"), 2f, 0.25f, 5f, 0.25f);
-            hideNSeekCommonTasks = CustomOption.Create(3023, Types.HideNSeekMain, cs(Color.yellow, "Common Tasks"), 1f, 0f, 4f, 1f);
-            hideNSeekShortTasks = CustomOption.Create(3024, Types.HideNSeekMain, cs(Color.yellow, "Short Tasks"), 3f, 1f, 23f, 1f);
-            hideNSeekLongTasks = CustomOption.Create(3025, Types.HideNSeekMain, cs(Color.yellow, "Long Tasks"), 3f, 0f, 15f, 1f);
-            hideNSeekTimer = CustomOption.Create(3003, Types.HideNSeekMain, cs(Color.yellow, "Timer In Min"), 5f, 1f, 30f, 1f);
-            hideNSeekTaskWin = CustomOption.Create(3004, Types.HideNSeekMain, cs(Color.yellow, "Task Win Is Possible"), false);
-            hideNSeekTaskPunish = CustomOption.Create(3017, Types.HideNSeekMain, cs(Color.yellow, "Finish Tasks Punish In Sec"), 10f, 0f, 30f, 1f);
-            hideNSeekCanSabotage = CustomOption.Create(3019, Types.HideNSeekMain, cs(Color.yellow, "Enable Sabotages"), false);
-            hideNSeekHunterWaiting = CustomOption.Create(3022, Types.HideNSeekMain, cs(Color.yellow, "Time The Hunter Needs To Wait"), 15f, 2.5f, 60f, 2.5f);
+            hideNSeekMap = CustomOption.Create(3020, Types.HideNSeekMain, cs(Color.yellow, "地圖"), new string[] { "The Skeld", "Mira", "Polus", "Airship", "Submerged" }, null, true);
+            hideNSeekHunterCount = CustomOption.Create(3000, Types.HideNSeekMain, cs(Color.yellow, "獵人數量"), 1f, 1f, 3f, 1f);
+            hideNSeekKillCooldown = CustomOption.Create(3021, Types.HideNSeekMain, cs(Color.yellow, "殺人冷卻時間"), 10f, 2.5f, 60f, 2.5f);
+            hideNSeekHunterVision = CustomOption.Create(3001, Types.HideNSeekMain, cs(Color.yellow, "獵人視野"), 0.5f, 0.25f, 2f, 0.25f);
+            hideNSeekHuntedVision = CustomOption.Create(3002, Types.HideNSeekMain, cs(Color.yellow, "獵物視野"), 2f, 0.25f, 5f, 0.25f);
+            hideNSeekCommonTasks = CustomOption.Create(3023, Types.HideNSeekMain, cs(Color.yellow, "普通任務數"), 1f, 0f, 4f, 1f);
+            hideNSeekShortTasks = CustomOption.Create(3024, Types.HideNSeekMain, cs(Color.yellow, "短任務數"), 3f, 1f, 23f, 1f);
+            hideNSeekLongTasks = CustomOption.Create(3025, Types.HideNSeekMain, cs(Color.yellow, "長任務數"), 3f, 0f, 15f, 1f);
+            hideNSeekTimer = CustomOption.Create(3003, Types.HideNSeekMain, cs(Color.yellow, "倒數計時(分)"), 5f, 1f, 30f, 1f);
+            hideNSeekTaskWin = CustomOption.Create(3004, Types.HideNSeekMain, cs(Color.yellow, "任務獲勝"), false);
+            hideNSeekTaskPunish = CustomOption.Create(3017, Types.HideNSeekMain, cs(Color.yellow, "完成任務懲罰(秒)"), 10f, 0f, 30f, 1f);
+            hideNSeekCanSabotage = CustomOption.Create(3019, Types.HideNSeekMain, cs(Color.yellow, "啟用破壞"), false);
+            hideNSeekHunterWaiting = CustomOption.Create(3022, Types.HideNSeekMain, cs(Color.yellow, "獵人釋放等待時間"), 15f, 2.5f, 60f, 2.5f);
 
-            hunterLightCooldown = CustomOption.Create(3005, Types.HideNSeekRoles, cs(Color.red, "Hunter Light Cooldown"), 30f, 5f, 60f, 1f, null, true);
-            hunterLightDuration = CustomOption.Create(3006, Types.HideNSeekRoles, cs(Color.red, "Hunter Light Duration"), 5f, 1f, 60f, 1f);
-            hunterLightVision = CustomOption.Create(3007, Types.HideNSeekRoles, cs(Color.red, "Hunter Light Vision"), 3f, 1f, 5f, 0.25f);
-            hunterLightPunish = CustomOption.Create(3008, Types.HideNSeekRoles, cs(Color.red, "Hunter Light Punish In Sec"), 5f, 0f, 30f, 1f);
-            hunterAdminCooldown = CustomOption.Create(3009, Types.HideNSeekRoles, cs(Color.red, "Hunter Admin Cooldown"), 30f, 5f, 60f, 1f);
-            hunterAdminDuration = CustomOption.Create(3010, Types.HideNSeekRoles, cs(Color.red, "Hunter Admin Duration"), 5f, 1f, 60f, 1f);
-            hunterAdminPunish = CustomOption.Create(3011, Types.HideNSeekRoles, cs(Color.red, "Hunter Admin Punish In Sec"), 5f, 0f, 30f, 1f);
-            hunterArrowCooldown = CustomOption.Create(3012, Types.HideNSeekRoles, cs(Color.red, "Hunter Arrow Cooldown"), 30f, 5f, 60f, 1f);
-            hunterArrowDuration = CustomOption.Create(3013, Types.HideNSeekRoles, cs(Color.red, "Hunter Arrow Duration"), 5f, 0f, 60f, 1f);
-            hunterArrowPunish = CustomOption.Create(3014, Types.HideNSeekRoles, cs(Color.red, "Hunter Arrow Punish In Sec"), 5f, 0f, 30f, 1f);
+            hunterLightCooldown = CustomOption.Create(3005, Types.HideNSeekRoles, cs(Color.red, "獵人點燈冷卻"), 30f, 5f, 60f, 1f, null, true);
+            hunterLightDuration = CustomOption.Create(3006, Types.HideNSeekRoles, cs(Color.red, "獵人點燈持續時間"), 5f, 1f, 60f, 1f);
+            hunterLightVision = CustomOption.Create(3007, Types.HideNSeekRoles, cs(Color.red, "獵人點燈視野"), 3f, 1f, 5f, 0.25f);
+            hunterLightPunish = CustomOption.Create(3008, Types.HideNSeekRoles, cs(Color.red, "獵人點燈懲罰(秒)"), 5f, 0f, 30f, 1f);
+            hunterAdminCooldown = CustomOption.Create(3009, Types.HideNSeekRoles, cs(Color.red, "獵人管理冷卻"), 30f, 5f, 60f, 1f);
+            hunterAdminDuration = CustomOption.Create(3010, Types.HideNSeekRoles, cs(Color.red, "獵人管理持續時間"), 5f, 1f, 60f, 1f);
+            hunterAdminPunish = CustomOption.Create(3011, Types.HideNSeekRoles, cs(Color.red, "獵人管理懲罰(秒)"), 5f, 0f, 30f, 1f);
+            hunterArrowCooldown = CustomOption.Create(3012, Types.HideNSeekRoles, cs(Color.red, "獵人箭頭冷卻"), 30f, 5f, 60f, 1f);
+            hunterArrowDuration = CustomOption.Create(3013, Types.HideNSeekRoles, cs(Color.red, "獵人箭頭持續時間"), 5f, 0f, 60f, 1f);
+            hunterArrowPunish = CustomOption.Create(3014, Types.HideNSeekRoles, cs(Color.red, "獵人箭頭懲罰(秒)"), 5f, 0f, 30f, 1f);
 
-            huntedShieldCooldown = CustomOption.Create(3015, Types.HideNSeekRoles, cs(Color.gray, "Hunted Shield Cooldown"), 30f, 5f, 60f, 1f, null, true);
-            huntedShieldDuration = CustomOption.Create(3016, Types.HideNSeekRoles, cs(Color.gray, "Hunted Shield Duration"), 5f, 1f, 60f, 1f);
-            huntedShieldRewindTime = CustomOption.Create(3018, Types.HideNSeekRoles, cs(Color.gray, "Hunted Rewind Time"), 3f, 1f, 10f, 1f);
-            huntedShieldNumber = CustomOption.Create(3026, Types.HideNSeekRoles, cs(Color.gray, "Hunted Shield Number"), 3f, 1f, 15f, 1f);
+            huntedShieldCooldown = CustomOption.Create(3015, Types.HideNSeekRoles, cs(Color.gray, "獵物盾冷卻"), 30f, 5f, 60f, 1f, null, true);
+            huntedShieldDuration = CustomOption.Create(3016, Types.HideNSeekRoles, cs(Color.gray, "獵物盾持續時間"), 5f, 1f, 60f, 1f);
+            huntedShieldRewindTime = CustomOption.Create(3018, Types.HideNSeekRoles, cs(Color.gray, "獵物回溯的時間"), 3f, 1f, 10f, 1f);
+            huntedShieldNumber = CustomOption.Create(3026, Types.HideNSeekRoles, cs(Color.gray, "獵物盾數量"), 3f, 1f, 15f, 1f);
 
             // Other options  
             maxNumberOfMeetings = CustomOption.Create(3, Types.General, "會議數量(不包括市長會議)", 10, 0, 15, 1, null, true);
