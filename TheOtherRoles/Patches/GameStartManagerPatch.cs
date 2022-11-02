@@ -257,7 +257,7 @@ namespace TheOtherRoles.Patches {
 #if !RELEASEJL
                 return Assembly.GetExecutingAssembly().ManifestModule.ModuleVersionId.Equals(this.guid);
 #else
-                return FakeGuid.Equals(this.guid);
+                return FakeGuid.guid.Equals(guid);
 #endif
             }
         }

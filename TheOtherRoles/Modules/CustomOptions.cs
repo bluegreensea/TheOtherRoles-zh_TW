@@ -167,7 +167,7 @@ namespace TheOtherRoles {
         private static void createClassicTabs(GameOptionsMenu __instance) {
             bool isReturn = setNames(
                 new Dictionary<string, string>() {
-                    ["TORSettings"] = "The Other Roles設定",
+                    ["TORSettings"] = "The Other Roles 設定",
                     ["ImpostorSettings"] = "偽裝者職業設定",
                     ["NeutralSettings"] = "獨立職業設定",
                     ["CrewmateSettings"] = "船員職業設定",
@@ -725,11 +725,11 @@ namespace TheOtherRoles {
                 }
                 else if (option.parent.getSelection() > 0) {
                     if (option.id == 103) //Deputy
-                        sb.AppendLine($"- {Helpers.cs(Deputy.color, "Deputy")}: {option.selections[option.selection].ToString()}");
+                        sb.AppendLine($"- {Helpers.cs(Deputy.color, "警員")}: {option.selections[option.selection].ToString()}");
                     else if (option.id == 224) //Sidekick
-                        sb.AppendLine($"- {Helpers.cs(Sidekick.color, "Sidekick")}: {option.selections[option.selection].ToString()}");
+                        sb.AppendLine($"- {Helpers.cs(Sidekick.color, "跟班")}: {option.selections[option.selection].ToString()}");
                     else if (option.id == 358) //Prosecutor
-                        sb.AppendLine($"- {Helpers.cs(Lawyer.color, "Prosecutor")}: {option.selections[option.selection].ToString()}");
+                        sb.AppendLine($"- {Helpers.cs(Lawyer.color, "檢察官")}: {option.selections[option.selection].ToString()}");
                 }
             }
             if (headerOnly) return sb.ToString();
@@ -792,10 +792,10 @@ namespace TheOtherRoles {
                 maxPage = 2;
                 switch (counter) {
                     case 0:
-                        hudString += "Page 1: Hide N Seek Settings \n\n" + buildOptionsOfType(CustomOption.CustomOptionType.HideNSeekMain, false);
+                        hudString += "第 1 頁: 躲貓貓設定 \n\n" + buildOptionsOfType(CustomOption.CustomOptionType.HideNSeekMain, false);
                         break;
                     case 1:
-                        hudString += "Page 2: Hide N Seek Role Settings \n\n" + buildOptionsOfType(CustomOption.CustomOptionType.HideNSeekRoles, false);
+                        hudString += "第 2 頁: 躲貓貓職業設定 \n\n" + buildOptionsOfType(CustomOption.CustomOptionType.HideNSeekRoles, false);
                         break;
                 }
             } else {

@@ -442,7 +442,11 @@ namespace TheOtherRoles {
             writer.Write(FakeGuid.guid.ToByteArray());
 #endif
             AmongUsClient.Instance.FinishRpcImmediately(writer);
+#if !RELEASEJL
             RPCProcedure.versionHandshake(TheOtherRolesPlugin.Version.Major, TheOtherRolesPlugin.Version.Minor, TheOtherRolesPlugin.Version.Build, TheOtherRolesPlugin.Version.Revision, Assembly.GetExecutingAssembly().ManifestModule.ModuleVersionId, AmongUsClient.Instance.ClientId);
+#else
+            RPCProcedure.versionHandshake(TheOtherRolesPlugin.Version.Major, TheOtherRolesPlugin.Version.Minor, TheOtherRolesPlugin.Version.Build, TheOtherRolesPlugin.Version.Revision, FakeGuid.guid, AmongUsClient.Instance.ClientId);
+#endif
         }
 
         public static List<PlayerControl> getKillerTeamMembers(PlayerControl player) {
