@@ -90,6 +90,7 @@ namespace TheOtherRoles
         public static RoleInfo invert = new RoleInfo("反轉", Color.yellow, "你的移動是相反的", "你的移動是相反的", RoleId.Invert, false, true);
         public static RoleInfo chameleon = new RoleInfo("變色龍", Color.yellow, "你不動的時候很難被看見", "你不動的時候很難被看見", RoleId.Chameleon, false, true);
         public static RoleInfo shifter = new RoleInfo("轉職師", Color.yellow, "轉移你的職業", "轉移你的職業", RoleId.Shifter, false, true);
+        
 
         public static List<RoleInfo> allRoleInfos = new List<RoleInfo>() {
             impostor,
