@@ -120,7 +120,7 @@ namespace TheOtherRoles.Patches {
                         __instance.GameStartText.text = $"<color=#FF0000FF>主持人擁有不同版本的或沒有 The Other Roles\n你將會在{Math.Round(10 - kickingTimer)}秒內被踢出</color>";
                         __instance.GameStartText.transform.localPosition = __instance.StartButton.transform.localPosition + Vector3.up * 2;
                     } else if (versionMismatch) {
-                        __instance.GameStartText.text = $"<color=#FF0000FF>Players With Different Versions:\n</color>" + message;
+                        __instance.GameStartText.text = $"<color=#FF0000FF>玩家擁有不同版本:\n</color>" + message;
                         __instance.GameStartText.transform.localPosition = __instance.StartButton.transform.localPosition + Vector3.up * 2;
                     } else {
                         __instance.GameStartText.transform.localPosition = __instance.StartButton.transform.localPosition;
@@ -128,7 +128,7 @@ namespace TheOtherRoles.Patches {
                             __instance.GameStartText.text = String.Empty;
                         }
                         else {
-                            __instance.GameStartText.text = $"Starting in {(int)startingTimer + 1}";
+                            __instance.GameStartText.text = $"開始倒數: {(int)startingTimer + 1}";
                             if (startingTimer <= 0) {
                                 __instance.GameStartText.text = String.Empty;
                             }

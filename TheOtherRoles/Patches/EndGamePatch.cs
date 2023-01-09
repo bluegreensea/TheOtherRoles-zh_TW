@@ -338,14 +338,14 @@ namespace TheOtherRoles.Patches {
                 if (HideNSeek.isHideNSeekGM) {
                     int minutes = (int)AdditionalTempData.timer / 60;
                     int seconds = (int)AdditionalTempData.timer % 60;
-                    roleSummaryText.AppendLine($"<color=#FAD934FF>Time: {minutes:00}:{seconds:00}</color> \n");
+                    roleSummaryText.AppendLine($"<color=#FAD934FF>時間: {minutes:00}:{seconds:00}</color> \n");
                 }
                 roleSummaryText.AppendLine("遊戲結束時的玩家總結:");
                 foreach(var data in AdditionalTempData.playerRoles) {
                     var roles = string.Join(" ", data.Roles.Select(x => Helpers.cs(x.color, x.name)));
-                    if (data.IsGuesser) roles += " (Guesser)";
+                    if (data.IsGuesser) roles += " (賭徒)";
                     var taskInfo = data.TasksTotal > 0 ? $" - <color=#FAD934FF>({data.TasksCompleted}/{data.TasksTotal})</color>" : "";
-                    if (data.Kills != null) taskInfo += $" - <color=#FF0000FF>(Kills: {data.Kills})</color>";
+                    if (data.Kills != null) taskInfo += $" - <color=#FF0000FF>(殺人數: {data.Kills})</color>";
                     roleSummaryText.AppendLine($"{data.PlayerName} - {roles}{taskInfo}"); 
                 }
                 TMPro.TMP_Text roleSummaryTextMesh = roleSummary.GetComponent<TMPro.TMP_Text>();
