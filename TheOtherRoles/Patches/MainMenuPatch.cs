@@ -182,8 +182,8 @@ Goose-Goose-Duck - Idea for the Vulture role came from Slushiegoose</size>";
                 }));
 
                 template.StartCoroutine(Effects.Lerp(0.1f, new System.Action<float>((p) => {
-                    guesserButtonText.SetText("TOR Guesser");
-                    HideNSeekButtonText.SetText("TOR Hide N Seek");
+                    guesserButtonText.SetText("TOR 賭徒");
+                    HideNSeekButtonText.SetText("TOR 躲貓貓");
                  })));
             }));
         }

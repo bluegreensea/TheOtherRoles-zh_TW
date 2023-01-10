@@ -2,8 +2,10 @@
 <p align="center"><a href="https://github.com/bluegreensea/TheOtherRoles/releases/"><img src="https://badgen.net/github/release/eisbison/theotherroles"></a></p>
 
 [![en](https://img.shields.io/static/v1?label=lang&message=en&color=blue&style=for-the-badge)](./README.md)
-<p style="text-align: center">
+
 This mod is not affiliated with Among Us or Innersloth LLC, and the content contained therein is not endorsed or otherwise sponsored by Innersloth LLC. Portions of the materials contained herein are property of Innersloth LLC. © Innersloth LLC.</p>
+<p align="center">
+  To other mod devs: for usage of our code, please read and respect the <a href="#license">license</a></p>
 
 [![Discord](./Images/TOR_server.png)](https://discord.gg/77RkMJHWsM)
 ![eisbison infographic](./Images/TOR_Roles.png)
@@ -17,9 +19,9 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 | 偽裝者 | 船員 | 獨立 | 特殊標籤 | 遊戲模式 |
 |----------|-------------|-----------------|----------------|----------------|
 | [教父 (黑手黨)](#黑手黨) | [市長](#市長) | [小丑](#小丑) | [血族](#血族) | [經典](#職業) |
-| [黑手黨員 (黑手黨)](#黑手黨) | [工程師](#工程師) | [縱火狂](#縱火狂) | [反傳送](#反傳送) | [賭徒](#特殊賭徒) |
+| [黑手黨員 (黑手黨)](#黑手黨) | [工程師](#工程師) | [縱火狂](#縱火狂) | [反傳送](#反傳送) | [特殊賭徒](#特殊賭徒) |
 | [守墓人 (黑手黨)](#黑手黨) | [警長](#警長) | [豺狼](#豺狼) | [決勝者](#決勝者) | [躲貓貓](#躲貓貓) |
-| [百變怪](#百變怪) | [警員](#警員) | [跟班](#跟班) | [誘餌](#誘餌) |
+| [百變怪](#百變怪) | [警員](#警員) | [跟班](#跟班) | [誘餌](#誘餌) | [原版捉迷藏](https://www.innersloth.com/new-game-mode-hide-n-seek-is-here-emergency-meeting-35/) |
 | [魔術師](#魔術師) | [點燈人](#點燈人) | [禿鷲](#禿鷲) | [戀人](#戀人) |
 | [吸血鬼](#吸血鬼) | [偵探](#偵探) | [律師](#律師) | [墨鏡](#墨鏡) |
 | [抹除者](#抹除者) | [時間管理大師](#時間管理大師) | [檢察官](#檢察官) | [迷你](#迷你) |
@@ -42,6 +44,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
+| 2022.12.14s| v4.2.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.2.1/TheOtherRoles.zip)
 | 2022.10.25s| v4.2.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.2.0/TheOtherRoles.zip)
 | 2022.9.20s| v4.1.7| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.7/TheOtherRoles.zip)
 | 2022.6.21s| v4.1.6| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.6/TheOtherRoles.zip)
@@ -111,6 +114,17 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # Changelog
 <details>
   <summary>Click to show the Changelog</summary>
+  
+**Version 4.2.1**
+- Updated to Among Us version 2022.12.14
+- Added a new option for random maps: Use Random Map Setting Presets, see [random maps](#隨機地圖)
+- Added the possibility to play the Vanilla Hide 'n' Seek mode
+- Added the possibility to filter for another faction when haunting players: Evil (Impostors + Neutral)
+- Changed the way option presets work: They now include all vanilla options (e.g. amount of tasks, movement speed etc.) 
+- Changed the animation of the TOR Hunter to the Seeker animation of vanilla
+- Fixed a bug where the prosecutor did not promote to pursuer when the target shifted an evil role and died. 
+- Fixed a bug where the prosecutor did not promote to pursuer when the target is Witch exiled
+- Removed Horse Mode (for now)
 
 **Version 4.2.0**
 - Added a new Guesser-Gamemode
@@ -711,7 +725,7 @@ docker run -d -p 22023:22023/udp --env IMPOSTOR_AntiCheatEnabled=false --env IMP
 [Ottomated](https://twitter.com/ottomated_) - Idea for the Morphling, Snitch and Camouflager role came from **Ottomated**\
 [Crowded-Mod](https://github.com/CrowdedMods/CrowdedMod) - Our implementation for 10+ player lobbies were inspired by the one from the **Crowded Mod Team**\
 [Goose-Goose-Duck](https://store.steampowered.com/app/1568590/Goose_Goose_Duck) - Idea for the Vulture role came from **Slushiegoose**\
-[Ninja](#ninja), [Thief](#thief), [Lawyer](#lawyer) / [Pursuer](#pursuer), [Deputy](#deputy), [Portalmaker](#portalmaker), [Guesser Modifier](#guesser-modifier) - Idea: [K3ndo](https://github.com/K3ndoo) ; Developed by [Gendelo](https://github.com/gendelo3) & [Mallöris](https://github.com/Mallaris)
+[Ninja](#忍者), [Thief](#小偷), [Lawyer](#律師) / [Pursuer](#原告), [Deputy](#警員), [Portalmaker](#傳送師), [Guesser Modifier](#特殊賭徒) - Idea: [K3ndo](https://github.com/K3ndoo) ; Developed by [Gendelo](https://github.com/gendelo3) & [Mallöris](https://github.com/Mallaris)
 
 # 設定
 該模組在 Among Us 添加了一些新設定(除了職業設定)：
@@ -752,6 +766,15 @@ Example: If you configure 4 common tasks on Airship crewmates will only receive 
 | Polus | 4 | 14 | 15
 | Airship | 2 | 23 | 15
 -----------------------
+
+### 隨機地圖
+**隨機地圖** If enabled it allows you to set percentages for each current map.
+
+**使用隨機地圖設定組:** When this option is turned on, the game will switch to the `隨機地圖設定組 <MapName>` when a game is started on a random map. **This includes vanilla options!**. This makes it possible to e.g. play with less tasks on large maps like Airship.
+The game will **保持** in the preset for that random map after the match.
+
+The random map presets can still be used like normal presets, if you **關閉** `隨機地圖` (make sure you do this in all presets you are using).
+
 
 
 # 自定義帽子
@@ -936,22 +959,22 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 
 ## 咒詛師
 ### **隊伍:偽裝者**
-The Warlock is an 偽裝者, that can curse another player (the cursed player doesn't get notified).\
-If the cursed person stands next to another player, the Warlock is able to kill that player (no matter how far away they are).\
-Performing a kill with the help of a cursed player, will lift the curse and it will result in the Warlock being unable to move for a configurable amount of time.\
-The Warlock can still perform normal kills, but the two buttons share the same cooldown.\
+咒詛師是個偽裝者，可以詛咒另一個玩家(被詛咒的玩家並不會注意到)。\
+如果被詛咒的人站在另一個玩家旁邊，術士就可以控制被詛咒的玩家去殺死那個玩家(無論他們離多遠)。\
+在控制被詛咒的玩家的下進行殺戮將解除詛咒，這將導致咒詛師在一段可設定的時間內無法移動。\
+咒詛師仍然可以執行正常擊殺，但兩個按鈕共享相同的冷卻時間。\
 \
 **NOTE:**
-- The Warlock can always kill their 偽裝者 mates (and even themself) using the "cursed kill"
-- If there is a Warlock in the game, there can't be a Vampire
-- Performing a normal kill, doesn't lift the curse
+- 咒詛師使用"詛咒殺戮"可以殺死他們的偽裝者夥伴(甚至他們自己)
+- 如果遊戲中有咒詛師，就不會有吸血鬼
+- 進行正常的殺戮，不會解除詛咒
 
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
 | 咒詛師生成機率 | -
-| 咒詛師冷卻 | Cooldown for using the Curse and curse Kill
-| 咒詛師定身持續時間 | Time the Warlock is rooted in place after killing using the curse
+| 咒詛師冷卻 | 使用詛咒和詛咒殺戮的冷卻時間
+| 咒詛師定身持續時間 | 使用詛咒殺戮後，咒詛師被固定在原地的時間
 -----------------------
 
 ## 賞金獵人
@@ -1032,16 +1055,16 @@ The Warlock can still perform normal kills, but the two buttons share the same c
 
 ## 賭徒
 ### **隊伍:船員或偽裝者**
-賭徒可能是船員或是偽裝者 (depending on the settings).\
-賭徒 can shoot players during the meeting, by guessing its role. If the guess is wrong, the 賭徒 dies instead.\
-You can select how many players can be shot per game and if multiple players can be shot during a single meeting.\
-The guesses 偽裝者 and Crewmate are only right, if the player is part of the corresponding team and has no special role.\
-You can only shoot during the voting time.\
-Depending on the options, the Guesser can't guess the shielded player and depending on the Medic options the Medic/shielded player might be notified (no one will die, independently of what the Guesser guessed).\
+賭徒可能是船員或是偽裝者 (根據選項設定)。\
+賭徒可以在會議期間通過猜測職業來射擊玩家。如果猜錯了，賭徒將會死去。\
+可以選擇每場遊戲可以射擊多少玩家，以及在一次會議中是否可以多次射擊玩家。\
+只有當玩家是相應團隊的一員並且沒有特殊職業時，猜測偽裝者和船員才會是正確的。\
+您只能在投票時間猜測。\
+根據選項設定，賭徒無法猜測被上盾的玩家，並且根據醫生設定，可能會通知醫生/被上盾的玩家(沒有人會死，與賭徒猜測職業的無關)。\
 \
 **NOTE:**
-- If a player gets shot, you'll get back your votes
-- Jester wins won't be triggered, if the 賭徒 shoots the Jester before the Jester gets voted out
+- 如果玩家被射中，您將取回您的投票
+- 如果賭徒在小丑被票出之前猜出了小丑，就不會觸發小丑獲勝
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -1054,7 +1077,7 @@ Depending on the options, the Guesser can't guess the shielded player and depend
 | 賭徒忽略醫生盾 | -
 | 壞賭徒可以猜出間諜 | -
 | 雙賭徒的生成機率 | -
-| 當密探任務完成後，賭徒無法猜出密探 | -
+| 密探完成任務後無法猜出密探 | -
 
 -----------------------
 
@@ -1201,20 +1224,20 @@ Depending on the options, the Guesser can't guess the shielded player and depend
 -----------------------
 
 ## 檢察官
-### **隊伍: 獨立**
-The Prosecutor is a neutral role that resembles the Lawyer. The Prosecutor has a client who is a Crewmate.\
-The Prosecutor needs their client to be voted out in order to win the game.\
-The Prosecutor's client doesn't know that they are their client.\
-If the client gets sidekicked, the Prosecutor changes their role and becomes the client's [Lawyer](#lawyer) and has to protect the
-client from now on.\
-If the Prosecutor's client dies, the Prosecutor changes their role and becomes the [Pursuer](#pursuer), which has a different goal to win the game.
+### **隊伍:獨立**
+檢察官是一個類似於律師的獨立職業。檢察官有一個是船員的客戶。\
+檢察官需要他們的客戶被票出才能獲勝。\
+檢察官的客戶們不知道自己是他的客戶。\
+如果客戶人被招募為跟班，檢察官就會改變職業，成為客戶的[律師](#律師)，從現在開始
+必須要保護客戶。\
+如果檢察官的客戶死了，檢察官就會改變職業，變成[原告](#原告)，有不同的目標去獲勝。
 
 **NOTE:**
-- The Prosecutor's role settings are shared with the Lawyer settings.
-- If the client disconnects, the Prosecutor will also turn into the Pursuer.
-- The Prosecutor needs to figure out the role of their client depending on the options.
-- The tasks only count, if the Prosecutor gets promoted to Pursuer.
-- If the Prosecutor dies before their client, they will lose all their tasks and will get the overview immediately.
+- 檢察官的職業設定與律師設定共享。
+- 如果客戶斷開連接，檢察官也將變成原告。
+- 檢察官根據選項設定需要確定客戶的職業。
+- 只有檢察官變為原告，任務才算數。
+- 如果檢察官比客戶先死亡，他們將失去所有任務進度並獲得狀況概覽。
 
 ## 原告
 ### **隊伍:獨立**
@@ -1232,26 +1255,26 @@ If the Prosecutor's client dies, the Prosecutor changes their role and becomes t
 
 ## 小偷
 ### **隊伍:獨立**
-The Thief has to kill another killer (Impostor, Jackal/Sidekick and if enabled Sheriff)
-in order to have a win condition.\
-If the Thief doesn't kill another killer they will lose the game.\
-If the Thief kills one of the other killers, the Thief overtakes their role (e.g. Ninja) and joins their team (in this case
-team Impostor). They then have the new Role's win condition (e.g. Impostor-Win).\
-If the Thief tries to kill any non-killing role (Crewmate or Neutral), they die similar to a misfiring Sheriff.\
+小偷必須殺死另一個殺手(偽裝者、豺狼/跟班，如果啟用警長)
+才能獲勝。\
+如果小偷不殺死另一個殺手，他們就會輸掉。\
+如果小偷殺死了其他殺手之一，小偷就會竊取他們的職業(例如忍者)並加入他們的團隊(在這種情況下
+為偽裝者隊伍)。然後他們擁有新職業的獲勝條件(例如偽裝者獲勝)。\
+如果小偷試圖殺死任何非殺手職業(船員或獨立)，他們就會像失誤的警長一樣死去。\
 \
 **NOTE**
-- If the option "Thief Can Kill Sheriff" is On, the Thief has tasks which will ONLY begin to count, if they kill
-  the Sheriff. While the Thief hasn't fired, their tasks do not count towards the taskwin.
-- If the option "Thief Can Kill Sheriff" is Off, the Thief will not have tasks.
+- 如果"小偷可以殺死警長"選項開啟，小偷的任務只有在他們殺死
+  警長後才會開始計算。只要小偷沒有開火，他們的任務就不計入任務勝利條件。
+- 如果"小偷可以殺死警長"選項關閉，小偷將沒有任務。
 
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
-| Thief Spawn Chance | -
-| Thief Countdown | -
-| Thief Can Kill Sheriff | -
-| Thief Has Impostor Vision | -
-| Thief Can Use Vents | -
+| 小偷生成機率 | -
+| 小偷冷卻 | -
+| 小偷可以殺死警長 | -
+| 小偷有偽裝者視野 | -
+| 小偷可使用通風口 | -
 -----------------------
 
 ## 市長
@@ -1272,13 +1295,13 @@ If the Thief tries to kill any non-killing role (Crewmate or Neutral), they die 
 
 ## 工程師
 ### **隊伍:船員**
-The Engineer (if alive) can fix a certain amount of sabotages per game from anywhere on the map.\
-The Engineer can use vents.\
-If the Engineer is inside a vent, depending on the options the members of the team Jackal/Impostors will see a blue outline around all vents on the map (in order to warn them).\
-Because of the vents the Engineer might not be able to start some tasks using the "Use" button, you can double-click on the tasks instead.
+工程師(還活著時)可以在地圖上的任何地方修復遊戲中一定數量的破壞。\
+工程師可以使用通風口。\
+如果工程師在通風口內，豺狼/跟班團隊的成員將根據選項設定在地圖上的所有通風口周圍看到藍色輪廓(來通知他們)。\
+由於通風口，工程師可能無法使用"使用"按鈕啟動某些任務，您可以改為雙擊這些任務。
 
 **NOTE:**
-- The kill button of 偽裝者s activates if they stand next to a vent where the Engineer is. They can also kill them there. No other action (e.g. Morphling sample, Shifter shift, ...) can affect players inside vents.
+- 如果偽裝者站在工程師所在的通風口旁邊，他們的擊殺按鈕就會啟用。他們也可以在那裡殺死他們。沒有其他動作(例如百變怪採集樣本、轉職師轉移等)可以影響通風口內的玩家。
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -1360,17 +1383,17 @@ Because of the vents the Engineer might not be able to start some tasks using th
 | 名稱 | 描述 |
 |----------|:-------------:|
 | 偵探生成機率 | -
-| 匿名足跡 | If set to true, all footprints will have the same color. Otherwise they will have the color of the respective player.
-| 足跡間隔 | The interval between two footprints
-| 足跡持續時間 | Sets how long the footprints remain visible.
-| 偵探舉報將有名字的時間 | The amount of time that the Detective will have to report the body since death to get the killer's name.  |
-| 偵探舉報將有顏色類型的時間 | The amount of time that the Detective will have to report the body since death to get the killer's color type. |
+| 匿名足跡 | 如果設置為開，則所有足跡都將具有相同的顏色。否則，它們將具有各自玩家的顏色。
+| 足跡間隔 | 兩個足跡之間的間隔
+| 足跡持續時間 | 設置足跡保持可視的時間。
+| 偵探舉報將有名字的時間 | 從死亡以來到偵探舉報屍體能取得殺手名稱的時間。  |
+| 偵探舉報將有顏色類型的時間 | 從死亡以來到偵探舉報屍體能取得殺手顏色類型的時間。 |
 -----------------------
 
 ## 時間管理大師
 ### **隊伍:船員**
 時間管理大師有一個時間之盾。時間之盾將在可設定的時間內保持啟動狀態。\
-如果試圖在時間之盾啟動時殺死時間管理大師，則不會殺死，並且
+如果試圖在時間之盾啟動狀態嘗試殺死時間管理大師，則殺不死，並且
 將回溯設定的時間。\
 殺手的殺死冷卻時間也不會重置，因此時間管理大師
 必須確保不會遇到相同的情況。\
@@ -1413,44 +1436,44 @@ Because of the vents the Engineer might not be able to start some tasks using th
 | 醫生生成機率 | - | -
 | 顯示被上盾者 | 設置誰能查看玩家是否有盾牌 | "所有人", "被上盾者 + 醫生", "醫生"
 | 裝盾玩家可看到謀殺未遂 | 被上盾的玩家是否看到有人試圖殺死他們 | 開/關 |
-| 盾生效時間 | Sets when the shield will be active | "Instantly", "Instantly, Visible After Meeting", "After Meeting"
+| 盾生效時間 | 設定盾何時生效 | "立刻", "立刻，會議後可視化", "會議後"
 | 醫生可看到對被上盾者的謀殺未遂 | - | 如果有人試圖傷害被上盾的玩家(偽裝者、警長、賭徒……)，醫生將看到紅色閃光
 -----------------------
 
 ## 換票師
 ### **隊伍:船員**
-During meetings the Swapper can exchange votes that two people get (i.e. all votes
-that player A got will be given to player B and vice versa).\
-Because of the Swapper's strength in meetings, they might not start emergency meetings and can't fix lights and comms.\
-The Swapper now has initial swap charges and can recharge those charges after completing a configurable amount of tasks.\
+在會議期間，換票師可以交換兩個人獲得的得票(即玩家 A 獲得的
+所有票將給予玩家 B，反之亦然)。\
+由於換票師在會議中的優勢，他們可能無法召開緊急會議，也無法修復電燈和通訊。\
+換票師有初始換票充能，並且可以在完成可設定的任務數量後重新充能。\
 \
 **NOTE:**
-- The remaining charges will be displayed in brackets next to the players role while not in a meeting
-- In a meeting the charges will appear next to the Confirm Swap button
+- 未開會時，剩餘充能將顯示在玩家職業旁邊的括號中
+- 在會議中，充能數將顯示在"確認交換"按鈕旁邊
 
 ### 遊戲選項
 | 名稱 | 描述
 |----------|:-------------:|
 | 掉包者生成機率 | -
-| 掉包者可召開緊急會議 | Option to disable the emergency button for the Swapper
-| 掉包者只可掉包其他人的票 | Sets whether the Swapper can swap themself or not
+| 掉包者可召開緊急會議 | 禁用換票師緊急按鈕的選項
+| 掉包者只可掉包其他人的票 | 設定換票師是否可以交換自己的得票
 | 初始掉包充能 | -
 | 充能所需要的任務數 | -
 -----------------------
 
 ## 靈媒
 ### **隊伍:船員**
-The Seer has two abilities (one can activate one of them or both in the options).\
-The Seer sees the souls of players that died a round earlier, the souls slowly fade away.\
-The Seer gets a blue flash on their screen, if a player dies somewhere on the map.
+靈媒有兩種能力(可以在選項中啟用其中一種或同時啟用兩種能力)。\
+靈媒能看到前一輪死亡玩家的靈魂，靈魂將會慢慢消失。\
+如果玩家在地圖上某處死亡，先知的螢幕上會出現藍色閃光。
 
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
 | 靈媒生成機率 | -
-| 靈媒能力模式 | Options: Show death flash and souls, show death flash, show souls
-| 靈魂有持續時間限制 | Toggle if souls should turn invisible after a while
-| 靈魂持續時間 | Sets how long it will take the souls to turn invisible after a meeting
+| 靈媒能力模式 | 選項: 顯示死亡閃爍+靈魂、顯示死亡閃爍、顯示靈魂
+| 靈魂有持續時間限制 | 切換靈魂是否在一段時間後轉為隱形
+| 靈魂持續時間 | 設定靈魂在會議後轉為隱形需要多長時間
 -----------------------
 
 ## 駭客
@@ -1459,7 +1482,7 @@ The Seer gets a blue flash on their screen, if a player dies somewhere on the ma
 否則，他們只會看到與其他人相同的資訊。\
 **管理室地圖**: 駭客可以看到地圖上玩家的顏色(或顏色類型)。\
 **生命監測器**: 駭客可以看到死去的玩家死了多久。\
-駭客可以使用他的攜帶式小工具(生命監測器和管理室地圖)，可配置的最大充能(使用)和充能所需任務量。\
+駭客可以使用他的攜帶式小工具(生命監測器和管理室地圖)，可設定的最大充能數(使用次數)和充能所需任務量。\
 駭客在使用這些工具時不能移動。\
 
 **NOTE:**
@@ -1492,7 +1515,7 @@ The Seer gets a blue flash on their screen, if a player dies somewhere on the ma
 | 名稱 | 描述
 |----------|:-------------:|
 | 追踪者生成機率 | -
-| 追踪更新間隔 | Sets how often the position is being updated
+| 追踪更新間隔 | 設定位置更新的頻率
 | 會議後重置追踪 | -
 | 追踪者可以追踪屍體 | -
 | 屍體追踪冷卻 | -
@@ -1514,20 +1537,20 @@ The Seer gets a blue flash on their screen, if a player dies somewhere on the ma
 | 告密者可看到偽裝者在哪的任務數 | -
 | 包含豺狼團隊 | -
 | 對豺狼團隊使用不同顏色的箭頭 | -
-| Snitch can't be guessed after finishing all their tasks | -
+| 密探完成任務後不可被賭徒猜出 | -
 -----------------------
 
 ## 間諜
 ### **隊伍:船員**
-The Spy is a Crewmate, which has no special abilities.\
-The Spy looks like an additional 偽裝者 to the 偽裝者s, they can't tell the difference.\
-There are two possibilities (depending on the set options):
-- The 偽裝者s can't kill the Spy (because otherwise their kill button would reveal, who the Spy is)
-- The 偽裝者s can kill the Spy but they can also kill their 偽裝者 partner (if they mistake another 偽裝者 for the Spy)
-  You can set whether the Sheriff can kill the Spy or not (in order to keep the lie alive).
+間諜是個船員，沒有特殊能力。\
+間諜看起來像是偽裝者們的一員，他們無法區分。\
+有兩種可能性 (根據選項設定):
+- 偽裝者們無法殺死間諜(因為他們的擊殺按鈕會讓人知道間諜是誰)
+- 偽裝者們可以殺死間諜，但他們也可以殺死他們的偽裝者夥伴(如果他們將偽裝者誤認為是間諜)
+  您可以設定警長是否可以射擊間諜(為了讓謊言繼續存在)。
 
 **NOTE:**
-- If the Spy gets sidekicked, it still will appear red to the Impostors.
+- 如果間諜被招募為跟班，他在偽裝者眼裡仍會是紅色的。
 
 ### 遊戲選項
 | 名稱 | 描述
@@ -1535,8 +1558,8 @@ There are two possibilities (depending on the set options):
 | 間諜生成機率 |
 | 間諜可被警長殺死 |
 | 如果偽裝者中有間諜可以殺死任何人 | 這將允許偽裝者殺死間諜和他們的偽裝者夥伴
-| 間諜可進入通風口 | Allow the Spy to enter/exit vents (but not actually move to connected vents)
-| 間諜有偽裝者視野 | Give the Spy the same vision as the 偽裝者s have
+| 間諜可進入通風口 | 允許間諜進入/跳出通風口(但實際上不能移動到相連的通風口)
+| 間諜有偽裝者視野 | 給間諜和偽裝者一樣的視野
 -----------------------
 
 ## 傳送師
@@ -1574,7 +1597,7 @@ There are two possibilities (depending on the set options):
 - 詭騙箱不能封鎖
 - 守衛不能在MiraHQ設置攝影機
 - 剩餘的螺絲數量可以在按鈕上方看到。
-- 在 Skeld 上，四個攝影機將每3秒切換一次(與新的四個攝影機)。也可以使用方向鍵手動切換
+- 在 Skeld 上，四個攝影機將每 3 秒切換一次(與新的四個攝影機)。也可以使用方向鍵手動切換
 - 守衛使用完螺絲後可以使用攜帶式小工具觀看攝影機
 - 在觀看攝影機時，守衛不能移動
 
@@ -1614,17 +1637,17 @@ There are two possibilities (depending on the set options):
 
 ## 陷阱師
 ### **隊伍: 船員**
-The Trapper is a crewmate which can set up traps to trap player and gain information from them.\
-The traps will stuck player for x-seconds (depends on the setting) and reveal information in chat
-about their "Role", if they are a "Good/Evil Role" or their "Name".\
-The trap is not visible until a configurable amount of player were trapped.\
-When the trap gets visible, the Trapper will gain the information in chat (in a random order).\
-If a trap is triggered (and the option is enabled), the map of the Trapper will open up and show which trap
-was triggered.\
-The traps have a maximum of charges (uses) and a configurable amount of tasks are needed to recharge.\
+陷阱師是個船員，可以設置陷阱來困住玩家並從他們那裡獲取資訊。\
+陷阱會困住玩家 x 秒 (根據選項設定) 並在聊天室中顯示資訊
+關於他們的"職業"、"職業好/壞"或"名稱".\
+直到可設定的玩家數量被困後，陷阱才會顯示。\
+當陷阱可視後，陷阱師將在聊天中獲得資訊(以隨機順序)。\
+如果觸發了一個陷阱(並且啟用了該選項)，陷阱師的地圖將打開並顯示哪個陷阱
+被觸發。\
+陷阱有最大的充能數(使用次數)，並且需要可設定的任務數量來充能。\
 \
 **NOTE:**
-- The Trapper can't be trapped in their own trap(s).
+- 陷阱師不會被困在自己的陷阱中。
 
 ### 遊戲選項
 | 名稱 | 描述
@@ -1633,7 +1656,7 @@ The traps have a maximum of charges (uses) and a configurable amount of tasks ar
 | 陷阱師冷卻 | -
 | 最大陷阱師充能 | -
 | 充能所需要的任務數 | -
-| 陷阱需要被觸發才能顯示 | -
+| 陷阱被觸發才會顯示的次數 | -
 | 顯示匿名地圖 | -
 | 陷阱資訊類型 | "名稱", "職業", "職業好/壞"
 | 陷阱持續時間 | -
@@ -1883,50 +1906,51 @@ VIP會在他死時向所有人發出類似於靈媒閃光的閃爍。\
 - 如果船員賭徒被招募，即使主持人(可能)僅設置了 1 個"獨立賭徒"，他們仍將成為賭徒。
 
 ## 躲貓貓
-The **躲貓貓模式** is a standalone Gamemode where Hunter have to catch their prey ("Hunted" players).\
-The Hunter and Hunted player who are still alive are displayed to everyone in the bottom left corner (similar to the Arsonist display).\
-When the game starts, the Hunter's movement is disabled for x-seconds (depends on the settings).\
-There is a time-limit for each round, if the timer runs out and at least one Hunted is still alive, the Crew wins. The Hunted players can also win, if Taskwin is enabled and the Crew completes all tasks.\
-If the Hunters kill all players before one of these conditions is triggered, the Hunters win.\
+**躲貓貓模式**是一個獨立的遊戲模式，獵人必須抓住他們的獵物("獵物"玩家)。\
+仍活著的獵人和獵物玩家會在左下角顯示給所有人(類似於縱火狂的顯示)。\
+遊戲開始時，獵人的移動將被停止 x 秒(根據選項設定)。\
+每輪都有時間限制，如果計時器倒數完並且至少有一個獵物還活著，則船員獲勝。如果啟用任務獲勝並且船員完成所有任務，獵物玩家也可以獲勝。\
+如果獵人在觸發這些條件之一之前殺死所有玩家，獵人獲勝。\
 
 #### 獵人能力:
-- Enable arrows (arrows point to all Hunted players for x-seconds (depending on settings))
-- Mobile Admin table (like Hacker)
-- Lighter ability (gives the Hunter a biggier vision radius for x-seconds (depending on settings))
+- 追蹤箭頭 (指向所有獵物玩家的箭頭 x 秒 (根據選項設定))
+- 攜帶式管理表 (像是駭客)
+- 點燈能力 (給獵人更大的視野範圍 x 秒 (根據選項設定))
 
 #### 獵物能力:
-- Timeshield (like Timemaster, depending on settings)
+- 時間之盾 (像是時間管理大師, 根據選項設定)
 
-Each Hunter action or finished Crew task will lower the timer by a configurable amount of time.\
+每當獵人使用能力或船員完成任務都會將計時器縮短一段可設定的時間。\
 \
 **NOTE:**
-- We added a vent on Polus (Specimen), but only for this Gamemode. The vent is connected with Admin & Lab.
-- The Report button lights up, but cannot be pressed.
-- The tasks can be configured separately for this mode, without affecting your normal game settings.
-- Only the Hunter will be rewinded if they try to kill a player with an active timeshield.
+- 我們在 Polus (標本室) 新增了個通風口，僅於此遊戲模式。此與管理室與實驗室的通風口相連.
+- 舉報按鈕將亮起，但無法使用。
+- 可以單獨為此模式設定任務，而不會影響您的正常模式的設定。
+- 如果獵人嘗試殺死啟動時間之盾的玩家，則只有獵人會被回溯。
 
 ### 遊戲選項
 | General | 描述 | 獵人 | 描述 | 獵物 | 描述 |
 |----------|:-------------:|----------|:-------------:|----------|:-------------:|
-| 地圖 | -                                | Hunter Light Cooldown | -                  | Hunted Shield Cooldown | -
-| 獵人數量 | -                  | Hunter Light Duration | -                  | Hunted Shield Duration | -
-| 殺人冷卻時間 | -                      | Hunter Light Vision | -                    | Hunted Rewind Time | -
-| 獵人視野 | -                      | Hunter Light Punish in Sec | -             | Hunted Shield Number | -
-| 獵物視野 | -                      | Hunter Admin Cooldown | -
-| 普通任務數 | -                       | Hunter Admin Duration | -
-| 短任務數 | -                        | Hunter Admin Punish In Sec | -
-| 長任務數 | -                         | Hunter Arrow Cooldown | -
-| 倒數計時(分) | -                       | Hunter Arrow Duration | -
-| 任務獲勝 | -               | Hunter Arrow Punish In Sec | -
-| 完成任務懲罰(秒) | -
+| 地圖 | -                                | 獵人點燈冷卻 | -                  | 獵物盾冷卻| -
+| 獵人數量 | -                  | 獵人點燈持續時間 | -                  | 獵物盾持續時間 | -
+| 殺人冷卻時間 | -                      | 獵人點燈視野 | -                    | 獵物回溯的時間 | -
+| 獵人視野 | -                      | 獵人點燈懲罰(秒) | -             | 獵物盾數量 | -
+| 獵物視野 | -                      | 獵人管理表冷卻 | -
+| 普通任務數 | -                       | 獵人管理表持續時間 | -
+| 短任務數 | -                        | 獵人管理表懲罰(秒) | -
+| 長任務數 | -                         | 獵人箭頭冷卻 | -
+| 倒數計時(分) | -                       | 獵人箭頭持續時間 | -
+| 任務獲勝 | -               | 獵人箭頭懲罰(秒) | -
+| 完成任務獎勵(秒) | -
 | 啟用破壞 | -
 | 獵人釋放等待時間 | -
 
-# 原始碼
-You can use parts of the code but don't copy paste the whole thing. Make sure you give credits to the other developers, because some parts of the code are based on theirs.
+# License
+TheOtherRolesAU/TheOtherRolesDev is licensed under the
 
-# Bugs, suggestions and requests
-If you found any bugs, have an idea for a new role or any other request, join our [Discord server](https://discord.gg/77RkMJHWsM).
+[GNU General Public License v3.0](https://github.com/TheOtherRolesAU/TheOtherRoles/blob/main/LICENSE)
+
+Permissions of this strong copyleft license are conditioned on making available **complete source code of licensed works and modifications**, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights.
 
 # Copyedit
 Thanks for fixing our typos [jacktose](https://github.com/jacktose) ✌️

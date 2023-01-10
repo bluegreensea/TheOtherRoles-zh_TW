@@ -39,7 +39,7 @@ namespace TheOtherRoles.Patches {
 
         public static void Postfix(RegionMenu __instance) {
             if (!__instance.TryCast<RegionMenu>()) return;
-            bool isCustomRegion = FastDestroyableSingleton<ServerManager>.Instance.CurrentRegion.Name == "Custom";
+            bool isCustomRegion = FastDestroyableSingleton<ServerManager>.Instance.CurrentRegion.Name == "自訂";
             if (!isCustomRegion)
             {
                 if (ipField != null && ipField.gameObject != null) {

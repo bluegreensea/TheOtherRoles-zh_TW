@@ -443,8 +443,8 @@ namespace TheOtherRoles {
             guesserHasMultipleShotsPerMeeting = CustomOption.Create(313, Types.Neutral, "賭徒每個會議可以猜測多次", false, guesserSpawnRate);
             guesserKillsThroughShield  = CustomOption.Create(315, Types.Neutral, "賭徒忽略醫生盾", true, guesserSpawnRate);
             guesserEvilCanKillSpy  = CustomOption.Create(316, Types.Neutral, "壞賭徒可以猜出間諜", true, guesserSpawnRate);
-            guesserSpawnBothRate = CustomOption.Create(317, Types.Neutral, "B雙賭徒的生成機率", rates, guesserSpawnRate);
-            guesserCantGuessSnitchIfTaksDone = CustomOption.Create(318, Types.Neutral, "當密探任務完成後賭徒無法猜出密探", true, guesserSpawnRate);
+            guesserSpawnBothRate = CustomOption.Create(317, Types.Neutral, "雙賭徒的生成機率", rates, guesserSpawnRate);
+            guesserCantGuessSnitchIfTaksDone = CustomOption.Create(318, Types.Neutral, "密探完成任務後無法猜出密探", true, guesserSpawnRate);
 
             jesterSpawnRate = CustomOption.Create(60, Types.Neutral, cs(Jester.color, "小丑"), rates, null, true);
             jesterCanCallEmergency = CustomOption.Create(61, Types.Neutral, "小丑可召開緊急會議", true, jesterSpawnRate);
@@ -524,7 +524,7 @@ namespace TheOtherRoles {
             medicSpawnRate = CustomOption.Create(140, Types.Crewmate, cs(Medic.color, "醫生"), rates, null, true);
             medicShowShielded = CustomOption.Create(143, Types.Crewmate, "顯示被上盾者", new string[] {"所有人", "被上盾者 + 醫生", "醫生"}, medicSpawnRate);
             medicShowAttemptToShielded = CustomOption.Create(144, Types.Crewmate, "被上盾者可看到謀殺未遂", false, medicSpawnRate);
-            medicSetOrShowShieldAfterMeeting = CustomOption.Create(145, Types.Crewmate, "盾生效時間", new string[] { "立即", "立即, 會議後可見", "會議後" }, medicSpawnRate);
+            medicSetOrShowShieldAfterMeeting = CustomOption.Create(145, Types.Crewmate, "盾生效時間", new string[] { "立刻", "立刻，會議後可視化", "會議後" }, medicSpawnRate);
 
             medicShowAttemptToMedic = CustomOption.Create(146, Types.Crewmate, "醫生可看到對被上盾者的謀殺未遂", false, medicSpawnRate);
 
@@ -537,7 +537,7 @@ namespace TheOtherRoles {
 
 
             seerSpawnRate = CustomOption.Create(160, Types.Crewmate, cs(Seer.color, "靈媒"), rates, null, true);
-            seerMode = CustomOption.Create(161, Types.Crewmate, "靈媒能力模式", new string[]{ "顯示死亡閃爍 + 靈魂", "顯示死亡閃爍", "顯示靈魂"}, seerSpawnRate);
+            seerMode = CustomOption.Create(161, Types.Crewmate, "靈媒能力模式", new string[]{ "顯示死亡閃爍+靈魂", "顯示死亡閃爍", "顯示靈魂"}, seerSpawnRate);
             seerLimitSoulDuration = CustomOption.Create(163, Types.Crewmate, "靈魂有持續時間限制", false, seerSpawnRate);
             seerSoulDuration = CustomOption.Create(162, Types.Crewmate, "靈魂持續時間", 15f, 0f, 120f, 5f, seerLimitSoulDuration);
         
@@ -598,7 +598,7 @@ namespace TheOtherRoles {
             trapperCooldown = CustomOption.Create(420, Types.Crewmate, "陷阱師冷卻", 30f, 5f, 120f, 5f, trapperSpawnRate);
             trapperMaxCharges = CustomOption.Create(440, Types.Crewmate, "最大陷阱師充能", 5f, 1f, 15f, 1f, trapperSpawnRate);
             trapperRechargeTasksNumber = CustomOption.Create(450, Types.Crewmate, "充能所需要的任務數", 2f, 1f, 15f, 1f, trapperSpawnRate);
-            trapperTrapNeededTriggerToReveal = CustomOption.Create(451, Types.Crewmate, "陷阱需要被觸發才能顯示", 3f, 2f, 10f, 1f, trapperSpawnRate);
+            trapperTrapNeededTriggerToReveal = CustomOption.Create(451, Types.Crewmate, "陷阱被觸發才會顯示的次數", 3f, 2f, 10f, 1f, trapperSpawnRate);
             trapperAnonymousMap = CustomOption.Create(452, Types.Crewmate, "顯示匿名地圖", false, trapperSpawnRate);
             trapperInfoType = CustomOption.Create(453, Types.Crewmate, "陷阱資訊類型", new string[] { "職業", "職業好/壞", "名稱" }, trapperSpawnRate);
             trapperTrapDuration = CustomOption.Create(454, Types.Crewmate, "陷阱持續時間", 5f, 1f, 15f, 1f, trapperSpawnRate);
@@ -660,7 +660,7 @@ namespace TheOtherRoles {
             guesserGamemodeHasMultipleShotsPerMeeting = CustomOption.Create(2006, Types.Guesser, "賭徒在每次會議可猜測多次", false, null);
             guesserGamemodeKillsThroughShield = CustomOption.Create(2008, Types.Guesser, "賭徒忽略醫生盾", true, null);
             guesserGamemodeEvilCanKillSpy = CustomOption.Create(2009, Types.Guesser, "壞賭徒可猜出間諜", true, null);
-            guesserGamemodeCantGuessSnitchIfTaksDone = CustomOption.Create(2010, Types.Guesser, "當密探完成任務後賭徒不可猜出", true, null);
+            guesserGamemodeCantGuessSnitchIfTaksDone = CustomOption.Create(2010, Types.Guesser, "密探完成任務後不可被賭徒猜出", true, null);
 
             // Hide N Seek Gamemode (3000 - 3999)
             hideNSeekMap = CustomOption.Create(3020, Types.HideNSeekMain, cs(Color.yellow, "地圖"), new string[] { "The Skeld", "Mira", "Polus", "Airship", "Submerged" }, null, true);
@@ -673,7 +673,7 @@ namespace TheOtherRoles {
             hideNSeekLongTasks = CustomOption.Create(3025, Types.HideNSeekMain, cs(Color.yellow, "長任務數"), 3f, 0f, 15f, 1f);
             hideNSeekTimer = CustomOption.Create(3003, Types.HideNSeekMain, cs(Color.yellow, "倒數計時(分)"), 5f, 1f, 30f, 1f);
             hideNSeekTaskWin = CustomOption.Create(3004, Types.HideNSeekMain, cs(Color.yellow, "任務獲勝"), false);
-            hideNSeekTaskPunish = CustomOption.Create(3017, Types.HideNSeekMain, cs(Color.yellow, "完成任務懲罰(秒)"), 10f, 0f, 30f, 1f);
+            hideNSeekTaskPunish = CustomOption.Create(3017, Types.HideNSeekMain, cs(Color.yellow, "完成任務獎勵(秒)"), 10f, 0f, 30f, 1f);
             hideNSeekCanSabotage = CustomOption.Create(3019, Types.HideNSeekMain, cs(Color.yellow, "啟用破壞"), false);
             hideNSeekHunterWaiting = CustomOption.Create(3022, Types.HideNSeekMain, cs(Color.yellow, "獵人釋放等待時間"), 15f, 2.5f, 60f, 2.5f);
 
@@ -681,9 +681,9 @@ namespace TheOtherRoles {
             hunterLightDuration = CustomOption.Create(3006, Types.HideNSeekRoles, cs(Color.red, "獵人點燈持續時間"), 5f, 1f, 60f, 1f);
             hunterLightVision = CustomOption.Create(3007, Types.HideNSeekRoles, cs(Color.red, "獵人點燈視野"), 3f, 1f, 5f, 0.25f);
             hunterLightPunish = CustomOption.Create(3008, Types.HideNSeekRoles, cs(Color.red, "獵人點燈懲罰(秒)"), 5f, 0f, 30f, 1f);
-            hunterAdminCooldown = CustomOption.Create(3009, Types.HideNSeekRoles, cs(Color.red, "獵人管理冷卻"), 30f, 5f, 60f, 1f);
-            hunterAdminDuration = CustomOption.Create(3010, Types.HideNSeekRoles, cs(Color.red, "獵人管理持續時間"), 5f, 1f, 60f, 1f);
-            hunterAdminPunish = CustomOption.Create(3011, Types.HideNSeekRoles, cs(Color.red, "獵人管理懲罰(秒)"), 5f, 0f, 30f, 1f);
+            hunterAdminCooldown = CustomOption.Create(3009, Types.HideNSeekRoles, cs(Color.red, "獵人管理表冷卻"), 30f, 5f, 60f, 1f);
+            hunterAdminDuration = CustomOption.Create(3010, Types.HideNSeekRoles, cs(Color.red, "獵人管理表持續時間"), 5f, 1f, 60f, 1f);
+            hunterAdminPunish = CustomOption.Create(3011, Types.HideNSeekRoles, cs(Color.red, "獵人管理表懲罰(秒)"), 5f, 0f, 30f, 1f);
             hunterArrowCooldown = CustomOption.Create(3012, Types.HideNSeekRoles, cs(Color.red, "獵人箭頭冷卻"), 30f, 5f, 60f, 1f);
             hunterArrowDuration = CustomOption.Create(3013, Types.HideNSeekRoles, cs(Color.red, "獵人箭頭持續時間"), 5f, 0f, 60f, 1f);
             hunterArrowPunish = CustomOption.Create(3014, Types.HideNSeekRoles, cs(Color.red, "獵人箭頭懲罰(秒)"), 5f, 0f, 30f, 1f);
@@ -707,7 +707,7 @@ namespace TheOtherRoles {
             dynamicMapEnablePolus = CustomOption.Create(503, Types.General, "Polus", rates, dynamicMap, false);
             dynamicMapEnableAirShip = CustomOption.Create(504, Types.General, "Airship", rates, dynamicMap, false);
             dynamicMapEnableSubmerged = CustomOption.Create(505, Types.General, "Submerged", rates, dynamicMap, false);
-            dynamicMapSeparateSettings = CustomOption.Create(509, Types.General, "Use Random Map Setting Presets", true, dynamicMap, false);
+            dynamicMapSeparateSettings = CustomOption.Create(509, Types.General, "使用隨機地圖設定組", true, dynamicMap, false);
 
             blockedRolePairings.Add((byte)RoleId.Vampire, new [] { (byte)RoleId.Warlock});
             blockedRolePairings.Add((byte)RoleId.Warlock, new [] { (byte)RoleId.Vampire});

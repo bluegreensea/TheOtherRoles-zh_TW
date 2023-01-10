@@ -67,13 +67,13 @@ namespace TheOtherRoles
         public static RoleInfo lawyer = new RoleInfo("律師", Lawyer.color, "保護您的客戶", "保護您的客戶", RoleId.Lawyer, true);
         public static RoleInfo prosecutor = new RoleInfo("檢察官", Lawyer.color, "票出你的目標", "票出你的目標", RoleId.Prosecutor, true);
         public static RoleInfo pursuer = new RoleInfo("原告", Pursuer.color, "填空偽裝者", "填空偽裝者", RoleId.Pursuer);
-        public static RoleInfo impostor = new RoleInfo("偽裝者", Palette.ImpostorRed, Helpers.cs(Palette.ImpostorRed, "破壞跟殺死所有人"), "破壞跟殺死所有人", RoleId.Impostor);
-        public static RoleInfo crewmate = new RoleInfo("船員", Color.white, "找到偽裝者", "找到偽裝者", RoleId.Crewmate);
+        public static RoleInfo impostor = new RoleInfo("偽裝者", Palette.ImpostorRed, Helpers.cs(Palette.ImpostorRed, "搞破壞並殺死所有人"), "搞破壞並殺死所有人", RoleId.Impostor);
+        public static RoleInfo crewmate = new RoleInfo("船員", Color.white, "找出偽裝者", "找出偽裝者", RoleId.Crewmate);
         public static RoleInfo witch = new RoleInfo("巫師", Witch.color, "對你的敵人施法", "對你的敵人施法", RoleId.Witch);
         public static RoleInfo ninja = new RoleInfo("忍者", Ninja.color, "驚嚇並暗殺你的敵人", "驚嚇並暗殺你的敵人", RoleId.Ninja);
         public static RoleInfo thief = new RoleInfo("小偷", Thief.color, "殺死殺手來竊取他們的職業", "竊取殺手的職業", RoleId.Thief, true);
 
-        public static RoleInfo hunter = new RoleInfo("獵人", Palette.ImpostorRed, Helpers.cs(Palette.ImpostorRed, "尋找並殺死所有人"), "尋找並殺死所有人", RoleId.Impostor);
+        public static RoleInfo hunter = new RoleInfo("獵人", Palette.ImpostorRed, Helpers.cs(Palette.ImpostorRed, "尋找並殺死所有船員"), "尋找並殺死所有船員", RoleId.Impostor);
         public static RoleInfo hunted = new RoleInfo("獵物", Color.white, "躲藏", "躲藏", RoleId.Crewmate);
 
 
@@ -86,7 +86,7 @@ namespace TheOtherRoles
         public static RoleInfo sunglasses = new RoleInfo("墨鏡", Color.yellow, "你有墨鏡", "你的視野將下降", RoleId.Sunglasses, false, true);
         public static RoleInfo lover = new RoleInfo("戀人", Lovers.color, $"你正在戀愛中", $"你正在戀愛中", RoleId.Lover, false, true);
         public static RoleInfo mini = new RoleInfo("迷你", Color.yellow, "在你長大之前沒有人可以傷害你", "沒有人可以傷害你", RoleId.Mini, false, true);
-        public static RoleInfo vip = new RoleInfo("VIP", Color.yellow, "你是VIP", "每個人都會知道你的死亡", RoleId.Vip, false, true);
+        public static RoleInfo vip = new RoleInfo("VIP", Color.yellow, "你是VIP", "每個人都會知道你死亡", RoleId.Vip, false, true);
         public static RoleInfo invert = new RoleInfo("反轉", Color.yellow, "你的移動是相反的", "你的移動是相反的", RoleId.Invert, false, true);
         public static RoleInfo chameleon = new RoleInfo("變色龍", Color.yellow, "你不動的時候很難被看見", "你不動的時候很難被看見", RoleId.Chameleon, false, true);
         public static RoleInfo shifter = new RoleInfo("轉職師", Color.yellow, "轉移你的職業", "轉移你的職業", RoleId.Shifter, false, true);
