@@ -456,13 +456,13 @@ namespace TheOtherRoles {
 
             jackalSpawnRate = CustomOption.Create(220, Types.Neutral, cs(Jackal.color, "豺狼"), rates, null, true);
             jackalKillCooldown = CustomOption.Create(221, Types.Neutral, "豺狼/跟班殺人冷卻", 30f, 10f, 60f, 2.5f, jackalSpawnRate);
-            jackalCreateSidekickCooldown = CustomOption.Create(222, Types.Neutral, "豺狼製造跟班冷卻", 30f, 10f, 60f, 2.5f, jackalSpawnRate);
+            jackalCreateSidekickCooldown = CustomOption.Create(222, Types.Neutral, "豺狼招募跟班冷卻", 30f, 10f, 60f, 2.5f, jackalSpawnRate);
             jackalCanUseVents = CustomOption.Create(223, Types.Neutral, "豺狼可使用通風口", true, jackalSpawnRate);
-            jackalCanCreateSidekick = CustomOption.Create(224, Types.Neutral, "豺狼可製造跟班跟班", false, jackalSpawnRate);
-            sidekickPromotesToJackal = CustomOption.Create(225, Types.Neutral, "在豺狼死亡後跟班可升職成豺狼", false, jackalCanCreateSidekick);
+            jackalCanCreateSidekick = CustomOption.Create(224, Types.Neutral, "豺狼可招募跟班", false, jackalSpawnRate);
+            sidekickPromotesToJackal = CustomOption.Create(225, Types.Neutral, "豺狼死後跟班升職成豺狼", false, jackalCanCreateSidekick);
             sidekickCanKill = CustomOption.Create(226, Types.Neutral, "跟班可以殺人", false, jackalCanCreateSidekick);
             sidekickCanUseVents = CustomOption.Create(227, Types.Neutral, "跟班可使用通風口", true, jackalCanCreateSidekick);
-            jackalPromotedFromSidekickCanCreateSidekick = CustomOption.Create(228, Types.Neutral, "從跟班升職的豺狼可製造跟班", true, sidekickPromotesToJackal);
+            jackalPromotedFromSidekickCanCreateSidekick = CustomOption.Create(228, Types.Neutral, "跟班升職豺狼後可招募跟班", true, sidekickPromotesToJackal);
             jackalCanCreateSidekickFromImpostor = CustomOption.Create(229, Types.Neutral, "豺狼可讓偽裝者轉成跟班", true, jackalCanCreateSidekick);
             jackalAndSidekickHaveImpostorVision = CustomOption.Create(430, Types.Neutral, "豺狼與跟班有偽裝者視野", false, jackalSpawnRate);
 
