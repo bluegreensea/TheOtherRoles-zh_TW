@@ -13,12 +13,15 @@ namespace TheOtherRoles {
         public static CustomOption activateRoles;
         public static CustomOption crewmateRolesCountMin;
         public static CustomOption crewmateRolesCountMax;
+        public static CustomOption crewmateRolesFill;
         public static CustomOption neutralRolesCountMin;
         public static CustomOption neutralRolesCountMax;
         public static CustomOption impostorRolesCountMin;
         public static CustomOption impostorRolesCountMax;
         public static CustomOption modifiersCountMin;
         public static CustomOption modifiersCountMax;
+
+        public static CustomOption enableCodenameHorsemode;
 
         public static CustomOption mafiaSpawnRate;
         public static CustomOption janitorCooldown;
@@ -95,12 +98,14 @@ namespace TheOtherRoles {
         public static CustomOption mayorTasksNeededToSeeVoteColors;
         public static CustomOption mayorMeetingButton;
         public static CustomOption mayorMaxRemoteMeetings;
+        public static CustomOption mayorChooseSingleVote;
 
         public static CustomOption portalmakerSpawnRate;
         public static CustomOption portalmakerCooldown;
         public static CustomOption portalmakerUsePortalCooldown;
         public static CustomOption portalmakerLogOnlyColorType;
         public static CustomOption portalmakerLogHasTime;
+        public static CustomOption portalmakerCanPortalFromAnywhere;
 
         public static CustomOption engineerSpawnRate;
         public static CustomOption engineerNumberOfFixes;
@@ -122,8 +127,7 @@ namespace TheOtherRoles {
         public static CustomOption lighterSpawnRate;
         public static CustomOption lighterModeLightsOnVision;
         public static CustomOption lighterModeLightsOffVision;
-        public static CustomOption lighterCooldown;
-        public static CustomOption lighterDuration;
+        public static CustomOption lighterFlashlightWidth;
 
         public static CustomOption detectiveSpawnRate;
         public static CustomOption detectiveAnonymousFootprints;
@@ -172,8 +176,6 @@ namespace TheOtherRoles {
 
         public static CustomOption snitchSpawnRate;
         public static CustomOption snitchLeftTasksForReveal;
-        public static CustomOption snitchIncludeTeamJackal;
-        public static CustomOption snitchTeamJackalUseDifferentArrowColor;
 
         public static CustomOption spySpawnRate;
         public static CustomOption spyCanDieToSheriff;
@@ -213,6 +215,7 @@ namespace TheOtherRoles {
         public static CustomOption mediumCooldown;
         public static CustomOption mediumDuration;
         public static CustomOption mediumOneTimeUse;
+        public static CustomOption mediumChanceAdditionalInfo;
 
         public static CustomOption lawyerSpawnRate;
         public static CustomOption lawyerIsProsecutorChance;
@@ -238,6 +241,14 @@ namespace TheOtherRoles {
         public static CustomOption trapperAnonymousMap;
         public static CustomOption trapperInfoType;
         public static CustomOption trapperTrapDuration;
+
+        public static CustomOption bomberSpawnRate;
+        public static CustomOption bomberBombDestructionTime;
+        public static CustomOption bomberBombDestructionRange;
+        public static CustomOption bomberBombHearRange;
+        public static CustomOption bomberDefuseDuration;
+        public static CustomOption bomberBombCooldown;
+        public static CustomOption bomberBombActiveAfter;
 
         public static CustomOption modifiersAreHidden;
 
@@ -291,6 +302,9 @@ namespace TheOtherRoles {
         public static CustomOption hidePlayerNames;
         public static CustomOption allowParallelMedBayScans;
         public static CustomOption shieldFirstKill;
+        public static CustomOption finishTasksBeforeHauntingOrZoomingOut;
+        public static CustomOption camsNightVision;
+        public static CustomOption camsNoNightVisionIfImpVision;
 
         public static CustomOption dynamicMap;
         public static CustomOption dynamicMapEnableSkeld;
@@ -362,10 +376,13 @@ namespace TheOtherRoles {
             presetSelection = CustomOption.Create(0, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "設定"), presets, null, true);
             activateRoles = CustomOption.Create(1, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "啟用模組職業並禁用原版職業"), true, null, true);
 
+            if (Utilities.EventUtility.canBeEnabled) enableCodenameHorsemode = CustomOption.Create(10423, Types.General, cs(Color.green, "Enable Codename Horse"), false, null, true);
+
             // Using new id's for the options to not break compatibilty with older versions
 #if !RELEASEJL
             crewmateRolesCountMin = CustomOption.Create(300, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小船員職業數"), 15f, 0f, 15f, 1f, null, true);
             crewmateRolesCountMax = CustomOption.Create(301, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大船員職業數"), 15f, 0f, 15f, 1f);
+            crewmateRolesFill = CustomOption.Create(308, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "Fill Crewmate Roles\n(Ignores Min/Max)"), false);
             neutralRolesCountMin = CustomOption.Create(302, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小獨立職業數"), 15f, 0f, 15f, 1f);
             neutralRolesCountMax = CustomOption.Create(303, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大獨立職業數"), 15f, 0f, 15f, 1f);
             impostorRolesCountMin = CustomOption.Create(304, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小偽裝者職業數"), 15f, 0f, 15f, 1f);
@@ -383,8 +400,8 @@ namespace TheOtherRoles {
             modifiersCountMax = CustomOption.Create(307, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大特殊標籤數"), 15f, 0f, 127f, 1f);
 #endif
 
-            mafiaSpawnRate = CustomOption.Create(10, Types.Impostor, cs(Janitor.color, "黑手黨"), rates, null, true);
-            janitorCooldown = CustomOption.Create(11, Types.Impostor, "守墓人冷卻", 30f, 10f, 60f, 2.5f, mafiaSpawnRate);
+            mafiaSpawnRate = CustomOption.Create(18, Types.Impostor, cs(Janitor.color, "黑手黨"), rates, null, true);
+            janitorCooldown = CustomOption.Create(19, Types.Impostor, "守墓人冷卻", 30f, 10f, 60f, 2.5f, mafiaSpawnRate);
 
             morphlingSpawnRate = CustomOption.Create(20, Types.Impostor, cs(Morphling.color, "百變怪"), rates, null, true);
             morphlingCooldown = CustomOption.Create(21, Types.Impostor, "百變怪冷卻", 30f, 10f, 60f, 2.5f, morphlingSpawnRate);
@@ -437,6 +454,14 @@ namespace TheOtherRoles {
             ninjaTraceColorTime = CustomOption.Create(384, Types.Impostor, "痕跡褪色的時間", 2f, 0f, 20f, 0.5f, ninjaSpawnRate);
             ninjaInvisibleDuration = CustomOption.Create(385, Types.Impostor, "忍者隱身持續時間", 3f, 0f, 20f, 1f, ninjaSpawnRate);
 
+            bomberSpawnRate = CustomOption.Create(460, Types.Impostor, cs(Bomber.color, "Bomber"), rates, null, true);
+            bomberBombDestructionTime = CustomOption.Create(461, Types.Impostor, "Bomb Destruction Time", 20f, 2.5f, 120f, 2.5f, bomberSpawnRate);
+            bomberBombDestructionRange = CustomOption.Create(462, Types.Impostor, "Bomb Destruction Range", 50f, 5f, 150f, 5f, bomberSpawnRate);
+            bomberBombHearRange = CustomOption.Create(463, Types.Impostor, "Bomb Hear Range", 60f, 5f, 150f, 5f, bomberSpawnRate);
+            bomberDefuseDuration = CustomOption.Create(464, Types.Impostor, "Bomb Defuse Duration", 3f, 0.5f, 30f, 0.5f, bomberSpawnRate);
+            bomberBombCooldown = CustomOption.Create(465, Types.Impostor, "Bomb Cooldown", 15f, 2.5f, 30f, 2.5f, bomberSpawnRate);
+            bomberBombActiveAfter = CustomOption.Create(466, Types.Impostor, "Bomb Is Active After", 3f, 0.5f, 15f, 0.5f, bomberSpawnRate);
+
             guesserSpawnRate = CustomOption.Create(310, Types.Neutral, cs(Guesser.color, "賭徒"), rates, null, true);
             guesserIsImpGuesserRate = CustomOption.Create(311, Types.Neutral, "賭徒是個偽裝者的機率", rates, guesserSpawnRate);
             guesserNumberOfShots = CustomOption.Create(312, Types.Neutral, "賭徒的猜測次數", 2f, 1f, 15f, 1f, guesserSpawnRate);
@@ -486,6 +511,7 @@ namespace TheOtherRoles {
             mayorTasksNeededToSeeVoteColors = CustomOption.Create(82, Types.Crewmate, "可以看到是誰投票所需要的任務數", 5f, 0f, 20f, 1f, mayorCanSeeVoteColors);
             mayorMeetingButton = CustomOption.Create(83, Types.Crewmate, "攜帶式緊急會議按鈕", true, mayorSpawnRate);
             mayorMaxRemoteMeetings = CustomOption.Create(84, Types.Crewmate, "遠端緊急會議次數", 1f, 1f, 5f, 1f, mayorMeetingButton);
+            mayorChooseSingleVote = CustomOption.Create(85, Types.Crewmate, "Mayor Can Choose Single Vote", new string[] { "Off", "On (Before Voting)", "On (Until Meeting Ends)" }, mayorSpawnRate);
 
             engineerSpawnRate = CustomOption.Create(90, Types.Crewmate, cs(Engineer.color, "工程師"), rates, null, true);
             engineerNumberOfFixes = CustomOption.Create(91, Types.Crewmate, "破壞修復數量", 1f, 1f, 3f, 1f, engineerSpawnRate);
@@ -504,10 +530,9 @@ namespace TheOtherRoles {
             deputyKeepsHandcuffs = CustomOption.Create(109, Types.Crewmate, "警員升職後保持手銬", true, deputyGetsPromoted);
 
             lighterSpawnRate = CustomOption.Create(110, Types.Crewmate, cs(Lighter.color, "點燈人"), rates, null, true);
-            lighterModeLightsOnVision = CustomOption.Create(111, Types.Crewmate, "開燈時點燈視野", 2f, 0.25f, 5f, 0.25f, lighterSpawnRate);
-            lighterModeLightsOffVision = CustomOption.Create(112, Types.Crewmate, "關燈時點燈視野", 0.75f, 0.25f, 5f, 0.25f, lighterSpawnRate);
-            lighterCooldown = CustomOption.Create(113, Types.Crewmate, "點燈人冷卻", 30f, 5f, 120f, 5f, lighterSpawnRate);
-            lighterDuration = CustomOption.Create(114, Types.Crewmate, "點燈持續時間", 5f, 2.5f, 60f, 2.5f, lighterSpawnRate);
+            lighterModeLightsOnVision = CustomOption.Create(111, Types.Crewmate, "開燈時點燈視野", 1.5f, 0.25f, 5f, 0.25f, lighterSpawnRate);
+            lighterModeLightsOffVision = CustomOption.Create(112, Types.Crewmate, "關燈時點燈視野", 0.5f, 0.25f, 5f, 0.25f, lighterSpawnRate);
+            lighterFlashlightWidth = CustomOption.Create(113, Types.Crewmate, "手電筒大小", 0.3f, 0.1f, 1f, 0.1f, lighterSpawnRate);
 
             detectiveSpawnRate = CustomOption.Create(120, Types.Crewmate, cs(Detective.color, "偵探"), rates, null, true);
             detectiveAnonymousFootprints = CustomOption.Create(121, Types.Crewmate, "匿名足跡", false, detectiveSpawnRate); 
@@ -557,9 +582,7 @@ namespace TheOtherRoles {
             trackerCorpsesTrackingDuration = CustomOption.Create(205, Types.Crewmate, "屍體追踪持續時間", 5f, 2.5f, 30f, 2.5f, trackerCanTrackCorpses);
                            
             snitchSpawnRate = CustomOption.Create(210, Types.Crewmate, cs(Snitch.color, "密探"), rates, null, true);
-            snitchLeftTasksForReveal = CustomOption.Create(211, Types.Crewmate, "告密者可看到偽裝者在哪的任務數", 1f, 0f, 5f, 1f, snitchSpawnRate);
-            snitchIncludeTeamJackal = CustomOption.Create(212, Types.Crewmate, "包含豺狼團隊", false, snitchSpawnRate);
-            snitchTeamJackalUseDifferentArrowColor = CustomOption.Create(213, Types.Crewmate, "對豺狼團隊使用不同顏色的箭頭", true, snitchIncludeTeamJackal);
+            snitchLeftTasksForReveal = CustomOption.Create(219, Types.Crewmate, "密探可看到偽裝者在哪需要的任務數", 5f, 0f, 25f, 1f, snitchSpawnRate);
 
             spySpawnRate = CustomOption.Create(240, Types.Crewmate, cs(Spy.color, "間諜"), rates, null, true);
             spyCanDieToSheriff = CustomOption.Create(241, Types.Crewmate, "間諜可以被警長殺死", false, spySpawnRate);
@@ -573,6 +596,8 @@ namespace TheOtherRoles {
             portalmakerLogOnlyColorType = CustomOption.Create(393, Types.Crewmate, "傳送師記錄只顯示顏色類型", true, portalmakerSpawnRate);
             portalmakerLogHasTime = CustomOption.Create(394, Types.Crewmate, "記錄顯示時間", true, portalmakerSpawnRate);
             
+            portalmakerCanPortalFromAnywhere = CustomOption.Create(395, Types.Crewmate, "Can Port To Portal From Everywhere", true, portalmakerSpawnRate);
+
             securityGuardSpawnRate = CustomOption.Create(280, Types.Crewmate, cs(SecurityGuard.color, "守衛"), rates, null, true);
             securityGuardCooldown = CustomOption.Create(281, Types.Crewmate, "守衛冷卻", 30f, 10f, 60f, 2.5f, securityGuardSpawnRate);
             securityGuardTotalScrews = CustomOption.Create(282, Types.Crewmate, "初始守衛螺絲數量", 7f, 1f, 15f, 1f, securityGuardSpawnRate);
@@ -587,6 +612,7 @@ namespace TheOtherRoles {
             mediumCooldown = CustomOption.Create(361, Types.Crewmate, "通靈師詢問冷卻", 30f, 5f, 120f, 5f, mediumSpawnRate);
             mediumDuration = CustomOption.Create(362, Types.Crewmate, "通靈師詢問持續時間", 3f, 0f, 15f, 1f, mediumSpawnRate);
             mediumOneTimeUse = CustomOption.Create(363, Types.Crewmate, "每個靈魂只能被詢問一次", false, mediumSpawnRate);
+            mediumChanceAdditionalInfo = CustomOption.Create(364, Types.Crewmate, "Chance That The Answer Contains \n    Additional Information", rates, mediumSpawnRate);
 
             thiefSpawnRate = CustomOption.Create(400, Types.Neutral, cs(Thief.color, "小偷"), rates, null, true);
             thiefCooldown = CustomOption.Create(401, Types.Neutral, "小偷冷卻", 30f, 5f, 120f, 5f, thiefSpawnRate);
@@ -700,14 +726,18 @@ namespace TheOtherRoles {
             hidePlayerNames = CustomOption.Create(6, Types.General, "隱藏玩家名稱", false);
             allowParallelMedBayScans = CustomOption.Create(7, Types.General, "允許並列醫務室掃描", false);
             shieldFirstKill = CustomOption.Create(8, Types.General, "免死金牌", false);
+            finishTasksBeforeHauntingOrZoomingOut = CustomOption.Create(9, Types.General, "Finish Tasks Before Haunting Or Zooming Out", true);
+            camsNightVision = CustomOption.Create(11, Types.General, "Cams Switch To Night Vision If Lights Are Off", false, null, true);
+            camsNoNightVisionIfImpVision = CustomOption.Create(12, Types.General, "Impostor Vision Ignores Night Vision Cams", false, camsNightVision, false);
 
-            dynamicMap = CustomOption.Create(500, Types.General, "隨機地圖", false, null, false);
+
+            dynamicMap = CustomOption.Create(500, Types.General, "隨機地圖", false, null, true);
             dynamicMapEnableSkeld = CustomOption.Create(501, Types.General, "Skeld", rates, dynamicMap, false);
             dynamicMapEnableMira = CustomOption.Create(502, Types.General, "Mira", rates, dynamicMap, false);
             dynamicMapEnablePolus = CustomOption.Create(503, Types.General, "Polus", rates, dynamicMap, false);
             dynamicMapEnableAirShip = CustomOption.Create(504, Types.General, "Airship", rates, dynamicMap, false);
             dynamicMapEnableSubmerged = CustomOption.Create(505, Types.General, "Submerged", rates, dynamicMap, false);
-            dynamicMapSeparateSettings = CustomOption.Create(509, Types.General, "使用隨機地圖設定組", true, dynamicMap, false);
+            dynamicMapSeparateSettings = CustomOption.Create(509, Types.General, "使用隨機地圖設定組", false, dynamicMap, false);
 
             blockedRolePairings.Add((byte)RoleId.Vampire, new [] { (byte)RoleId.Warlock});
             blockedRolePairings.Add((byte)RoleId.Warlock, new [] { (byte)RoleId.Vampire});

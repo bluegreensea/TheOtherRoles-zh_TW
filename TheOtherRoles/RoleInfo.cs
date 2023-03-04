@@ -71,7 +71,8 @@ namespace TheOtherRoles
         public static RoleInfo crewmate = new RoleInfo("船員", Color.white, "找出偽裝者", "找出偽裝者", RoleId.Crewmate);
         public static RoleInfo witch = new RoleInfo("巫師", Witch.color, "對你的敵人施法", "對你的敵人施法", RoleId.Witch);
         public static RoleInfo ninja = new RoleInfo("忍者", Ninja.color, "驚嚇並暗殺你的敵人", "驚嚇並暗殺你的敵人", RoleId.Ninja);
-        public static RoleInfo thief = new RoleInfo("小偷", Thief.color, "殺死殺手來竊取他們的職業", "竊取殺手的職業", RoleId.Thief, true);
+        public static RoleInfo thief = new RoleInfo("小偷", Thief.color, "殺了殺手來竊取他們的職業", "竊取殺手的職業", RoleId.Thief, true);
+        public static RoleInfo bomber = new RoleInfo("炸彈客", Bomber.color, "炸了所有船員", "炸了所有船員", RoleId.Bomber);
 
         public static RoleInfo hunter = new RoleInfo("獵人", Palette.ImpostorRed, Helpers.cs(Palette.ImpostorRed, "尋找並殺死所有船員"), "尋找並殺死所有船員", RoleId.Impostor);
         public static RoleInfo hunted = new RoleInfo("獵物", Color.white, "躲藏", "躲藏", RoleId.Crewmate);
@@ -107,6 +108,7 @@ namespace TheOtherRoles
             bountyHunter,
             witch,
             ninja,
+            bomber,
             goodGuesser,
             badGuesser,
             lover,
@@ -195,6 +197,7 @@ namespace TheOtherRoles
             if (p == Warlock.warlock) infos.Add(warlock);
             if (p == Witch.witch) infos.Add(witch);
             if (p == Ninja.ninja) infos.Add(ninja);
+            if (p == Bomber.bomber) infos.Add(bomber);
             if (p == Detective.detective) infos.Add(detective);
             if (p == TimeMaster.timeMaster) infos.Add(timeMaster);
             if (p == Medic.medic) infos.Add(medic);
@@ -222,20 +225,53 @@ namespace TheOtherRoles
             // Default roles (just impostor, just crewmate, or hunter / hunted for hide n seek
             if (infos.Count == count) {
                 if (p.Data.Role.IsImpostor)
-                    infos.Add(MapOptions.gameMode == CustomGamemodes.HideNSeek ? RoleInfo.hunter : RoleInfo.impostor);
+                    infos.Add(TORMapOptions.gameMode == CustomGamemodes.HideNSeek ? RoleInfo.hunter : RoleInfo.impostor);
                 else
-                    infos.Add(MapOptions.gameMode == CustomGamemodes.HideNSeek ? RoleInfo.hunted : RoleInfo.crewmate);
+                    infos.Add(TORMapOptions.gameMode == CustomGamemodes.HideNSeek ? RoleInfo.hunted : RoleInfo.crewmate);
             }
 
             return infos;
         }
 
-        public static String GetRolesString(PlayerControl p, bool useColors, bool showModifier = true) {
+        public static String GetRolesString(PlayerControl p, bool useColors, bool showModifier = true, bool suppressGhostInfo = false) {
             string roleName;
             roleName = String.Join(" ", getRoleInfoForPlayer(p, showModifier).Select(x => useColors ? Helpers.cs(x.color, x.name) : x.name).ToArray());
             if (Lawyer.target != null && p.PlayerId == Lawyer.target.PlayerId && CachedPlayer.LocalPlayer.PlayerControl != Lawyer.target) 
                 roleName += (useColors ? Helpers.cs(Pursuer.color, " §") : " §");
             if (HandleGuesser.isGuesserGm && HandleGuesser.isGuesser(p.PlayerId)) roleName += " (賭徒)";
+
+            if (!suppressGhostInfo && p != null) {
+                if (p == Shifter.shifter && (CachedPlayer.LocalPlayer.PlayerControl == Shifter.shifter || Helpers.shouldShowGhostInfo()) && Shifter.futureShift != null)
+                    roleName += Helpers.cs(Color.yellow, " ← " + Shifter.futureShift.Data.PlayerName);
+                if (p == Vulture.vulture && (CachedPlayer.LocalPlayer.PlayerControl == Vulture.vulture || Helpers.shouldShowGhostInfo()))
+                    roleName = roleName + Helpers.cs(Vulture.color, $" ({Vulture.vultureNumberToWin - Vulture.eatenBodies} left)");
+                if (Helpers.shouldShowGhostInfo()) {
+                    if (Eraser.futureErased.Contains(p))
+                        roleName = Helpers.cs(Color.gray, "(erased) ") + roleName;
+                    if (Vampire.vampire != null && !Vampire.vampire.Data.IsDead && Vampire.bitten == p && !p.Data.IsDead)
+                        roleName = Helpers.cs(Vampire.color, $"(bitten {(int)HudManagerStartPatch.vampireKillButton.Timer + 1}) ") + roleName;
+                    if (Deputy.handcuffedPlayers.Contains(p.PlayerId))
+                        roleName = Helpers.cs(Color.gray, "(cuffed) ") + roleName;
+                    if (Deputy.handcuffedKnows.ContainsKey(p.PlayerId))  // Active cuff
+                        roleName = Helpers.cs(Deputy.color, "(cuffed) ") + roleName;
+                    if (p == Warlock.curseVictim)
+                        roleName = Helpers.cs(Warlock.color, "(cursed) ") + roleName;
+                    if (p == Ninja.ninjaMarked)
+                        roleName = Helpers.cs(Ninja.color, "(marked) ") + roleName;
+                    if (Pursuer.blankedList.Contains(p) && !p.Data.IsDead)
+                        roleName = Helpers.cs(Pursuer.color, "(blanked) ") + roleName;
+                    if (Witch.futureSpelled.Contains(p) && !MeetingHud.Instance) // This is already displayed in meetings!
+                        roleName = Helpers.cs(Witch.color, "☆ ") + roleName;
+                    if (BountyHunter.bounty == p)
+                        roleName = Helpers.cs(BountyHunter.color, "(bounty) ") + roleName;
+                    if (Arsonist.dousedPlayers.Contains(p))
+                        roleName = Helpers.cs(Arsonist.color, "♨ ") + roleName;
+                    if (p == Arsonist.arsonist)
+                        roleName = roleName + Helpers.cs(Arsonist.color, $" ({CachedPlayer.AllPlayers.Count(x => { return x.PlayerControl != Arsonist.arsonist && !x.Data.IsDead && !x.Data.Disconnected && !Arsonist.dousedPlayers.Any(y => y.PlayerId == x.PlayerId); })} left)");
+                    if (p == Jackal.fakeSidekick)
+                        roleName = Helpers.cs(Sidekick.color, $" (fake SK)") + roleName;
+                }
+            }
             return roleName;
         }
     }
