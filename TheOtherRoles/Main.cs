@@ -65,7 +65,7 @@ namespace TheOtherRoles
         public static void UpdateRegions() {
             ServerManager serverManager = FastDestroyableSingleton<ServerManager>.Instance;
             var regions = new IRegionInfo[] {
-                new StaticHttpRegionInfo("Custom", StringNames.NoTranslation, Ip.Value, new Il2CppReferenceArray<ServerInfo>(new ServerInfo[1] { new ServerInfo("自訂", Ip.Value, Port.Value, false) })).CastFast<IRegionInfo>()
+                new StaticHttpRegionInfo("自訂", StringNames.NoTranslation, Ip.Value, new Il2CppReferenceArray<ServerInfo>(new ServerInfo[1] { new ServerInfo("自訂", Ip.Value, Port.Value, false) })).CastFast<IRegionInfo>()
             };
             
             IRegionInfo currentRegion = serverManager.CurrentRegion;

@@ -147,12 +147,12 @@ namespace TheOtherRoles.Patches {
     [HarmonyPatch(typeof(RegionMenu), nameof(RegionMenu.ChooseOption))]
     public static class RegionMenuChooseOptionPatch {
         public static bool Prefix(RegionMenu __instance, IRegionInfo region) {
-            if (region.Name != "Custom" || FastDestroyableSingleton<ServerManager>.Instance.CurrentRegion.Name == "Custom") return true;
+            if (region.Name != "自訂" || FastDestroyableSingleton<ServerManager>.Instance.CurrentRegion.Name == "自訂") return true;
             DestroyableSingleton<ServerManager>.Instance.SetRegion(region);
-            __instance.RegionText.text = "Custom";
+            __instance.RegionText.text = "自訂";
             foreach (var Button in __instance.ButtonPool.activeChildren) {
                 ServerListButton serverListButton = Button.TryCast<ServerListButton>();
-                if (serverListButton != null) serverListButton.SetSelected(serverListButton.Text.text == "Custom");
+                if (serverListButton != null) serverListButton.SetSelected(serverListButton.Text.text == "自訂");
             }
             __instance.Open();
             return false;

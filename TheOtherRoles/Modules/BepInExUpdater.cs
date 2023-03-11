@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using BepInEx;
 using BepInEx.Unity.IL2CPP;
@@ -21,7 +22,13 @@ public class BepInExUpdater : MonoBehaviour
 {
     public const string RequiredBepInExVersion = "6.0.0-be.664+0b23557c1355913983f3540797fa22c43a02247d";
     public const string BepInExDownloadURL = "https://builds.bepinex.dev/projects/bepinex_be/664/BepInEx-Unity.IL2CPP-win-x86-6.0.0-be.664%2B0b23557.zip";
+#if !RELEASEJL
     public static bool UpdateRequired => Paths.BepInExVersion.ToString() != RequiredBepInExVersion;
+#else
+    public static bool UpdateRequired => 
+        Int32.Parse(Regex.Match(Paths.BepInExVersion.PreRelease, @"\d+").Value) <
+        Int32.Parse(Regex.Match(RequiredBepInExVersion.Substring(6, 12), @"\d+").Value);
+#endif
 
     public void Awake()
     {

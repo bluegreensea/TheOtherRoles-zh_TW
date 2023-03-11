@@ -247,29 +247,29 @@ namespace TheOtherRoles
                     roleName = roleName + Helpers.cs(Vulture.color, $" ({Vulture.vultureNumberToWin - Vulture.eatenBodies} left)");
                 if (Helpers.shouldShowGhostInfo()) {
                     if (Eraser.futureErased.Contains(p))
-                        roleName = Helpers.cs(Color.gray, "(erased) ") + roleName;
+                        roleName = Helpers.cs(Color.gray, "(被抹除) ") + roleName;
                     if (Vampire.vampire != null && !Vampire.vampire.Data.IsDead && Vampire.bitten == p && !p.Data.IsDead)
-                        roleName = Helpers.cs(Vampire.color, $"(bitten {(int)HudManagerStartPatch.vampireKillButton.Timer + 1}) ") + roleName;
+                        roleName = Helpers.cs(Vampire.color, $"(被咬 {(int)HudManagerStartPatch.vampireKillButton.Timer + 1}) ") + roleName;
                     if (Deputy.handcuffedPlayers.Contains(p.PlayerId))
-                        roleName = Helpers.cs(Color.gray, "(cuffed) ") + roleName;
+                        roleName = Helpers.cs(Color.gray, "(被銬) ") + roleName;
                     if (Deputy.handcuffedKnows.ContainsKey(p.PlayerId))  // Active cuff
-                        roleName = Helpers.cs(Deputy.color, "(cuffed) ") + roleName;
+                        roleName = Helpers.cs(Deputy.color, "(被銬) ") + roleName;
                     if (p == Warlock.curseVictim)
-                        roleName = Helpers.cs(Warlock.color, "(cursed) ") + roleName;
+                        roleName = Helpers.cs(Warlock.color, "(被詛咒) ") + roleName;
                     if (p == Ninja.ninjaMarked)
-                        roleName = Helpers.cs(Ninja.color, "(marked) ") + roleName;
+                        roleName = Helpers.cs(Ninja.color, "(被標記) ") + roleName;
                     if (Pursuer.blankedList.Contains(p) && !p.Data.IsDead)
-                        roleName = Helpers.cs(Pursuer.color, "(blanked) ") + roleName;
+                        roleName = Helpers.cs(Pursuer.color, "(被填空) ") + roleName;
                     if (Witch.futureSpelled.Contains(p) && !MeetingHud.Instance) // This is already displayed in meetings!
                         roleName = Helpers.cs(Witch.color, "☆ ") + roleName;
                     if (BountyHunter.bounty == p)
-                        roleName = Helpers.cs(BountyHunter.color, "(bounty) ") + roleName;
+                        roleName = Helpers.cs(BountyHunter.color, "(被懸賞) ") + roleName;
                     if (Arsonist.dousedPlayers.Contains(p))
                         roleName = Helpers.cs(Arsonist.color, "♨ ") + roleName;
                     if (p == Arsonist.arsonist)
-                        roleName = roleName + Helpers.cs(Arsonist.color, $" ({CachedPlayer.AllPlayers.Count(x => { return x.PlayerControl != Arsonist.arsonist && !x.Data.IsDead && !x.Data.Disconnected && !Arsonist.dousedPlayers.Any(y => y.PlayerId == x.PlayerId); })} left)");
+                        roleName = roleName + Helpers.cs(Arsonist.color, $" ({CachedPlayer.AllPlayers.Count(x => { return x.PlayerControl != Arsonist.arsonist && !x.Data.IsDead && !x.Data.Disconnected && !Arsonist.dousedPlayers.Any(y => y.PlayerId == x.PlayerId); })} 剩餘)");
                     if (p == Jackal.fakeSidekick)
-                        roleName = Helpers.cs(Sidekick.color, $" (fake SK)") + roleName;
+                        roleName = Helpers.cs(Sidekick.color, $" (假跟班)") + roleName;
                 }
             }
             return roleName;

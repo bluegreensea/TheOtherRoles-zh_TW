@@ -1401,42 +1401,42 @@ namespace TheOtherRoles
                 var selectedInfo = infos[rnd.Next(infos.Count)];
                 switch (selectedInfo) {
                     case SpecialMediumInfo.SheriffSuicide:
-                        msg = "Yikes, that Sheriff shot backfired.";
+                        msg = "哎呀，警長擦搶走火自殺了。";
                         break;
                     case SpecialMediumInfo.WarlockSuicide:
-                        msg = "MAYBE I cursed the person next to me and killed myself. Oops.";
+                        msg = "或許，只是或許，我詛咒了我旁邊的人然後控制他殺了我自己。Oops。";
                         break;
                     case SpecialMediumInfo.ThiefSuicide:
-                        msg = "I tried to steal the gun from their pocket, but they were just happy to see me.";
+                        msg = "我試圖從他們口袋裡偷槍，但他們很高興看見我。";
                         break;
                     case SpecialMediumInfo.ActiveLoverDies:
-                        msg = "I wanted to get out of this toxic relationship anyways.";
+                        msg = "無論如何，我想擺脫這種有毒的交情。";
                         break;
                     case SpecialMediumInfo.PassiveLoverSuicide:
-                        msg = "The love of my life died, thus with a kiss I die.";
+                        msg = "我生命中的摯愛死了，因此我吻向了死亡。";
                         break;
                     case SpecialMediumInfo.LawyerKilledByClient:
-                        msg = "My client killed me. Do I still get paid?";
+                        msg = "我的客戶殺了我，這樣我還能得到酬金嗎？";
                         break;
                     case SpecialMediumInfo.JackalKillsSidekick:
-                        msg = "First they sidekicked me, then they killed me. At least I don't need to do tasks anymore.";
+                        msg = "他們先是招募了我，然後殺了我。至少我不用再做任務了。";
                         break;
                     case SpecialMediumInfo.ImpostorTeamkill:
-                        msg = "I guess they confused me for the Spy, is there even one?";
+                        msg = "我猜他們把我誤認為是間諜了，是不是這樣？";
                         break;
                     case SpecialMediumInfo.BodyCleaned:
-                        msg = "Is my dead body some kind of art now or... aaand it's gone.";
+                        msg = "我想想，我的屍體現在是某種藝術品或是...... 總之 現在它不見了。";
                         break;
                 }
             } else {
                 int randomNumber = rnd.Next(4);
-                string typeOfColor = Helpers.isLighterColor(Medium.target.killerIfExisting.Data.DefaultOutfit.ColorId) ? "lighter" : "darker";
+                string typeOfColor = Helpers.isLighterColor(Medium.target.killerIfExisting.Data.DefaultOutfit.ColorId) ? "淺" : "深";
                 float timeSinceDeath = ((float)(Medium.meetingStartTime - Medium.target.timeOfDeath).TotalMilliseconds);
                 
-                if (randomNumber == 0) msg = "If my role hasn't been saved, there's no " + RoleInfo.GetRolesString(Medium.target.player, false) + " in the game anymore.";
-                else if (randomNumber == 1) msg = "I'm not sure, but I guess a " + typeOfColor + " color killed me.";
-                else if (randomNumber == 2) msg = "If I counted correctly, I died " + Math.Round(timeSinceDeath / 1000) + "s before the next meeting started.";
-                else msg = "It seems like my killer was the " + RoleInfo.GetRolesString(Medium.target.killerIfExisting, false, false, true) + ".";
+                if (randomNumber == 0) msg = "如果我的職業不是被拿走，這場遊戲中就沒有 " + RoleInfo.GetRolesString(Medium.target.player, false) + " 了。";
+                else if (randomNumber == 1) msg = "我不是很確定，但我猜是個" + typeOfColor + "色系的人殺了我。";
+                else if (randomNumber == 2) msg = "如果我數的正確，我是在會議開始" + Math.Round(timeSinceDeath / 1000) + "秒前死的。";
+                else msg = "殺我的殺手看起來像是" + RoleInfo.GetRolesString(Medium.target.killerIfExisting, false, false, true) + "。";
             }
 
             if (rnd.NextDouble() < chanceAdditionalInfo) {
@@ -1446,24 +1446,24 @@ namespace TheOtherRoles
                 switch (rnd.Next(3)) {
                     case 0:
                         count = alivePlayersList.Where(pc => pc.Data.Role.IsImpostor || new List<RoleInfo>() { RoleInfo.jackal, RoleInfo.sidekick, RoleInfo.sheriff, RoleInfo.thief }.Contains(RoleInfo.getRoleInfoForPlayer(pc, false).FirstOrDefault())).Count();
-                        condition = "killer" + (count == 1 ? "" : "s");
+                        condition = "殺手" + (count == 1 ? "" : "");
                         break;
                     case 1:
                         count = alivePlayersList.Where(Helpers.roleCanUseVents).Count();
-                        condition = "player" + (count == 1 ? "" : "s") + " who can use vents";
+                        condition = "可使用通風口的玩家" + (count == 1 ? "" : "") + "";
                         break;
                     case 2:
                         count = alivePlayersList.Where(pc => Helpers.isNeutral(pc) && pc != Jackal.jackal && pc != Sidekick.sidekick && pc != Thief.thief).Count();
-                        condition = "player" + (count == 1 ? "" : "s") + " who " + (count == 1 ? "is" : "are") + " neutral but cannot kill";
+                        condition = "獨立但不是殺手的玩家" + (count == 1 ? "" : "") + "" + (count == 1 ? "" : "") + "";
                         break;
                     case 3:
                         //count = alivePlayersList.Where(pc =>
                         break;               
                 }
-                msg += $"\nWhen you asked, {count} " + condition + (count == 1 ? " was" : " were") + " still alive";
+                msg += $"\n當你詢問時，{count}個" + condition + (count == 1 ? " " : " ") + "還活著";
             }
 
-            return Medium.target.player.Data.PlayerName + "'s Soul:\n" + msg;
+            return Medium.target.player.Data.PlayerName + "的靈魂:\n" + msg;
         }
     }
 

@@ -31,20 +31,25 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 | [賞金獵人](#賞金獵人) | [駭客](#駭客) |  | [轉職師](#轉職師)
 | [巫師](#巫師) | [追踪者](#追踪者) |  |  |
 | [忍者](#忍者) | [密探](#密探) |  |  |
-| [壞賭徒](#賭徒) | [間諜](#間諜) |  |  |
-|  | [傳送師](#傳送師) |  |  |
+| [炸彈客](#炸彈客) | [間諜](#間諜) |  |  |
+| [壞賭徒](#賭徒) | [傳送師](#傳送師) |  |  |
 |  | [守衛](#守衛) |  |  |
 |  | [通靈師](#通靈師) |  |  |
 |  | [陷阱師](#陷阱師) |  |  |
 |  | [好賭徒](#賭徒) |  |  |
-|  |  |  |
 
 [職業分配](#職業分配) 部分解釋了職業如何分配.
 
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
+| 2022.12.14s| v4.3.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.3.0/TheOtherRoles.zip)
 | 2022.12.14s| v4.2.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.2.1/TheOtherRoles.zip)
+<details>
+  <summary>Click to show older versions</summary>
+  
+| Among Us - Version| Mod Version | Link |
+|----------|-------------|-----------------|
 | 2022.10.25s| v4.2.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.2.0/TheOtherRoles.zip)
 | 2022.9.20s| v4.1.7| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.7/TheOtherRoles.zip)
 | 2022.6.21s| v4.1.6| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.6/TheOtherRoles.zip)
@@ -110,10 +115,30 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 | 2021.3.5s | v1.3 | [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v1.3/TheOtherRoles.zip)
 | 2020.12.19s | v1.1 | [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v1.1/TheOtherRoles.zip)
 | 2020.12.19s | v1.0 | [Download](https://github.com/Eisbison/TheOtherRoles/files/6097191/TheOtherRoles.zip)
-
+</details>
+  
+  
 # Changelog
 <details>
   <summary>Click to show the Changelog</summary>
+
+**Version 4.3.0**
+- Updated to Among Us version 2023.2.28
+- Added a new role: [Bomber](#炸彈客)
+- Added more information for ghosts (e.g. who is cuffed, witched, ninja marked etc.), can be turned off in the mod options menu
+- Added the option to change between cameras (Polus & Airship) with A & D and left & right arrow keys on your keyboard
+- Added a new feature in settings: Fill Crewmate Roles
+- Added a new option: Cams Switch To Night Vision If Lights Are Off (+ Option: Impostor Vision Ignores Night Vision Cams)
+- Added a new option: Finish Tasks Before Haunting Or Zooming Out
+- Added a new option to Mayor: Mayor Can Choose Single Vote
+- Added a button to see the game settings while ingame (F1-Key)
+- Added a new ability to Portalmaker: Port to any of the portals from anywhere
+- Added a new option to Medium: Chance That The Answer Contains Additional Information (see [Medium](#通靈師))
+- Changed the question pattern for the Medium
+- Changed the role: Lighter (Flashlight vision)
+- Changed the role: Snitch (no more arrows, location information instead)
+- Fixed a bug where entering a custom server manually did not work anymore (+ nicer UI for entering a custom server)
+- Fixed a bug where a witch-spelled prosecutor would not win if their target was voted
   
 **Version 4.2.1**
 - Updated to Among Us version 2022.12.14
@@ -730,6 +755,7 @@ docker run -d -p 22023:22023/udp --env IMPOSTOR_AntiCheatEnabled=false --env IMP
 # 設定
 該模組在 Among Us 添加了一些新設定(除了職業設定)：
 - **船員數量:** 可以在大廳內設定船員的數量
+- **填滿船員職業(忽略最大/最小):** 所有人都將有職業，即使設置說會有普通船員(需要足夠的職業大於0%)。
 - **獨立數量:** 可以在大廳內設定獨立的數量
 - **偽裝者數量:** 可以在大廳內設定偽裝者的數量
 - **特殊數量:** 可以在大廳內設定特殊的數量
@@ -739,16 +765,21 @@ docker run -d -p 22023:22023/udp --env IMPOSTOR_AntiCheatEnabled=false --env IMP
 - **隱藏玩家名稱:** 隱藏所有有您不知職業玩家的名稱。戀人/偽裝者/豺狼隊伍仍可以看到他們隊友的名字。偽裝者還可以看到間諜的名字，每個人仍可以看到迷你的年齡。
 - **允許並列醫務室掃描:** 允許玩家同時進行他們的醫務室掃描。
 - **免死金牌** 上一輪第一個被殺死的玩家將被上盾並且所有玩家可見直到第一次會議時。
+- **作祟或縮放需先做完任務** 縮放功能和作祟將對玩家隱藏，直到他們完成所有任務
+- **管理表顯示屍體**
+- **當關燈時攝影機切換到夜視鏡** 關燈時，攝影機上看不到任何顏色和裝飾。迷你可以被發現！
+- **偽裝者視角忽略攝影機夜視鏡**
 - **隨機地圖** 如果啟用，它允許你設定除了 ehT dlekS 隨機所有地圖的機率。
-- **死者可看到職業**
-- **死者可看到投票**
-- **死者可看到特殊標籤**
-- **死者可看到剩餘任務**
+- **死後可看到職業**
+- **死後可看到投票**
+- **死後可看到特殊標籤**
+- **死後可看到任務與其它資訊** 其它資訊：例如誰被詛咒、被銬等等，還有醫生盾、閃光燈、工程師修復等。
 - **地圖可在會議期間開啟，並會在有人舉報/召集會議時顯示您的最後位置**
 - **死者完成任務時，將獲得縮放/概覽功能**
 - **任務數量:** 您現在可以選擇更多任務。
 - **職業總結:** 當遊戲結束時，列出所有玩家及其職業,任務進度與偽裝者殺死了多少玩家。
 - **深/淺:** 在會議顯示玩家的色系。
+- **在遊戲中顯示設定** 您可以使用位於地圖按鈕下方的按鈕或 F1鍵 來打開或關閉大廳設定的顯示
 
 ### 地圖任務數上限
 你可以設定:
@@ -768,7 +799,9 @@ Example: If you configure 4 common tasks on Airship crewmates will only receive 
 -----------------------
 
 ### 隨機地圖
-**隨機地圖** If enabled it allows you to set percentages for each current map.
+**隨機地圖** 如果啟用，它允許您為每個當前地圖設置百分比。
+
+**完成任務前作祟或縮放** 您必須先完成任務，然後才能縮放。
 
 **使用隨機地圖設定組:** When this option is turned on, the game will switch to the `隨機地圖設定組 <MapName>` when a game is started on a random map. **This includes vanilla options!**. This makes it possible to e.g. play with less tasks on large maps like Airship.
 The game will **保持** in the preset for that random map after the match.
@@ -851,7 +884,7 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 - 腳印的顏色會相應發生變化(也包括已經在地面上的腳印)。
 - 偽裝者夥伴仍能看到是偽裝者(名字仍是紅色)。
 - 護盾相應變化(百變怪獲得或失去護盾)。
-- 追踪者及密探箭頭正常工作。
+- 追踪者箭頭正常工作。
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -872,7 +905,7 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 - 腳印的顏色變成灰色(包括已經在地上的腳印)。
 - 駭客在管理表上將看到灰色圖標。
 - 盾牌不再可見。
-- 追踪者及密探箭頭正常工作。
+- 追踪者箭頭正常工作。
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -892,6 +925,8 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 - 如果在召開會議時被咬的玩家還活著，他們會在會議開始時死亡。
 - 咬人冷卻時間與殺人冷卻時間相同(如果吸血鬼咬目標則外加死亡延遲時間)。
 - 如果遊戲中有吸血鬼，就不會有咒詛師。
+- 如果吸血鬼咬了一個玩家，而小偷殺死了吸血鬼，仍然會進行咬殺，但新的吸血鬼會顯示在擊殺動畫中。
+- 如果吸血鬼咬了一名玩家並在被咬殺之前被殺死，被咬的玩家將倖存。
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -961,20 +996,20 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 ### **隊伍:偽裝者**
 咒詛師是個偽裝者，可以詛咒另一個玩家(被詛咒的玩家並不會注意到)。\
 如果被詛咒的人站在另一個玩家旁邊，術士就可以控制被詛咒的玩家去殺死那個玩家(無論他們離多遠)。\
-在控制被詛咒的玩家的下進行殺戮將解除詛咒，這將導致咒詛師在一段可設定的時間內無法移動。\
+在控制被詛咒的玩家的下進行擊殺將解除詛咒，這將導致咒詛師在一段可設定的時間內無法移動。\
 咒詛師仍然可以執行正常擊殺，但兩個按鈕共享相同的冷卻時間。\
 \
 **NOTE:**
-- 咒詛師使用"詛咒殺戮"可以殺死他們的偽裝者夥伴(甚至他們自己)
+- 咒詛師使用"詛咒擊殺"可以殺死他們的偽裝者夥伴(甚至他們自己)
 - 如果遊戲中有咒詛師，就不會有吸血鬼
-- 進行正常的殺戮，不會解除詛咒
+- 進行正常的擊殺，不會解除詛咒
 
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
 | 咒詛師生成機率 | -
-| 咒詛師冷卻 | 使用詛咒和詛咒殺戮的冷卻時間
-| 咒詛師定身持續時間 | 使用詛咒殺戮後，咒詛師被固定在原地的時間
+| 咒詛師冷卻 | 使用詛咒和詛咒擊殺的冷卻時間
+| 咒詛師定身持續時間 | 使用詛咒擊殺後，咒詛師被固定在原地的時間
 -----------------------
 
 ## 賞金獵人
@@ -1051,6 +1086,33 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 | 痕跡持續時間 | -
 | 痕跡褪色的時間 | -
 | 忍者隱形持續時間 | -
+-----------------------
+
+## 炸彈客
+### **隊伍:偽裝者**
+炸彈客是個偽裝者，具有非常"爆炸性"的能力。他們能放置炸彈來分散成群結隊的船員並能炸死他們。\
+炸彈客能像正常偽裝者一樣進行擊殺。\
+炸彈的放置時間可能與擊殺冷卻不同，取決於選項。\
+船員根據選項設定可以拆除炸彈。
+
+**NOTE:**
+- 炸彈不會殺死帶護盾的玩家(醫生、免死金牌)
+- 炸彈在迷你長大之前不會炸死他
+- 炸彈可以殺死炸彈客及其隊友
+- 估計範圍可以高於/低於實際破壞範圍，根據選項設定，並具有視覺指示
+- 視覺指示會慢慢變成紅色，直到炸彈爆炸並且不顯示爆炸範圍(只顯示估計範圍)！
+- 炸彈可以通過站在上面並剪斷保險絲(DEFUSE按鈕)來拆除
+
+### 遊戲選項
+| 名稱 | 描述 |
+|----------|:-------------:|
+| 炸彈客生成機率 | -
+| 炸彈爆炸倒數 | -
+| 炸彈爆炸範圍 | -
+| 炸彈估計範圍 | -
+| 炸彈拆彈持續時間 | -
+| 炸彈放置冷卻 | -
+| 炸彈啟動倒數 |
 -----------------------
 
 ## 賭徒
@@ -1282,7 +1344,8 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 市長通過兩票來領導船員。\
 市長始終可以使用他們的會議，即使已達到最大會議次數。\
 根據選項設定，市長可以有個攜帶式緊急會議按鈕。\
-根據選項設定，市長可以在完成可設定數量的任務後看到是誰投票的顏色。
+根據選項設定，市長可以在完成可設定數量的任務後看到是誰投票的顏色。\
+市長可以選擇只投一票而不是兩票(通過會議時螢幕上的按鈕)，取決於選項。
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -1291,6 +1354,7 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 | 市長可以看到是誰投票 | -
 | 可以看到是誰投票所需要的任務數 | -
 | 攜帶式緊急會議按鈕 | -
+| 市長可以選擇投單票 | 關、開(投票時間前)、開(直到會議結束)
 -----------------------
 
 ## 工程師
@@ -1335,7 +1399,7 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 警員可將玩家上銬。\
 手銬是隱藏的，直到被上銬的玩家嘗試使用禁用的能力。\
 手銬禁用:
-- 殺戮
+- 擊殺
 - 能力
 - 通風口
 - 舉報\
@@ -1357,16 +1421,16 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 
 ## 點燈人
 ### **隊伍:船員**
-點燈人可以不時地開燈，讓他們增加設定的視野。
+點燈人根據設置與其他人有著不同的視野。\
+他們的視野看起來像一個可以四處移動的手電筒錐體(從 Hide'n'Seek 模式)。
 
 ### 遊戲選項
 | 名稱 | 描述 |
 |----------|:-------------:|
 | 點燈人生成機率 | -
-| 開燈時點燈視野 | 當燈泡亮起且點燈人開燈時點燈人的視野
-| 關燈時點燈視野 | 當燈泡熄滅且點燈人開燈時點燈人的視野
-| 點燈人冷卻 | -
-| 點燈持續時間 | -
+| 開燈時點燈視野 | 當燈泡亮起且點燈人的視野
+| 關燈時點燈視野 | 當燈泡熄滅且點燈人的視野
+| 手電筒大小 | -
 -----------------------
 
 ## 偵探
@@ -1524,20 +1588,18 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 
 ## 密探
 ### **隊伍:船員**
-當密探完成所有任務時，將出現指向偽裝者的箭頭 (僅對密探可見) (根據選項也能指向豺狼隊伍的成員)。\
-當密探還剩下一項任務(可設定)時，密探將會被偽裝者知道 (取決於選項也讓豺狼隊伍的成員知道)，出現有指向密探的箭頭。
+當密探完成所有任務時，他們將在會議開始時在聊天中取得所有殺手最後位置的資訊。\
+當密探只剩下可配置的任務數量時，將在邪惡方玩家螢幕上顯示遊戲中有一個密探的文字。
 
-**NOTE**
-- 在 Submerged 中，密探完成任務時，偽裝者/豺狼在不同樓層，箭頭將始終指向電梯
+**NOTE:**
+- 當密探死亡時，殺手們都會被告知密探已經死了
+- 最後位置可能是房間或空地
 
 ### 遊戲選項
 | 名稱 | 描述
 |----------|:-------------:|
 | 密探生成機率 | -
 | 告密者可看到偽裝者在哪的任務數 | -
-| 包含豺狼團隊 | -
-| 對豺狼團隊使用不同顏色的箭頭 | -
-| 密探完成任務後不可被賭徒猜出 | -
 -----------------------
 
 ## 間諜
@@ -1567,7 +1629,8 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 傳送師是個船員，可以在地圖上放置兩個傳送門。\
 這兩個傳送門將相連。\
 這些傳送門會在會議後可見，每個人都可以使用。\
-除此之外，根據選項設定傳送師還可以知道誰使用了傳送門以及開始會議多久前使用的資訊在聊天欄中。
+除此之外，根據選項設定傳送師還可以知道誰使用了傳送門以及開始會議多久前使用的資訊在聊天欄中。\
+如果啟用選項，傳送師可以從任何地方傳送到他們放置的傳送門。
 
 **NOTE:**
 - 額外使用傳送門的按鈕將會在傳送師建造完傳送門並過了拍桌會議/屍體報告後出現。
@@ -1584,6 +1647,7 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 | 傳送門冷卻 | -
 | 傳送師記錄只顯示顏色類型 | -
 | 記錄顯示時間 | -
+| 可以從任何地方傳送到傳送門 | -
 -----------------------
 
 ## 守衛
@@ -1618,13 +1682,33 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 ## 通靈師
 ### **隊伍:船員**
 
-通靈師是一個可以詢問靈魂來得到資訊的船員。和靈媒一樣，他將看到玩家死亡的地方(下次會議後)並可以詢問祂們。然後他會在聊天欄中取得有關靈魂或殺手的隨機資訊。靈魂只停留一回合，即只到下次會議。根據選項設定，靈魂只能被詢問一次然後消失。\
-
+通靈師是一個可以詢問靈魂來得到資訊的船員。和靈媒一樣，他將看到玩家死亡的靈魂(下次會議後)並可以詢問祂們。然後他們會在聊天欄中取得有關靈魂或殺手的隨機資訊。靈魂只停留一回合，即只到下次會議。根據選項設定，靈魂只能被詢問一次然後消失。\
+\
 問題:
-你的職業是什麼？
-殺你的殺手顏色類型是什麼？
-你什麼時候死的？
-殺你的殺手職業是什麼？
+靈魂總是喜歡先回答職業的具體資訊！
+
+**職業相關:**
+- 警長自殺: "哎呀，警長擦搶走火自殺了。"
+- 小偷自殺: "我試圖從他們口袋裡偷槍，但他們很高興看見我。"
+- 戀人被殺: "無論如何，我想擺脫這種有毒的交情。"
+- 戀人自殺: "我生命中的摯愛死了，因此我吻向了死亡。"
+- 律師客戶殺了律師: "我的客戶殺了我，這樣我還能得到酬金嗎？"
+- 豺狼/跟班 隊內擊殺: "他們先是招募了我，然後殺了我... 但為什麼要？"
+- 偽裝者 隊內擊殺: "我猜他們把我誤認為是間諜了，是不是這樣？"
+- Submerged 中缺氧致死: "我真的需要那個呼吸面罩嗎？"
+- 咒詛師殺了自己: "或許，只是或許，我詛咒了我旁邊的人然後控制他殺了我自己。Oops。"
+- 禿鷲/清道夫 吃/清 了屍體: "我想想，我的屍體現在是某種藝術品或是...... 總之 現在它不見了。"
+
+**其它隨機:**
+- "我不是很確定，但我猜是個暗/亮色系的人殺了我。"
+- "如果我數的正確，我是在會議開始x秒前死的。"
+- "如果我的職業不是被拿走，這場遊戲中就沒有(職業)了。"
+- "殺我的殺手看起來像是(職業)。"
+
+**有機率會回答的更多資訊:**
+- 當你詢問時，x個殺手還活著。
+- 當你詢問時，x個可使用通風口的玩家還活著。
+- 當你詢問時，x個獨立但不是殺手的玩家還活著。
 
 ### 遊戲選項
 | 名稱 | 描述
@@ -1633,6 +1717,7 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 | 通靈師冷卻 | -
 | 通靈持續時間 | 詢問靈魂所需要的時間
 | 每個靈魂只能被詢問一次 | 如果設置為開，靈魂只能被詢問一次然後消失
+| 回答會包含殺手職業的剩餘人數的機率 | 機率包括警長和小偷
 -----------------------
 
 ## 陷阱師
