@@ -1434,9 +1434,9 @@ namespace TheOtherRoles
                 float timeSinceDeath = ((float)(Medium.meetingStartTime - Medium.target.timeOfDeath).TotalMilliseconds);
                 
                 if (randomNumber == 0) msg = "如果我的職業不是被拿走，這場遊戲中就沒有 " + RoleInfo.GetRolesString(Medium.target.player, false) + " 了。";
-                else if (randomNumber == 1) msg = "我不是很確定，但我猜是個" + typeOfColor + "色系的人殺了我。";
-                else if (randomNumber == 2) msg = "如果我數的正確，我是在會議開始" + Math.Round(timeSinceDeath / 1000) + "秒前死的。";
-                else msg = "殺我的殺手看起來像是" + RoleInfo.GetRolesString(Medium.target.killerIfExisting, false, false, true) + "。";
+                else if (randomNumber == 1) msg = "我不是很確定，但我猜是個 " + typeOfColor + " 色系的人殺了我。";
+                else if (randomNumber == 2) msg = "如果我數的正確，我是在會議開始 " + Math.Round(timeSinceDeath / 1000) + "秒 前死的。";
+                else msg = "殺我的殺手看起來像是 " + RoleInfo.GetRolesString(Medium.target.killerIfExisting, false, false, true) + "。";
             }
 
             if (rnd.NextDouble() < chanceAdditionalInfo) {
@@ -1460,7 +1460,7 @@ namespace TheOtherRoles
                         //count = alivePlayersList.Where(pc =>
                         break;               
                 }
-                msg += $"\n當你詢問時，{count}個" + condition + (count == 1 ? " " : " ") + "還活著";
+                msg += $"\n當你詢問時，剩 {count}個 " + condition + (count == 1 ? " " : " ") + "還活著";
             }
 
             return Medium.target.player.Data.PlayerName + "的靈魂:\n" + msg;

@@ -644,7 +644,7 @@ namespace TheOtherRoles.Patches {
                 // Add trapped Info into Trapper chat
                 if (Trapper.trapper != null && (CachedPlayer.LocalPlayer.PlayerControl == Trapper.trapper || Helpers.shouldShowGhostInfo()) && !Trapper.trapper.Data.IsDead) {
                     if (Trap.traps.Any(x => x.revealed))
-                        FastDestroyableSingleton<HudManager>.Instance.Chat.AddChat(Trapper.trapper, "Trap Logs:");
+                        FastDestroyableSingleton<HudManager>.Instance.Chat.AddChat(Trapper.trapper, "陷阱日誌:");
                     foreach (Trap trap in Trap.traps) {
                         if (!trap.revealed) continue;
                         string message = $"陷阱 {trap.instanceId}: \n";
@@ -668,7 +668,7 @@ namespace TheOtherRoles.Patches {
                     var (playerCompleted, playerTotal) = TasksHandler.taskInfo(Snitch.snitch.Data);
                     int numberOfTasks = playerTotal - playerCompleted;
                     if (numberOfTasks == 0) {
-                        output = $"Bad alive roles in game: \n \n";
+                        output = $"在遊戲中還活著的壞職業: \n \n";
                         FastDestroyableSingleton<HudManager>.Instance.StartCoroutine(Effects.Lerp(0.3f, new Action<float>((x) => {
                             if (x == 1f) {
                                 foreach (PlayerControl p in CachedPlayer.AllPlayers) {
@@ -676,11 +676,11 @@ namespace TheOtherRoles.Patches {
                                     if (!Snitch.playerRoomMap.ContainsKey(p.PlayerId)) continue;
                                     if (p.Data.IsDead) continue;
                                     var room = Snitch.playerRoomMap[p.PlayerId];
-                                    var roomName = "open fields";
+                                    var roomName = "開放空間";
                                     if (room != byte.MinValue) {
                                         roomName = DestroyableSingleton<TranslationController>.Instance.GetString((SystemTypes)room);
                                     }
-                                    output += "- " + RoleInfo.GetRolesString(p, false, false, true) + ", was last seen in " + roomName + "\n";
+                                    output += "- " + RoleInfo.GetRolesString(p, false, false, true) + " 最後在 " + roomName + "\n";
                                 }
                                 FastDestroyableSingleton<HudManager>.Instance.Chat.AddChat(Snitch.snitch, $"{output}");
                             }
