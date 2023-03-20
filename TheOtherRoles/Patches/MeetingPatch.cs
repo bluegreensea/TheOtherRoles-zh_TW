@@ -680,7 +680,7 @@ namespace TheOtherRoles.Patches {
                                     if (room != byte.MinValue) {
                                         roomName = DestroyableSingleton<TranslationController>.Instance.GetString((SystemTypes)room);
                                     }
-                                    output += "- " + RoleInfo.GetRolesString(p, false, false, true) + " 最後在 " + roomName + "\n";
+                                    output += "- " + RoleInfo.GetRolesString(p, false, false, true) + "最後在 " + roomName + "\n";
                                 }
                                 FastDestroyableSingleton<HudManager>.Instance.Chat.AddChat(Snitch.snitch, $"{output}");
                             }
