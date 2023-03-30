@@ -43,7 +43,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
-| 2022.12.14s| v4.3.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.3.0/TheOtherRoles.zip)
+| 2023.2.28s| v4.3.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.3.0/TheOtherRoles.zip)
 | 2022.12.14s| v4.2.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.2.1/TheOtherRoles.zip)
 <details>
   <summary>Click to show older versions</summary>
@@ -1014,7 +1014,6 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 
 ## 賞金獵人
 ### **隊伍:偽裝者**
-\
 賞金獵人是一個偽裝者，將不斷有懸賞目標 (被作為目標的玩家不會有通知)。\
 賞金獵人的目標在每次會議後和可設置的時間後更換。\
 如果賞金獵人殺死他們的懸賞目標，他們的擊殺冷卻會比原本少很多。\
@@ -1235,7 +1234,6 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 
 ## 禿鷲
 ### **隊伍:獨立**
-
 禿鷲沒有任何任務，他們必須自己取得勝利。\
 禿鷲是一個獨立職業，必須吃掉指定數量的屍體(取決於選項)才能獲勝。\
 根據選項設定，當有玩家死亡時，禿鷲會得到一個指向屍體的箭頭。\
@@ -1681,7 +1679,6 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 
 ## 通靈師
 ### **隊伍:船員**
-
 通靈師是一個可以詢問靈魂來得到資訊的船員。和靈媒一樣，他將看到玩家死亡的靈魂(下次會議後)並可以詢問祂們。然後他們會在聊天欄中取得有關靈魂或殺手的隨機資訊。靈魂只停留一回合，即只到下次會議。根據選項設定，靈魂只能被詢問一次然後消失。\
 \
 問題:
