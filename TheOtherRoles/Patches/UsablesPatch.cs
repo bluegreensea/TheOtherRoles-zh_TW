@@ -234,8 +234,8 @@ namespace TheOtherRoles.Patches {
             // Potentially deactivate emergency button for Lawyer/Prosecutor
             if (Lawyer.lawyer != null && Lawyer.lawyer == CachedPlayer.LocalPlayer.PlayerControl && !Lawyer.canCallEmergency) {
                 roleCanCallEmergency = false;
-                statusText = "The Lawyer can't start an emergency meeting";
-                if (Lawyer.isProsecutor) statusText = "The Prosecutor can't start an emergency meeting";
+                statusText = "律師不能發起緊急會議";
+                if (Lawyer.isProsecutor) statusText = "檢察官不能發起緊急會議";
             }
 
             if (!roleCanCallEmergency) {

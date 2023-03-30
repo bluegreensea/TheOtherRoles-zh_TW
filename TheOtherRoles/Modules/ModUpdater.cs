@@ -101,8 +101,8 @@ namespace TheOtherRoles.Modules
             }));
 
             var text = button.transform.GetChild(0).GetComponent<TMP_Text>();
-            string t = "Update";
-            if (TORUpdate is null && SubmergedUpdate is not null) t = SubmergedCompatibility.Loaded ? $"Update\nSubmerged" : $"Download\nSubmerged";
+            string t = "更新";
+            if (TORUpdate is null && SubmergedUpdate is not null) t = SubmergedCompatibility.Loaded ? $"更新\nSubmerged" : $"下載\nSubmerged";
 
             StartCoroutine(Effects.Lerp(0.1f, (System.Action<float>)(p => text.SetText(t))));
 
@@ -110,7 +110,7 @@ namespace TheOtherRoles.Modules
             passiveButton.OnMouseOut.AddListener((Action)(() => buttonSprite.color = text.color = Color.red));
 
             var isSubmerged = TORUpdate == null;
-            var announcement = $"<size=150%>A new {(isSubmerged ? "Submerged" : "THE OTHER ROLES")} update to {(isSubmerged ? SubmergedUpdate.Tag : TORUpdate.Tag)} is available</size>\n{(isSubmerged ? SubmergedUpdate.Content : TORUpdate.Content)}";
+            var announcement = $"<size=150%>有新的 {(isSubmerged ? "Submerged" : "THE OTHER ROLES")} 更新 {(isSubmerged ? SubmergedUpdate.Tag : TORUpdate.Tag)} 可用</size>\n{(isSubmerged ? SubmergedUpdate.Content : TORUpdate.Content)}";
             var mgr = FindObjectOfType<MainMenuManager>(true);
 
             if (!isSubmerged) {
@@ -120,7 +120,7 @@ namespace TheOtherRoles.Modules
                         passiveButton.OnClick.RemoveAllListeners();
                         passiveButton.OnClick = new Button.ButtonClickedEvent();
                         passiveButton.OnClick.AddListener((Action)(() => {
-                            mgr.StartCoroutine(CoShowAnnouncement($"<size=150%>A MANUAL UPDATE IS REQUIRED</size>"));
+                            mgr.StartCoroutine(CoShowAnnouncement($"<size=150%>需要手動更新</size>"));
                         }));
                     }
                 } catch {  
@@ -130,7 +130,7 @@ namespace TheOtherRoles.Modules
             }
             
             if (isSubmerged && !SubmergedCompatibility.Loaded) showPopUp = false;
-            if (showPopUp) mgr.StartCoroutine(CoShowAnnouncement(announcement, shortTitle: isSubmerged ? "Submerged Update" : "TOR Update", date: isSubmerged ? SubmergedUpdate.TimeString : TORUpdate.TimeString));
+            if (showPopUp) mgr.StartCoroutine(CoShowAnnouncement(announcement, shortTitle: isSubmerged ? "Submerged 更新" : "TOR 更新", date: isSubmerged ? SubmergedUpdate.TimeString : TORUpdate.TimeString));
             showPopUp = false;
         }
         
