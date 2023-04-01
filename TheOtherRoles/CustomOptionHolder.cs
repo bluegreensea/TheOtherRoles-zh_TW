@@ -588,8 +588,8 @@ namespace TheOtherRoles {
                            
             snitchSpawnRate = CustomOption.Create(210, Types.Crewmate, cs(Snitch.color, "密探"), rates, null, true);
             snitchLeftTasksForReveal = CustomOption.Create(219, Types.Crewmate, "密探可看到偽裝者在哪需要的任務數", 5f, 0f, 25f, 1f, snitchSpawnRate);
-            snitchMode = CustomOption.Create(211, Types.Crewmate, "Information Mode", new string[] { "Chat", "Map", "Chat & Map" }, snitchSpawnRate);
-            snitchTargets = CustomOption.Create(212, Types.Crewmate, "Targets", new string[] { "All Evil Players", "Killing Players" }, snitchSpawnRate);
+            snitchMode = CustomOption.Create(211, Types.Crewmate, "資訊模式", new string[] { "聊天室", "地圖", "聊天室 & 地圖" }, snitchSpawnRate);
+            snitchTargets = CustomOption.Create(212, Types.Crewmate, "目標", new string[] { "所有非船員玩家", "非船員方可殺人玩家" }, snitchSpawnRate);
 
             spySpawnRate = CustomOption.Create(240, Types.Crewmate, cs(Spy.color, "間諜"), rates, null, true);
             spyCanDieToSheriff = CustomOption.Create(241, Types.Crewmate, "間諜可以被警長殺死", false, spySpawnRate);
