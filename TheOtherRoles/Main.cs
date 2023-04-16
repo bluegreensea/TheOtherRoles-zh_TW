@@ -26,6 +26,9 @@ namespace TheOtherRoles
 {
     [BepInPlugin(Id, "The Other Roles", VersionString)]
     [BepInDependency(SubmergedCompatibility.SUBMERGED_GUID, BepInDependency.DependencyFlags.SoftDependency)]
+#if RELEASE_JL
+    [BepInDependency(CrowdedModCompatibility.CROWDEDMOD_GUID, BepInDependency.DependencyFlags.SoftDependency)]
+#endif
     [BepInProcess("Among Us.exe")]
     [ReactorModFlags(Reactor.Networking.ModFlags.RequireOnAllClients)]
     public class TheOtherRolesPlugin : BasePlugin
@@ -125,6 +128,9 @@ namespace TheOtherRoles
             EventUtility.Load();
 
             SubmergedCompatibility.Initialize();
+#if RELEASE_JL
+            CrowdedModCompatibility.Initialize();
+#endif
             AddComponent<ModUpdateBehaviour>();
             Modules.MainMenuPatch.addSceneChangeCallbacks();
         }

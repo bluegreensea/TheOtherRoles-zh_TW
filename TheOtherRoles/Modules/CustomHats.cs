@@ -402,7 +402,7 @@ namespace TheOtherRoles.Modules {
                 });
                 foreach (string key in orderedKeys) {
                     List<System.Tuple<HatData, HatExtension>> value = packages[key];
-#if !NOTHATS && RELEASEJL
+#if !NOTHATS && RELEASE_JL
                     if (key == "Translator Hats") continue;
 #endif
                     YOffset = createHatPackage(value, key, YOffset, __instance);

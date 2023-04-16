@@ -258,7 +258,7 @@ namespace TheOtherRoles.Patches {
             }
 
             public bool GuidMatches() {
-#if !RELEASEJL
+#if !RELEASE_JL
                 return Assembly.GetExecutingAssembly().ManifestModule.ModuleVersionId.Equals(this.guid);
 #else
                 return FakeGuid.guid.Equals(guid);

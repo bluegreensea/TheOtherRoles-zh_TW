@@ -8,18 +8,18 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-		ReleaseJL|Any CPU = ReleaseJL|Any CPU
+		Release.JL|Any CPU = Release.JL|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{11FBC798-BAF5-4EE5-9511-BE6DB0592F99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{11FBC798-BAF5-4EE5-9511-BE6DB0592F99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11FBC798-BAF5-4EE5-9511-BE6DB0592F99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11FBC798-BAF5-4EE5-9511-BE6DB0592F99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11FBC798-BAF5-4EE5-9511-BE6DB0592F99}.Release.JL|Any CPU.ActiveCfg = Release.JL|Any CPU
+		{11FBC798-BAF5-4EE5-9511-BE6DB0592F99}.Release.JL|Any CPU.Build.0 = Release.JL|Any CPU
 		{73A5662B-9C59-4C97-95C5-F5B2A8BBDDCA}.Debug|Any CPU.ActiveCfg = Debug|Win32
 		{73A5662B-9C59-4C97-95C5-F5B2A8BBDDCA}.Debug|Any CPU.Build.0 = Debug|Win32
 		{73A5662B-9C59-4C97-95C5-F5B2A8BBDDCA}.Release|Any CPU.ActiveCfg = Release|Win32
 		#{73A5662B-9C59-4C97-95C5-F5B2A8BBDDCA}.Release|Any CPU.Build.0 = Release|Win32
-		{11FBC798-BAF5-4EE5-9511-BE6DB0592F99}.ReleaseJL|Any CPU.ActiveCfg = ReleaseJL|Any CPU
-		{11FBC798-BAF5-4EE5-9511-BE6DB0592F99}.ReleaseJL|Any CPU.Build.0 = ReleaseJL|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -459,13 +459,13 @@ namespace TheOtherRoles {
             writer.Write(AmongUsClient.Instance.AmHost ? Patches.GameStartManagerPatch.timer : -1f);
             writer.WritePacked(AmongUsClient.Instance.ClientId);
             writer.Write((byte)(TheOtherRolesPlugin.Version.Revision < 0 ? 0xFF : TheOtherRolesPlugin.Version.Revision));
-#if !RELEASEJL
+#if !RELEASE_JL
             writer.Write(Assembly.GetExecutingAssembly().ManifestModule.ModuleVersionId.ToByteArray());
 #else
             writer.Write(FakeGuid.guid.ToByteArray());
 #endif
             AmongUsClient.Instance.FinishRpcImmediately(writer);
-#if !RELEASEJL
+#if !RELEASE_JL
             RPCProcedure.versionHandshake(TheOtherRolesPlugin.Version.Major, TheOtherRolesPlugin.Version.Minor, TheOtherRolesPlugin.Version.Build, TheOtherRolesPlugin.Version.Revision, Assembly.GetExecutingAssembly().ManifestModule.ModuleVersionId, AmongUsClient.Instance.ClientId);
 #else
             RPCProcedure.versionHandshake(TheOtherRolesPlugin.Version.Major, TheOtherRolesPlugin.Version.Minor, TheOtherRolesPlugin.Version.Build, TheOtherRolesPlugin.Version.Revision, FakeGuid.guid, AmongUsClient.Instance.ClientId);

@@ -1,4 +1,4 @@
-#if RELEASEJL
+#if RELEASE_JL
 using System;
 namespace TheOtherRoles; 
 
