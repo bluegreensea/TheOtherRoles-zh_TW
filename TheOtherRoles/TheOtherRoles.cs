@@ -1429,7 +1429,7 @@ namespace TheOtherRoles
                         msg = "我試圖從他們口袋裡偷槍，但他們很高興看見我。";
                         break;
                     case SpecialMediumInfo.ActiveLoverDies:
-                        msg = "無論如何，我想擺脫這種有毒的交情。";
+                        msg = "無論如何，我想擺脫這種有毒的感情。";
                         break;
                     case SpecialMediumInfo.PassiveLoverSuicide:
                         msg = "我生命中的摯愛死了，因此我吻向了死亡。";
@@ -1482,7 +1482,7 @@ namespace TheOtherRoles
                 msg += $"\n當你詢問時，剩 {count}個 " + condition + (count == 1 ? " " : " ") + "還活著";
             }
 
-            return Medium.target.player.Data.PlayerName + "的靈魂:\n" + msg;
+            return Medium.target.player.Data.PlayerName + " 的靈魂:\n" + msg;
         }
     }
 
