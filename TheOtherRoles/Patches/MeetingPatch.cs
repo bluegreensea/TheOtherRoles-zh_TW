@@ -331,8 +331,8 @@ namespace TheOtherRoles.Patches {
                 swapperButtonList[i].OnClick.RemoveAllListeners();
                 swapperButtonList[i].OnClick.AddListener((System.Action)(() => swapperOnClick(copyI, __instance)));
             }
-            meetingExtraButtonText.text = $"Swaps: {Swapper.charges}";
-            meetingExtraButtonLabel.text = Helpers.cs(Color.red, "Confirm Swap");
+            meetingExtraButtonText.text = $"可換票次數: {Swapper.charges}";
+            meetingExtraButtonLabel.text = Helpers.cs(Color.red, "確認交換");
 
         }
 

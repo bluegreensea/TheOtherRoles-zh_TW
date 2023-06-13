@@ -43,6 +43,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
+| 2023.03.28s| v4.3.2| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.3.2/TheOtherRoles.zip)
 | 2023.03.28s| v4.3.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.3.1/TheOtherRoles.zip)
 | 2023.02.28s| v4.3.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.3.0/TheOtherRoles.zip)
 | 2022.12.14s| v4.2.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.2.1/TheOtherRoles.zip)
@@ -122,9 +123,21 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # Changelog
 <details>
   <summary>Click to show the Changelog</summary>
+  
+**Version 4.3.2**
+- Added new option to Thief: Can Guess To Steal Role
+- Added new option to Guesser Mode: Force Thief Guesser
+- Added the death reason to the additional infos for ghosts.
+- Added the possibility to copy and paste the settings for the current preset to / from the clipboard (buttons)
+- Added a feature to the swapper: The swap resets if one of the target players is guessed or disconnects
+- Fixed the Security Guard Mobile Cams and the Hacker Vitals Panel when playing on LevelImposter maps (don't rename the panels for now, please)
+- Fixed several bugs in Vanilla Hide'n'Seek
+- Fixed an issue where Crewmate "Fill" did not work correcty if min neutrals was set bigger than max neutrals
+- Fixed a bug where the colorblind-text of the ninja remained visible when using the ninja-ability
+- Fixed a bug where the bomb could explode in a meeting due to desync and bad timing
+- Fixed a bug where the host Eraser could guess erased players
 
 **Version 4.3.1**
-- Update to Among Us 2023.3.28
 - Added new options (Information mode - Chat/Map/Both, Roles - Evil Killing / Evil)  to the snitch and fixed bugs affecting the snitch
 - Changed the maximum amount per modifier to 15 (where applicable)
 - Changed the colorblind text and player name to be behind certain objects again (rock on Polus etc.)
@@ -1056,9 +1069,9 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 在下一次會議期間，被下蠱的玩家將被突顯，他們將在會議結束後立即死亡。\
 下面列出了多個選項，您可以根據自己的喜好進行配置。\
 與吸血鬼類似，盾牌和填空將被檢查兩次(在對玩家施放法術結束時和會議結束巫術發動時)。\
-這可能導致玩家在會議期間被標記為被下蠱，但最後不會死亡(當他們獲得盾牌或女巫在施放巫術後被填空)。\
-如果女巫在會議開始前死亡，或者在會議期間被賭徒猜出女巫，那麼被下蠱的玩家將被突顯，但他們會活下來。\
-根據選項設定，您可以選擇將女巫票出是否會拯救所有被下蠱的玩家。\
+這可能導致玩家在會議期間被標記為被下蠱，但最後不會死亡(當他們獲得盾牌或巫師在施放巫術後被填空)。\
+如果巫師在會議開始前死亡，或者在會議期間被賭徒猜出巫師，那麼被下蠱的玩家將被突顯，但他們會活下來。\
+根據選項設定，您可以選擇將巫師票出是否會拯救所有被下蠱的玩家。\
 \
 **NOTE:**
 - 被下蠱的玩家將在被投票的玩家死亡之前死亡(這可能會觸發例如偽裝者獲勝條件，即使女巫是被投票的那個)
@@ -1072,7 +1085,7 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 | 巫師可以對任何人施術 | 如果設置為關，女巫不能對間諜和其他偽裝者施術
 | 巫師施法持續時間 | 你需要留在目標旁邊以便對其施術的時間
 | 觸發兩個冷卻時間 | 如果設置為開，施術也會觸發殺死按鈕的冷卻時間，反之亦然(但兩個冷卻時間可能會有所不同)
-| 票出巫師拯救所有目標 | 如果設置為開，所有被詛咒的目標都會在會議結束時存活下來
+| 票出巫師拯救所有目標 | 如果設置為開，所有被下蠱的目標都會在會議結束時存活下來
 -----------------------
 
 ## 忍者
@@ -1339,8 +1352,11 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 \
 **NOTE**
 - 如果"小偷可以殺死警長"選項開啟，小偷的任務只有在他們殺死
-  警長後才會開始計算。只要小偷沒有開火，他們的任務就不計入任務勝利條件。
+警長後才會開始計算。只要小偷沒有開火，他們的任務就不計入任務勝利條件。
 - 如果"小偷可以殺死警長"選項關閉，小偷將沒有任務。
+
+- 如果小偷殺死了巫師，已經被施了巫術的玩家會保持巫術狀態(小偷自己除外)。
+- 如果啟用小偷可用猜測來偷職業，則猜測巫師將拯救所有目標或不拯救任何目標(根據巫師的選項：票出巫師拯救所有目標)
 
 ### 遊戲選項
 | 名稱 | 描述 |
@@ -1350,6 +1366,7 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 | 小偷可以殺死警長 | -
 | 小偷有偽裝者視野 | -
 | 小偷可使用通風口 | -
+| 小偷可用猜測來偷職業 | -
 -----------------------
 
 ## 市長
@@ -1992,8 +2009,9 @@ VIP會在他死時向所有人發出類似於靈媒閃光的閃爍。\
 | 船員賭徒人數 | -
 | 獨立賭徒人數 | -
 | 偽裝者賭徒人數 | -
-| 強制豺狼賭徒 | 如果設為"開"，第一個將成為賭徒的獨立職業是豺狼 
+| 強制豺狼賭徒 | 如果設為"開"，第一個成為賭徒的獨立職業將是豺狼。
 | 賭徒們可有特殊標籤 | -
+| 強制小偷賭徒 | 如果設為"開"，第一個(或第二個，如果啟用強制豺狼賭徒)成為賭徒的獨立職業將是小偷。
 | 賭徒可猜測次數 | -
 | 賭徒在每次會議可猜測多次 | -
 | 賭徒忽略醫生盾 | -
@@ -2045,7 +2063,7 @@ VIP會在他死時向所有人發出類似於靈媒閃光的閃爍。\
 | 獵人釋放等待時間 | -
 
 # License
-TheOtherRolesAU/TheOtherRolesDev is licensed under the
+TheOtherRolesAU/TheOtherRoles is licensed under the
 
 [GNU General Public License v3.0](https://github.com/TheOtherRolesAU/TheOtherRoles/blob/main/LICENSE)
 
