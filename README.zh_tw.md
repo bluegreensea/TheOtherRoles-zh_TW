@@ -43,15 +43,16 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
+| 2023.07.12s| v4.3.3| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.3.3/TheOtherRoles.zip)
 | 2023.03.28s| v4.3.2| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.3.2/TheOtherRoles.zip)
-| 2023.03.28s| v4.3.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.3.1/TheOtherRoles.zip)
-| 2023.02.28s| v4.3.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.3.0/TheOtherRoles.zip)
-| 2022.12.14s| v4.2.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.2.1/TheOtherRoles.zip)
 <details>
   <summary>Click to show older versions</summary>
   
 | Among Us - Version| Mod Version | Link |
 |----------|-------------|-----------------|
+| 2023.03.28s| v4.3.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.3.1/TheOtherRoles.zip)
+| 2023.02.28s| v4.3.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.3.0/TheOtherRoles.zip)
+| 2022.12.14s| v4.2.1| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.2.1/TheOtherRoles.zip)
 | 2022.10.25s| v4.2.0| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.2.0/TheOtherRoles.zip)
 | 2022.9.20s| v4.1.7| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.7/TheOtherRoles.zip)
 | 2022.6.21s| v4.1.6| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.1.6/TheOtherRoles.zip)
@@ -123,6 +124,15 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # Changelog
 <details>
   <summary>Click to show the Changelog</summary>
+  
+**Version 4.3.3**
+- Updated to Among Us version 2023.07.12
+- Fixed an issue where the swap icon of a swapper guesser would be in front of the witch icon on a spelled player 
+- Fixed an issue where haunting was impossible in vanilla Hide'n'Seek
+- Fixed an issue where the settings for the Trapper would not appear in the in-game settings shower
+- Fixed a bug where the Arsonists win would show "killed by" on dead players in the summary screen
+- Fixed a bug where placing a garlic would convert a random player into a horse for the rest of the round
+- Changed the Eraser Guesser: Jackal and Sidekick are no longer guessable after being fake-"erased"
   
 **Version 4.3.2**
 - Added new option to Thief: Can Guess To Steal Role
@@ -778,6 +788,7 @@ docker run -d -p 22023:22023/udp --env IMPOSTOR_AntiCheatEnabled=false --env IMP
 [Ottomated](https://twitter.com/ottomated_) - Idea for the Morphling, Snitch and Camouflager role came from **Ottomated**\
 [Crowded-Mod](https://github.com/CrowdedMods/CrowdedMod) - Our implementation for 10+ player lobbies were inspired by the one from the **Crowded Mod Team**\
 [Goose-Goose-Duck](https://store.steampowered.com/app/1568590/Goose_Goose_Duck) - Idea for the Vulture role came from **Slushiegoose**\
+[TheEpicRoles](https://github.com/LaicosVK/TheEpicRoles) - Idea for the first kill shield (partly) and the tabbed option menu (fully + some code), by **LaicosVK** **DasMonschta** **Nova**\
 [Ninja](#忍者), [Thief](#小偷), [Lawyer](#律師) / [Pursuer](#原告), [Deputy](#警員), [Portalmaker](#傳送師), [Guesser Modifier](#特殊賭徒) - Idea: [K3ndo](https://github.com/K3ndoo) ; Developed by [Gendelo](https://github.com/gendelo3) & [Mallöris](https://github.com/Mallaris)
 
 # 設定
@@ -1354,7 +1365,6 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 - 如果"小偷可以殺死警長"選項開啟，小偷的任務只有在他們殺死
 警長後才會開始計算。只要小偷沒有開火，他們的任務就不計入任務勝利條件。
 - 如果"小偷可以殺死警長"選項關閉，小偷將沒有任務。
-
 - 如果小偷殺死了巫師，已經被施了巫術的玩家會保持巫術狀態(小偷自己除外)。
 - 如果啟用小偷可用猜測來偷職業，則猜測巫師將拯救所有目標或不拯救任何目標(根據巫師的選項：票出巫師拯救所有目標)
 
@@ -2010,8 +2020,8 @@ VIP會在他死時向所有人發出類似於靈媒閃光的閃爍。\
 | 獨立賭徒人數 | -
 | 偽裝者賭徒人數 | -
 | 強制豺狼賭徒 | 如果設為"開"，第一個成為賭徒的獨立職業將是豺狼。
-| 賭徒們可有特殊標籤 | -
 | 強制小偷賭徒 | 如果設為"開"，第一個(或第二個，如果啟用強制豺狼賭徒)成為賭徒的獨立職業將是小偷。
+| 賭徒們可有特殊標籤 | -
 | 賭徒可猜測次數 | -
 | 賭徒在每次會議可猜測多次 | -
 | 賭徒忽略醫生盾 | -
