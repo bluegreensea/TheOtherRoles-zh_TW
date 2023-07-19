@@ -116,6 +116,9 @@ namespace TheOtherRoles
             DebugMode = Config.Bind("Custom", "Enable Debug Mode", "false");
             Harmony.PatchAll();
             
+#if RELEASE_JL
+            CrowdedModCompatibility.Initialize();
+#endif
             CustomOptionHolder.Load();
             CustomColors.Load();
             if (BepInExUpdater.UpdateRequired)
@@ -126,9 +129,6 @@ namespace TheOtherRoles
 
             EventUtility.Load();
             SubmergedCompatibility.Initialize();
-#if RELEASE_JL
-            CrowdedModCompatibility.Initialize();
-#endif
             AddComponent<ModUpdateBehaviour>();
             Modules.MainMenuPatch.addSceneChangeCallbacks();
         }
