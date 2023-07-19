@@ -313,7 +313,7 @@ namespace TheOtherRoles
                                     deathReasonString = $" - 被炸死 由 {Helpers.cs(killerColor, deadPlayer.killerIfExisting.Data.PlayerName)}";
                                     break;
                                 case DeadPlayer.CustomDeathReason.Arson:
-                                    deathReasonString = $" - burnt by {Helpers.cs(killerColor, deadPlayer.killerIfExisting.Data.PlayerName)}";
+                                    deathReasonString = $" - 被燒死 由 {Helpers.cs(killerColor, deadPlayer.killerIfExisting.Data.PlayerName)}";
                                     break;
                             }
                             roleName = roleName + deathReasonString;
