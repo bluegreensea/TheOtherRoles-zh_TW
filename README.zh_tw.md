@@ -43,6 +43,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
+| 2023.07.12s| v4.3.4| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.3.4/TheOtherRoles.zip)
 | 2023.07.12s| v4.3.3| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.3.3/TheOtherRoles.zip)
 | 2023.03.28s| v4.3.2| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.3.2/TheOtherRoles.zip)
 <details>
@@ -125,6 +126,13 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 <details>
   <summary>Click to show the Changelog</summary>
   
+**Version 4.3.4**
+- Updated BepInEx dependency to 671
+- Fixed compatibility to Submerged (not thouroughly tested)
+- Fixed a bug where the death reason of a guessed shifter was incorrectly displayed as "shifted xy"
+- Make it possible to disable the Mod-Updater (see [details](#gcerror) ), to circumvent a crash at startup with a GC-Error
+- Fixed the hats in freeplay partially
+
 **Version 4.3.3**
 - Updated to Among Us version 2023.07.12
 - Fixed an issue where the swap icon of a swapper guesser would be in front of the witch icon on a spelled player 
@@ -2071,6 +2079,10 @@ VIP會在他死時向所有人發出類似於靈媒閃光的閃爍。\
 | 完成任務獎勵(秒) | -
 | 啟用破壞 | -
 | 獵人釋放等待時間 | -
+
+## GCERROR
+If the error message "Fatal Error in GC - Collecting from unknown thread" stops you from playing the game, you can now disable the mod-updater, which causes this error.
+In order to do this, create a file called `noupdater.txt` in your modded Among Us folder.
 
 # License
 TheOtherRolesAU/TheOtherRoles is licensed under the
