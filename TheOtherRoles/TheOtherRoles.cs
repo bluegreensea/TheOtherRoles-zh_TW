@@ -76,6 +76,7 @@ namespace TheOtherRoles
             // Gamemodes
             HandleGuesser.clearAndReload();
             HideNSeek.clearAndReload();
+            PropHunt.clearAndReload();
 
         }
 
@@ -1449,11 +1450,15 @@ namespace TheOtherRoles
                 }
             } else {
                 int randomNumber = rnd.Next(4);
-                string typeOfColor = Helpers.isLighterColor(Medium.target.killerIfExisting.Data.DefaultOutfit.ColorId) ? "淺" : "深";
+                string typeOfColor = Helpers.isLighterColor(Medium.target.killerIfExisting) ? "淺" : "深";
                 float timeSinceDeath = ((float)(Medium.meetingStartTime - Medium.target.timeOfDeath).TotalMilliseconds);
-                
-                if (randomNumber == 0) msg = "如果我的職業不是被拿走，這場遊戲中就沒有 " + RoleInfo.GetRolesString(Medium.target.player, false) + " 了。";
-                else if (randomNumber == 1) msg = "我不是很確定，但我猜是個 " + typeOfColor + " 色系的人殺了我。";
+                var roleString = RoleInfo.GetRolesString(Medium.target.player, false);
+                if (randomNumber == 0) {
+                    if (!roleString.Contains("Impostor") && !roleString.Contains("Crewmate"))
+                        msg = "如果我的職業不是被拿走，這場遊戲中就少了 " + roleString + " 了。";
+                    else
+                        msg = "I am a " + roleString + " without an other role."; 
+                } else if (randomNumber == 1) msg = "我不是很確定，但我想是個 " + typeOfColor + " 色系的人殺了我。";
                 else if (randomNumber == 2) msg = "如果我數的正確，我是在會議開始 " + Math.Round(timeSinceDeath / 1000) + "秒 前死的。";
                 else msg = "殺我的殺手看起來像是 " + RoleInfo.GetRolesString(Medium.target.killerIfExisting, false, false, true) + "。";
             }
