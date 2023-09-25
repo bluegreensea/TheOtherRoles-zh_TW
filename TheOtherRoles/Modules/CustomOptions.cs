@@ -1077,17 +1077,17 @@ namespace TheOtherRoles {
                 maxPage = 2;
                 switch (counter) {
                     case 0:
-                        hudString += "第 1 頁: 躲貓貓設定 \n\n" + buildOptionsOfType(CustomOption.CustomOptionType.HideNSeekMain, false);
+                        hudString += "第 1 頁：躲貓貓設定 \n\n" + buildOptionsOfType(CustomOption.CustomOptionType.HideNSeekMain, false);
                         break;
                     case 1:
-                        hudString += "第 2 頁: 躲貓貓職業設定 \n\n" + buildOptionsOfType(CustomOption.CustomOptionType.HideNSeekRoles, false);
+                        hudString += "第 2 頁：躲貓貓職業設定 \n\n" + buildOptionsOfType(CustomOption.CustomOptionType.HideNSeekRoles, false);
                         break;
                 }
             } else if (TORMapOptions.gameMode == CustomGamemodes.PropHunt) {
                 maxPage = 1;
                 switch (counter) {
                     case 0:
-                        hudString += "Page 1: Prop Hunt Settings \n\n" + buildOptionsOfType(CustomOption.CustomOptionType.PropHunt, false);
+                        hudString += "第 1 頁：物品獵殺設定 \n\n" + buildOptionsOfType(CustomOption.CustomOptionType.PropHunt, false);
                         break;
                 }
             } else {
@@ -1097,7 +1097,7 @@ namespace TheOtherRoles {
                         hudString += (!hideExtras ? "" : "第 1 頁：原版設定 \n\n") + vanillaSettings;
                         break;
                     case 1:
-                        hudString += "第 2 頁：The Other Roles設定 \n" + buildOptionsOfType(CustomOption.CustomOptionType.General, false);
+                        hudString += "第 2 頁：The Other Roles 設定 \n" + buildOptionsOfType(CustomOption.CustomOptionType.General, false);
                         break;
                     case 2:
                         hudString += "第 3 頁：職業與特殊標籤的機率 \n" + buildRoleOptions();

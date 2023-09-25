@@ -2072,7 +2072,7 @@ namespace TheOtherRoles
                 CustomButton.ButtonPositions.lowerRowRight,
                 __instance,
                 KeyCode.F,
-                buttonText: "DISGUISE"               
+                buttonText: "偽裝"               
                 );
             propSpriteHolder = new GameObject("TORPropButtonPropSpritePreview");
             propSpriteRenderer = propSpriteHolder.AddComponent<SpriteRenderer>();
@@ -2096,7 +2096,7 @@ namespace TheOtherRoles
                 () => { PlayerControl.LocalPlayer.Collider.enabled = true;
                         propHuntUnstuckButton.Timer = propHuntUnstuckButton.MaxTimer;
                 },
-                buttonText: "UNSTUCK"
+                buttonText: "出竅"
                 );
 
             propHuntRevealButton = new CustomButton(
@@ -2146,7 +2146,7 @@ namespace TheOtherRoles
                     SoundEffectsManager.play("morphlingMorph");
                     propHuntInvisButton.Timer = propHuntInvisButton.MaxTimer;
                 },
-                buttonText: "INVIS"
+                buttonText: "隱形"
                 );
 
             propHuntSpeedboostButton = new CustomButton(
@@ -2170,7 +2170,7 @@ namespace TheOtherRoles
                     SoundEffectsManager.stop("timemasterShield");
                     propHuntSpeedboostButton.Timer = propHuntSpeedboostButton.MaxTimer;
                 },
-                buttonText: "BOOST"
+                buttonText: "加速"
                 );
 
             propHuntAdminButton = new CustomButton(
@@ -2223,7 +2223,7 @@ namespace TheOtherRoles
                     propHuntFindButton.Timer = propHuntFindButton.MaxTimer;
                     propHuntFindButton.isEffectActive = false;
                 },
-                buttonText: "FIND"
+                buttonText: "尋找"
                 );
 
             // Set the default (or settings from the previous game) timers / durations when spawning the buttons

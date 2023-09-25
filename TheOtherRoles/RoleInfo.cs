@@ -77,7 +77,7 @@ namespace TheOtherRoles
         public static RoleInfo hunter = new RoleInfo("獵人", Palette.ImpostorRed, Helpers.cs(Palette.ImpostorRed, "尋找並殺死所有船員"), "尋找並殺死所有船員", RoleId.Impostor);
         public static RoleInfo hunted = new RoleInfo("獵物", Color.white, "躲藏", "躲藏", RoleId.Crewmate);
 
-        public static RoleInfo prop = new RoleInfo("Prop", Color.white, "Disguise As An Object and Survive", "Disguise As An Object", RoleId.Crewmate);
+        public static RoleInfo prop = new RoleInfo("物品", Color.white, "偽裝成物件並存活", "偽裝成物件", RoleId.Crewmate);
 
 
 

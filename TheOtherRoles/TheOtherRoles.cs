@@ -1454,10 +1454,10 @@ namespace TheOtherRoles
                 float timeSinceDeath = ((float)(Medium.meetingStartTime - Medium.target.timeOfDeath).TotalMilliseconds);
                 var roleString = RoleInfo.GetRolesString(Medium.target.player, false);
                 if (randomNumber == 0) {
-                    if (!roleString.Contains("Impostor") && !roleString.Contains("Crewmate"))
+                    if (!roleString.Contains("偽裝者") && !roleString.Contains("船員"))
                         msg = "如果我的職業不是被拿走，這場遊戲中就少了 " + roleString + " 了。";
                     else
-                        msg = "I am a " + roleString + " without an other role."; 
+                        msg = "我是個沒有其他職業的 " + roleString + "。"; 
                 } else if (randomNumber == 1) msg = "我不是很確定，但我想是個 " + typeOfColor + " 色系的人殺了我。";
                 else if (randomNumber == 2) msg = "如果我數的正確，我是在會議開始 " + Math.Round(timeSinceDeath / 1000) + "秒 前死的。";
                 else msg = "殺我的殺手看起來像是 " + RoleInfo.GetRolesString(Medium.target.killerIfExisting, false, false, true) + "。";

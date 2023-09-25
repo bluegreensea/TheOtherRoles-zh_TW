@@ -27,7 +27,7 @@ namespace TheOtherRoles.Patches {
                 __instance.GameModeText.text = "TOR 躲貓貓";
                 TORMapOptions.gameMode = CustomGamemodes.HideNSeek;
             } else if (gm == CustomGamemodes.PropHunt) {
-                __instance.GameModeText.text = "TOR Prop Hunt";
+                __instance.GameModeText.text = "TOR 物品獵殺";
                 TORMapOptions.gameMode = CustomGamemodes.PropHunt;
             }
             return false;
@@ -42,7 +42,7 @@ namespace TheOtherRoles.Patches {
             else if (TORMapOptions.gameMode == CustomGamemodes.HideNSeek) {
                 __instance.GameModeText.text = "TOR 躲貓貓";
             } else if (TORMapOptions.gameMode == CustomGamemodes.PropHunt) {
-                __instance.GameModeText.text = "TOR Prop Hunt";
+                __instance.GameModeText.text = "TOR 物品獵殺";
             }
         }
     }
@@ -66,7 +66,7 @@ namespace TheOtherRoles.Patches {
                     else {
                         chatLanguageButton.Text.text = i == 3 ? "TOR 賭徒" : "TOR 躲貓貓";
                         if (i == 5)
-                            chatLanguageButton.Text.text = "TOR Prop Hunt";
+                            chatLanguageButton.Text.text = "TOR 物品獵殺";
                     }
                     chatLanguageButton.Button.OnClick.RemoveAllListeners();
                     chatLanguageButton.Button.OnClick.AddListener((System.Action)delegate {

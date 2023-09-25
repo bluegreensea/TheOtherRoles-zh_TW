@@ -184,7 +184,7 @@ ugackMiner53 - Idea and core code for the Prop Hunt game mode</size>";
                 template.StartCoroutine(Effects.Lerp(0.1f, new System.Action<float>((p) => {
                     guesserButtonText.SetText("TOR 賭徒");
                     HideNSeekButtonText.SetText("TOR 躲貓貓");
-                    PropHuntButtonText.SetText("TOR Prop Hunt");
+                    PropHuntButtonText.SetText("TOR 物品獵殺");
                 })));
             }));
         }

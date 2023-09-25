@@ -22,7 +22,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 | [黑手黨員 (黑手黨)](#黑手黨) | [工程師](#工程師) | [縱火狂](#縱火狂) | [反傳送](#反傳送) | [特殊賭徒](#特殊賭徒) |
 | [守墓人 (黑手黨)](#黑手黨) | [警長](#警長) | [豺狼](#豺狼) | [決勝者](#決勝者) | [躲貓貓](#躲貓貓) |
 | [百變怪](#百變怪) | [警員](#警員) | [跟班](#跟班) | [誘餌](#誘餌) | [原版捉迷藏](https://www.innersloth.com/new-game-mode-hide-n-seek-is-here-emergency-meeting-35/) |
-| [魔術師](#魔術師) | [點燈人](#點燈人) | [禿鷲](#禿鷲) | [戀人](#戀人) |
+| [魔術師](#魔術師) | [點燈人](#點燈人) | [禿鷲](#禿鷲) | [戀人](#戀人) | [物品獵殺](#物品獵殺)|
 | [吸血鬼](#吸血鬼) | [偵探](#偵探) | [律師](#律師) | [墨鏡](#墨鏡) |
 | [抹除者](#抹除者) | [時間管理大師](#時間管理大師) | [檢察官](#檢察官) | [迷你](#迷你) |
 | [詭騙師](#詭騙師) | [醫生](#醫生) | [原告](#原告) | [VIP](#vip) |
@@ -125,7 +125,11 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # Changelog
 <details>
   <summary>Click to show the Changelog</summary>
-  
+
+**Version 4.4.0**
+- Added a new gamemode, PropHunt. Players can disguise as objects on the map
+- Changed Lighter and Darker colors: L/D are no longer random, but rather assigned in alternating order.
+
 **Version 4.3.4**
 - Updated BepInEx dependency to 671
 - Fixed compatibility to Submerged (not thouroughly tested)
@@ -797,7 +801,8 @@ docker run -d -p 22023:22023/udp --env IMPOSTOR_AntiCheatEnabled=false --env IMP
 [Crowded-Mod](https://github.com/CrowdedMods/CrowdedMod) - Our implementation for 10+ player lobbies were inspired by the one from the **Crowded Mod Team**\
 [Goose-Goose-Duck](https://store.steampowered.com/app/1568590/Goose_Goose_Duck) - Idea for the Vulture role came from **Slushiegoose**\
 [TheEpicRoles](https://github.com/LaicosVK/TheEpicRoles) - Idea for the first kill shield (partly) and the tabbed option menu (fully + some code), by **LaicosVK** **DasMonschta** **Nova**\
-[Ninja](#忍者), [Thief](#小偷), [Lawyer](#律師) / [Pursuer](#原告), [Deputy](#警員), [Portalmaker](#傳送師), [Guesser Modifier](#特殊賭徒) - Idea: [K3ndo](https://github.com/K3ndoo) ; Developed by [Gendelo](https://github.com/gendelo3) & [Mallöris](https://github.com/Mallaris)
+[Ninja](#忍者), [Thief](#小偷), [Lawyer](#律師) / [Pursuer](#原告), [Deputy](#警員), [Portalmaker](#傳送師), [Guesser Modifier](#特殊賭徒) - Idea: [K3ndo](https://github.com/K3ndoo) ; Developed by [Gendelo](https://github.com/gendelo3) & [Mallöris](https://github.com/Mallaris) \
+[dMiner53](https://github.com/ugackMiner53/PropHunt) - Idea and core code for the Prop Hunt game mode
 
 # 設定
 該模組在 Among Us 添加了一些新設定(除了職業設定)：
@@ -886,6 +891,7 @@ Here are a few instructions, on how to create a custom hat:
 - **Submission:** If you got a hat design, you can submit it on our [Discord server](https://discord.gg/77RkMJHWsM). We'll look at all the hats and add all the good ones to the game.
 
 # 顏色
+Note: Lighter and Darker colors are no longer based on the players color. Instead they are assigned alternatingly, s.t. they are always balanced in a lobby.
 ![TOR Colors](./Images/TOR_colors.jpg)
 
 # 職業
@@ -2064,21 +2070,61 @@ VIP會在他死時向所有人發出類似於靈媒閃光的閃爍。\
 - 如果獵人嘗試殺死啟動時間之盾的玩家，則只有獵人會被回溯。
 
 ### 遊戲選項
-| General | 描述 | 獵人 | 描述 | 獵物 | 描述 |
+| 常規 | 描述 | 獵人 | 描述 | 獵物 | 描述 |
 |----------|:-------------:|----------|:-------------:|----------|:-------------:|
 | 地圖 | -                                | 獵人點燈冷卻 | -                  | 獵物盾冷卻| -
 | 獵人數量 | -                  | 獵人點燈持續時間 | -                  | 獵物盾持續時間 | -
 | 殺人冷卻時間 | -                      | 獵人點燈視野 | -                    | 獵物回溯的時間 | -
 | 獵人視野 | -                      | 獵人點燈懲罰(秒) | -             | 獵物盾數量 | -
 | 獵物視野 | -                      | 獵人管理表冷卻 | -
-| 普通任務數 | -                       | 獵人管理表持續時間 | -
-| 短任務數 | -                        | 獵人管理表懲罰(秒) | -
-| 長任務數 | -                         | 獵人箭頭冷卻 | -
-| 倒數計時(分) | -                       | 獵人箭頭持續時間 | -
+|  | -                       | 獵人管理表持續時間 | -
+|  | -                        | 獵人管理表懲罰(秒) | -
+|  | -                         | 獵人箭頭冷卻 | -
+|  | -                       | 獵人箭頭持續時間 | -
 | 任務獲勝 | -               | 獵人箭頭懲罰(秒) | -
 | 完成任務獎勵(秒) | -
 | 啟用破壞 | -
 | 獵人釋放等待時間 | -
+
+## 物品獵殺
+**Prop-Gamemode** 是個獨立的遊戲模式，獵人必須找到偽裝的玩家("物品")。\
+仍然活著的獵人和道具會在左下角向所有人顯示(類似於縱火犯顯示)。\
+遊戲開始時，獵人的移動將被禁用 x 秒(根據選項設定)，並且螢幕將變黑。\
+每輪都有時間限制，如果倒數計時耗盡且至少有一個道具還活著，則剩餘的道具獲勝。\
+如果獵人在計時器耗盡之前殺死所有玩家，則獵人獲勝。\
+當道具死亡，他們加入獵人團隊或死亡(設定)。
+
+#### 共通能力:
+- 出竅: 按下此按鈕，你可以短暫穿過牆壁。這是必要的，因為物品有時會因為碰撞改變而卡在牆裡。不要用它來作弊！
+
+#### 獵人能力:
+- 揭示: 隨機玩家當前物品向所有玩家顯示 x 秒 (根據選項設定)。倒數計時將減少 *懲罰* 秒。
+- 攜帶式管理表(像是駭客) - 普通管理表共享冷卻
+- 尋找: 顯示原版 HideNSeek 中的危險等級計 x 秒。獵人越接近附近的物品，危險等級就越高。
+#### 物品能力:
+- 隱形: 變成一個偽裝的道具，隱形 x 秒。
+- 加速: 移動加速 x 秒。
+
+**NOTE:**
+- 舉報按鈕亮起，但無法按下。
+- 獵人可使用通風口
+- 擊殺按鈕和通風口按鈕永久啟用，因此你無法使用它們來判斷附近是否有道具
+- 擊殺按鈕總是可以被按下，但如果附近沒有道具，你將失手。擊中和失手的冷卻時間可以分別設定。
+
+
+### 遊戲選項
+| 常規 | 描述 | 獵人 | 描述 | 獵物 | 描述 |
+|----------|:-------------:|----------|:-------------:|----------|:-------------:|
+| 地圖 | -                     | 獵人數量 | -                  | 物品變成獵人當被找到 | -
+| 倒數計時(分) | -            | 初始暗幕持續時間 | -          | 隱形 | -
+| 出竅冷卻 | -        | 擊殺失手後冷卻 | -           | 隱形冷卻 | -
+| 出竅持續時間 | -        | 擊殺擊中後冷卻 | -            | 隱形持續時間 | -
+| 獵人視野 | -           | 揭示物品冷卻 | -               | 加速 | -
+| 物品視野 | -             | 揭示物品持續時間 | -               | 加速冷卻 | -
+|  | -             | 揭示物品懲罰 | 倒數計時扣除量 | 加速持續時間 | - 
+|  | -                         |  獵人管理表冷卻 | - | 加速比率 | 速度乘以的倍率
+|  | -                       | 搜尋冷卻 | -
+|  | -               | 搜尋持續時間 | -
 
 ## GCERROR
 If the error message "Fatal Error in GC - Collecting from unknown thread" stops you from playing the game, you can now disable the mod-updater, which causes this error.
