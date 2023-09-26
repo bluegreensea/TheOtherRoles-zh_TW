@@ -43,6 +43,8 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
+| 2023.07.12s| v4.4.1| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.4.1/TheOtherRoles.zip)
+| 2023.07.12s| v4.4.0| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.4.0/TheOtherRoles.zip)
 | 2023.07.12s| v4.3.4| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.3.4/TheOtherRoles.zip)
 | 2023.07.12s| v4.3.3| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.3.3/TheOtherRoles.zip)
 | 2023.03.28s| v4.3.2| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.3.2/TheOtherRoles.zip)
@@ -125,6 +127,9 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # Changelog
 <details>
   <summary>Click to show the Changelog</summary>
+
+**Version 4.4.1**
+- Fixed a bug where PropHunt buttons did not work for the Hunters after watching the intro cutscene.
 
 **Version 4.4.0**
 - Added a new gamemode, PropHunt. Players can disguise as objects on the map
@@ -802,7 +807,7 @@ docker run -d -p 22023:22023/udp --env IMPOSTOR_AntiCheatEnabled=false --env IMP
 [Goose-Goose-Duck](https://store.steampowered.com/app/1568590/Goose_Goose_Duck) - Idea for the Vulture role came from **Slushiegoose**\
 [TheEpicRoles](https://github.com/LaicosVK/TheEpicRoles) - Idea for the first kill shield (partly) and the tabbed option menu (fully + some code), by **LaicosVK** **DasMonschta** **Nova**\
 [Ninja](#忍者), [Thief](#小偷), [Lawyer](#律師) / [Pursuer](#原告), [Deputy](#警員), [Portalmaker](#傳送師), [Guesser Modifier](#特殊賭徒) - Idea: [K3ndo](https://github.com/K3ndoo) ; Developed by [Gendelo](https://github.com/gendelo3) & [Mallöris](https://github.com/Mallaris) \
-[dMiner53](https://github.com/ugackMiner53/PropHunt) - Idea and core code for the Prop Hunt game mode
+[ugackMiner53](https://github.com/ugackMiner53/PropHunt) - Idea and core code for the Prop Hunt game mode
 
 # 設定
 該模組在 Among Us 添加了一些新設定(除了職業設定)：
@@ -2104,12 +2109,15 @@ VIP會在他死時向所有人發出類似於靈媒閃光的閃爍。\
 #### 物品能力:
 - 隱形: 變成一個偽裝的道具，隱形 x 秒。
 - 加速: 移動加速 x 秒。
+- 偽裝: 當靠近可用物件時，按下按鈕即可顯示成偽裝的物件！
 
 **NOTE:**
 - 舉報按鈕亮起，但無法按下。
 - 獵人可使用通風口
 - 擊殺按鈕和通風口按鈕永久啟用，因此你無法使用它們來判斷附近是否有道具
 - 擊殺按鈕總是可以被按下，但如果附近沒有道具，你將失手。擊中和失手的冷卻時間可以分別設定。
+- 可用的道具物件有：所有任務控制台以及許多物件(岩石、雪人、障礙物、床、桌子、...)
+- **LevelImposter**地圖上的任何物件，其名稱中包含 `liprop` 並且具有 `SpriteRenderer` (+ Sprite) 也可以用作道具！
 
 
 ### 遊戲選項
