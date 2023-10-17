@@ -26,12 +26,12 @@ namespace TheOtherRoles.Modules {
 
             /* Custom Colors, starting with id (for ORDER) 18 */
             colors.Add(new CustomColor {
-                longname = "Tamarind", //18
+                longname = "羅望子", //18
                 color = new Color32(48, 28, 34, byte.MaxValue),
                 shadow = new Color32(30, 11, 16, byte.MaxValue),
                 isLighterColor = true });
             colors.Add(new CustomColor {
-                longname = "Army", // 19
+                longname = "軍綠色", // 19
                 color = new Color32(39, 45, 31, byte.MaxValue),
                 shadow = new Color32(11, 30, 24, byte.MaxValue),
                 isLighterColor = false });
@@ -78,7 +78,7 @@ namespace TheOtherRoles.Modules {
                                         shadow = new Color32(0x74, 0xE5, 0x10, byte.MaxValue), 
                                         isLighterColor = true });
             // 30
-            colors.Add(new CustomColor { longname = "號誌\n橘",
+            colors.Add(new CustomColor { longname = "號誌橘",
                                         color = new Color32(0xF7, 0x44, 0x17, byte.MaxValue), 
                                         shadow = new Color32(0x9B, 0x2E, 0x0F, byte.MaxValue),
                                         isLighterColor = true });
@@ -101,39 +101,39 @@ namespace TheOtherRoles.Modules {
                                         shadow = new Color32(0x59, 0x9F, 0xC8, byte.MaxValue),
                                         isLighterColor = true });
             // 35
-            colors.Add(new CustomColor { longname = "Fuchsia", //35 Color Credit: LaikosVK
+            colors.Add(new CustomColor { longname = "紫紅色", //35 Color Credit: LaikosVK
                                         color = new Color32(164, 17, 129, byte.MaxValue),
                                         shadow = new Color32(104, 3, 79, byte.MaxValue),
                                         isLighterColor = false
             });
-            colors.Add(new CustomColor { longname = "Royal\nGreen", //36
+            colors.Add(new CustomColor { longname = "皇家綠", //36
                                         color = new Color32(9, 82, 33, byte.MaxValue),
                                         shadow = new Color32(0, 46, 8, byte.MaxValue),
                                         isLighterColor = false
             });
-            colors.Add(new CustomColor { longname = "Slime",
+            colors.Add(new CustomColor { longname = "史萊姆綠",
                                         color = new Color32(244, 255, 188, byte.MaxValue),
                                         shadow = new Color32(167, 239, 112, byte.MaxValue),
                                         isLighterColor = false
             });
-            colors.Add(new CustomColor { longname = "Navy", //38
+            colors.Add(new CustomColor { longname = "海軍藍", //38
                                         color = new Color32(9, 43, 119, byte.MaxValue),
                                         shadow = new Color32(0, 13, 56, byte.MaxValue),
                                         isLighterColor = false
             });
-            colors.Add(new CustomColor { longname = "Darkness", //39
+            colors.Add(new CustomColor { longname = "暗黑色", //39
                                         color = new Color32(36, 39, 40, byte.MaxValue),
                                         shadow = new Color32(10, 10, 10, byte.MaxValue),
                                         isLighterColor = false
             });
             colors.Add(new CustomColor {
-                longname = "Ocean", //40
+                longname = "海洋", //40
                 color = new Color32(55, 159, 218, byte.MaxValue),
                 shadow = new Color32(62, 92, 158, byte.MaxValue),
                 isLighterColor = false
             });
             colors.Add(new CustomColor {
-                longname = "Sundown", // 41
+                longname = "日落", // 41
                 color = new Color32(252, 194, 100, byte.MaxValue),
                 shadow = new Color32(197, 98, 54, byte.MaxValue),
                 isLighterColor = false
