@@ -209,7 +209,7 @@ namespace TheOtherRoles
                     GameData.Instance.GetPlayerById(player.PlayerId); // player.RemoveInfected(); (was removed in 2022.12.08, no idea if we ever need that part again, replaced by these 2 lines.) 
                     player.SetRole(RoleTypes.Crewmate);
 
-                    player.MurderPlayer(player);
+                    player.MurderPlayer(player, MurderResultFlags.Succeeded | MurderResultFlags.DecisionByHost);
                     player.Data.IsDead = true;
                 }
             }
@@ -445,7 +445,7 @@ namespace TheOtherRoles
             PlayerControl target = Helpers.playerById(targetId);
             if (source != null && target != null) {
                 if (showAnimation == 0) KillAnimationCoPerformKillPatch.hideNextAnimation = true;
-                source.MurderPlayer(target);
+                source.MurderPlayer(target, MurderResultFlags.Succeeded | MurderResultFlags.DecisionByHost);
             }
         }
 
@@ -1004,7 +1004,7 @@ namespace TheOtherRoles
                 if (AmongUsClient.Instance.AmClient && FastDestroyableSingleton<HudManager>.Instance)
                     FastDestroyableSingleton<HudManager>.Instance.Chat.AddChat(guesser, msg);
                 if (msg.IndexOf("who", StringComparison.OrdinalIgnoreCase) >= 0)
-                    FastDestroyableSingleton<Assets.CoreScripts.Telemetry>.Instance.SendWho();
+                    FastDestroyableSingleton<Assets.CoreScripts.UnityTelemetry>.Instance.SendWho();
             }
         }
 

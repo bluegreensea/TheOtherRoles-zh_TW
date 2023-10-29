@@ -1138,7 +1138,7 @@ namespace TheOtherRoles.Patches {
                         }
                         if (msg.IndexOf("who", StringComparison.OrdinalIgnoreCase) >= 0)
                         {
-                            FastDestroyableSingleton<Assets.CoreScripts.Telemetry>.Instance.SendWho();
+                            FastDestroyableSingleton<Assets.CoreScripts.UnityTelemetry>.Instance.SendWho();
                         }
                     }
                 }
@@ -1182,7 +1182,7 @@ namespace TheOtherRoles.Patches {
             if ((Lovers.lover1 != null && target == Lovers.lover1) || (Lovers.lover2 != null && target == Lovers.lover2)) {
                 PlayerControl otherLover = target == Lovers.lover1 ? Lovers.lover2 : Lovers.lover1;
                 if (otherLover != null && !otherLover.Data.IsDead && Lovers.bothDie) {
-                    otherLover.MurderPlayer(otherLover);
+                    otherLover.MurderPlayer(otherLover, MurderResultFlags.Succeeded | MurderResultFlags.DecisionByHost);
                     GameHistory.overrideDeathReasonAndKiller(otherLover, DeadPlayer.CustomDeathReason.LoverSuicide);
                 }
             }
