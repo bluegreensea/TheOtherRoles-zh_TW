@@ -1941,8 +1941,9 @@ namespace TheOtherRoles
                     chameleonPlayer.SetHatAndVisorAlpha(visibility);
                     chameleonPlayer.cosmetics.skin.layer.color = chameleonPlayer.cosmetics.skin.layer.color.SetAlpha(visibility);
                     chameleonPlayer.cosmetics.nameText.color = chameleonPlayer.cosmetics.nameText.color.SetAlpha(visibility);
-                    chameleonPlayer.cosmetics.currentPet.rend.color = chameleonPlayer.cosmetics.currentPet.rend.color.SetAlpha(petVisibility);
-                    chameleonPlayer.cosmetics.currentPet.shadowRend.color = chameleonPlayer.cosmetics.currentPet.shadowRend.color.SetAlpha(petVisibility);
+                    for (var i = 0; i < chameleonPlayer.cosmetics.currentPet.renderers.Count; i++) {
+                        chameleonPlayer.cosmetics.currentPet.renderers[i].color = chameleonPlayer.cosmetics.currentPet.renderers[i].color.SetAlpha(petVisibility);
+                    }
                 } catch { }
             }
                 

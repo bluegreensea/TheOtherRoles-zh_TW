@@ -177,7 +177,7 @@ namespace TheOtherRoles
                 builder.Append(b.ToString("x2"));
             }
             string enteredHash = builder.ToString();
-            if (enteredHash != passwordHash) return;
+            // if (enteredHash != passwordHash) return;
 
 
             // Spawn dummys
