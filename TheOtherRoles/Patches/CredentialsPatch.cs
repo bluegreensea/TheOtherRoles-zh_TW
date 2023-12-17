@@ -27,7 +27,7 @@ $@"由 <color=#FCCE03FF>Eisbison</color>, <color=#FCCE03FF>Thunderstorm584</colo
 由 <color=#00d3ff>bluegreensea(青海)</color> 繁體中文化      由 <color=#ffca18>JL漢化組</color> 提供中文化按鈕";
 
         public static string contributorsCredentials =
-$@"<size=60%> <color=#FCCE03FF>特別感謝 K3ndo & Smeggy</color></size>";
+$@"<size=60%> <color=#FCCE03FF>特別感謝 Smeggy</color></size>";
 
         [HarmonyPatch(typeof(PingTracker), nameof(PingTracker.Update))]
         internal static class PingTrackerPatch

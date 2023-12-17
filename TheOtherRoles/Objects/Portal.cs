@@ -52,7 +52,7 @@ namespace TheOtherRoles.Objects {
 
             int colorId = playerControl.Data.DefaultOutfit.ColorId;
 
-            if (Camouflager.camouflageTimer > 0) {
+            if (Camouflager.camouflageTimer > 0 || Helpers.MushroomSabotageActive()) {
                 playerNameDisplay = "一個迷彩玩家";
                 colorId = 6;
             }
