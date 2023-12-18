@@ -12,6 +12,9 @@ public static class CustomHatManager
     public const string ResourcesDirectory = "TheOtherHats";
     public const string InnerslothPackageName = "Innersloth Hats";
     public const string DeveloperPackageName = "Developer Hats";
+#if !NOTHATS
+    public const string TranslatorPackageName = "Translator Hats";
+#endif
     
     internal static readonly Tuple<string, string> Repository = new("TheOtherRolesAU", "TheOtherHats");
     internal static string RepositoryUrl
@@ -22,6 +25,15 @@ public static class CustomHatManager
             return $"https://raw.githubusercontent.com/{owner}/{repository}/master";
         }
     }
+#if !NOTHATS
+    internal static readonly Tuple<string, string> TranslatorRepository = new("bluegreensea", "TheOtherTranslatorHats");
+    internal static string TranslatorRepositoryUrl {
+        get {
+            var (owner, repository) = TranslatorRepository;
+            return $"https://raw.githubusercontent.com/{owner}/{repository}/master";
+        }
+    }
+#endif
 
     internal static readonly string ManifestFileName = "CustomHats.json";
     
@@ -254,10 +266,11 @@ public static class CustomHatManager
         return !resHash.Equals(hash);
     }
 
-    internal static List<string> GenerateDownloadList(List<CustomHat> hats)
+    internal static Tuple<List<string>, List<string>> GenerateDownloadList(List<CustomHat> hats)
     {
         var algorithm = MD5.Create();
         var toDownload = new List<string>();
+        var toDownloadPackage = new List<string>();
 
         foreach (var hat in hats)
         {
@@ -274,10 +287,11 @@ public static class CustomHatManager
                 if (fileName != null && ResourceRequireDownload(fileName, fileHash, algorithm))
                 {
                     toDownload.Add(fileName);
+                    toDownloadPackage.Add(hat.Package);
                 }
             }
         }
 
-        return toDownload;
+        return new Tuple<List<string>, List<string>>(toDownload, toDownloadPackage);
     }
 }

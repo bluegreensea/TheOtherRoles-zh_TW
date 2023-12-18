@@ -57,11 +57,17 @@ internal static class HatsTabPatches
             {
                 CustomHatManager.InnerslothPackageName => 1000,
                 CustomHatManager.DeveloperPackageName => 0,
+#if !NOTHATS
+                CustomHatManager.TranslatorPackageName => 50,
+#endif
                 _ => 500
             });
         foreach (var key in orderedKeys)
         {
             var value = packages[key];
+#if !NOTHATS && RELEASE_JL
+            if (key == "Translator Hats") continue;
+#endif
             yOffset = CreateHatPackage(value, key, yOffset, __instance);
         }
         
