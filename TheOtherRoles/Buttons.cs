@@ -659,7 +659,7 @@ namespace TheOtherRoles
                    if (MapBehaviour.Instance && MapBehaviour.Instance.isActiveAndEnabled) MapBehaviour.Instance.Close();
                },
                GameOptionsManager.Instance.currentNormalGameOptions.MapId == 3,
-               "ADMIN"
+               "管理表"
            );
 
             // Hacker Admin Table Charges
@@ -700,7 +700,7 @@ namespace TheOtherRoles
                () => {
                    if (hackerVitalsChargesText != null) hackerVitalsChargesText.text = $"{Hacker.chargesVitals} / {Hacker.toolsNumber}";
                    hackerVitalsButton.actionButton.graphic.sprite = Helpers.isMira() ? Hacker.getLogSprite() : Hacker.getVitalsSprite();
-                   hackerVitalsButton.actionButton.OverrideText(Helpers.isMira() ? "DOORLOG" : "VITALS");
+                   hackerVitalsButton.actionButton.OverrideText(Helpers.isMira() ? "門禁日誌" : "生命");
                    return Hacker.chargesVitals > 0;
                },
                () => {
@@ -723,7 +723,7 @@ namespace TheOtherRoles
                    }
                },
                false,
-              Helpers.isMira() ? "DOORLOG" : "VITALS"
+              Helpers.isMira() ? "門禁日誌" : "生命"
            );
 
             // Hacker Vitals Charges
@@ -1975,7 +1975,7 @@ namespace TheOtherRoles
                    if (MapBehaviour.Instance && MapBehaviour.Instance.isActiveAndEnabled) MapBehaviour.Instance.Close();
                },
                false,
-               "ADMIN"
+               "管理表"
             );
 
             hunterArrowButton = new CustomButton(
@@ -2209,7 +2209,7 @@ namespace TheOtherRoles
                    if (MapBehaviour.Instance && MapBehaviour.Instance.isActiveAndEnabled) MapBehaviour.Instance.Close();
                },
                false,
-               "ADMIN"
+               "管理表"
             ); 
             propHuntFindButton = new CustomButton(
                 () => {
