@@ -27,7 +27,7 @@ namespace TheOtherRoles.Modules {
                                     if (LobbyLimit != GameOptionsManager.Instance.currentNormalGameOptions.MaxPlayers) {
                                         GameOptionsManager.Instance.currentNormalGameOptions.MaxPlayers = LobbyLimit;
                                         FastDestroyableSingleton<GameStartManager>.Instance.LastPlayerCount = LobbyLimit;
-                                        CachedPlayer.LocalPlayer.PlayerControl.RpcSyncSettings(GameOptionsManager.Instance.gameOptionsFactory.ToBytes(GameOptionsManager.Instance.currentGameOptions));  // TODO Maybe simpler?? 
+                                        CachedPlayer.LocalPlayer.PlayerControl.RpcSyncSettings(GameOptionsManager.Instance.gameOptionsFactory.ToBytes(GameOptionsManager.Instance.currentGameOptions, false));  // TODO Maybe simpler?? 
                                         __instance.AddChat(CachedPlayer.LocalPlayer.PlayerControl, $"大廳大小變更至{LobbyLimit}人");
                                     } else {
                                         __instance.AddChat(CachedPlayer.LocalPlayer.PlayerControl, $"大廳大小已是{LobbyLimit}人");

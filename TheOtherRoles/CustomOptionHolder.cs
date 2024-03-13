@@ -21,8 +21,8 @@ namespace TheOtherRoles {
         public static CustomOption modifiersCountMin;
         public static CustomOption modifiersCountMax;
 
-        public static CustomOption enableCodenameHorsemode;
-        public static CustomOption enableCodenameDisableHorses;
+        public static CustomOption anyPlayerCanStopStart;
+        public static CustomOption enableEventMode;
 
         public static CustomOption mafiaSpawnRate;
         public static CustomOption janitorCooldown;
@@ -331,6 +331,7 @@ namespace TheOtherRoles {
         public static CustomOption guesserGamemodeKillsThroughShield;
         public static CustomOption guesserGamemodeEvilCanKillSpy;
         public static CustomOption guesserGamemodeCantGuessSnitchIfTaksDone;
+        public static CustomOption guesserGamemodeSidekickIsAlwaysGuesser;
 
         // Hide N Seek Gamemode
         public static CustomOption hideNSeekHunterCount;
@@ -412,9 +413,9 @@ namespace TheOtherRoles {
             // Role Options
             presetSelection = CustomOption.Create(0, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "設定"), presets, null, true);
             activateRoles = CustomOption.Create(1, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "啟用模組職業並禁用原版職業"), true, null, true);
+            anyPlayerCanStopStart = CustomOption.Create(2, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "Any Player Can Stop The Start"), false, null, false);
 
-            if (Utilities.EventUtility.canBeEnabled) enableCodenameHorsemode = CustomOption.Create(10423, Types.General, cs(Color.green, "啟用代號馬模式"), true, null, true);
-            if (Utilities.EventUtility.canBeEnabled) enableCodenameDisableHorses = CustomOption.Create(10424, Types.General, cs(Color.green, "禁用馬"), false, enableCodenameHorsemode, false);
+            if (Utilities.EventUtility.canBeEnabled) enableEventMode = CustomOption.Create(10423, Types.General, cs(Color.green, "啟用特殊模式"), true, null, true);
 
             // Using new id's for the options to not break compatibilty with older versions
 #if RELEASE_JL
@@ -640,7 +641,6 @@ namespace TheOtherRoles {
             portalmakerUsePortalCooldown = CustomOption.Create(392, Types.Crewmate, "傳送門冷卻", 30f, 10f, 60f, 2.5f, portalmakerSpawnRate);
             portalmakerLogOnlyColorType = CustomOption.Create(393, Types.Crewmate, "傳送師記錄只顯示顏色類型", true, portalmakerSpawnRate);
             portalmakerLogHasTime = CustomOption.Create(394, Types.Crewmate, "記錄顯示時間", true, portalmakerSpawnRate);
-            
             portalmakerCanPortalFromAnywhere = CustomOption.Create(395, Types.Crewmate, "可以從任何地方傳送到傳送門", true, portalmakerSpawnRate);
 
             securityGuardSpawnRate = CustomOption.Create(280, Types.Crewmate, cs(SecurityGuard.color, "守衛"), rates, null, true);
@@ -727,6 +727,7 @@ namespace TheOtherRoles {
             guesserGamemodeNeutralNumber = CustomOption.Create(2002, Types.Guesser, cs(Guesser.color, "獨立賭徒人數"), 15f, 1f, 15f, 1f, null, true);
             guesserGamemodeImpNumber = CustomOption.Create(2003, Types.Guesser, cs(Guesser.color, "偽裝者賭徒人數"), 15f, 1f, 15f, 1f, null, true);
             guesserForceJackalGuesser = CustomOption.Create(2007, Types.Guesser, "強制豺狼賭徒", false, null, true);
+            guesserGamemodeSidekickIsAlwaysGuesser = CustomOption.Create(2012, Types.Guesser, "Sidekick Is Always Guesser", false, null);
             guesserForceThiefGuesser = CustomOption.Create(2011, Types.Guesser, "強制小偷賭徒", false, null, true);
             guesserGamemodeHaveModifier = CustomOption.Create(2004, Types.Guesser, "賭徒們可有特殊標籤", true, null);
             guesserGamemodeNumberOfShots = CustomOption.Create(2005, Types.Guesser, "賭徒可猜測次數", 3f, 1f, 15f, 1f, null);
@@ -734,6 +735,8 @@ namespace TheOtherRoles {
             guesserGamemodeKillsThroughShield = CustomOption.Create(2008, Types.Guesser, "賭徒忽略醫生盾", true, null);
             guesserGamemodeEvilCanKillSpy = CustomOption.Create(2009, Types.Guesser, "壞賭徒可猜出間諜", true, null);
             guesserGamemodeCantGuessSnitchIfTaksDone = CustomOption.Create(2010, Types.Guesser, "密探完成任務後不可被賭徒猜出", true, null);
+            // Care: 2012 already taken!
+            
 
             // Hide N Seek Gamemode (3000 - 3999)
             hideNSeekMap = CustomOption.Create(3020, Types.HideNSeekMain, cs(Color.yellow, "地圖"), new string[] { "The Skeld", "Mira", "Polus", "Airship", "Fungle", "Submerged", "LI Map"}, null, true, onChange: () => { int map = hideNSeekMap.selection; if (map >= 3) map++; GameOptionsManager.Instance.currentNormalGameOptions.MapId = (byte)map; });
