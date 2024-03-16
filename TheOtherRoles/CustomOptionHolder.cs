@@ -413,7 +413,7 @@ namespace TheOtherRoles {
             // Role Options
             presetSelection = CustomOption.Create(0, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "設定"), presets, null, true);
             activateRoles = CustomOption.Create(1, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "啟用模組職業並禁用原版職業"), true, null, true);
-            anyPlayerCanStopStart = CustomOption.Create(2, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "Any Player Can Stop The Start"), false, null, false);
+            anyPlayerCanStopStart = CustomOption.Create(2, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "任何玩家皆可中斷開始"), false, null, false);
 
             if (Utilities.EventUtility.canBeEnabled) enableEventMode = CustomOption.Create(10423, Types.General, cs(Color.green, "啟用特殊模式"), true, null, true);
 
@@ -727,7 +727,7 @@ namespace TheOtherRoles {
             guesserGamemodeNeutralNumber = CustomOption.Create(2002, Types.Guesser, cs(Guesser.color, "獨立賭徒人數"), 15f, 1f, 15f, 1f, null, true);
             guesserGamemodeImpNumber = CustomOption.Create(2003, Types.Guesser, cs(Guesser.color, "偽裝者賭徒人數"), 15f, 1f, 15f, 1f, null, true);
             guesserForceJackalGuesser = CustomOption.Create(2007, Types.Guesser, "強制豺狼賭徒", false, null, true);
-            guesserGamemodeSidekickIsAlwaysGuesser = CustomOption.Create(2012, Types.Guesser, "Sidekick Is Always Guesser", false, null);
+            guesserGamemodeSidekickIsAlwaysGuesser = CustomOption.Create(2012, Types.Guesser, "跟班總是賭徒", false, null);
             guesserForceThiefGuesser = CustomOption.Create(2011, Types.Guesser, "強制小偷賭徒", false, null, true);
             guesserGamemodeHaveModifier = CustomOption.Create(2004, Types.Guesser, "賭徒們可有特殊標籤", true, null);
             guesserGamemodeNumberOfShots = CustomOption.Create(2005, Types.Guesser, "賭徒可猜測次數", 3f, 1f, 15f, 1f, null);

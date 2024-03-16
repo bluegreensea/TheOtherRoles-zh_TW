@@ -155,13 +155,13 @@ namespace TheOtherRoles.Patches {
                         __instance.GameStartText.transform.localPosition = __instance.StartButton.transform.localPosition + Vector3.up * 2;
                     } else {
                         __instance.GameStartText.transform.localPosition = __instance.StartButton.transform.localPosition;
-                        if (!__instance.GameStartText.text.StartsWith("Starting"))
+                        if (!__instance.GameStartText.text.StartsWith("開始倒數"))
                             __instance.GameStartText.text = String.Empty;
                     }
 
-                    if (!__instance.GameStartText.text.StartsWith("Starting") || !CustomOptionHolder.anyPlayerCanStopStart.getBool())
+                    if (!__instance.GameStartText.text.StartsWith("開始倒數") || !CustomOptionHolder.anyPlayerCanStopStart.getBool())
                         copiedStartButton?.Destroy();
-                    if (CustomOptionHolder.anyPlayerCanStopStart.getBool() && copiedStartButton == null && __instance.GameStartText.text.StartsWith("Starting")) {
+                    if (CustomOptionHolder.anyPlayerCanStopStart.getBool() && copiedStartButton == null && __instance.GameStartText.text.StartsWith("開始倒數")) {
 
                         // Activate Stop-Button
                         copiedStartButton = GameObject.Instantiate(__instance.StartButton.gameObject, __instance.StartButton.gameObject.transform.parent);
@@ -169,7 +169,7 @@ namespace TheOtherRoles.Patches {
                         copiedStartButton.GetComponent<SpriteRenderer>().sprite = Helpers.loadSpriteFromResources("TheOtherRoles.Resources.StopClean.png", 180f);
                         copiedStartButton.SetActive(true);
                         var startButtonText = copiedStartButton.GetComponentInChildren<TMPro.TextMeshPro>();
-                        startButtonText.text = "STOP";
+                        startButtonText.text = "中斷";
                         startButtonText.fontSize *= 0.8f;
                         startButtonText.fontSizeMax = startButtonText.fontSize;
                         startButtonText.gameObject.transform.localPosition = Vector3.zero;
@@ -185,7 +185,7 @@ namespace TheOtherRoles.Patches {
                         }
                         startButtonPassiveButton.OnClick.AddListener((Action)(() => StopStartFunc()));
                         __instance.StartCoroutine(Effects.Lerp(.1f, new System.Action<float>((p) => {
-                            startButtonText.text = "STOP";
+                            startButtonText.text = "中斷";
                         })));
 
                     }

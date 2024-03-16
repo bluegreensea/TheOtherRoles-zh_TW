@@ -43,15 +43,16 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
+| 2024.3.5s| v4.5.2| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.5.2/TheOtherRoles.zip)
 | 2023.11.28s| v4.5.1| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.5.1/TheOtherRoles.zip)
-| 2023.11.28s| v4.5.0| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.5.0/TheOtherRoles.zip)
-| 2023.07.12s| v4.4.2| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.4.2/TheOtherRoles.zip)
 
 <details>
   <summary>Click to show older versions</summary>
   
 | Among Us - Version| Mod Version | Link |
 |----------|-------------|-----------------|
+| 2023.11.28s| v4.5.0| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.5.0/TheOtherRoles.zip)
+| 2023.07.12s| v4.4.2| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.4.2/TheOtherRoles.zip)
 | 2023.07.12s| v4.4.1| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.4.1/TheOtherRoles.zip)
 | 2023.07.12s| v4.4.0| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.4.0/TheOtherRoles.zip)
 | 2023.07.12s| v4.3.4| [Download](https://github.com/Eisbison/TheOtherRoles/releases/download/v4.3.4/TheOtherRoles.zip)
@@ -131,6 +132,16 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # Changelog
 <details>
   <summary>Click to show the Changelog</summary>
+  
+ **Version 4.5.2**
+- Updated to Among Us version 2024.3.5s (various small / "long" features and bugfixes)
+- Updated BepInEx dependency to 688
+- Added a new feature: Stop the game start (With an option to allow any player to stop it)
+- Added a new option (guesser mode): Sidekick is always guesser
+- Fixed the Arsonist Win - death reasons for already dead players are no longer replaced 
+- Changed the implementation of the Detective footprints - Improved performance can be expected
+- Changed the medic shield: Is now also displayed in meetings to players who can see it with brackets around the name
+
   
 **Version 4.5.1**
 - Fix a bug that lead to Props not being able to use the disguise button
@@ -854,6 +865,7 @@ Thanks to miniduikboot & GD for hosting modded servers (and so much more)
 
 # 設定
 該模組在 Among Us 添加了一些新設定(除了職業設定)：
+- **任何玩家皆可中斷開始:** 如果關閉，則只有主持人可以中斷遊戲開始。如果開啟，所有玩家都可以這麼做。中斷開始的非主持玩家將發送訊息，指示是誰中斷了它。
 - **船員數量:** 可以在大廳內設定船員的數量
 - **填滿船員職業(忽略最大/最小):** 所有人都將有職業，即使設置說會有普通船員(需要足夠的職業大於0%)。
 - **獨立數量:** 可以在大廳內設定獨立的數量
@@ -1000,7 +1012,7 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 ## 魔術師
 ### **隊伍:偽裝者**
 魔術師是個偽裝者，可以額外發動迷彩模式。\
-迷彩模式持續 10 秒，發動時所有玩家姓名/寵物/帽子\
+迷彩模式持續 10 秒，發動時所有玩家名字/寵物/帽子\
 都會被隱藏，且所有玩家的顏色都相同。\
 \
 **NOTE:**
@@ -1585,7 +1597,7 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 
 ## 醫生
 ### **隊伍:船員**
-醫生可以在每場比賽中上盾(玩家周圍發光)一名玩家，這使玩家無法被殺死。\
+醫生可以在每場比賽中上盾(玩家周圍發光)一名玩家，這使玩家無法被殺死。\ 盾牌還會在會議中為被上盾的玩家名字周圍顯示中括號。
 被上盾的玩家仍然可以被票出，也可能是一個偽裝者。\
 如果在選項中設定開啟，有人(偽裝者、警長...)試圖謀殺被上盾的玩家，被上盾的玩家和/或醫生將在螢幕上閃爍紅色。\
 如果醫生死了，盾也會隨之消失。\
@@ -2087,6 +2099,7 @@ VIP會在他死時向所有人發出類似於靈媒閃光的閃爍。\
 | 偽裝者賭徒人數 | -
 | 強制豺狼賭徒 | 如果設為"開"，第一個成為賭徒的獨立職業將是豺狼。
 | 強制小偷賭徒 | 如果設為"開"，第一個(或第二個，如果啟用強制豺狼賭徒)成為賭徒的獨立職業將是小偷。
+| 跟班總是賭徒 | 被招募的跟班將成為賭徒 | -
 | 賭徒們可有特殊標籤 | -
 | 賭徒可猜測次數 | -
 | 賭徒在每次會議可猜測多次 | -
