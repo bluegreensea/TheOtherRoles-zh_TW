@@ -117,7 +117,7 @@ namespace TheOtherRoles.Patches {
                         copiedStartButton.GetComponent<SpriteRenderer>().sprite = Helpers.loadSpriteFromResources("TheOtherRoles.Resources.StopClean.png", 180f);
                         copiedStartButton.SetActive(true);
                         var startButtonText = copiedStartButton.GetComponentInChildren<TMPro.TextMeshPro>();
-                        startButtonText.text = "STOP";
+                        startButtonText.text = "中斷";
                         startButtonText.fontSize *= 0.8f;
                         startButtonText.fontSizeMax = startButtonText.fontSize;
                         startButtonText.gameObject.transform.localPosition = Vector3.zero;
@@ -130,7 +130,7 @@ namespace TheOtherRoles.Patches {
                         }
                         startButtonPassiveButton.OnClick.AddListener((Action)(() => StopStartFunc()));
                         __instance.StartCoroutine(Effects.Lerp(.1f, new System.Action<float>((p) => {
-                            startButtonText.text = "STOP";
+                            startButtonText.text = "中斷";
                         })));
 
                     }
