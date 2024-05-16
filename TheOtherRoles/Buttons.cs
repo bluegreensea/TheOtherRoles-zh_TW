@@ -1940,7 +1940,7 @@ namespace TheOtherRoles
                         yoyoButton.Sprite = Yoyo.getBlinkButtonSprite();
                         yoyoButton.Timer = 10f;
                         yoyoButton.HasEffect = false;
-                        yoyoButton.buttonText = "Blink";
+                        yoyoButton.buttonText = "眨眼";
                     } else {
                         TheOtherRolesPlugin.Logger.LogMessage("in else for some reason");
                         // Jump to location
@@ -1957,7 +1957,7 @@ namespace TheOtherRoles
                         yoyoButton.EffectDuration = Yoyo.blinkDuration;
                         yoyoButton.Timer = 10f;
                         yoyoButton.HasEffect = true;
-                        yoyoButton.buttonText = "Returning...";
+                        yoyoButton.buttonText = "返回中...";
                         SoundEffectsManager.play("morphlingMorph");
                     }
                 },
@@ -2010,7 +2010,7 @@ namespace TheOtherRoles
                     yoyoButton.actionButton.cooldownTimerText.color = Palette.EnabledColor;
                     yoyoButton.HasEffect = false;
                     yoyoButton.Sprite = Yoyo.getMarkButtonSprite();
-                    yoyoButton.buttonText = "Mark Location";
+                    yoyoButton.buttonText = "標記位置";
                     SoundEffectsManager.play("morphlingMorph");
                     if (Minigame.Instance) {
                         Minigame.Instance.Close();

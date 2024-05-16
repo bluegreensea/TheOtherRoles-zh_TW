@@ -3,6 +3,6 @@ using System;
 namespace TheOtherRoles; 
 
 public class FakeGuid {
-    public static Guid guid = Guid.Parse("07710692-C82A-418D-B08F-12ACB44F8778");
+    public static Guid guid = Guid.Parse("C45816A5-4146-4890-B15F-066F8A2DF66B");
 }
 #endif

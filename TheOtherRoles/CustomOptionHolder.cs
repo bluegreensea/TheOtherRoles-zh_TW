@@ -522,12 +522,12 @@ namespace TheOtherRoles {
 
 
             yoyoSpawnRate = CustomOption.Create(470, Types.Impostor, cs(Yoyo.color, "Yo-Yo"), rates, null, true);
-            yoyoBlinkDuration = CustomOption.Create(471, Types.Impostor, "Blink Duration", 20f, 2.5f, 120f, 2.5f, yoyoSpawnRate);
-            yoyoMarkCooldown = CustomOption.Create(472, Types.Impostor, "Mark Location Cooldown", 20f, 2.5f, 120f, 2.5f, yoyoSpawnRate);
-            yoyoMarkStaysOverMeeting = CustomOption.Create(473, Types.Impostor, "Marked Location Stays After Meeting", true, yoyoSpawnRate);
-            yoyoHasAdminTable = CustomOption.Create(474, Types.Impostor, "Has Admin Table", true, yoyoSpawnRate);
-            yoyoAdminTableCooldown = CustomOption.Create(475, Types.Impostor, "Admin Table Cooldown", 20f, 2.5f, 120f, 2.5f, yoyoHasAdminTable);
-            yoyoSilhouetteVisibility = CustomOption.Create(476, Types.Impostor, "Silhouette Visibility", new string[] { "0%", "10%", "20%", "30%", "40%", "50%" }, yoyoSpawnRate);
+            yoyoBlinkDuration = CustomOption.Create(471, Types.Impostor, "眨眼持續時間", 20f, 2.5f, 120f, 2.5f, yoyoSpawnRate);
+            yoyoMarkCooldown = CustomOption.Create(472, Types.Impostor, "標記位置冷卻", 20f, 2.5f, 120f, 2.5f, yoyoSpawnRate);
+            yoyoMarkStaysOverMeeting = CustomOption.Create(473, Types.Impostor, "標記位置在會議後保留", true, yoyoSpawnRate);
+            yoyoHasAdminTable = CustomOption.Create(474, Types.Impostor, "有管理表", true, yoyoSpawnRate);
+            yoyoAdminTableCooldown = CustomOption.Create(475, Types.Impostor, "管理表冷卻", 20f, 2.5f, 120f, 2.5f, yoyoHasAdminTable);
+            yoyoSilhouetteVisibility = CustomOption.Create(476, Types.Impostor, "殘影能見度", new string[] { "0%", "10%", "20%", "30%", "40%", "50%" }, yoyoSpawnRate);
 
 
             guesserSpawnRate = CustomOption.Create(310, Types.Neutral, cs(Guesser.color, "賭徒"), rates, null, true);
@@ -551,12 +551,12 @@ namespace TheOtherRoles {
             jackalKillCooldown = CustomOption.Create(221, Types.Neutral, "豺狼/跟班殺人冷卻", 30f, 10f, 60f, 2.5f, jackalSpawnRate);
             jackalCreateSidekickCooldown = CustomOption.Create(222, Types.Neutral, "豺狼招募跟班冷卻", 30f, 10f, 60f, 2.5f, jackalSpawnRate);
             jackalCanUseVents = CustomOption.Create(223, Types.Neutral, "豺狼可使用通風口", true, jackalSpawnRate);
-            jackalCanSabotageLights = CustomOption.Create(431, Types.Neutral, "Jackal Can Sabotage Lights", true, jackalSpawnRate);
+            jackalCanSabotageLights = CustomOption.Create(431, Types.Neutral, "豺狼可破壞燈光", true, jackalSpawnRate);
             jackalCanCreateSidekick = CustomOption.Create(224, Types.Neutral, "豺狼可招募跟班", false, jackalSpawnRate);
             sidekickPromotesToJackal = CustomOption.Create(225, Types.Neutral, "豺狼死後跟班升職成豺狼", false, jackalCanCreateSidekick);
             sidekickCanKill = CustomOption.Create(226, Types.Neutral, "跟班可以殺人", false, jackalCanCreateSidekick);
             sidekickCanUseVents = CustomOption.Create(227, Types.Neutral, "跟班可使用通風口", true, jackalCanCreateSidekick);
-            sidekickCanSabotageLights = CustomOption.Create(432, Types.Neutral, "Sidekick Can Sabotage Lights", true, jackalCanCreateSidekick);
+            sidekickCanSabotageLights = CustomOption.Create(432, Types.Neutral, "跟班可破壞燈光", true, jackalCanCreateSidekick);
             jackalPromotedFromSidekickCanCreateSidekick = CustomOption.Create(228, Types.Neutral, "跟班升職豺狼後可招募跟班", true, sidekickPromotesToJackal);
             jackalCanCreateSidekickFromImpostor = CustomOption.Create(229, Types.Neutral, "豺狼可讓偽裝者轉成跟班", true, jackalCanCreateSidekick);
             jackalAndSidekickHaveImpostorVision = CustomOption.Create(430, Types.Neutral, "豺狼與跟班有偽裝者視野", false, jackalSpawnRate);
@@ -650,7 +650,7 @@ namespace TheOtherRoles {
             trackerCanTrackCorpses = CustomOption.Create(203, Types.Crewmate, "追踪者可以追踪屍體", true, trackerSpawnRate);
             trackerCorpsesTrackingCooldown = CustomOption.Create(204, Types.Crewmate, "屍體追踪冷卻", 30f, 5f, 120f, 5f, trackerCanTrackCorpses);
             trackerCorpsesTrackingDuration = CustomOption.Create(205, Types.Crewmate, "屍體追踪持續時間", 5f, 2.5f, 30f, 2.5f, trackerCanTrackCorpses);
-            trackerTrackingMethod = CustomOption.Create(206, Types.Crewmate, "How Tracker Gets Target Location", new string[] { "Arrow Only", "Proximity Dectector Only", "Arrow + Proximity" }, trackerSpawnRate);
+            trackerTrackingMethod = CustomOption.Create(206, Types.Crewmate, "追踪者如何追踪目標", new string[] { "僅箭頭", "僅接近偵測器", "箭頭 + 接近偵測" }, trackerSpawnRate);
                            
             snitchSpawnRate = CustomOption.Create(210, Types.Crewmate, cs(Snitch.color, "密探"), rates, null, true);
             snitchLeftTasksForReveal = CustomOption.Create(219, Types.Crewmate, "密探可看到偽裝者在哪需要的任務數", 5f, 0f, 25f, 1f, snitchSpawnRate);
@@ -836,7 +836,7 @@ namespace TheOtherRoles {
             finishTasksBeforeHauntingOrZoomingOut = CustomOption.Create(9, Types.General, "作祟或縮放需先做完任務", true);
             camsNightVision = CustomOption.Create(11, Types.General, "當關燈時攝影機切換到夜視鏡", false, null, true);
             camsNoNightVisionIfImpVision = CustomOption.Create(12, Types.General, "偽裝者視角忽略攝影機夜視鏡", false, camsNightVision, false);
-            deadImpsBlockSabotage = CustomOption.Create(13, Types.General, cs(Palette.ImpostorRed, "Block Dead Impostor From Sabotaging"), false, null, false);
+            deadImpsBlockSabotage = CustomOption.Create(13, Types.General, cs(Palette.ImpostorRed, "阻止死亡偽裝者的破壞"), false, null, false);
 
 
             dynamicMap = CustomOption.Create(500, Types.General, "隨機地圖", false, null, true);

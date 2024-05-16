@@ -75,7 +75,7 @@ namespace TheOtherRoles
         public static RoleInfo ninja = new RoleInfo("忍者", Ninja.color, "驚嚇並暗殺你的敵人", "驚嚇並暗殺你的敵人", RoleId.Ninja);
         public static RoleInfo thief = new RoleInfo("小偷", Thief.color, "殺了殺手來竊取他們的職業", "竊取殺手的職業", RoleId.Thief, true);
         public static RoleInfo bomber = new RoleInfo("炸彈客", Bomber.color, "炸了所有船員", "炸了所有船員", RoleId.Bomber);
-        public static RoleInfo yoyo = new RoleInfo("Yo-Yo", Yoyo.color, "Blink to a marked location and Back", "Blink to a location", RoleId.Yoyo);
+        public static RoleInfo yoyo = new RoleInfo("Yo-Yo", Yoyo.color, "眨眼到標記位置並返回", "眨眼到某個位置", RoleId.Yoyo);
 
         public static RoleInfo hunter = new RoleInfo("獵人", Palette.ImpostorRed, Helpers.cs(Palette.ImpostorRed, "尋找並殺死所有船員"), "尋找並殺死所有船員", RoleId.Impostor);
         public static RoleInfo hunted = new RoleInfo("獵物", Color.white, "躲藏", "躲藏", RoleId.Crewmate);

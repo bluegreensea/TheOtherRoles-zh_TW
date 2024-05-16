@@ -32,8 +32,8 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 | [巫師](#巫師) | [追踪者](#追踪者) |  |  |
 | [忍者](#忍者) | [密探](#密探) |  |  |
 | [炸彈客](#炸彈客) | [間諜](#間諜) |  |  |
-| [壞賭徒](#賭徒) | [傳送師](#傳送師) |  |  |
-|  | [守衛](#守衛) |  |  |
+| [Yo-Yo](#yoyo) | [傳送師](#傳送師) |  |  |
+| [壞賭徒](#賭徒) | [守衛](#守衛) |  |  |
 |  | [通靈師](#通靈師) |  |  |
 |  | [陷阱師](#陷阱師) |  |  |
 |  | [好賭徒](#賭徒) |  |  |
@@ -43,6 +43,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
+| 2024.3.5s| v4.5.3| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.5.3/TheOtherRoles.zip)
 | 2024.3.5s| v4.5.2| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.5.2/TheOtherRoles.zip)
 | 2023.11.28s| v4.5.1| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.5.1/TheOtherRoles.zip)
 
@@ -132,6 +133,19 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # Changelog
 <details>
   <summary>Click to show the Changelog</summary>
+  
+**Version 4.5.3**
+- Added a new role: Yo-Yo (Impostor) - Mark and blink to a position, then blink back to the start of the blink!
+- Added a new option to Jackal And Sidekick: Jackal / Sidekick can sabotage lights (cooldown syncs with Imp Sabotages)
+- Added a new option: Block Dead Impostor From Sabotaging
+- Added a new option to the Tracker: Tracking Type: Arrow, Proximity Meter, Both
+- Added a new feature: The host is always displayed to all players, in the meeting ui and ping  tracker text
+- Added a new feature: Ghosts see the icons of all players on their map
+- Fixed the chat command to ban a player from the lobby `/ban`
+- Fixed an issue where killing in PropHunt crashed the lobby
+- Fixed an issue with the very short kill distance in Vanilla HideNSeek
+- Changed trapper trap: is now visible with transparency to the trapper while inactive
+  
   
  **Version 4.5.2**
 - Updated to Among Us version 2024.3.5s (various small / "long" features and bugfixes)
@@ -1229,6 +1243,31 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 | 炸彈啟動倒數 |
 -----------------------
 
+## YoYo
+### **隊伍: 偽裝者**
+Yo-Yo 是個偽裝者，擁有標記一個位置並眨眼(傳送)到此位置的能力。\
+在眨眼後 Yo-Yo 有固定的時間(根據選項)來做他們想做的任何事情，然後將自動眨眼回到第一次眨眼時的位置。\
+每次眨眼都將留下一個具有可設定透明度的殘影。 殘影非常難被看到。\
+Yo-Yo 根據選項設定可以存取管理表。
+
+**NOTE:**
+
+- 標記的位置僅 Yo-Yo 和死者能見。
+- 第一次眨眼(傳送到標記位置)的殘影將(幾乎)保持不變，直到 Yo-Yo 返回
+- 第二次眨眼(返回)的殘影停留5秒
+
+### 遊戲選項
+| 名稱 | 描述 |
+|----------|:-------------:|
+| Yo-Yo 生成機率 | -
+| 眨眼持續時間 | -
+| 標記位置冷卻 | -
+| 標記位置在會議後保留 | -
+| 有管理表 | -
+| 管理表冷卻 | -
+| 殘影能見度 | -
+-----------------------
+
 ## 賭徒
 ### **隊伍:船員或偽裝者**
 賭徒可能是船員或是偽裝者 (根據選項設定)。\
@@ -1322,7 +1361,12 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 | 豺狼/跟班殺人冷卻 | 殺死冷卻 |
 | 豺狼製造跟班冷卻 | 建立同伴的冷卻時間 |
 | 豺狼可使用通風口 | 開/關 |
+| 豺狼可破壞燈光 | 開/關 |
 | 豺狼可製造跟班 | 開/關 |
+| 豺狼死後跟班升職成豺狼 | 開/關 |
+| 跟班可以殺人 | 開/關 |
+| 跟班可使用通風口 | 開/關 |
+| 跟班可破壞燈光 | 開/關 |
 | 從跟班升職的豺狼可製造跟班 | 開/關 (防止豺狼團隊成長擴大) |
 | 豺狼可讓偽裝者轉成他們的跟班 | 開/關 (為了防止豺狼將偽裝者變成跟班，如果他在偽裝者身上使用該能力，他會將偽裝者視為跟班，但偽裝者不會轉換為跟班。如果此選項設置為「關」，豺狼和跟班可以互相殘殺。) |
 | 豺狼與跟班有偽裝者視野 | - |
@@ -1686,6 +1730,7 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 追踪者可以選擇一名玩家進行追踪。 根據選項設定，追踪者可以在每次會議後追踪不同的人，或者在整個遊戲中追踪同一個人。\
 有個箭頭指向玩家的最後位置。\
 箭頭每隔幾秒更新一次位置 (可設定)。\
+根據選項，箭頭可以替換或與 Hide N Seek 中的接近偵測器組合。\
 根據選項設定的不同，追踪者還有另一種能力：他們可以在一定時間內追踪地圖上的所有屍體。 即使屍體被禿鷲清理或吃掉，他們也會繼續追踪屍體。
 
 **NOTE**
@@ -1700,6 +1745,7 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 | 追踪者可以追踪屍體 | -
 | 屍體追踪冷卻 | -
 | 屍體追踪持續時間 | -
+| 追踪者如何指向目標 | -
 -----------------------
 
 ## 密探
