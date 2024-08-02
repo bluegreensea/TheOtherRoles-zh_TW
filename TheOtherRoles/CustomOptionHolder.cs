@@ -445,15 +445,15 @@ namespace TheOtherRoles {
             crewmateRolesFill = CustomOption.Create(308, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "填滿船員職業\n(忽略最小/最大)"), false);
 #if RELEASE_JL
             } else {
-            crewmateRolesCountMin = CustomOption.Create(300, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小船員職業數"), 15f, 0f, 127f, 1f, null, true, heading: "最小/最大職業數");
-            crewmateRolesCountMax = CustomOption.Create(301, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大船員職業數"), 15f, 0f, 127f, 1f);
-            neutralRolesCountMin = CustomOption.Create(302, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小獨立職業數"), 15f, 0f, 127f, 1f);
-            neutralRolesCountMax = CustomOption.Create(303, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大獨立職業數"), 15f, 0f, 127f, 1f);
-            impostorRolesCountMin = CustomOption.Create(304, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小偽裝者職業數"), 15f, 0f, 63f, 1f);
-            impostorRolesCountMax = CustomOption.Create(305, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大偽裝者職業數"), 15f, 0f, 63f, 1f);
-            modifiersCountMin = CustomOption.Create(306, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小特殊標籤數"), 15f, 0f, 127f, 1f);
-            modifiersCountMax = CustomOption.Create(307, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大特殊標籤數"), 15f, 0f, 127f, 1f);
-            crewmateRolesFill = CustomOption.Create(308, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "填滿船員職業\n(忽略最小/最大)"), false);
+                crewmateRolesCountMin = CustomOption.Create(300, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小船員職業數"), 15f, 0f, 127f, 1f, null, true, heading: "最小/最大職業數");
+                crewmateRolesCountMax = CustomOption.Create(301, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大船員職業數"), 15f, 0f, 127f, 1f);
+                neutralRolesCountMin = CustomOption.Create(302, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小獨立職業數"), 15f, 0f, 127f, 1f);
+                neutralRolesCountMax = CustomOption.Create(303, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大獨立職業數"), 15f, 0f, 127f, 1f);
+                impostorRolesCountMin = CustomOption.Create(304, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小偽裝者職業數"), 15f, 0f, 63f, 1f);
+                impostorRolesCountMax = CustomOption.Create(305, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大偽裝者職業數"), 15f, 0f, 63f, 1f);
+                modifiersCountMin = CustomOption.Create(306, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小特殊標籤數"), 15f, 0f, 127f, 1f);
+                modifiersCountMax = CustomOption.Create(307, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大特殊標籤數"), 15f, 0f, 127f, 1f);
+                crewmateRolesFill = CustomOption.Create(308, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "填滿船員職業\n(忽略最小/最大)"), false);
             }
 #endif
 
@@ -749,13 +749,13 @@ namespace TheOtherRoles {
             modifierShifter = CustomOption.Create(1100, Types.Modifier, cs(Color.yellow, "轉職師"), rates, null, true);
 
             // Guesser Gamemode (2000 - 2999)
-            guesserGamemodeCrewNumber = CustomOption.Create(2001, Types.Guesser, cs(Guesser.color, "船員賭徒人數"), 15f, 1f, 15f, 1f, null, true, heading: "Amount of Guessers");
+            guesserGamemodeCrewNumber = CustomOption.Create(2001, Types.Guesser, cs(Guesser.color, "船員賭徒人數"), 15f, 1f, 15f, 1f, null, true, heading: "賭徒人數");
             guesserGamemodeNeutralNumber = CustomOption.Create(2002, Types.Guesser, cs(Guesser.color, "獨立賭徒人數"), 15f, 1f, 15f, 1f, null);
             guesserGamemodeImpNumber = CustomOption.Create(2003, Types.Guesser, cs(Guesser.color, "偽裝者賭徒人數"), 15f, 1f, 15f, 1f, null);
-            guesserForceJackalGuesser = CustomOption.Create(2007, Types.Guesser, "強制豺狼賭徒", false, null, true, heading: "Force Guessers");
+            guesserForceJackalGuesser = CustomOption.Create(2007, Types.Guesser, "強制豺狼賭徒", false, null, true, heading: "強制賭徒");
             guesserGamemodeSidekickIsAlwaysGuesser = CustomOption.Create(2012, Types.Guesser, "跟班總是賭徒", false, null);
             guesserForceThiefGuesser = CustomOption.Create(2011, Types.Guesser, "強制小偷賭徒", false, null);
-            guesserGamemodeHaveModifier = CustomOption.Create(2004, Types.Guesser, "賭徒們可有特殊標籤", true, null, true, heading: "General Guesser Settings");
+            guesserGamemodeHaveModifier = CustomOption.Create(2004, Types.Guesser, "賭徒們可有特殊標籤", true, null, true, heading: "賭徒通用設定");
             guesserGamemodeNumberOfShots = CustomOption.Create(2005, Types.Guesser, "賭徒可猜測次數", 3f, 1f, 15f, 1f, null);
             guesserGamemodeHasMultipleShotsPerMeeting = CustomOption.Create(2006, Types.Guesser, "賭徒在每次會議可猜測多次", false, null);
             guesserGamemodeKillsThroughShield = CustomOption.Create(2008, Types.Guesser, "賭徒忽略醫生盾", true, null);
@@ -779,7 +779,7 @@ namespace TheOtherRoles {
             hideNSeekCanSabotage = CustomOption.Create(3019, Types.HideNSeekMain, cs(Color.yellow, "啟用破壞"), false);
             hideNSeekHunterWaiting = CustomOption.Create(3022, Types.HideNSeekMain, cs(Color.yellow, "獵人釋放等待時間"), 15f, 2.5f, 60f, 2.5f);
 
-            hunterLightCooldown = CustomOption.Create(3005, Types.HideNSeekRoles, cs(Color.red, "獵人點燈冷卻"), 30f, 5f, 60f, 1f, null, true, heading: "Hunter Lights Settings");
+            hunterLightCooldown = CustomOption.Create(3005, Types.HideNSeekRoles, cs(Color.red, "獵人點燈冷卻"), 30f, 5f, 60f, 1f, null, true, heading: "獵人燈光設定");
             hunterLightDuration = CustomOption.Create(3006, Types.HideNSeekRoles, cs(Color.red, "獵人點燈持續時間"), 5f, 1f, 60f, 1f);
             hunterLightVision = CustomOption.Create(3007, Types.HideNSeekRoles, cs(Color.red, "獵人點燈視野"), 3f, 1f, 5f, 0.25f);
             hunterLightPunish = CustomOption.Create(3008, Types.HideNSeekRoles, cs(Color.red, "獵人點燈懲罰(秒)"), 5f, 0f, 30f, 1f);
@@ -790,20 +790,20 @@ namespace TheOtherRoles {
             hunterArrowDuration = CustomOption.Create(3013, Types.HideNSeekRoles, cs(Color.red, "獵人箭頭持續時間"), 5f, 0f, 60f, 1f);
             hunterArrowPunish = CustomOption.Create(3014, Types.HideNSeekRoles, cs(Color.red, "獵人箭頭懲罰(秒)"), 5f, 0f, 30f, 1f);
 
-            huntedShieldCooldown = CustomOption.Create(3015, Types.HideNSeekRoles, cs(Color.gray, "獵物盾冷卻"), 30f, 5f, 60f, 1f, null, true, heading: "Hunter Shields Settings");
+            huntedShieldCooldown = CustomOption.Create(3015, Types.HideNSeekRoles, cs(Color.gray, "獵物盾冷卻"), 30f, 5f, 60f, 1f, null, true, heading: "獵物護盾設定");
             huntedShieldDuration = CustomOption.Create(3016, Types.HideNSeekRoles, cs(Color.gray, "獵物盾持續時間"), 5f, 1f, 60f, 1f);
             huntedShieldRewindTime = CustomOption.Create(3018, Types.HideNSeekRoles, cs(Color.gray, "獵物回溯的時間"), 3f, 1f, 10f, 1f);
             huntedShieldNumber = CustomOption.Create(3026, Types.HideNSeekRoles, cs(Color.gray, "獵物盾數量"), 3f, 1f, 15f, 1f);
 
             // Prop Hunt General Options
             propHuntMap = CustomOption.Create(4020, Types.PropHunt, cs(Color.yellow, "地圖"), new string[] { "The Skeld", "Mira", "Polus", "Airship", "Fungle", "Submerged", "LI Map"}, null, true, onChange: ()=> { int map = propHuntMap.selection; if (map >= 3) map++; GameOptionsManager.Instance.currentNormalGameOptions.MapId = (byte)map;});
-            propHuntTimer = CustomOption.Create(4021, Types.PropHunt, cs(Color.yellow, "倒數計時(分)"), 5f, 1f, 30f, 0.5f, null, true, heading: "General PropHunt Settings");
+            propHuntTimer = CustomOption.Create(4021, Types.PropHunt, cs(Color.yellow, "倒數計時(分)"), 5f, 1f, 30f, 0.5f, null, true, heading: "物品獵殺通用設定");
             propHuntUnstuckCooldown = CustomOption.Create(4011, Types.PropHunt, cs(Color.yellow, "出竅冷卻"), 30f, 2.5f, 60f, 2.5f);
             propHuntUnstuckDuration = CustomOption.Create(4012, Types.PropHunt, cs(Color.yellow, "出竅持續時間"), 2f, 1f, 60f, 1f);
             propHunterVision = CustomOption.Create(4006, Types.PropHunt, cs(Color.yellow, "獵人視野"), 0.5f, 0.25f, 2f, 0.25f);
             propVision = CustomOption.Create(4007, Types.PropHunt, cs(Color.yellow, "物品視野"), 2f, 0.25f, 5f, 0.25f);
             // Hunter Options
-            propHuntNumberOfHunters = CustomOption.Create(4000, Types.PropHunt, cs(Color.red, "獵人數量"), 1f, 1f, 5f, 1f, null, true, heading: "Hunter Settings");
+            propHuntNumberOfHunters = CustomOption.Create(4000, Types.PropHunt, cs(Color.red, "獵人數量"), 1f, 1f, 5f, 1f, null, true, heading: "獵人設定");
             hunterInitialBlackoutTime = CustomOption.Create(4001, Types.PropHunt, cs(Color.red, "獵人初始暗幕持續時間"), 10f, 5f, 20f, 1f);
             hunterMissCooldown = CustomOption.Create(4004, Types.PropHunt, cs(Color.red, "擊殺失手後冷卻"), 10f, 2.5f, 60f, 2.5f);
             hunterHitCooldown = CustomOption.Create(4005, Types.PropHunt, cs(Color.red, "擊殺擊中後冷卻"), 10f, 2.5f, 60f, 2.5f);
@@ -814,7 +814,7 @@ namespace TheOtherRoles {
             propHuntFindCooldown = CustomOption.Create(4023, Types.PropHunt, cs(Color.red, "搜尋冷卻"), 60f, 2.5f, 1800f, 2.5f);
             propHuntFindDuration = CustomOption.Create(4024, Types.PropHunt, cs(Color.red, "搜尋持續時間"), 5f, 1f, 15f, 1f);
             // Prop Options
-            propBecomesHunterWhenFound = CustomOption.Create(4003, Types.PropHunt, cs(Palette.CrewmateBlue, "物品變成獵人當被找到"), false, null, true, heading: "Prop Settings");
+            propBecomesHunterWhenFound = CustomOption.Create(4003, Types.PropHunt, cs(Palette.CrewmateBlue, "物品變成獵人當被找到"), false, null, true, heading: "物品設定");
             propHuntInvisEnabled = CustomOption.Create(4013, Types.PropHunt, cs(Palette.CrewmateBlue, "隱形"), true, null, true);
             propHuntInvisCooldown = CustomOption.Create(4014, Types.PropHunt, cs(Palette.CrewmateBlue, "隱形冷卻"), 120f, 10f, 1800f, 2.5f, propHuntInvisEnabled);
             propHuntInvisDuration = CustomOption.Create(4015, Types.PropHunt, cs(Palette.CrewmateBlue, "隱形持續時間"), 5f, 1f, 30f, 1f, propHuntInvisEnabled);
@@ -840,7 +840,7 @@ namespace TheOtherRoles {
 
 
 
-            dynamicMap = CustomOption.Create(500, Types.General, "隨機地圖", false, null, true, heading: "Random Maps");
+            dynamicMap = CustomOption.Create(500, Types.General, "隨機地圖", false, null, true, heading: "隨機地圖");
             dynamicMapEnableSkeld = CustomOption.Create(501, Types.General, "Skeld", rates, dynamicMap, false);
             dynamicMapEnableMira = CustomOption.Create(502, Types.General, "Mira", rates, dynamicMap, false);
             dynamicMapEnablePolus = CustomOption.Create(503, Types.General, "Polus", rates, dynamicMap, false);

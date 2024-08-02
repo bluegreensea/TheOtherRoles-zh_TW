@@ -38,19 +38,20 @@ $@"<size=60%> <color=#FCCE03FF>特別感謝 Smeggy</color></size>";
                 __instance.text.alignment = TextAlignmentOptions.Top;
                 var position = __instance.GetComponent<AspectPosition>();
                 position.Alignment = AspectPosition.EdgeAlignments.Top;
+                __instance.text.text = $"<size=80%>{DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss")}</size>\n{__instance.text.text}";
                 if (AmongUsClient.Instance.GameState == InnerNet.InnerNetClient.GameStates.Started) {
                     string gameModeText = $"";
-                    if (HideNSeek.isHideNSeekGM) gameModeText = $"Hide 'N Seek";
-                    else if (HandleGuesser.isGuesserGm) gameModeText = $"Guesser";
-                    else if (PropHunt.isPropHuntGM) gameModeText = "Prop Hunt";
+                    if (HideNSeek.isHideNSeekGM) gameModeText = $"躲貓貓";
+                    else if (HandleGuesser.isGuesserGm) gameModeText = $"賭徒";
+                    else if (PropHunt.isPropHuntGM) gameModeText = "物品獵殺";
                     if (gameModeText != "") gameModeText = Helpers.cs(Color.yellow, gameModeText) + "\n";
                     __instance.text.text = $"<size=130%><color=#ff351f>TheOtherRoles</color></size> v{TheOtherRolesPlugin.Version.ToString() + (TheOtherRolesPlugin.betaDays > 0 ? "-BETA" : "")}\n{gameModeText}" + __instance.text.text;
                     position.DistanceFromEdge = new Vector3(2.25f, 0.11f, 0);
                 } else {
                     string gameModeText = $"";
-                    if (TORMapOptions.gameMode == CustomGamemodes.HideNSeek) gameModeText = $"Hide 'N Seek";
-                    else if (TORMapOptions.gameMode == CustomGamemodes.Guesser) gameModeText = $"Guesser";
-                    else if (TORMapOptions.gameMode == CustomGamemodes.PropHunt) gameModeText = $"Prop Hunt";
+                    if (TORMapOptions.gameMode == CustomGamemodes.HideNSeek) gameModeText = $"躲貓貓";
+                    else if (TORMapOptions.gameMode == CustomGamemodes.Guesser) gameModeText = $"賭徒";
+                    else if (TORMapOptions.gameMode == CustomGamemodes.PropHunt) gameModeText = $"物品獵殺";
                     if (gameModeText != "") gameModeText = Helpers.cs(Color.yellow, gameModeText);
 
                     __instance.text.text = $"{fullCredentialsVersion}\n{fullCredentials}\n {__instance.text.text}";
@@ -58,9 +59,9 @@ $@"<size=60%> <color=#FCCE03FF>特別感謝 Smeggy</color></size>";
 
                     try {
                         var GameModeText = GameObject.Find("GameModeText")?.GetComponent<TextMeshPro>();
-                        GameModeText.text = gameModeText == "" ? (GameOptionsManager.Instance.currentGameOptions.GameMode == GameModes.HideNSeek ? "Van. HideNSeek" : "Classic" ): gameModeText;
+                        GameModeText.text = gameModeText == "" ? (GameOptionsManager.Instance.currentGameOptions.GameMode == GameModes.HideNSeek ? "原版 捉迷藏" : "經典" ): gameModeText;
                         var ModeLabel = GameObject.Find("ModeLabel")?.GetComponentInChildren<TextMeshPro>();
-                        ModeLabel.text = "Game Mode";
+                        ModeLabel.text = "遊戲模式";
                     } catch { }
                 }
                 position.AdjustPosition();

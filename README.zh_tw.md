@@ -43,15 +43,16 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
+| 2024.6.18s| v4.6.0| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.6.0/TheOtherRoles.zip)
 | 2024.3.5s| v4.5.3| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.5.3/TheOtherRoles.zip)
-| 2024.3.5s| v4.5.2| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.5.2/TheOtherRoles.zip)
-| 2023.11.28s| v4.5.1| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.5.1/TheOtherRoles.zip)
 
 <details>
   <summary>Click to show older versions</summary>
   
 | Among Us - Version| Mod Version | Link |
 |----------|-------------|-----------------|
+| 2024.3.5s| v4.5.2| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.5.2/TheOtherRoles.zip)
+| 2023.11.28s| v4.5.1| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.5.1/TheOtherRoles.zip)
 | 2023.11.28s| v4.5.0| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.5.0/TheOtherRoles.zip)
 | 2023.07.12s| v4.4.2| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.4.2/TheOtherRoles.zip)
 | 2023.07.12s| v4.4.1| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.4.1/TheOtherRoles.zip)
@@ -133,6 +134,20 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # Changelog
 <details>
   <summary>Click to show the Changelog</summary>
+  
+  
+** Version 4.6.0**
+- Updated to Among Us version 2024.6.18 (Vanilla Update with new UI elements and many Server Side Changes)
+- Added a completely new UI for the Mod's Options, using the new Vanilla Design.
+- Added a button to switch gamemodes in the lobby
+- Added an option to enable the Chat-Notification in game (in Mod Options)
+- Fixed a bug where the shielding the bomber would show a murder attempt on the bomber, when they plant a bomb (sorry Vlesk)
+- Fixed a bug in PropHunt, where the background of the Prop-Display was visible in the cameras
+- Fixed a bug where guessing a player would sometimes not return the votes to the voters
+- Fixed a bug where the Lawyer would not properly die when guessing the client
+- Removed: Disabled Vanilla Servers for now, as the mod is incompatible with them in its / their current state. Thanks to Miniduikboat for making custom servers great again!
+- Experimental: Advanded users can try to install the mod on the Windows Store Version of Among Us. No Support Provided!
+
   
 **Version 4.5.3**
 - Added a new role: Yo-Yo (Impostor) - Mark and blink to a position, then blink back to the start of the blink!
@@ -889,7 +904,7 @@ Thanks to miniduikboot & GD for hosting modded servers (and so much more)
 - **最大緊急會議次數 :** 您可以設定總共可以招開的最大緊急會議數(每個玩家仍有個人最大招開數，但如果達到最大會議數，即使您還有一些緊急會議也無法使用。偽裝者和豺狼也算)
 - **允許跳過緊急會議:** 如果設定為關，緊急會議中將不會有跳過按鈕。如果玩家不投票，他們將投票給自己。
 - **隱藏玩家名稱:** 隱藏所有有您不知職業玩家的名稱。戀人/偽裝者/豺狼隊伍仍可以看到他們隊友的名字。偽裝者還可以看到間諜的名字，每個人仍可以看到迷你的年齡。
-- **允許並列醫務室掃描:** 允許玩家同時進行他們的醫務室掃描。
+- **允許醫務室並列掃描:** 允許玩家同時進行他們的醫務室掃描。
 - **免死金牌** 上一輪第一個被殺死的玩家將被上盾並且所有玩家可見直到第一次會議時。
 - **作祟或縮放需先做完任務** 縮放功能和作祟將對玩家隱藏，直到他們完成所有任務
 - **管理表顯示屍體**

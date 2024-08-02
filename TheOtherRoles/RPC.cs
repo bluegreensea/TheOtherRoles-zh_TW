@@ -231,7 +231,7 @@ namespace TheOtherRoles
         public static void stopStart(byte playerId) {
             if (AmongUsClient.Instance.AmHost && CustomOptionHolder.anyPlayerCanStopStart.getBool()) {
                 GameStartManager.Instance.ResetStartState();
-                PlayerControl.LocalPlayer.RpcSendChat($"{Helpers.playerById(playerId).Data.PlayerName} stopped the game start!");
+                PlayerControl.LocalPlayer.RpcSendChat($"{Helpers.playerById(playerId).Data.PlayerName} 中斷了遊戲開始倒數!");
             }
         }
 

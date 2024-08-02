@@ -489,7 +489,7 @@ namespace TheOtherRoles {
                 viewSettingsInfoPanel.SetInfo(StringNames.ImpostorsCategory, option.selections[value].ToString(), 61);
                 viewSettingsInfoPanel.titleText.text = option.name;
                 if (option.isHeader && (int)optionType != 99 && option.heading == "" && (option.type == CustomOptionType.Neutral || option.type == CustomOptionType.Crewmate || option.type == CustomOptionType.Impostor || option.type == CustomOptionType.Modifier)) {
-                    viewSettingsInfoPanel.titleText.text = "Spawn Chance";
+                    viewSettingsInfoPanel.titleText.text = "生成機率";
                 }
                 if ((int)optionType == 99) {
                     viewSettingsInfoPanel.titleText.outlineColor = Color.white;
@@ -512,26 +512,26 @@ namespace TheOtherRoles {
             if (TORMapOptions.gameMode == CustomGamemodes.Guesser || TORMapOptions.gameMode == CustomGamemodes.Classic) {
 
                 // create TOR settings
-                createCustomButton(__instance, next++, "TORSettings", "TOR Settings", CustomOptionType.General);
+                createCustomButton(__instance, next++, "TORSettings", "TOR 設定", CustomOptionType.General);
                    // create TOR settings
-                createCustomButton(__instance, next++, "RoleOverview", "Role Overview", (CustomOptionType)99);
+                createCustomButton(__instance, next++, "RoleOverview", "職業總覽", (CustomOptionType)99);
                 // IMp
-                createCustomButton(__instance, next++, "ImpostorSettings", "Impostor Roles", CustomOptionType.Impostor);
+                createCustomButton(__instance, next++, "ImpostorSettings", "偽裝者職業", CustomOptionType.Impostor);
 
                 // Neutral
-                createCustomButton(__instance, next++, "NeutralSettings", "Neutral Roles", CustomOptionType.Neutral);
+                createCustomButton(__instance, next++, "NeutralSettings", "獨立職業", CustomOptionType.Neutral);
                 // Crew
-                createCustomButton(__instance, next++, "CrewmateSettings", "Crewmate Roles", CustomOptionType.Crewmate);
+                createCustomButton(__instance, next++, "CrewmateSettings", "船員職業", CustomOptionType.Crewmate);
                 // Modifier
-                createCustomButton(__instance, next++, "ModifierSettings", "Modifiers", CustomOptionType.Modifier);
+                createCustomButton(__instance, next++, "ModifierSettings", "特殊標籤", CustomOptionType.Modifier);
 
             } else if (TORMapOptions.gameMode == CustomGamemodes.HideNSeek) {
                 // create Main HNS settings
-                createCustomButton(__instance, next++, "HideNSeekMain", "Hide 'N' Seek", CustomOptionType.HideNSeekMain);
+                createCustomButton(__instance, next++, "HideNSeekMain", "躲貓貓", CustomOptionType.HideNSeekMain);
                 // create HNS Role settings
-                createCustomButton(__instance, next++, "HideNSeekRoles", "Hide 'N' Seek Roles", CustomOptionType.HideNSeekRoles);
+                createCustomButton(__instance, next++, "HideNSeekRoles", "躲貓貓", CustomOptionType.HideNSeekRoles);
             } else if (TORMapOptions.gameMode == CustomGamemodes.PropHunt) {
-                createCustomButton(__instance, next++, "PropHunt", "Prop Hunt", CustomOptionType.PropHunt);
+                createCustomButton(__instance, next++, "PropHunt", "物品獵殺", CustomOptionType.PropHunt);
             }
         }
     }
@@ -659,7 +659,7 @@ namespace TheOtherRoles {
                 stringOption.OnValueChanged = new Action<OptionBehaviour>((o) => { });
                 stringOption.TitleText.text = option.name;
                 if (option.isHeader && option.heading == "" && (option.type == CustomOptionType.Neutral || option.type == CustomOptionType.Crewmate || option.type == CustomOptionType.Impostor || option.type == CustomOptionType.Modifier)) {
-                    stringOption.TitleText.text = "Spawn Chance";
+                    stringOption.TitleText.text = "生成機率";
                 }
                 if (stringOption.TitleText.text.Length > 25)
                     stringOption.TitleText.fontSize = 2.2f;
@@ -742,36 +742,36 @@ namespace TheOtherRoles {
             if (TORMapOptions.gameMode == CustomGamemodes.Guesser || TORMapOptions.gameMode == CustomGamemodes.Classic) {
 
                 // create TOR settings
-                createCustomButton(__instance, next++, "TORSettings", "TOR Settings");
+                createCustomButton(__instance, next++, "TORSettings", "TOR 設定");
                 createGameOptionsMenu(__instance, CustomOptionType.General, "TORSettings");
                 // Guesser if applicable
                 if (TORMapOptions.gameMode == CustomGamemodes.Guesser) {
-                    createCustomButton(__instance, next++, "GuesserSettings", "Guesser Settings");
+                    createCustomButton(__instance, next++, "GuesserSettings", "賭徒設定");
                     createGameOptionsMenu(__instance, CustomOptionType.Guesser, "GuesserSettings");
                 }
                 // IMp
-                createCustomButton(__instance, next++, "ImpostorSettings", "Impostor Roles");
+                createCustomButton(__instance, next++, "ImpostorSettings", "偽裝者設定");
                 createGameOptionsMenu(__instance, CustomOptionType.Impostor, "ImpostorSettings");
 
                 // Neutral
-                createCustomButton(__instance, next++, "NeutralSettings", "Neutral Roles");
+                createCustomButton(__instance, next++, "NeutralSettings", "獨立職業");
                 createGameOptionsMenu(__instance, CustomOptionType.Neutral, "NeutralSettings");
                 // Crew
-                createCustomButton(__instance, next++, "CrewmateSettings", "Crewmate Roles");
+                createCustomButton(__instance, next++, "CrewmateSettings", "船員職業");
                 createGameOptionsMenu(__instance, CustomOptionType.Crewmate, "CrewmateSettings");
                 // Modifier
-                createCustomButton(__instance, next++, "ModifierSettings", "Modifiers");
+                createCustomButton(__instance, next++, "ModifierSettings", "特殊標籤");
                 createGameOptionsMenu(__instance, CustomOptionType.Modifier, "ModifierSettings");
 
             } else if (TORMapOptions.gameMode == CustomGamemodes.HideNSeek) {
                 // create Main HNS settings
-                createCustomButton(__instance, next++, "HideNSeekMain", "Hide 'N' Seek");
+                createCustomButton(__instance, next++, "HideNSeekMain", "躲貓貓");
                 createGameOptionsMenu(__instance, CustomOptionType.HideNSeekMain, "HideNSeekMain");
                 // create HNS Role settings
-                createCustomButton(__instance, next++, "HideNSeekRoles", "Hide 'N' Seek Roles");
+                createCustomButton(__instance, next++, "HideNSeekRoles", "躲貓貓職業");
                 createGameOptionsMenu(__instance, CustomOptionType.HideNSeekRoles, "HideNSeekRoles");
             } else if (TORMapOptions.gameMode == CustomGamemodes.PropHunt) {
-                createCustomButton(__instance, next++, "PropHunt", "Prop Hunt");
+                createCustomButton(__instance, next++, "PropHunt", "物品獵殺");
                 createGameOptionsMenu(__instance, CustomOptionType.PropHunt, "PropHunt");
             }
         }
