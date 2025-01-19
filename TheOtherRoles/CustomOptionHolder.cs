@@ -311,6 +311,8 @@ namespace TheOtherRoles {
         public static CustomOption modifierChameleonHoldDuration;
         public static CustomOption modifierChameleonFadeDuration;
         public static CustomOption modifierChameleonMinVisibility;
+        
+        public static CustomOption modifierArmored;
 
         public static CustomOption modifierShifter;
 
@@ -345,6 +347,7 @@ namespace TheOtherRoles {
         public static CustomOption guesserGamemodeKillsThroughShield;
         public static CustomOption guesserGamemodeEvilCanKillSpy;
         public static CustomOption guesserGamemodeCantGuessSnitchIfTaksDone;
+        public static CustomOption guesserGamemodeCrewGuesserNumberOfTasks;
         public static CustomOption guesserGamemodeSidekickIsAlwaysGuesser;
 
         // Hide N Seek Gamemode
@@ -746,23 +749,24 @@ namespace TheOtherRoles {
             modifierChameleonFadeDuration = CustomOption.Create(1093, Types.Modifier, "淡出持續時間", 1f, 0.25f, 10f, 0.25f, modifierChameleon);
             modifierChameleonMinVisibility = CustomOption.Create(1094, Types.Modifier, "最低能見度", new string[] { "0%", "10%", "20%", "30%", "40%", "50%" }, modifierChameleon);
 
+            modifierArmored = CustomOption.Create(1101, Types.Modifier, cs(Color.yellow, "Armored"), rates, null, true);
+
             modifierShifter = CustomOption.Create(1100, Types.Modifier, cs(Color.yellow, "轉職師"), rates, null, true);
 
             // Guesser Gamemode (2000 - 2999)
-            guesserGamemodeCrewNumber = CustomOption.Create(2001, Types.Guesser, cs(Guesser.color, "船員賭徒人數"), 15f, 1f, 15f, 1f, null, true, heading: "賭徒人數");
-            guesserGamemodeNeutralNumber = CustomOption.Create(2002, Types.Guesser, cs(Guesser.color, "獨立賭徒人數"), 15f, 1f, 15f, 1f, null);
-            guesserGamemodeImpNumber = CustomOption.Create(2003, Types.Guesser, cs(Guesser.color, "偽裝者賭徒人數"), 15f, 1f, 15f, 1f, null);
+            guesserGamemodeCrewNumber = CustomOption.Create(2001, Types.Guesser, cs(Guesser.color, "船員賭徒人數"), 15f, 0f, 15f, 1f, null, true, heading: "賭徒人數");
+            guesserGamemodeNeutralNumber = CustomOption.Create(2002, Types.Guesser, cs(Guesser.color, "獨立賭徒人數"), 15f, 0f, 15f, 1f, null);
+            guesserGamemodeImpNumber = CustomOption.Create(2003, Types.Guesser, cs(Guesser.color, "偽裝者賭徒人數"), 15f, 0f, 15f, 1f, null);
             guesserForceJackalGuesser = CustomOption.Create(2007, Types.Guesser, "強制豺狼賭徒", false, null, true, heading: "強制賭徒");
             guesserGamemodeSidekickIsAlwaysGuesser = CustomOption.Create(2012, Types.Guesser, "跟班總是賭徒", false, null);
             guesserForceThiefGuesser = CustomOption.Create(2011, Types.Guesser, "強制小偷賭徒", false, null);
             guesserGamemodeHaveModifier = CustomOption.Create(2004, Types.Guesser, "賭徒們可有特殊標籤", true, null, true, heading: "賭徒通用設定");
             guesserGamemodeNumberOfShots = CustomOption.Create(2005, Types.Guesser, "賭徒可猜測次數", 3f, 1f, 15f, 1f, null);
             guesserGamemodeHasMultipleShotsPerMeeting = CustomOption.Create(2006, Types.Guesser, "賭徒在每次會議可猜測多次", false, null);
+            guesserGamemodeCrewGuesserNumberOfTasks = CustomOption.Create(2013, Types.Guesser, "Number Of Tasks Needed To Unlock Shooting\nFor Crew Guesser", 0f, 0f, 15f, 1f, null);
             guesserGamemodeKillsThroughShield = CustomOption.Create(2008, Types.Guesser, "賭徒忽略醫生盾", true, null);
             guesserGamemodeEvilCanKillSpy = CustomOption.Create(2009, Types.Guesser, "壞賭徒可猜出間諜", true, null);
             guesserGamemodeCantGuessSnitchIfTaksDone = CustomOption.Create(2010, Types.Guesser, "密探完成任務後不可被賭徒猜出", true, null);
-            // Care: 2012 already taken!
-            
 
             // Hide N Seek Gamemode (3000 - 3999)
             hideNSeekMap = CustomOption.Create(3020, Types.HideNSeekMain, cs(Color.yellow, "地圖"), new string[] { "The Skeld", "Mira", "Polus", "Airship", "Fungle", "Submerged", "LI Map"}, null, true, onChange: () => { int map = hideNSeekMap.selection; if (map >= 3) map++; GameOptionsManager.Instance.currentNormalGameOptions.MapId = (byte)map; });
