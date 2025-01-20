@@ -99,7 +99,7 @@ namespace TheOtherRoles.Patches {
                     } else {
                         __instance.GameStartText.transform.localPosition = Vector3.zero;
                         __instance.GameStartText.transform.localScale = new Vector3(1.2f, 1.2f, 1f);
-                        if (!__instance.GameStartText.text.StartsWith("Starting")) {
+                        if (!__instance.GameStartText.text.StartsWith("開始倒數")) {
                             __instance.GameStartText.text = String.Empty;
                             __instance.GameStartTextParent.SetActive(false);
                         }

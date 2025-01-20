@@ -23,7 +23,8 @@ public class BepInExUpdater : MonoBehaviour
     public const string RequiredBepInExVersion = "6.0.0-be.697+53625800b86f6c68751445248260edf0b27a71c2";
     public const string BepInExDownloadURL = "https://builds.bepinex.dev/projects/bepinex_be/697/BepInEx-Unity.IL2CPP-win-x86-6.0.0-be.697%2B5362580.zip";
 #if !RELEASE_JL
-    public static bool UpdateRequired => Paths.BepInExVersion.ToString() != RequiredBepInExVersion;
+    public static bool UpdateRequired => Paths.BepInExVersion.ToString() != RequiredBepInExVersion
+        && !File.Exists(Directory.GetCurrentDirectory() + Path.DirectorySeparatorChar + "noupdater.txt");
 #else
     public static bool UpdateRequired => 
         Int32.Parse(Regex.Match(Paths.BepInExVersion.PreRelease, @"\d+").Value) <

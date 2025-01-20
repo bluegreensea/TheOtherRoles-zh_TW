@@ -95,7 +95,7 @@ namespace TheOtherRoles
         public static RoleInfo vip = new RoleInfo("VIP", Color.yellow, "你是VIP", "每個人都會知道你死亡", RoleId.Vip, false, true);
         public static RoleInfo invert = new RoleInfo("反轉", Color.yellow, "你的移動是相反的", "你的移動是相反的", RoleId.Invert, false, true);
         public static RoleInfo chameleon = new RoleInfo("變色龍", Color.yellow, "你不動的時候很難被看見", "你不動的時候很難被看見", RoleId.Chameleon, false, true);
-        public static RoleInfo armored = new RoleInfo("Armored", Color.yellow, "You are protected from one murder attempt", "You are protected from one murder attempt", RoleId.Armored, false, true);
+        public static RoleInfo armored = new RoleInfo("裝甲", Color.yellow, "您受到保護，免於一次謀殺", "您受到保護，免於一次謀殺", RoleId.Armored, false, true);
         public static RoleInfo shifter = new RoleInfo("轉職師", Color.yellow, "轉移你的職業", "轉移你的職業", RoleId.Shifter, false, true);
         
 
@@ -252,7 +252,7 @@ namespace TheOtherRoles
                 int remainingShots = HandleGuesser.remainingShots(p.PlayerId);
                 var (playerCompleted, playerTotal) = TasksHandler.taskInfo(p.Data);
                 if (!Helpers.isEvil(p) && playerCompleted < HandleGuesser.tasksToUnlock || remainingShots == 0)
-                    roleName += Helpers.cs(Color.gray, " (Guesser)");
+                    roleName += Helpers.cs(Color.gray, " (賭徒)");
                 else
                     roleName += Helpers.cs(Color.white," (賭徒)");
             }

@@ -448,14 +448,14 @@ namespace TheOtherRoles {
             crewmateRolesFill = CustomOption.Create(308, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "填滿船員職業\n(忽略最小/最大)"), false);
 #if RELEASE_JL
             } else {
-                crewmateRolesCountMin = CustomOption.Create(300, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小船員職業數"), 15f, 0f, 127f, 1f, null, true, heading: "最小/最大職業數");
-                crewmateRolesCountMax = CustomOption.Create(301, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大船員職業數"), 15f, 0f, 127f, 1f);
-                neutralRolesCountMin = CustomOption.Create(302, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小獨立職業數"), 15f, 0f, 127f, 1f);
-                neutralRolesCountMax = CustomOption.Create(303, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大獨立職業數"), 15f, 0f, 127f, 1f);
-                impostorRolesCountMin = CustomOption.Create(304, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小偽裝者職業數"), 15f, 0f, 63f, 1f);
-                impostorRolesCountMax = CustomOption.Create(305, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大偽裝者職業數"), 15f, 0f, 63f, 1f);
-                modifiersCountMin = CustomOption.Create(306, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小特殊標籤數"), 15f, 0f, 127f, 1f);
-                modifiersCountMax = CustomOption.Create(307, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大特殊標籤數"), 15f, 0f, 127f, 1f);
+                crewmateRolesCountMin = CustomOption.Create(300, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小船員職業數"), 15f, 0f, CrowdedModCompatibility.MaxPlayers, 1f, null, true, heading: "最小/最大職業數");
+                crewmateRolesCountMax = CustomOption.Create(301, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大船員職業數"), 15f, 0f, CrowdedModCompatibility.MaxPlayers, 1f);
+                neutralRolesCountMin = CustomOption.Create(302, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小獨立職業數"), 15f, 0f, CrowdedModCompatibility.MaxPlayers, 1f);
+                neutralRolesCountMax = CustomOption.Create(303, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大獨立職業數"), 15f, 0f, CrowdedModCompatibility.MaxPlayers, 1f);
+                impostorRolesCountMin = CustomOption.Create(304, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小偽裝者職業數"), 15f, 0f, CrowdedModCompatibility.MaxImpostors, 1f);
+                impostorRolesCountMax = CustomOption.Create(305, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大偽裝者職業數"), 15f, 0f, CrowdedModCompatibility.MaxImpostors, 1f);
+                modifiersCountMin = CustomOption.Create(306, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小特殊標籤數"), 15f, 0f, CrowdedModCompatibility.MaxPlayers, 1f);
+                modifiersCountMax = CustomOption.Create(307, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大特殊標籤數"), 15f, 0f, CrowdedModCompatibility.MaxPlayers, 1f);
                 crewmateRolesFill = CustomOption.Create(308, Types.General, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "填滿船員職業\n(忽略最小/最大)"), false);
             }
 #endif
@@ -749,7 +749,7 @@ namespace TheOtherRoles {
             modifierChameleonFadeDuration = CustomOption.Create(1093, Types.Modifier, "淡出持續時間", 1f, 0.25f, 10f, 0.25f, modifierChameleon);
             modifierChameleonMinVisibility = CustomOption.Create(1094, Types.Modifier, "最低能見度", new string[] { "0%", "10%", "20%", "30%", "40%", "50%" }, modifierChameleon);
 
-            modifierArmored = CustomOption.Create(1101, Types.Modifier, cs(Color.yellow, "Armored"), rates, null, true);
+            modifierArmored = CustomOption.Create(1101, Types.Modifier, cs(Color.yellow, "裝甲"), rates, null, true);
 
             modifierShifter = CustomOption.Create(1100, Types.Modifier, cs(Color.yellow, "轉職師"), rates, null, true);
 
@@ -763,7 +763,7 @@ namespace TheOtherRoles {
             guesserGamemodeHaveModifier = CustomOption.Create(2004, Types.Guesser, "賭徒們可有特殊標籤", true, null, true, heading: "賭徒通用設定");
             guesserGamemodeNumberOfShots = CustomOption.Create(2005, Types.Guesser, "賭徒可猜測次數", 3f, 1f, 15f, 1f, null);
             guesserGamemodeHasMultipleShotsPerMeeting = CustomOption.Create(2006, Types.Guesser, "賭徒在每次會議可猜測多次", false, null);
-            guesserGamemodeCrewGuesserNumberOfTasks = CustomOption.Create(2013, Types.Guesser, "Number Of Tasks Needed To Unlock Shooting\nFor Crew Guesser", 0f, 0f, 15f, 1f, null);
+            guesserGamemodeCrewGuesserNumberOfTasks = CustomOption.Create(2013, Types.Guesser, "船員賭徒解鎖猜測需要的任務數量", 0f, 0f, 15f, 1f, null);
             guesserGamemodeKillsThroughShield = CustomOption.Create(2008, Types.Guesser, "賭徒忽略醫生盾", true, null);
             guesserGamemodeEvilCanKillSpy = CustomOption.Create(2009, Types.Guesser, "壞賭徒可猜出間諜", true, null);
             guesserGamemodeCantGuessSnitchIfTaksDone = CustomOption.Create(2010, Types.Guesser, "密探完成任務後不可被賭徒猜出", true, null);

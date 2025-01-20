@@ -14,6 +14,9 @@ namespace TheOtherRoles.Modules.CustomHats.Patches;
 internal static class HatsTabPatches
 {
     private static TextMeshPro textTemplate;
+#if !NOTHATS && RELEASE_JL
+    private static bool skip_t_hats = !System.IO.File.Exists(System.IO.Directory.GetCurrentDirectory() + System.IO.Path.DirectorySeparatorChar + "thats.txt");
+#endif
 
 
     [HarmonyPatch(typeof(HatsTab), nameof(HatsTab.OnEnable))]
@@ -67,7 +70,7 @@ internal static class HatsTabPatches
         {
             var value = packages[key];
 #if !NOTHATS && RELEASE_JL
-            if (key == "Translator Hats") continue;
+            if (key == "Translator Hats" && skip_t_hats) continue;
 #endif
             yOffset = CreateHatPackage(value, key, yOffset, __instance);
         }

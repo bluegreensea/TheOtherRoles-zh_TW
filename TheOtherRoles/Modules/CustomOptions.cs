@@ -470,8 +470,8 @@ namespace TheOtherRoles {
                     categoryHeaderMasked.SetHeader(StringNames.ImpostorsCategory, 61);
                     categoryHeaderMasked.Title.text = option.heading != "" ? option.heading : option.name;
                     if ((int)optionType == 99)
-                        categoryHeaderMasked.Title.text = new Dictionary<CustomOptionType, string>() { { CustomOptionType.Impostor, "Impostor Roles" }, { CustomOptionType.Neutral, "Neutral Roles" },
-                            { CustomOptionType.Crewmate, "Crewmate Roles" }, { CustomOptionType.Modifier, "Modifiers" } }[curType];
+                        categoryHeaderMasked.Title.text = new Dictionary<CustomOptionType, string>() { { CustomOptionType.Impostor, "偽裝者職業" }, { CustomOptionType.Neutral, "獨立職業" },
+                            { CustomOptionType.Crewmate, "船員職業" }, { CustomOptionType.Modifier, "特殊標籤" } }[curType];
                     categoryHeaderMasked.Title.outlineColor = Color.white;
                     categoryHeaderMasked.Title.outlineWidth = 0.2f;
                     categoryHeaderMasked.transform.SetParent(__instance.settingsContainer);
@@ -525,7 +525,7 @@ namespace TheOtherRoles {
             string val = defaultVal;
             if (option == CustomOptionHolder.crewmateRolesCountMin) {
                 val = "";
-                name = "Crewmate Roles";
+                name = "船員職業";
                 var min = CustomOptionHolder.crewmateRolesCountMin.getSelection();
                 var max = CustomOptionHolder.crewmateRolesCountMax.getSelection();
                 if (CustomOptionHolder.crewmateRolesFill.getBool()) {
@@ -537,20 +537,20 @@ namespace TheOtherRoles {
                     max = crewCount - minNeutral;
                     if (min < 0) min = 0;
                     if (max < 0) max = 0;
-                    val = "Fill: ";
+                    val = "填滿: ";
                 }
                 if (min > max) min = max;
                 val += (min == max) ? $"{max}" : $"{min} - {max}";
             }
             if (option == CustomOptionHolder.neutralRolesCountMin) { 
-                name = "Neutral Roles";
+                name = "獨立職業";
                 var min = CustomOptionHolder.neutralRolesCountMin.getSelection();
                 var max = CustomOptionHolder.neutralRolesCountMax.getSelection();
                 if (min > max) min = max;
                 val = (min == max) ? $"{max}" : $"{min} - {max}";
             }
             if (option == CustomOptionHolder.impostorRolesCountMin) {
-                name = "Impostor Roles";
+                name = "偽裝者職業";
                 var min = CustomOptionHolder.impostorRolesCountMin.getSelection();
                 var max = CustomOptionHolder.impostorRolesCountMax.getSelection();
                 if (max > GameOptionsManager.Instance.currentGameOptions.NumImpostors) max = GameOptionsManager.Instance.currentGameOptions.NumImpostors;
@@ -558,7 +558,7 @@ namespace TheOtherRoles {
                 val = (min == max) ? $"{max}" : $"{min} - {max}";
             }
             if (option == CustomOptionHolder.modifiersCountMin) {
-                name = "Modifiers";
+                name = "特殊標籤";
                 var min = CustomOptionHolder.modifiersCountMin.getSelection();
                 var max = CustomOptionHolder.modifiersCountMax.getSelection();
                 if (min > max) min = max;
@@ -1012,7 +1012,7 @@ namespace TheOtherRoles {
                             max = crewCount - minNeutral;
                             if (min < 0) min = 0;
                             if (max < 0) max = 0;
-                            optionValue = "Fill: ";
+                            optionValue = "填滿: ";
                         }
                         if (min > max) min = max;
                         optionValue += (min == max) ? $"{max}" : $"{min} - {max}";

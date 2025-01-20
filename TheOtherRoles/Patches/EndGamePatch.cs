@@ -319,31 +319,31 @@ namespace TheOtherRoles.Patches {
             } else if (AdditionalTempData.winCondition == WinCondition.Default) {
                 switch (OnGameEndPatch.gameOverReason) {
                     case GameOverReason.ImpostorDisconnect:
-                        textRenderer.text = "Last Crewmate Disconnected";
+                        textRenderer.text = "最後的船員失去連線";
                         textRenderer.color = Color.red;
                         break;
                     case GameOverReason.ImpostorByKill:
-                        textRenderer.text = "Impostors Win - By Kill";
+                        textRenderer.text = "偽裝者 獲勝 - 透過擊殺";
                         textRenderer.color = Color.red;
                         break;
                     case GameOverReason.ImpostorBySabotage:
-                        textRenderer.text = "Impostors Win - By Sabotage";
+                        textRenderer.text = "偽裝者 獲勝 - 透過破壞";
                         textRenderer.color = Color.red;
                         break;
                     case GameOverReason.ImpostorByVote:
-                        textRenderer.text = "Impostors Win - By Vote, Guess or DC";
+                        textRenderer.text = "偽裝者 獲勝 - 透過票出、猜測";
                         textRenderer.color = Color.red;
                         break;
                     case GameOverReason.HumansByTask:
-                        textRenderer.text = "Crew Wins - Taskwin";
+                        textRenderer.text = "船員 獲勝 - 透過任務";
                         textRenderer.color = Color.white;
                         break;
                     case GameOverReason.HumansDisconnect:
-                        textRenderer.text = "Crew Wins - No Evil Killers Left";
+                        textRenderer.text = "船員 獲勝 - 無剩餘的壞殺手";
                         textRenderer.color = Color.white;
                         break;
                     case GameOverReason.HumansByVote:
-                        textRenderer.text = "Crew Wins - No Evil Killers Left";
+                        textRenderer.text = "船員 獲勝 - 無剩餘的壞殺手";
                         textRenderer.color = Color.white;
                         break;
                 }

@@ -55,12 +55,12 @@ namespace TheOtherRoles.Patches {
                     string code = GameCode.IntToGameName(GameId);
                     if (code != "") {
                         code = DataManager.Settings.Gameplay.StreamerMode ? "****" : code;
-                        LobbyText.GetComponent<TMPro.TextMeshPro>().text = $"Prev Lobby: {code}   [LShift]";
+                        LobbyText.GetComponent<TMPro.TextMeshPro>().text = $"前一大廳: {code}   [左 Shift]";
 
                     }
                 }
                 if (code2 != "") {
-                    LobbyText.GetComponent<TMPro.TextMeshPro>().text += $"\nClipboard: {code2Disp}  [RShift]";
+                    LobbyText.GetComponent<TMPro.TextMeshPro>().text += $"\n剪貼簿: {code2Disp}  [右 Shift]";
                 }
             }
         }

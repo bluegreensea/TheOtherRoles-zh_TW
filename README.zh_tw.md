@@ -13,7 +13,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 
 # The Other Roles
 
-**The Other Roles** 是個 [Among Us](https://store.steampowered.com/app/945360/Among_Us) 的模組，新增了更多的職業與新的 [設定](#設定) 及 [自定義帽子](#自定義帽子) 到遊戲中。
+**The Other Roles** 是個 [Among Us](https://store.steampowered.com/app/945360/Among_Us) 的模組，新增了更多的職業與新的 [設定](#設定) 及 [自訂帽子](#自訂帽子) 到遊戲中。
 更多職業即將推出。 :)
 
 | 偽裝者 | 船員 | 獨立 | 特殊標籤 | 遊戲模式 |
@@ -29,7 +29,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 | [清道夫](#清道夫) | [換票師](#換票師) | [小偷](#小偷) | [反轉](#反轉) |
 | [咒詛師](#咒詛師) | [靈媒](#靈媒) |  | [變色龍](#變色龍) |
 | [賞金獵人](#賞金獵人) | [駭客](#駭客) |  | [轉職師](#轉職師)
-| [巫師](#巫師) | [追踪者](#追踪者) |  |  |
+| [巫師](#巫師) | [追踪者](#追踪者) |  | [裝甲](#裝甲) |
 | [忍者](#忍者) | [密探](#密探) |  |  |
 | [炸彈客](#炸彈客) | [間諜](#間諜) |  |  |
 | [Yo-Yo](#yoyo) | [傳送師](#傳送師) |  |  |
@@ -43,14 +43,16 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
-| 2024.6.18s| v4.6.0| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.6.0/TheOtherRoles.zip)
-| 2024.3.5s| v4.5.3| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.5.3/TheOtherRoles.zip)
+| 2024.11.26| v4.7.0| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.7.0/TheOtherRoles.zip)
+| 2024.6.18| v4.6.0| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.6.0/TheOtherRoles.zip)
+
 
 <details>
   <summary>Click to show older versions</summary>
   
 | Among Us - Version| Mod Version | Link |
 |----------|-------------|-----------------|
+| 2024.3.5s| v4.5.3| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.5.3/TheOtherRoles.zip)
 | 2024.3.5s| v4.5.2| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.5.2/TheOtherRoles.zip)
 | 2023.11.28s| v4.5.1| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.5.1/TheOtherRoles.zip)
 | 2023.11.28s| v4.5.0| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.5.0/TheOtherRoles.zip)
@@ -134,9 +136,21 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # Changelog
 <details>
   <summary>Click to show the Changelog</summary>
+
+**Version 4.7.0**
+- Updated to Among Us version 2024.11.26 (Vanilla Updates)
+- Added a new modifier, Armored. The first time the armored would die by an ordinary kill, they are protected by their Armor. (NesTT17 & Gendelo, idea by zFinnyX) 
+- Added the possibility to use the shift keys to (re-)join a lobby, if you just left a lobby or you have a lobby code copied to the clipboard. (twix & Gendelo)
+- Added a setting to Guesser Mode: "Number Of Tasks Needed To Unlock Shooting For Crew Guesser" (NesTT17, idea by DracoL1ch & multiple other players)
+- Fixed a bug with the Tracker's Proximity Meter - it now disappears after the meeting if the target is dead and no new target can be tracked.
+- Fixed a bug with the "Fill Crewmates" option, where selecting a range for min/max neutral roles would often lead to players being plain crewmates without a role
+- Fixed a bug where a passive lover death of a role that can suicide would sometimes give the medium incorrect info.
+- Fixed a bug where the zoom out button would be shown to ghosts during meetings.
+- Changed the way options are shown in the menu: Disabling an option (e.g. a role or modifier spawn chance) will now hide its depending sub-options again (like pre 4.6.0 with the old menu)
+- Change: Significantly decreased the size of our mod by using compression. (Thanks to miniduikboat for giving us a gentle push)
+
   
-  
-** Version 4.6.0**
+**Version 4.6.0**
 - Updated to Among Us version 2024.6.18 (Vanilla Update with new UI elements and many Server Side Changes)
 - Added a completely new UI for the Mod's Options, using the new Vanilla Design.
 - Added a button to switch gamemodes in the lobby
@@ -146,7 +160,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 - Fixed a bug where guessing a player would sometimes not return the votes to the voters
 - Fixed a bug where the Lawyer would not properly die when guessing the client
 - Removed: Disabled Vanilla Servers for now, as the mod is incompatible with them in its / their current state. Thanks to Miniduikboat for making custom servers great again!
-- Experimental: Advanded users can try to install the mod on the Windows Store Version of Among Us. No Support Provided!
+- Experimental: Advanced users can try to install the mod on the Windows Store Version of Among Us. No Support Provided!
 
   
 **Version 4.5.3**
@@ -611,7 +625,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 **Version 2.6.3**
 - Changed the role limits options to allow for minimum and maximum bounds
 - Changed the role assignment to be more random when assigning roles (previously assigned the neutral roles before assigning the crewmate roles)
-- Added new `flip` option to [Custom Hats](#自定義帽子)
+- Added new `flip` option to [Custom Hats](#自訂帽子)
 
 **Version 2.6.2**
 - The Other Roles now supports the new Among Us version **2021.5.10s**
@@ -663,7 +677,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 **Version 2.3.0**
 - **New Role:** [Cleaner](#清道夫)
 - Added 12 new [Colors](#顏色)
-- We added support for creating [Custom Hats](#自定義帽子). New hats are coming with the next version, but you can already create and submit your own hats on [Discord](https://discord.gg/77RkMJHWsM).
+- We added support for creating [Custom Hats](#自訂帽子). New hats are coming with the next version, but you can already create and submit your own hats on [Discord](https://discord.gg/77RkMJHWsM).
 - Added the option to hide the name of players with an unknown role
 - Added Trickster Box vent animation. Thanks to [Drakoni](https://twitter.com/Drakoni13)
 - You can now change the custom server ip/port right inside the game
@@ -930,13 +944,6 @@ Thanks to miniduikboot & GD for hosting modded servers (and so much more)
 
 Please note, that if the configured option exceeds the available number of tasks of a map, the tasks will be limited to that number of tasks. \
 Example: If you configure 4 common tasks on Airship crewmates will only receive 2 common tasks, as airship doesn't offer more than 2 common tasks.
-
-| 地圖 | 普通任務 | 短任務 | 長任務 |
-|----------|:-------------:|:-------------:|:-------------:|
-| Skeld / Dleks | 2 | 19 | 8
-| Mira HQ | 2 | 13 | 11
-| Polus | 4 | 14 | 15
-| Airship | 2 | 23 | 15
 -----------------------
 
 ### 隨機地圖
@@ -951,7 +958,7 @@ The random map presets can still be used like normal presets, if you **關閉** 
 
 
 
-# 自定義帽子
+# 自訂帽子
 ## Create and submit new hat designs
 We're awaiting your creative hat designs and we'll integrate all the good ones in our mod.
 Here are a few instructions, on how to create a custom hat:
@@ -1020,7 +1027,8 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 
 ## 百變怪
 ### **隊伍:偽裝者**
-百變怪是個偽裝者他可以掃描玩家的外觀。在任意時間之後可以變形成這種外觀 10 秒。\
+百變怪是個偽裝者他可以掃描玩家的外觀。\
+之後可以在任意時間變形成這種外觀一段時間，該時間可以在選項中變更。\
 \
 **NOTE:**
 - 當複製迷你的外觀時會縮小到迷你的大小。
@@ -1320,6 +1328,7 @@ Yo-Yo 根據選項設定可以存取管理表。
 |----------|:-------------:|
 | 小丑生成機率 | -
 | 小丑可召開緊急會議 | 禁止小丑使用緊急按鈕的設定
+| 小丑有偽裝者視野 | -
 -----------------------
 
 ## 縱火狂
@@ -1352,8 +1361,8 @@ Yo-Yo 根據選項設定可以存取管理表。
 - 船員被淘汰，然後豺狼隊與偽裝者對抗(這種情況下，船員仍然可以解完任務獲勝)
 
 獲勝條件的優先順序如下：
-1. 迷你船員被投出輸掉
-2. 小丑被投出獲勝
+1. 小丑被投出獲勝(就算是迷你)
+2. 迷你船員被投出輸掉
 3. 縱火犯獲勝
 4. 偽裝者以破壞勝利
 5. 船員解完任務獲勝(就算都死了還是能)
@@ -1537,7 +1546,6 @@ Yo-Yo 根據選項設定可以存取管理表。
 工程師(還活著時)可以在地圖上的任何地方修復遊戲中一定數量的破壞。\
 工程師可以使用通風口。\
 如果工程師在通風口內，豺狼/跟班團隊的成員將根據選項設定在地圖上的所有通風口周圍看到藍色輪廓(來通知他們)。\
-由於通風口，工程師可能無法使用"使用"按鈕啟動某些任務，您可以改為雙擊這些任務。
 
 **NOTE:**
 - 如果偽裝者站在工程師所在的通風口旁邊，他們的擊殺按鈕就會啟用。他們也可以在那裡殺死他們。沒有其他動作(例如百變怪採集樣本、轉職師轉移等)可以影響通風口內的玩家。
@@ -2141,9 +2149,26 @@ VIP會在他死時向所有人發出類似於靈媒閃光的閃爍。\
 | 轉職師生成機率 | -
 -----------------------
 
+## 裝甲
+
+裝甲是一種特殊標籤，可以保護玩家免於受到可能殺死他們的一槍傷害。每輪只能有一名裝甲玩家。
+\
+**NOTE:**
+- 裝甲僅在回合期間有效，不能防止猜測與投票。
+- 裝甲的效果在所有其他盾牌或保護措施之後觸發，因此只有當玩家死亡時裝甲才破裂。
+- 殺手試圖殺死裝甲玩家時，此殺手會看到裝甲以漂亮的動畫破裂。
+- 穿著裝甲的玩家無法得知裝甲是否仍然有效，除非他們自己破壞它(術士、警長、盜賊)
+
+### 遊戲選項
+| 名稱 | 描述
+|----------|:-------------:|
+| 裝甲生成機率 | -
+-----------------------
+
 # 遊戲模式
 遊戲模式可以在建立大廳時或在大廳內聊天欄使用以下指令切換:
 `/gm <gamemode>`。使用這些為 gamemode 參數：`guess`或`gm`，`prophunt`或`ph`，`hidenseek`或`hns`。如果使用`/gm`而沒有參數或參數無法被解析，將會切換至經典模式。
+
 
 ## 特殊賭徒
 **賭徒模式** 是經典模式的擴充，提供了許多賭徒的新選擇。\
@@ -2164,6 +2189,7 @@ VIP會在他死時向所有人發出類似於靈媒閃光的閃爍。\
 | 賭徒們可有特殊標籤 | -
 | 賭徒可猜測次數 | -
 | 賭徒在每次會議可猜測多次 | -
+| 船員賭徒解鎖猜測需要的任務數量 | - 
 | 賭徒忽略醫生盾 | -
 | 壞賭徒可猜出間諜 | -
 | 當密探完成任務後賭徒不可猜出 | -
@@ -2265,6 +2291,9 @@ TheOtherRolesAU/TheOtherRoles is licensed under the
 [GNU General Public License v3.0](https://github.com/TheOtherRolesAU/TheOtherRoles/blob/main/LICENSE)
 
 Permissions of this strong copyleft license are conditioned on making available **complete source code of licensed works and modifications**, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights.
+
+# Bugs, suggestions and requests
+If you found any bugs, have an idea for a new role or any other request, join our [Discord server](https://discord.gg/77RkMJHWsM).
 
 # Copyedit
 Thanks for fixing our typos [jacktose](https://github.com/jacktose) ✌️
