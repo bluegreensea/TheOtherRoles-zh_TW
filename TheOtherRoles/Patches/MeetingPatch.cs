@@ -713,7 +713,8 @@ namespace TheOtherRoles.Patches {
                         if (!trap.revealed) continue;
                         string message = $"陷阱 {trap.instanceId}: \n";
                         trap.trappedPlayer = trap.trappedPlayer.OrderBy(x => rnd.Next()).ToList();
-                        foreach (PlayerControl p in trap.trappedPlayer) {
+                        foreach (byte playerId in trap.trappedPlayer) {
+                            PlayerControl p = Helpers.playerById(playerId);
                             if (Trapper.infoType == 0) message += RoleInfo.GetRolesString(p, false, false, true) + "\n";
                             else if (Trapper.infoType == 1) {
                                 if (Helpers.isNeutral(p) || p.Data.Role.IsImpostor) message += "壞職業 \n";
@@ -755,7 +756,7 @@ namespace TheOtherRoles.Patches {
 
                 if (PlayerControl.LocalPlayer.Data.IsDead && output != "") FastDestroyableSingleton<HudManager>.Instance.Chat.AddChat(PlayerControl.LocalPlayer, $"{output}");
 
-                Trapper.playersOnMap = new List<PlayerControl>();
+                Trapper.playersOnMap = new ();
                 Snitch.playerRoomMap = new Dictionary<byte, byte>();
 
                 // Remove revealed traps

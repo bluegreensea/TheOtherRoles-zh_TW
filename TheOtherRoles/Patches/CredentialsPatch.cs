@@ -43,9 +43,9 @@ $@"<size=60%> <color=#FCCE03FF>特別感謝 Smeggy</color></size>";
                     if (HideNSeek.isHideNSeekGM) gameModeText = $"躲貓貓";
                     else if (HandleGuesser.isGuesserGm) gameModeText = $"賭徒";
                     else if (PropHunt.isPropHuntGM) gameModeText = "物品獵殺";
-                    if (gameModeText != "") gameModeText = Helpers.cs(Color.yellow, gameModeText) + "\n";
+                    if (gameModeText != "") gameModeText = Helpers.cs(Color.yellow, gameModeText) + (MeetingHud.Instance ? " " : "\n");
                     __instance.text.text = $"<size=130%><color=#ff351f>TheOtherRoles</color></size> v{TheOtherRolesPlugin.Version.ToString() + (TheOtherRolesPlugin.betaDays > 0 ? "-BETA" : "")}\n{gameModeText}" + __instance.text.text;
-                    position.DistanceFromEdge = new Vector3(2.25f, 0.11f, 0);
+                    position.DistanceFromEdge = MeetingHud.Instance ? new Vector3(1.25f, 0.15f, 0) : new Vector3(1.55f, 0.15f, 0);
                 } else {
                     string gameModeText = $"";
                     if (TORMapOptions.gameMode == CustomGamemodes.HideNSeek) gameModeText = $"躲貓貓";
