@@ -37,13 +37,13 @@ namespace TheOtherRoles.Modules
             aspectPosition.DistanceFromEdge = new Vector2(1.62f, 1.2f);
             aspectPosition.AdjustPosition();
             feedText.transform.localScale = new Vector3(0.6f, 0.6f, 1);
-            feedText.text = "<size=200%>Player's Picks:</size>\n\n";
+            feedText.text = "<size=200%>玩家們的選擇:</size>\n\n";
             feedText.alignment = TMPro.TextAlignmentOptions.TopLeft;
             feedText.autoSizeTextContainer = true;
             feedText.fontSize = 3f;
             feedText.enableAutoSizing = false;
             __instance.TeamTitle.transform.localPosition = __instance.TeamTitle.transform.localPosition + new Vector3(1f, 0f);
-            __instance.TeamTitle.text = "Currently Picking:";
+            __instance.TeamTitle.text = "目前選擇中:";
             __instance.BackgroundBar.enabled = false;
             __instance.TeamTitle.transform.localScale = new Vector3(0.25f, 0.25f, 1f);
             __instance.TeamTitle.autoSizeTextContainer = true;
@@ -107,7 +107,7 @@ namespace TheOtherRoles.Modules
 
                         // enable pick, wait for pick
                         Color youColor = timer - (int)timer > 0.5 ? Color.red : Color.yellow;
-                        playerText = Helpers.cs(youColor, "You!");
+                        playerText = Helpers.cs(youColor, "你!");
                         // Available Roles:
                         List<RoleInfo> availableRoles = new();
                         foreach (RoleInfo roleInfo in RoleInfo.allRoleInfos) {
@@ -287,16 +287,16 @@ namespace TheOtherRoles.Modules
 
                     } else {
                         int currentPick = PlayerControl.AllPlayerControls.Count - pickOrder.Count + 1;
-                        playerText = $"Anonymous Player {currentPick}";
+                        playerText = $"匿名玩家 {currentPick}";
                         HudManager.Instance.FullScreen.color = Color.black;
                     }
-                    __instance.TeamTitle.text = $"{Helpers.cs(Color.white, "<size=280%>Welcome to the Role Draft!</size>")}\n\n\n<size=200%> Currently Picking:</size>\n\n\n<size=250%>{playerText}</size>";
+                    __instance.TeamTitle.text = $"{Helpers.cs(Color.white, "<size=280%>歡迎來到職業自選!</size>")}\n\n\n<size=200%> 目前選擇中:</size>\n\n\n<size=250%>{playerText}</size>";
                     int waitMore = pickOrder.IndexOf(PlayerControl.LocalPlayer.PlayerId);
                     string waitMoreText = "";
                     if (waitMore > 0) {
-                        waitMoreText = $" ({waitMore} rounds until your turn)";
+                        waitMoreText = $" ({waitMore} 輪後，輪到你)";
                     }
-                    __instance.TeamTitle.text += $"\n\n{waitMoreText}\nRandom Selection In... {(int)(maxTimer + 1 - timer)}\n {(SoundManager.MusicVolume > -80 ? "♫ Music: Ultimate Superhero 3 - Kenët & Rez ♫" : "")}";
+                    __instance.TeamTitle.text += $"\n\n{waitMoreText}\n隨機選擇在... {(int)(maxTimer + 1 - timer)} 後\n {(SoundManager.MusicVolume > -80 ? "♫ Music: Ultimate Superhero 3 - Kenët & Rez ♫" : "")}";
                     yield return null;
                 }
             }
@@ -338,18 +338,18 @@ namespace TheOtherRoles.Modules
                 string roleString = Helpers.cs(roleInfo.color, roleInfo.name);
                 int roleLength = roleInfo.name.Length;  // Not used for now, but stores the amount of charactes of the roleString.
                 if (!CustomOptionHolder.draftModeShowRoles.getBool() && !(playerId == PlayerControl.LocalPlayer.PlayerId)) {
-                    roleString = "Unknown Role";
+                    roleString = "未知職業";
                     roleLength = roleString.Length;
                 }                   
                 else if (CustomOptionHolder.draftModeHideImpRoles.getBool() && roleInfo.isImpostor && !(playerId == PlayerControl.LocalPlayer.PlayerId)) {
-                    roleString = Helpers.cs(Palette.ImpostorRed, "Impostor Role");
-                    roleLength = "Impostor Role".Length;
+                    roleString = Helpers.cs(Palette.ImpostorRed, "偽裝者職業");
+                    roleLength = "偽裝者職業".Length;
                 }                    
                 else if (CustomOptionHolder.draftModeHideNeutralRoles.getBool() && roleInfo.isNeutral && !(playerId == PlayerControl.LocalPlayer.PlayerId)) {
-                    roleString = Helpers.cs(Palette.Blue, "Neutral Role");
-                    roleLength = "Neutral Role".Length;
+                    roleString = Helpers.cs(Palette.Blue, "獨立職業");
+                    roleLength = "獨立職業".Length;
                 }                    
-                string line = $"{(playerId == PlayerControl.LocalPlayer.PlayerId ? "You" : alreadyPicked.Count)}:";
+                string line = $"{(playerId == PlayerControl.LocalPlayer.PlayerId ? "你" : alreadyPicked.Count)}:";
                 line = line + string.Concat(Enumerable.Repeat(" ", 6 - line.Length)) + roleString;
                 feedText.text += line + "\n";
                 SoundEffectsManager.play("select");

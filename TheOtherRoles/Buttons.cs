@@ -1972,7 +1972,7 @@ namespace TheOtherRoles
                         Yoyo.markedLocation = null;
                         yoyoButton.Timer = yoyoButton.MaxTimer;
                         yoyoButton.Sprite = Yoyo.getMarkButtonSprite();
-                        yoyoButton.buttonText = "Mark Location";
+                        yoyoButton.buttonText = "標記位置";
                     }
                 },
                 Yoyo.getMarkButtonSprite(),
@@ -2018,7 +2018,7 @@ namespace TheOtherRoles
                         Minigame.Instance.Close();
                     }
                 },
-                buttonText: "Mark Location"
+                buttonText: "標記位置"
             );
 
             yoyoAdminTableButton = new CustomButton(
@@ -2408,7 +2408,7 @@ namespace TheOtherRoles
                     // onEffectEnds
                     eventKickButton.Timer = 69;
                 },
-                buttonText: "KICK"
+                buttonText: "踢擊"
                 );
 
             // Set the default (or settings from the previous game) timers / durations when spawning the buttons

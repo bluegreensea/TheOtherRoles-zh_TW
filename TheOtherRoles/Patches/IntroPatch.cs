@@ -182,7 +182,7 @@ namespace TheOtherRoles.Patches {
             var neutralColor = new Color32(76, 84, 78, 255);
             if (roleInfo == null || roleInfo == RoleInfo.crewmate) {
                 if (RoleDraft.isEnabled && CustomOptionHolder.neutralRolesCountMax.getSelection() > 0) {
-                    __instance.TeamTitle.text = "<size=60%>Crewmate" + Helpers.cs(Color.white, " / ") + Helpers.cs(neutralColor, "Neutral") + "</size>";
+                    __instance.TeamTitle.text = "<size=60%>船員" + Helpers.cs(Color.white, " / ") + Helpers.cs(neutralColor, "獨立") + "</size>";
                 }
                 return;
             }

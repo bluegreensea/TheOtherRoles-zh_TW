@@ -444,12 +444,12 @@ namespace TheOtherRoles {
             
             if (Utilities.EventUtility.canBeEnabled) enableEventMode = CustomOption.Create(10423, Types.General, cs(Color.green, "啟用特殊模式"), true, null, true);
 
-            isDraftMode = CustomOption.Create(600, Types.General, cs(Color.yellow, "Enable Role Draft"), false, null, true, null, "Role Draft");
-            draftModeAmountOfChoices = CustomOption.Create(601, Types.General, cs(Color.yellow, "Max Amount Of Roles\nTo Choose From"), 5f, 2f, 15f, 1f, isDraftMode, false);
-            draftModeTimeToChoose = CustomOption.Create(602, Types.General, cs(Color.yellow, "Time For Selection"), 5f, 3f, 20f, 1f, isDraftMode, false);
-            draftModeShowRoles = CustomOption.Create(603, Types.General, cs(Color.yellow, "Show Picked Roles"), false, isDraftMode, false);
-            draftModeHideImpRoles = CustomOption.Create(604, Types.General, cs(Color.yellow, "Hide Impostor Roles"), false, draftModeShowRoles, false);
-            draftModeHideNeutralRoles = CustomOption.Create(605, Types.General, cs(Color.yellow, "Hide Neutral Roles"), false, draftModeShowRoles, false);
+            isDraftMode = CustomOption.Create(600, Types.General, cs(Color.yellow, "啟用職業自選"), false, null, true, null, "Role Draft");
+            draftModeAmountOfChoices = CustomOption.Create(601, Types.General, cs(Color.yellow, "最多可選職業數量"), 5f, 2f, 15f, 1f, isDraftMode, false);
+            draftModeTimeToChoose = CustomOption.Create(602, Types.General, cs(Color.yellow, "選擇時間"), 5f, 3f, 20f, 1f, isDraftMode, false);
+            draftModeShowRoles = CustomOption.Create(603, Types.General, cs(Color.yellow, "顯示已選職業"), false, isDraftMode, false);
+            draftModeHideImpRoles = CustomOption.Create(604, Types.General, cs(Color.yellow, "隱藏偽裝者職業"), false, draftModeShowRoles, false);
+            draftModeHideNeutralRoles = CustomOption.Create(605, Types.General, cs(Color.yellow, "隱藏獨立職業"), false, draftModeShowRoles, false);
 
             // Using new id's for the options to not break compatibilty with older versions
 #if RELEASE_JL
@@ -753,9 +753,9 @@ namespace TheOtherRoles {
             modifierMiniGrowingUpDuration = CustomOption.Create(1062, Types.Modifier, "迷你成長時間", 400f, 100f, 1500f, 100f, modifierMini);
             modifierMiniGrowingUpInMeeting = CustomOption.Create(1063, Types.Modifier, "迷你在會議時成長", true, modifierMini);
             if (Utilities.EventUtility.canBeEnabled || Utilities.EventUtility.isEnabled) {
-                eventKicksPerRound = CustomOption.Create(10424, Types.Modifier, cs(Color.green, "Maximum Kicks Mini Suffers"), 4f, 0f, 14f, 1f, modifierMini);
-                eventHeavyAge = CustomOption.Create(10425, Types.Modifier, cs(Color.green, "Age At Which Mini Is Heavy"), 12f, 6f, 18f, 0.5f, modifierMini);
-                eventReallyNoMini = CustomOption.Create(10426, Types.Modifier, cs(Color.green, "Really No Mini :("), false, modifierMini, invertedParent: true);
+                eventKicksPerRound = CustomOption.Create(10424, Types.Modifier, cs(Color.green, "最大迷你遭受踢擊數"), 4f, 0f, 14f, 1f, modifierMini);
+                eventHeavyAge = CustomOption.Create(10425, Types.Modifier, cs(Color.green, "迷你的體型隨年齡變大"), 12f, 6f, 18f, 0.5f, modifierMini);
+                eventReallyNoMini = CustomOption.Create(10426, Types.Modifier, cs(Color.green, "真的不要迷你 :("), false, modifierMini, invertedParent: true);
             }
 
             modifierVip = CustomOption.Create(1070, Types.Modifier, cs(Color.yellow, "VIP"), rates, null, true);
@@ -775,7 +775,7 @@ namespace TheOtherRoles {
             modifierArmored = CustomOption.Create(1101, Types.Modifier, cs(Color.yellow, "裝甲"), rates, null, true);
 
             modifierShifter = CustomOption.Create(1100, Types.Modifier, cs(Color.yellow, "轉職師"), rates, null, true);
-            modifierShifterShiftsMedicShield = CustomOption.Create(1102, Types.Modifier, "Can Shift Medic Shield", false, modifierShifter);
+            modifierShifterShiftsMedicShield = CustomOption.Create(1102, Types.Modifier, "可轉移醫生盾", false, modifierShifter);
 
             // Guesser Gamemode (2000 - 2999)
             guesserGamemodeCrewNumber = CustomOption.Create(2001, Types.Guesser, cs(Guesser.color, "船員賭徒人數"), 15f, 0f, 15f, 1f, null, true, heading: "賭徒人數");

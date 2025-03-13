@@ -43,6 +43,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # 發佈
 | Among Us - 版本| 模組 | 鏈結 |
 |----------|-------------|-----------------|
+| 2024.11.26| v4.8.0| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.8.0/TheOtherRoles.zip)
 | 2024.11.26| v4.7.0| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.7.0/TheOtherRoles.zip)
 | 2024.6.18| v4.6.0| [Download](https://github.com/TheOtherRolesAU/TheOtherRoles/releases/download/v4.6.0/TheOtherRoles.zip)
 
@@ -136,6 +137,18 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 # Changelog
 <details>
   <summary>Click to show the Changelog</summary>
+  
+**Version 4.8.0**
+- Added an optional Role Draft mode, where players can select their role out of some roles that are shown to them.
+- Added a new option to allow the medic to shift the medic shield as well - no more invincible medics.
+- Added partial key rebinding - all kill buttons will now use the vanilla kill button shortcut, same for vent and each roles first ability.
+- Fixed the way options view panel to match vanilla changes
+- Fixed options not showing/hiding sub-options when switching Presets
+- Fixed a bug where voting the witch would not save the target
+- Fixed a some bugs with the trapper, bomber and portal
+- Fixed a bug in PropHunt where you players could not transform into props
+- Fixed the summary button for the last game appearing outside the lobby sometimes
+- Changed the positioning of the ping tracker in meetings
 
 **Version 4.7.0**
 - Updated to Among Us version 2024.11.26 (Vanilla Updates)
@@ -905,9 +918,11 @@ Thanks to miniduikboot & GD for hosting modded servers (and so much more)
 [TheEpicRoles](https://github.com/LaicosVK/TheEpicRoles) - Idea for the first kill shield (partly) and the tabbed option menu (fully + some code), by **LaicosVK** **DasMonschta** **Nova**\
 [Ninja](#忍者), [Thief](#小偷), [Lawyer](#律師) / [Pursuer](#原告), [Deputy](#警員), [Portalmaker](#傳送師), [Guesser Modifier](#特殊賭徒) - Idea: [K3ndo](https://github.com/K3ndoo) ; Developed by [Gendelo](https://github.com/gendelo3) & [Mallöris](https://github.com/Mallaris) \
 [ugackMiner53](https://github.com/ugackMiner53/PropHunt) - Idea and core code for the Prop Hunt game mode
+Role Draft Music: [Unreal Superhero 3 by Kenët & Rez](https://www.youtube.com/watch?v=9STiQ8cCIo0)
 
 # 設定
 該模組在 Among Us 添加了一些新設定(除了職業設定)：
+- **啟用職業自選:** 請看[職業自選](#職業自選)
 - **任何玩家皆可中斷開始:** 如果關閉，則只有主持人可以中斷遊戲開始。如果開啟，所有玩家都可以這麼做。中斷開始的非主持玩家將發送訊息，指示是誰中斷了它。
 - **船員數量:** 可以在大廳內設定船員的數量
 - **填滿船員職業(忽略最大/最小):** 所有人都將有職業，即使設置說會有普通船員(需要足夠的職業大於0%)。
@@ -1005,7 +1020,21 @@ The count you set will only be reached, if there are enough 船員/偽裝者 in 
 **範例:**\
 Settings: 2 special Crewmate roles, Snitch: 100%, Hacker: 10%, Tracker: 30%\
 Result: Snitch is assigned, then one role out of the pool [Hacker, Tracker, Tracker, Tracker] is being selected\
-Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically result in the same outcome .
+Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically result in the same outcome.
+
+## 職業自選
+
+如果啟用了職業自選，在遊戲開始時，所有玩家將被允許以隨機順序依序選擇一個職業。職業自選尊重每個派系的職業的最小/最大設定，並嘗試強制生成設定為 100% 的職業。
+如果可用的職業不夠多，一些玩家將能夠選擇船員/偽裝者(普通職業)。職業自選畫面有選項可在畫面左側顯示所選職業。如果玩家在一定時間內未能選擇職業，則會指派一個隨機可用的職業(包括未顯示的職業)。
+
+### 遊戲選項
+| 名稱 | 描述 |
+|----------|:-------------:|
+| 最多可選職業數量 | 如果可能的話，遊戲會向每個玩家顯示可供選擇的職業數量
+| 選擇時間 | 選擇並指派隨機職業的時間
+| 顯示已選職業 | 如果關閉，則只顯示自己的選擇
+| 隱藏偽裝者職業 | 如果顯示職業，隱藏偽裝者職業
+| 隱藏獨立職業 | 如果顯示職業，隱藏所有獨立職業
 
 
 ## 黑手黨
@@ -1049,7 +1078,7 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 ## 魔術師
 ### **隊伍:偽裝者**
 魔術師是個偽裝者，可以額外發動迷彩模式。\
-迷彩模式持續 10 秒，發動時所有玩家名字/寵物/帽子\
+迷彩模式持續 x 秒(可設定)，發動時所有玩家名字/寵物/帽子\
 都會被隱藏，且所有玩家的顏色都相同。\
 \
 **NOTE:**
@@ -1114,7 +1143,7 @@ Note: Changing the settings to Hacker: 20%, Tracker: 60% would statistically res
 ## 詭騙師
 ### **隊伍:偽裝者**
 詭騙師是一個偽裝者，可以放置 3 個最初對其他玩家不可視的盒子。\
-如果詭騙師放完了他的所有盒子，它們將轉換成一個只能由詭騙師自己使用的通風口，但這些盒子將讓其他玩家可視。\
+如果詭騙師放完了他的所有盒子，它們將在下次會議後轉換成一個只能由詭騙師自己使用的通風口，但這些盒子也將讓其他玩家可視。\
 如果盒子轉換為通風口，詭騙師將獲得一項新能力"關燈"以限制非偽裝者的能見度，這是其他玩家無法修復的。能見度會在一段時間後自動恢復。\
 \
 **NOTE:**
@@ -1684,7 +1713,7 @@ Yo-Yo 根據選項設定可以存取管理表。
 | 顯示被上盾者 | 設置誰能查看玩家是否有盾牌 | "所有人", "被上盾者 + 醫生", "醫生"
 | 裝盾玩家可看到謀殺未遂 | 被上盾的玩家是否看到有人試圖殺死他們 | 開/關 |
 | 盾生效時間 | 設定盾何時生效 | "立刻", "立刻，會議後可視化", "會議後"
-| 醫生可看到對被上盾者的謀殺未遂 | - | 如果有人試圖傷害被上盾的玩家(偽裝者、警長、賭徒……)，醫生將看到紅色閃光
+| 醫生可看到對被上盾者的謀殺未遂 | 如果有人試圖傷害被上盾的玩家(偽裝者、警長、賭徒……)，醫生將看到紅色閃光 | - |
 -----------------------
 
 ## 換票師
@@ -2028,7 +2057,7 @@ Yo-Yo 根據選項設定可以存取管理表。
 -----------------------
 
 **NOTE:**
-- **戀人**這個特殊標籤不會被猜出來，你必須猜出戀人的職業，才能殺死他們。
+- 就像擊殺一樣，如果你的戀人被猜中，你也會和他一起死去。
 
 ## 墨鏡
 
